@@ -4,3 +4,4 @@ v0.0.3 Home page: Post list
 	todo: 侧边栏 分类
 v0.0.4 Home post/ 显示单篇
 	todo: 侧边栏 目录结构
+v0.0.5 晚上 /about 及 footer

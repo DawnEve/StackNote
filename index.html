@@ -6,25 +6,20 @@
 
 	<script src="/static/js/vue.global-3.0.11.js"></script>
 	<script src="/static/js/vue-router.global-4.0.6.js"></script>
+	<script src="/static/js/axios.min-0.18.0.js"></script>
 
-<!--
-	<script src="/static/js/showdown.min-1.9.1.js"></script>
--->
 	<script src="/static/js/marked-2.0.3.js"></script>
 
 
-	<script src="/static/js/axios.min-0.18.0.js"></script>
-
-	<title>Vue3 Blog</title>
-
-
+	<script src="/static/js/my-main.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="/static/css/index.css" media="all">
+	<title>Vue3 Blog</title>
 </head>
 
+
+
 <body>
-
-
-
 <div id="app1">
 	<ul id=topNav>
 		<b class=logo><a href="/">StackNote</a></b>
@@ -37,7 +32,17 @@
 
     <router-view></router-view>
 
-    <div class="footer"> The end</div>
+    <div class="footer">
+    	<p><i>种一棵树最好的时间是十年前，其次，是现在。</i></p>
+    	<p>Copyright &copy;2021 - present 
+    		<a target="_blank" href="https://www.biomooc.com">biomooc.com</a>. 
+    		All Rights Reserved.
+    	</p>
+    	<p>
+    		<a href="/#/about">Contact me</a>. | 
+    		Fork me at <a target="_blank" href="https://github.com/DawnEve/StackNote">GitHub</a>. 
+    	</p>
+    </div>
 </div>
 
 
@@ -46,33 +51,7 @@
 
 
 <div id="gotoTop">Top</div>
-<script>
 
-gotoTop.onclick = function(){
-	var timer = null;
-	cancelAnimationFrame(timer);
-	timer = requestAnimationFrame(function fn(){
-		var oTop = document.body.scrollTop || document.documentElement.scrollTop;
-		if(oTop > 0){
-			//scrollBy(0,-50);
-			scrollBy(0, -Math.max(oTop/20, 10) );
-			timer = requestAnimationFrame(fn);
-		}else{
-			cancelAnimationFrame(timer);
-		}
-	});
-};
-// 滚动超过500px时，显示 gotoTop 按钮
-window.addEventListener('scroll',function(e){
-	var oTop = document.body.scrollTop || document.documentElement.scrollTop;
-	if(oTop>=600){
-		gotoTop.style.visibility='visible'
-	}else{
-		gotoTop.style.visibility='hidden'
-	}
-},false);
-
-</script>
 
 
 
