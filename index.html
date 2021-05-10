@@ -21,14 +21,21 @@
 
 
 <div id="app1">
-	<my-header></my-header>
+	<ul id=topNav>
+		<b class=logo><a href="/">Note</a></b>
+		<template v-for="menu in topMenu">
+			<li :class="{current: menu.path == currentRoute}">
+				<router-link :to="menu.path">{{menu.caption}}</router-link>
+			</li>
+		</template>
+	</ul>
 
-    <div class='content' v-html="compiledMarkdown"></div>
+    <router-view></router-view>
 </div>
 
 
 
-<script>
+<script type="module">
 var log=console.log;
 
 var app=Vue.createApp({
@@ -37,6 +44,7 @@ var app=Vue.createApp({
             input:"# head 123",
             path:"/2021/0509-test.md",
 
+            //顶部目录
             topMenu:[
             	{path:'/', caption:'Home'},
             	{path:'/archive', caption:'Archive'},
@@ -44,75 +52,58 @@ var app=Vue.createApp({
             	{path:'/about', caption:'About'},
             ],
 
-            items: [
-            	{
-            		year: 2021,
-            		id:"0509-test.md",
-            		caption: "测试1",
-            	},
-            	{
-            		year: 2021,
-            		id:"0509-test2.md",
-            		caption: "测试2",
-            	},
-            ],
+
+            // 博客分类
+            categories: {1:"文献", 2:"英语", 3:"代码", 4:"杂谈" },
+
         }
     },
 
-    methods:{
-    	getData(e){
-    		var self=this;
-    		var path=this.path;
-
-			axios.post('/data/'+path, {
-				action:'fetchall',
-				usr:"admin",
-				pass:123
-			}).then(function(response){
-				self.input=response.data;
-			});
+    computed:{
+    	currentRoute(){
+    		return this.$route.path;
     	}
     },
 
-	computed: {
-		compiledMarkdown() {
-			return marked(this.input, {});
-		},
-	},
-
-    mounted(){
-    	this.getData()
-    },
 
 
-    //给子组件提供数据
+
+    //给子组件提供数据 暂时无用
     provide(){
     	return{
-    		"items": this.items,
+    		"topMenu": this.topMenu,
     	};    	
     }
 
 })
 
+import Home from "/src/views/Home.js"
+const Archive = {template: '<div>Archive</div>',}
+const Tags = {template: '<div>Tags</div>',}
+//const About = {template: '<div>About</div>',}
+
+import About from "/src/views/About.js"
 
 
-// 建立页面模板
-app.component('MyHeader',{
-	inject:["items"],
 
-	template:`
-		<ul id=topNav>
-			<li v-for="item in items"><a :href="'/data/'+item.year+'/'+item.id">{{item.caption}}</a></li>
-		</ul>
-	`
+//路由表
+const routes = [
+  { path: '/', component: Home },
+  { path: '/archive', component: Archive },
+  { path: '/tags', component: Tags },
+  { path: '/about', component: About },
+  { path: '/tags/:tag', component: Tags },
+]
+
+
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHashHistory(), 
+  routes,
 })
 
-app.components=["my-header"]
-
-
-
-
+app.use(router)
 var vm=app.mount("#app1");
+window.vm=vm
 </script>
 </body>
 </html>
