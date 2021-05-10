@@ -1,0 +1,118 @@
+<html>
+
+<head>
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<script src="/static/js/vue.global-3.0.11.js"></script>
+	<script src="/static/js/vue-router.global-4.0.6.js"></script>
+
+	<script src="/static/js/marked-2.0.3.js"></script>
+	<script src="/static/js/axios.min-0.18.0.js"></script>
+
+	<title>Vue3 Blog</title>
+
+
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css" media="all">
+</head>
+
+<body>
+
+
+
+<div id="app1">
+	<my-header></my-header>
+
+    <div class='content' v-html="compiledMarkdown"></div>
+</div>
+
+
+
+<script>
+var log=console.log;
+
+var app=Vue.createApp({
+    data(){
+        return {
+            input:"# head 123",
+            path:"/2021/0509-test.md",
+
+            topMenu:[
+            	{path:'/', caption:'Home'},
+            	{path:'/archive', caption:'Archive'},
+            	{path:'/tags', caption:'Tags'},
+            	{path:'/about', caption:'About'},
+            ],
+
+            items: [
+            	{
+            		year: 2021,
+            		id:"0509-test.md",
+            		caption: "测试1",
+            	},
+            	{
+            		year: 2021,
+            		id:"0509-test2.md",
+            		caption: "测试2",
+            	},
+            ],
+        }
+    },
+
+    methods:{
+    	getData(e){
+    		var self=this;
+    		var path=this.path;
+
+			axios.post('/data/'+path, {
+				action:'fetchall',
+				usr:"admin",
+				pass:123
+			}).then(function(response){
+				self.input=response.data;
+			});
+    	}
+    },
+
+	computed: {
+		compiledMarkdown() {
+			return marked(this.input, {});
+		},
+	},
+
+    mounted(){
+    	this.getData()
+    },
+
+
+    //给子组件提供数据
+    provide(){
+    	return{
+    		"items": this.items,
+    	};    	
+    }
+
+})
+
+
+
+// 建立页面模板
+app.component('MyHeader',{
+	inject:["items"],
+
+	template:`
+		<ul id=topNav>
+			<li v-for="item in items"><a :href="'/data/'+item.year+'/'+item.id">{{item.caption}}</a></li>
+		</ul>
+	`
+})
+
+app.components=["my-header"]
+
+
+
+
+var vm=app.mount("#app1");
+</script>
+</body>
+</html>
