@@ -28,7 +28,7 @@ export default {
 
     		//获取后台数据
     		var self=this;
-			axios.post('/data/'+this.path, {
+			axios.get('/data/'+this.path, {
 				/*action:'fetchall',
 				pass:123*/
 			}).then(function(response){

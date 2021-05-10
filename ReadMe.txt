@@ -10,7 +10,7 @@ Aim: 记录文献/英语/代码等，方便自我监督。
 	/tag/xx
 
 /archive //todo
-/Tags //todo
+/tags //todo
 
 /about 完工
 
