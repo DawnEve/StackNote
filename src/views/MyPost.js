@@ -1,33 +1,45 @@
 //MyPost.js
 
 export default {
-	props:['caption'],
+	data(){
+		return{
+			path: this.$route.params.postPath.join('/'), //this.$route.fullPath,
+			info:"# header",
+			suffix: 'md',
+		}
+	},
+	//props:['caption'],
 	template:`
-		<h1>{{caption}}</h1>
-		<div class='content' v-html="compiledMarkdown"></div>
+		<div class=content>
+			<p class="title">Path: /data/{{path}}</p>
+			<div class='markdown' :class="[{'typora-export':suffix=='html'}]">
+				<div v-html="info"></div>
+			</div>
+		</div>
+		<link v-if="suffix=='md'" rel="stylesheet" type="text/css" href="/static/css/MarkDown.css" media="all">
 	`,
 
-	
-    methods:{
-    	getData(e){
-    		var self=this;
-    		var path=this.path;
 
-			axios.post('/data/'+path, {
-				action:'fetchall',
-				usr:"admin",
-				pass:123
+    methods:{
+    	getData(){
+    		//更新后缀名
+    		var arr1=this.path.split('.');
+			this.suffix=arr1[arr1.length-1];
+
+    		//获取后台数据
+    		var self=this;
+			axios.post('/data/'+this.path, {
+				/*action:'fetchall',
+				pass:123*/
 			}).then(function(response){
-				self.input=response.data;
+				if(['md', 'markdown'].indexOf(self.suffix)!=-1 ){
+					self.info=marked(response.data, {});
+				}else{
+					self.info=response.data;
+				}
 			});
     	}
     },
-
-	computed: {
-		compiledMarkdown() {
-			return marked(this.input, {});
-		},
-	},
 
     mounted(){
     	this.getData()

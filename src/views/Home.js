@@ -12,7 +12,7 @@ export default{
 	},
 
 	template:`
-		<h1>Post list</h1>
+	<div class=content>
 		<ul class="post-preview-container">
 			<li class="post-preview" v-for="post in posts" :id="post.title">
 				<div class="post-time">
@@ -30,6 +30,7 @@ export default{
 				</div>
 			</li>
 		</ul>
+	</div>
 	`,
 
 	methods:{

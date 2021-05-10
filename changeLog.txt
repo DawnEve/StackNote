@@ -2,3 +2,5 @@ v0.0.1 实现了首页预览md [2021.5.10]
 v0.0.2 router 顶部nav正常跳转
 v0.0.3 Home page: Post list
 	todo: 侧边栏 分类
+v0.0.4 Home post/ 显示单篇
+	todo: 侧边栏 目录结构

@@ -7,7 +7,12 @@
 	<script src="/static/js/vue.global-3.0.11.js"></script>
 	<script src="/static/js/vue-router.global-4.0.6.js"></script>
 
+<!--
+	<script src="/static/js/showdown.min-1.9.1.js"></script>
+-->
 	<script src="/static/js/marked-2.0.3.js"></script>
+
+
 	<script src="/static/js/axios.min-0.18.0.js"></script>
 
 	<title>Vue3 Blog</title>
@@ -31,7 +36,44 @@
 	</ul>
 
     <router-view></router-view>
+
+    <div class="footer"> The end</div>
 </div>
+
+
+
+
+
+
+<div id="gotoTop">Top</div>
+<script>
+
+gotoTop.onclick = function(){
+	var timer = null;
+	cancelAnimationFrame(timer);
+	timer = requestAnimationFrame(function fn(){
+		var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+		if(oTop > 0){
+			//scrollBy(0,-50);
+			scrollBy(0, -Math.max(oTop/20, 10) );
+			timer = requestAnimationFrame(fn);
+		}else{
+			cancelAnimationFrame(timer);
+		}
+	});
+};
+// 滚动超过500px时，显示 gotoTop 按钮
+window.addEventListener('scroll',function(e){
+	var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+	if(oTop>=600){
+		gotoTop.style.visibility='visible'
+	}else{
+		gotoTop.style.visibility='hidden'
+	}
+},false);
+
+</script>
+
 
 
 
@@ -77,18 +119,27 @@ var app=Vue.createApp({
 
 })
 
-import Home from "/src/views/Home.js"
+// 载入所有的页面视图 组件
+import Home from "/src/views/Home.js" //首页 list
 const Archive = {
-	template: '<div>Archive</div>',}
+	template: '<div>Archive</div>',
+}
+
 const Tags = {template: '<div>Tags</div>',}
 //const About = {template: '<div>About</div>',}
 
 import About from "/src/views/About.js"
 
+import MyPost from "/src/views/MyPost.js" // 单个 md
+
+
 
 //路由表
 const routes = [
   { path: '/', component: Home },
+  { path: '/post/:postPath+', component: MyPost },
+
+
   { path: '/archive', component: Archive },
   { path: '/tags', component: Tags },
   { path: '/about', component: About },
