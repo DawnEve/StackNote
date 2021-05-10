@@ -22,7 +22,7 @@
 
 <div id="app1">
 	<ul id=topNav>
-		<b class=logo><a href="/">Note</a></b>
+		<b class=logo><a href="/">StackNote</a></b>
 		<template v-for="menu in topMenu">
 			<li :class="{current: menu.path == currentRoute}">
 				<router-link :to="menu.path">{{menu.caption}}</router-link>
@@ -71,19 +71,19 @@ var app=Vue.createApp({
     //给子组件提供数据 暂时无用
     provide(){
     	return{
-    		"topMenu": this.topMenu,
+    		"categories": this.categories,
     	};    	
     }
 
 })
 
 import Home from "/src/views/Home.js"
-const Archive = {template: '<div>Archive</div>',}
+const Archive = {
+	template: '<div>Archive</div>',}
 const Tags = {template: '<div>Tags</div>',}
 //const About = {template: '<div>About</div>',}
 
 import About from "/src/views/About.js"
-
 
 
 //路由表
@@ -95,7 +95,7 @@ const routes = [
   { path: '/tags/:tag', component: Tags },
 ]
 
-
+// 路由
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHashHistory(), 
   routes,

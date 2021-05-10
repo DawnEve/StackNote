@@ -1,6 +1,9 @@
-h1, h2{color:#eee;}
+
 body, p,div{margin:0; padding:0;}
-.red{color:red;}
+
+* {
+    font-family: "italic", Helvetica, Arial, "Heiti SC", "Microsoft YaHei";
+}
 
 
 /** top menu */
@@ -57,4 +60,58 @@ body, p,div{margin:0; padding:0;}
 	padding:10px;
 
 	box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
+}
+
+
+
+
+
+
+/* Home page */
+.post-preview-container{  }
+.post-preview{
+	width: 100%;
+    height: max-content;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+
+    max-width: 800px;
+}
+
+.post-preview .post-time {
+    font-size: 17px;
+    color: #999999;
+    width: 125px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.post-preview .post-info {
+    flex: 1;
+    color:#ccc;
+}
+
+.post-preview .post-info a {
+  font-weight: 300;
+  color: #999999;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.post-preview .post-info a h3 {
+    line-height: 24px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #101010;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.4s;
+    font-family: Arial, "Microsoft YaHei", serif;
+}
+
+.post-preview .post-info .tags a{
+	padding-right:10px;
 }
