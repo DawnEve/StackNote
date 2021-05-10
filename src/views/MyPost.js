@@ -1,19 +1,44 @@
 //MyPost.js
+import PostTags from "../components/PostTags.js"
 
 export default {
+	inject:['categories', 'posts'],
+
 	data(){
 		return{
 			path: this.$route.params.postPath.join('/'), //this.$route.fullPath,
-			info:"# header",
+			html:"# Loading ...",
 			suffix: 'md',
+			//posts: this.$root.$data.posts,
+			post: 'xx', 
+
 		}
 	},
 	//props:['caption'],
 	template:`
 		<div class=content>
-			<p class="title">Path: /data/{{path}}</p>
+			<p class="path">Path: /data/{{path}}</p>
+			
+
+			<!-- 详情 -->
+			<template v-for="post in posts.value">
+				<template v-if="post.year+'/'+post.title==this.path ">
+					<div class="post-title">
+				        {{post.caption}}
+				    </div>
+				    <div class="post-meta">
+						{{post.time}} / 
+						<a title="category" :href="'#/category/'+categories[post.category]">
+							{{categories[post.category]}}</a> /
+						<span class=tags>tags: <post-tags :tags="post.tags"></post-tags> </span>
+					</div>
+				</template>
+			</template>
+
+
+
 			<div class='markdown' :class="[{'typora-export':suffix=='html'}]">
-				<div v-html="info"></div>
+				<div v-html="html"></div>
 			</div>
 		</div>
 		<link v-if="suffix=='md'" rel="stylesheet" type="text/css" href="/static/css/MarkDown.css" media="all">
@@ -33,9 +58,9 @@ export default {
 				pass:123*/
 			}).then(function(response){
 				if(['md', 'markdown'].indexOf(self.suffix)!=-1 ){
-					self.info=marked(response.data, {});
+					self.html=marked(response.data, {});
 				}else{
-					self.info=response.data;
+					self.html=response.data;
 				}
 			});
     	}
@@ -44,4 +69,6 @@ export default {
     mounted(){
     	this.getData()
     },
+
+    components:{ PostTags, }
 }

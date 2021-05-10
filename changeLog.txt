@@ -8,7 +8,7 @@ v0.0.5 晚上 /about 及 footer
 v0.0.6 add CNAME
 	[bug-fixed]上传到github报错: 405 (Method Not Allowed) 原来不能用post请求
 v0.0.7 换成get请求，添加一个很丑的 favicon.ico
-
+v0.0.8 /post/ 页添加日期分类信息
 
 
 #

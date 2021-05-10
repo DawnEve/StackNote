@@ -3,18 +3,13 @@ import PostTags from "../components/PostTags.js"
 
 
 export default{
-	inject:['categories', ],
+	inject:['categories', 'posts'],
 
-	data(){
-		return{
-			posts:'',
-		}
-	},
 
 	template:`
 	<div class=content>
 		<ul class="post-preview-container">
-			<li class="post-preview" v-for="post in posts" :id="post.title">
+			<li class="post-preview" v-for="post in posts.value" :id="post.title">
 				<div class="post-time">
 					{{post.time}} 
 				</div>
@@ -33,28 +28,5 @@ export default{
 	</div>
 	`,
 
-	methods:{
-    	getPostList(e){
-    		var self=this;
-    		var log=console.log;
-
-			axios.get('/data/api/posts', {} ).then(function(res){
-				var posts=eval(res.data);
-				for(var i=0; i<posts.length;i++){
-					var post=posts[i];
-					// 计算属性
-					post.url='/post/'+post.year+"/"+post.title;
-					post.time=post.year +'-'+ post.title.substring(0,2) +'-' + post.title.substring(2,4);
-				}
-				self.posts=posts;
-			});
-    	}
-    },
-
-    mounted(){
-    	this.getPostList()
-    },
-
     components:{ PostTags, }
-
 }

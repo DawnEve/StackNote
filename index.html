@@ -33,7 +33,8 @@
     <router-view></router-view>
 
     <div class="footer">
-    	<p><i>种一棵树最好的时间是十年前，其次，是现在。</i></p>
+    	<p><i>种一棵树最好的时间是十年前，其次是现在。</i></p>
+    	<p>"The best time to plant a tree was 20 years ago. The second best time is now."</p>
     	<p>Copyright &copy;2021 - present 
     		<a target="_blank" href="https://www.biomooc.com">biomooc.com</a>. 
     		All Rights Reserved.
@@ -59,12 +60,12 @@
 <script type="module">
 var log=console.log;
 
+
+
+// 共享数据部分
 var app=Vue.createApp({
     data(){
         return {
-            input:"# head 123",
-            path:"/2021/0509-test.md",
-
             //顶部目录
             topMenu:[
             	{path:'/', caption:'Home'},
@@ -73,17 +74,37 @@ var app=Vue.createApp({
             	{path:'/about', caption:'About'},
             ],
 
-
             // 博客分类
             categories: {1:"文献", 2:"英语", 3:"代码", 4:"杂谈" },
-
+            posts: {value:''},
         }
     },
 
     computed:{
     	currentRoute(){
     		return this.$route.path;
+    	},
+    },
+
+
+	methods:{
+    	getPostList(){
+    		var self=this;
+			axios.get('/data/api/posts', {} ).then(function(res){
+				var posts=eval(res.data);
+				for(var i=0; i<posts.length;i++){
+					var post=posts[i];
+					// 计算属性
+					post.url='/post/'+post.year+"/"+post.title;
+					post.time=post.year +'-'+ post.title.substring(0,2) +'-' + post.title.substring(2,4);
+				}
+				self.posts.value=posts;
+			});
     	}
+    },
+
+    mounted(){
+    	this.getPostList()
     },
 
 
@@ -93,8 +114,10 @@ var app=Vue.createApp({
     provide(){
     	return{
     		"categories": this.categories,
+    		"posts": this.posts,
     	};    	
-    }
+    },
+
 
 })
 
