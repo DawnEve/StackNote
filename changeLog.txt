@@ -5,3 +5,12 @@ v0.0.3 Home page: Post list
 v0.0.4 Home post/ 显示单篇
 	todo: 侧边栏 目录结构
 v0.0.5 晚上 /about 及 footer
+v0.0.6 add CNAME
+
+#
+#--> commit
+#----------> push to github dawneve/StackNote
+
+
+Web url: note.biomooc.com
+local url: blog3.dawneve.cc
