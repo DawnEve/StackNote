@@ -188,6 +188,7 @@ main > nav li a{
   font-weight: 300;
   color: #ccc;
   text-decoration: none;
+  font-size: 12px;
 }
 
 .post-preview .post-info a h3 {
@@ -224,7 +225,7 @@ main > nav li a{
     margin-bottom: 0px;
     padding-bottom: 8px;
     font-weight: 300;
-    color: #aaa;
+    color: #ccc;
     font-size: 12px;
     text-decoration: none;
 

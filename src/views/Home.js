@@ -11,7 +11,7 @@ export default{
 		<my-category />
 	</nav>
 
-	<article>
+	<article class="content">
 		<!--
 		<blockquote>
 			“聪明出于勤奋,天才在于积累。”
@@ -30,7 +30,8 @@ export default{
 					<span class=cat>
 						<a title="category" :href="'#/category/'+categories[post.category]">
 							{{categories[post.category]}}</a>
-					</span> / 
+					</span> 
+					/ 
 					<span class=tags>tags: <post-tags :tags="post.tags"></post-tags> </span>
 				</div>
 			</li>
