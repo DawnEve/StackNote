@@ -31,11 +31,11 @@ Aim: 记录文献/英语/代码等，方便自我监督。
 
 # How to use this note system?
 
-## Download
+## 1.Download
 
 $ git clone https://github.com/DawnEve/StackNote.git
 
-## Create a md file
+## 2.Create a md file
 
 In `/data/2021/` with a name like `0511`-how_to_use_xx.`md`,
 
@@ -49,7 +49,7 @@ In `/data/2021/` with a name like `0511`-how_to_use_xx.`md`,
 
   
 
-## Update meta data
+## 3.Update meta data
 
 lastly, edit database-like file  `/data/api/posts`, which is an array containing the meta info of every posts.
 
@@ -84,8 +84,31 @@ You can edit it yourself, but we recommend you think carefully before your note 
 
 - Tags are recorded here `/data/api/tags.js`. Though this file is useless to the system up to now, it can help you remember.
 
+## 4.run a static server
+
+You can use apache or node.js, or push to github pages.
+
+```
+## node 版静态资源服务器: centOS / win10 测试通过
+$ npm install -g http-server ## 安装一次即可
+$ cd /your/path/
+$ http-server -p 12345
+```
+
+Then use web browser: localhost:12345
 
 
+
+# 意见反馈
+
+若内容有争议、或做得不到位的地方，请及时联系我们进行整改。
+
+
+# 参与贡献
+
+如果您对本项目有任何建议或发现文中内容有误的，欢迎提交 issues 进行指正。
+对于项目的更正和改进，欢迎提交 PR。
+如果您有文章推荐请以 markdown 格式到邮箱 jimmyMall at 163 dot com
 
 
 
@@ -100,6 +123,4 @@ You can edit it yourself, but we recommend you think carefully before your note 
 /tags //todo
 
 /about OK
-
-
 
