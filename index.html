@@ -148,7 +148,7 @@ var app=Vue.createApp({
 // 载入所有的页面视图 组件
 import Home from "/src/views/Home.js" //首页 list
 import Archive from "/src/views/Archive.js"
-
+import Category from "/src/views/Category.js"
 
 const Tags = {template: '<div>Tags</div>',}
 //const About = {template: '<div>About</div>',}
@@ -168,7 +168,8 @@ const routes = [
   { path: '/archive', component: Archive },
   { path: '/tags', component: Tags },
   { path: '/about', component: About },
-  { path: '/tags/:tag', component: Tags },
+  { path: '/tag/:tag', component: Tags },
+  { path: '/category/:cate', component: Category },
 ]
 
 // 路由

@@ -6,8 +6,8 @@ export default{
 	template:`
 	<nav></nav>
 
-	<article class="content">
-		<h3>Archive</h3>
+	<article>
+		<h1>Archive</h1>
 
 		<ul class="post-archive-container">
 			<li class="post-archive" v-for="post in posts.value" :id="post.title">

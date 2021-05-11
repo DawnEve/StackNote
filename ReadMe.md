@@ -116,7 +116,7 @@ Then use web browser: localhost:12345
 
 /  OK
 	/post/xxx.md OK
-	/category/xx
+	/category/xx OK
 	/tag/xx
 
 /archive OK
