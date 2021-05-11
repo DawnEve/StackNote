@@ -13,7 +13,7 @@
 
 	<script src="/static/js/my-main.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="/static/css/index.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
 	<title>StackNote v0.1 | 学术笔记流水账 </title>
 </head>
 
@@ -21,31 +21,41 @@
 
 <body>
 <div id="app1">
-	<ul id=topNav>
-		<b class=logo><a href="/">StackNote</a></b>
-		<template v-for="menu in topMenu">
-			<li :class="{current: menu.path == currentRoute}">
-				<router-link :to="menu.path">{{menu.caption}}</router-link>
-			</li>
-		</template>
+	<header>
+		<ul id=topNav>
+			<b class=logo><a href="/">StackNote</a></b>
+			<template v-for="menu in topMenu">
+				<li :class="{current: menu.path == currentRoute}">
+					<router-link :to="menu.path">{{menu.caption}}</router-link>
+				</li>
+			</template>
 
-	</ul>
-
-
-
-
-
-	<div class=content>
-	    <router-view></router-view>
-	</div>
+			| 
+			<li><a target="_blank" href="https://github.com/DawnEve/StackNote">GitHub</a></li>
+		</ul>
+	</header>
 
 
 
+	<main id="container">
+		<!--
+		<nav>1nav...</nav>
+		<article>2article...</article>
+		<aside>3aside...</aside>
+		-->
+		
+		<router-view></router-view>
+		    
+
+	</main>
+</div>
 
 
 
 
-    <div class="footer">
+
+
+    <footer class="footer">
     	<p><i>种一棵树最好的时间是十年前，其次是现在。</i></p>
     	<p>"The best time to plant a tree was 20 years ago. The second best time is now."</p>
     	<p>Copyright &copy;2021 - present 
@@ -56,8 +66,7 @@
     		<a href="/#/about">Contact me</a>. | 
     		Fork me at <a target="_blank" href="https://github.com/DawnEve/StackNote">GitHub</a>. 
     	</p>
-    </div>
-</div>
+    </footer>
 
 
 

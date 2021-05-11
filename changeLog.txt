@@ -1,9 +1,9 @@
 v0.0.1 实现了首页预览md [2021.5.10]
 v0.0.2 router 顶部nav正常跳转
 v0.0.3 Home page: Post list
-	todo: 侧边栏 分类
+	done(v0.1.2): 侧边栏 分类
 v0.0.4 Home post/ 显示单篇
-	todo: 侧边栏 目录结构
+	done(v0.0.9): 侧边栏 目录结构
 v0.0.5 晚上 /about 及 footer
 v0.0.6 add CNAME
 	[bug-fixed]上传到github报错: 405 (Method Not Allowed) 原来不能用post请求
@@ -14,7 +14,8 @@ v0.0.9 /post/ 侧边栏目录生成，滚动高亮
 v0.1.0 update ReadMe.md 
 	样式极简
 v0.1.1 版本号加到首页title中,fix示例文件名
-
+v0.1.2 flex局部，响应式布局, / 侧边栏
+	todo: 移动端字体太小
 
 
 

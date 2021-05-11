@@ -1,15 +1,22 @@
 // get post list
 import PostTags from "../components/PostTags.js"
+import MyCategory from "../components/MyCategory.js"
 
 
 export default{
 	inject:['categories', 'posts'],
 
-
 	template:`
+	<nav>
+		<my-category />
+	</nav>
+
+	<article>
+		<!--
 		<blockquote>
 			“聪明出于勤奋,天才在于积累。”
 		</blockquote>
+		-->
 
 		<ul class="post-preview-container">
 			<li class="post-preview" v-for="post in posts.value" :id="post.title">
@@ -28,8 +35,10 @@ export default{
 				</div>
 			</li>
 		</ul>
+	</article>
+	<aside></aside>
 
 	`,
 
-    components:{ PostTags, }
+    components:{ PostTags, MyCategory }
 }

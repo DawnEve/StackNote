@@ -1,6 +1,6 @@
 # StackNote 
 
-> a blog system based on Vue3.0
+> a serveless blog system based on Vue3.0
 
 Aim: 记录文献/英语/代码等，方便自我监督。
 
@@ -59,15 +59,15 @@ lastly, edit database-like file  `/data/api/posts`, which is an array containing
 		year: 2021,
 		title:"0509-test.md",
 		caption: "测试1",
-        category:1,
-        tags: ["IGV", "测试"]
+		category:1,
+		tags: ["IGV", "测试"]
 	},
 	{
 		year: 2021,
 		title:"0509-test2.md",
 		caption: "测试2",
-        category:3,
-        tags: ['js', "测试"]
+		category:3,
+		tags: ['js', "测试"]
 	},
 ]
 ```

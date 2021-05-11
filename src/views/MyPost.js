@@ -1,5 +1,6 @@
 //MyPost.js
 import PostTags from "../components/PostTags.js"
+import MyCategory from "../components/MyCategory.js"
 
 export default {
 	inject:['categories', 'posts'],
@@ -16,12 +17,15 @@ export default {
 	},
 	//props:['caption'],
 	template:`
+	<nav>
+		<my-category />
+	</nav>
 
+	<article>
+	<div class=content>
 			<p class="path">Path: /data/{{path}}</p>
 
-			<div id="side_contents">
-				<div class='side_menu'></div>
-			</div>
+
 			
 
 			<!-- 详情 -->
@@ -44,6 +48,15 @@ export default {
 			<div class='markdown' :class="[{'typora-export':suffix=='html'}]">
 				<div v-html="html"></div>
 			</div>
+	</div>
+	</article>
+
+
+	<aside>
+		<div id="side_contents">
+			<div class='side_menu'></div>
+		</div>
+	</aside>
 
 		<link v-if="suffix=='md'" rel="stylesheet" type="text/css" href="/static/css/MarkDown.css" media="all">
 	`,
@@ -146,19 +159,32 @@ export default {
 		},
 
 
+		// 改版右侧 目录宽度
+		changeSideBarWidth(){
+			var oDiv=$("side_contents");
+			var oSide=document.getElementsByTagName('aside')[0];
+
+			oDiv.style.width = getComputedStyle( oSide ).width
+		},
+
+
 
     },
 
     mounted(){
     	this.getData();
     	window.addEventListener('scroll', this.highlightCurrentContent, true);
+
+    	this.changeSideBarWidth();
+    	window.addEventListener('resize', this.changeSideBarWidth, true);
     },
 
     // 离开组件要销毁监听
     unmounted() {
 	  window.removeEventListener("scroll", this.highlightCurrentContent, true);
+	  window.removeEventListener('resize', this.changeSideBarWidth, true);
 	  //console.log('destroyed! on scroll')
 	},
 
-    components:{ PostTags, }
+    components:{ PostTags, MyCategory, }
 }

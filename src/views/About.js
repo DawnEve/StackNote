@@ -1,6 +1,7 @@
 export default{
 	template:`
-
+	<nav></nav>
+	<article>
 			<h1>About 关于</h1>
 
 			<h2>关于本项目</h2>
@@ -15,6 +16,7 @@ export default{
 
 			<p>Email: jimmymall at 163 dot com</p>
 			<p>GitHub: <a target="_blank" href="https://github.com/DawnEve/StackNote">https://github.com/DawnEve/StackNote</a></p>
-
+	</article>
+	<aside></aside>
 	`,
 }
