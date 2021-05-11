@@ -151,7 +151,10 @@ main > nav li a{
     margin: 0px 5px;
     text-decoration: none;
 }
-
+.content .tags a:hover{
+    background: #000;
+    color:white;
+}
 
 .smaller{font-size: smaller;}
 
@@ -231,6 +234,19 @@ main > nav li a{
 
     border-bottom: 1px solid #eee;
 }
+
+
+
+.post-archive-container{ color:#ccc; }
+.post-archive-container a{ color: black; }
+.post-archive-container li{ margin: 10px 0px;}
+
+
+
+
+
+
+
 
 
 .footer{

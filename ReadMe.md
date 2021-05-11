@@ -114,12 +114,12 @@ Then use web browser: localhost:12345
 
 # todo list
 
-/  OK //todo 侧边栏没做
-	/post/xxx.md OK  侧目录OK
+/  OK
+	/post/xxx.md OK
 	/category/xx
 	/tag/xx
 
-/archive //todo
+/archive OK
 /tags //todo
 
 /about OK
