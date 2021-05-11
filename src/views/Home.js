@@ -7,11 +7,14 @@ export default{
 
 
 	template:`
-	<div class=content>
+		<blockquote>
+			“聪明出于勤奋,天才在于积累。”
+		</blockquote>
+
 		<ul class="post-preview-container">
 			<li class="post-preview" v-for="post in posts.value" :id="post.title">
 				<div class="post-time">
-					{{post.time}} 
+					{{post.time}}
 				</div>
 
 				<div class="post-info">
@@ -25,7 +28,7 @@ export default{
 				</div>
 			</li>
 		</ul>
-	</div>
+
 	`,
 
     components:{ PostTags, }

@@ -49,7 +49,6 @@ body,div{margin:0; padding:0;}
 #topNav a:hover{color:#666;text-decoration:underline}
 
 
-
 .content{
 	width:800px;
 	margin:10px auto;
@@ -62,7 +61,30 @@ body,div{margin:0; padding:0;}
 
 	box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
 }
-.content .path{color:#eee; margin-top:10px; border-bottom: 1px solid #eee;}
+.content .path{color:#eee; margin-top:0px; border-bottom: 1px dashed #eee;}
+.content blockquote{
+	color:#e0e0e0;
+	display: block;
+    padding: 16px;
+    margin: 0 0 24px;
+    border-left: 8px solid #f4f4f4;
+    background: #fafafa;
+    overflow: auto;
+}
+
+.content .tags a{
+	display: inline-block;
+    cursor: pointer;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    /*color: #f4f4f4;*/
+    margin: 0px 5px;
+    text-decoration: none;
+}
+
+
+.smaller{font-size: smaller;}
 
 
 
@@ -81,7 +103,7 @@ body,div{margin:0; padding:0;}
 
 .post-preview .post-time {
     font-size: 17px;
-    color: #999999;
+    color: #ccc;
     width: 125px;
     font-weight: 300;
     line-height: 24px;
@@ -95,7 +117,7 @@ body,div{margin:0; padding:0;}
 .post-meta a,
 .post-preview .post-info a {
   font-weight: 300;
-  color: #999999;
+  color: #ccc;
   font-size: 14px;
   text-decoration: none;
 }
@@ -134,13 +156,14 @@ body,div{margin:0; padding:0;}
 .post-meta{
     text-align: center;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 8px;
     font-weight: 300;
     color: #aaa;
     font-size: 13px;
     text-decoration: none;
 
-    border-bottom: 2px dotted #eee;
+    border-bottom: 1px solid #eee;
 }
 
 
@@ -167,4 +190,44 @@ body,div{margin:0; padding:0;}
 
 	border-radius: 5px;
 	cursor: pointer;
+
+	opacity: 0.8;
 }
+
+
+#side_contents{
+
+	position: fixed;
+	background: white;
+	right:0;
+	top:0px;
+	border:1px solid #eee;
+
+	overflow-y: scroll;
+
+	max-width:250px;
+	max-height: 100%;
+
+	padding-bottom: 10px;
+	opacity: 0.8;
+}
+
+
+
+
+/*目录的链接样式*/
+/* 段落前空几格 */
+.indent_1{text-indent: 0em;}
+.indent_2{text-indent: 2em;}
+.indent_3{text-indent: 4em;}
+.indent_4{text-indent: 6em;}
+.indent_5{text-indent: 8em;}
+.indent_6{text-indent: 10em;}
+
+#side_contents a{text-decoration: none;}
+#side_contents a .text_menu{color:#eee;}
+#side_contents a .text_menu span{color:#000/*#009a61 DB784D */; }
+/*当前行*/
+#side_contents a.cur .text_menu {color:#0096ff; font-weight:bold;}
+#side_contents a.cur .text_menu span{color:#0096ff;}
+

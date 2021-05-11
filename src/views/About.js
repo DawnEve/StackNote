@@ -1,6 +1,5 @@
 export default{
 	template:`
-		<div class="content">
 
 			<h1>About 关于</h1>
 
@@ -16,6 +15,6 @@ export default{
 
 			<p>Email: jimmymall at 163 dot com</p>
 			<p>GitHub: <a target="_blank" href="https://github.com/dawneve">https://github.com/dawneve</a></p>
-		</div>
+
 	`,
 }
