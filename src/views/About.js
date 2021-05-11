@@ -14,7 +14,7 @@ export default{
 			<p>我是作者，推荐邮件联系。</p>
 
 			<p>Email: jimmymall at 163 dot com</p>
-			<p>GitHub: <a target="_blank" href="https://github.com/dawneve">https://github.com/dawneve</a></p>
+			<p>GitHub: <a target="_blank" href="https://github.com/DawnEve/StackNote">https://github.com/DawnEve/StackNote</a></p>
 
 	`,
 }

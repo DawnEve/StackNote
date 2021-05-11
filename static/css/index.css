@@ -63,12 +63,14 @@ body,div{margin:0; padding:0;}
 }
 .content .path{color:#eee; margin-top:0px; border-bottom: 1px dashed #eee;}
 .content blockquote{
+	/*
 	color:#e0e0e0;
+    background: #fafafa;
+	*/
 	display: block;
     padding: 16px;
     margin: 0 0 24px;
     border-left: 8px solid #f4f4f4;
-    background: #fafafa;
     overflow: auto;
 }
 
@@ -168,16 +170,20 @@ body,div{margin:0; padding:0;}
 
 
 .footer{
+	/*
 	background:black; 
+	border-top:5px solid red;
 	color:white; 
+	*/
+
+	border-top: 1px solid #ddd;
 	padding:30px 10px; 
 	margin:0;
 	margin-top:30px; 
-	border-top:5px solid red;
 }
 .footer a{color:#aaa; text-decoration: none;}
 .footer a:hover{ text-decoration: underline; }
-.footer p{text-align: center; color:#666;}
+.footer p{text-align: center; color:#ddd;}
 
 
 #gotoTop{
