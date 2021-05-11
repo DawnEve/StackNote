@@ -101,6 +101,9 @@ var app=Vue.createApp({
             // 博客分类
             categories: {1:"文献", 2:"英语", 3:"代码", 4:"杂谈" },
             posts: {value:''},
+
+            tagdict:{},
+            catdict:{},
         }
     },
 
@@ -121,6 +124,27 @@ var app=Vue.createApp({
 					// 计算属性
 					post.url='/post/'+post.year+"/"+post.title;
 					post.time=post.year +'-'+ post.title.substring(0,2) +'-' + post.title.substring(2,4);
+
+					// 分类 的文章数
+					var cat=post.category;
+					if(cat in self.catdict){
+						self.catdict[cat] +=1;
+					}else{
+						self.catdict[cat]=1;
+					}
+
+
+					// 标签云
+					for(var j=0; j<post.tags.length; j++){
+						var tag=post.tags[j];
+						if(tag in self.tagdict){
+							self.tagdict[tag] +=1;
+						}else{
+							self.tagdict[tag]=1;
+						}
+					}
+
+
 				}
 				self.posts.value=posts;
 			});
@@ -139,22 +163,21 @@ var app=Vue.createApp({
     	return{
     		"categories": this.categories,
     		"posts": this.posts,
+    		'catdict': this.catdict,
+    		'tagdict': this.tagdict,
     	};    	
     },
-
-
+    
 })
 
 // 载入所有的页面视图 组件
 import Home from "/src/views/Home.js" //首页 list
 import Archive from "/src/views/Archive.js"
 import Category from "/src/views/Category.js"
+import Tags from "/src/views/Tags.js"
 
-const Tags = {template: '<div>Tags</div>',}
 //const About = {template: '<div>About</div>',}
-
 import About from "/src/views/About.js"
-
 import MyPost from "/src/views/MyPost.js" // 单个 md
 
 

@@ -120,7 +120,7 @@ Then use web browser: localhost:12345
 	/tag/xx
 
 /archive OK
-/tags //todo
+/tags OK
 
 /about OK
 
