@@ -50,7 +50,7 @@ git push -u origin2 master
 #################
 
 v0.2.1 首页加 viewport，微调字号
-
+v0.2.2 fix 移动端 tags 重叠问题
 
 #
 #--> commit
