@@ -51,6 +51,8 @@ git push -u origin2 master
 
 v0.2.1 首页加 viewport，微调字号
 v0.2.2 fix 移动端 tags 重叠问题
+v0.2.3 微调 /about
+
 
 #
 #--> commit
@@ -59,6 +61,3 @@ v0.2.2 fix 移动端 tags 重叠问题
 
 Web url: note.biomooc.com
 local url: blog3.dawneve.cc
-
-
-

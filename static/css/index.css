@@ -50,8 +50,8 @@ body,div{margin:0; padding:0;}
 #topNav a:hover{color:#666;text-decoration:underline}
 #topNav li.out a{color:#0096ff; }
 
-.about a{color:black;}
-
+.about a{color:#0096ff; text-decoration:none;}
+.about a:hover{text-decoration:underline;}
 main { 
     display: flex; 
     /* 使元素成为flex容器，也可用 inline-flex，区别在于一个容器在文档流里是块级元素，一个是行内元素*/
