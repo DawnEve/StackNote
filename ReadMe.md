@@ -1,6 +1,6 @@
 # StackNote 
 
-> a serveless blog system based on Vue3.0
+> A serveless blog system based on Vue3.0
 
 Aim: 记录文献/英语/代码等，方便自我监督。
 
@@ -109,18 +109,3 @@ Then use web browser: localhost:12345
 如果您对本项目有任何建议或发现文中内容有误的，欢迎提交 issues 进行指正。
 对于项目的更正和改进，欢迎提交 PR。
 如果您有文章推荐请以 markdown 格式到邮箱 jimmyMall at 163 dot com
-
-
-
-# todo list
-
-/  OK
-	/post/xxx.md OK
-	/category/xx OK
-	/tag/xx
-
-/archive OK
-/tags OK
-
-/about OK
-

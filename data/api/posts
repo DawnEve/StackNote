@@ -26,17 +26,17 @@
 
 	{
 		year: 2021,
-		title:"0509-test2.md",
-		caption: "测试2",
+		title:"0509-Vue_learn.md",
+		caption: "Vue 从入门到精通",
 		category:3,
 		tags: ['js'],
 	},
 
 	{
 		year: 2021,
-		title:"0509-test.md",
-		caption: "测试1",
+		title:"0509-IGV.js_test.md",
+		caption: "IGV.js 测试",
 		category:1,
-		tags: ["IGV", "测试"],
+		tags: ["IGV", "测试", 'js'],
 	},
 ]

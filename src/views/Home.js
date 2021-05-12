@@ -37,7 +37,14 @@ export default{
 			</li>
 		</ul>
 	</article>
-	<aside></aside>
+
+	<aside>
+		<div class=box>
+			<div class=light>
+				Paper · English · R/Python · bioinfomatics · random thoughts
+			</div>
+		</div>
+	</aside>
 
 	`,
 

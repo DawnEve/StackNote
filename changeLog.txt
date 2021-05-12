@@ -21,6 +21,8 @@ v0.1.4 完善 readme
 v0.1.5 archive ok
 v0.1.6 /category/xx ok
 v0.1.7 /tags OK
+	category 添加计数
+v0.1.8 /tag/xx OK
 
 #
 #--> commit
