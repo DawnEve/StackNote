@@ -25,3 +25,34 @@ https://github.com/DawnEve/jsLecture
 http://jslecture.biomooc.com/Vue/index.html
 ```
 
+## how to use named ancher without remoke router?
+
+[sf](https://stackoverflow.com/questions/42645964/vue-js-anchor-to-div-within-the-same-component)
+
+```
+//P.S. the code is written for Vue 2.
+//You will have to adjust it to Vue 1.
+
+//Your view:
+<a class="porto-button" @click="scrollMeTo('porto')">Porto, Portugal</a>
+...
+<div ref="porto" class="fl-porto">
+
+
+
+//Your code:
+methods: {
+  scrollMeTo(refName) {
+    var element = this.$refs[refName];
+    
+    //method 1
+    var top = element.offsetTop;
+    window.scrollTo(0, top);
+
+    //method 2
+    //element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+```
+
+

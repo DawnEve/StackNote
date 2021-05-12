@@ -63,3 +63,15 @@ window.addEventListener('scroll',function(e){
 
 
 
+// 滚动到某个位置 tagName ="#pos3"
+function scrollMeTo(tagName) {
+	var element = document.getElementsByName(tagName)[0]; //this.$refs[refName];
+
+	//method 1
+	var top = element.parentElement.offsetTop;
+	//console.log(tagName, top)
+	window.scrollTo(0, top);
+
+	//method 2
+	//element.scrollIntoView({ behavior: 'smooth' });
+}

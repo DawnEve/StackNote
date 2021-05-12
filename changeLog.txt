@@ -10,7 +10,7 @@ v0.0.6 add CNAME
 v0.0.7 换成get请求，添加一个很丑的 favicon.ico
 v0.0.8 /post/ 页添加日期分类信息
 v0.0.9 /post/ 侧边栏目录生成，滚动高亮
-	todo: 侧边目录单击会报错，ancher和hash router 无法区分
+	[done-v0.2.0]: 侧边目录单击会报错，ancher和hash router 无法区分
 v0.1.0 update ReadMe.md 
 	样式极简
 v0.1.1 版本号加到首页title中,fix示例文件名
@@ -24,6 +24,7 @@ v0.1.7 /tags OK
 	category 添加计数
 v0.1.8 /tag/xx OK
 v0.1.9 重构 archive 页面，带年份
+v0.2.0 侧边栏md锚点用js生效，html锚点有点错位
 
 #
 #--> commit

@@ -330,7 +330,7 @@ main > nav li a{
 .indent_5{text-indent: 8em;}
 .indent_6{text-indent: 10em;}
 
-#side_contents a{text-decoration: none;}
+#side_contents a{text-decoration: none; cursor: pointer;}
 #side_contents a .text_menu{color:#eee;}
 #side_contents a .text_menu span{color:#000/*#009a61 DB784D */; }
 /*当前行*/

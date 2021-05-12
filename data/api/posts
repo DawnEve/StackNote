@@ -44,7 +44,7 @@
 		year: 2020,
 		title:"0101-test.md",
 		caption: "system test",
-		category:1,
+		category:3,
 		tags: ["测试"],
 	},
 ]

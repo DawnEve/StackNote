@@ -88,6 +88,7 @@ export default {
     	},
 
 
+
     	/*添加目录*/
     	//v2.0 修订过，锚点加到h内;
     	addContents(){
@@ -117,7 +118,11 @@ export default {
 					var innerSpan = createElement('span',{},text );
 					var innerLi = createElement('li',{'class':'text_menu '+indentNum} );
 					// 添加点击锚点
-					var innerA = createElement('a',{'href':'#pos'+j, 'title':tagName+": "+text}); //鼠标悬停提示文字
+					var innerA = createElement('a',
+						{
+							//'href':'#pos'+j, 
+						'onclick': "scrollMeTo('pos"+j+"')",
+						'title':tagName+": "+text}); //鼠标悬停提示文字
 					// 装载锚点 
 					innerLi.appendChild(innerSpan);
 					innerA.appendChild(innerLi);
@@ -147,7 +152,7 @@ export default {
 
 			//对正文的锚点进行遍历
 			for(var i=0;i<aA.length;i++){
-				if(aA[i].parentNode.offsetTop<scrollTop){
+				if(aA[i].parentNode.offsetTop<scrollTop+20){
 					//remove class cur, for 导航
 					for(var j=0;j<aSpan.length;j++){
 						aSpan[j].parentElement.parentElement.setAttribute("class","");

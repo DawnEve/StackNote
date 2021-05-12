@@ -26,6 +26,7 @@ Aim: 记录文献/英语/代码等，方便自我监督。
     |-0509-test2.md  # blog files
 ```
 
+博客基础代码不到1M，如果想上传到github，请特别珍惜使用图片，否则文件体积会迅速膨胀。
 
 
 
@@ -47,7 +48,9 @@ In `/data/2021/` with a name like `0511`-how_to_use_xx.`md`,
 
 - You can also save the md file and use html file ( `文件-导出-html with style` ) in the note system.
 
-  
+- Use absolute picture url in markdown, like `/data/2021/images/05/xx.png` 
+
+
 
 ## 3.Update meta data
 
@@ -115,3 +118,5 @@ Then use web browser: localhost:12345
 
 - 怎么翻页？
 - 怎么处理多个/data/子文件夹？
+- 移动端字体太小
+- 移动端隐藏侧栏
