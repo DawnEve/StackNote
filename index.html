@@ -89,7 +89,7 @@ var log=console.log;
 var app=Vue.createApp({
     data(){
         return {
-        	dateTime: new Date().getTime(),
+        	timestamp: new Date().getTime(), //vm.timestamp
 
             //顶部目录
             topMenu:[
@@ -103,8 +103,12 @@ var app=Vue.createApp({
             categories: {1:"文献", 2:"英语", 3:"代码", 4:"杂谈" },
             posts: {value:''},
 
+            // cate 和 tag 计数字典
             tagdict:{},
             catdict:{},
+
+            //博客的年份
+            years:[],
         }
     },
 
@@ -124,7 +128,8 @@ var app=Vue.createApp({
 					var post=posts[i];
 					// 计算属性
 					post.url='/post/'+post.year+"/"+post.title;
-					post.time=post.year +'-'+ post.title.substring(0,2) +'-' + post.title.substring(2,4);
+					post.date=post.title.substring(0,2) +'-' + post.title.substring(2,4)
+					post.time=post.year +'-'+ post.date;
 
 					// 分类 的文章数
 					var cat=post.category;
@@ -143,6 +148,11 @@ var app=Vue.createApp({
 						}else{
 							self.tagdict[tag]=1;
 						}
+					}
+
+					//年份
+					if( ! self.years.includes( post.year )){
+						self.years.push(post.year);
 					}
 
 
@@ -166,6 +176,7 @@ var app=Vue.createApp({
     		"posts": this.posts,
     		'catdict': this.catdict,
     		'tagdict': this.tagdict,
+    		'years': this.years,
     	};    	
     },
     

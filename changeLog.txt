@@ -23,6 +23,7 @@ v0.1.6 /category/xx ok
 v0.1.7 /tags OK
 	category 添加计数
 v0.1.8 /tag/xx OK
+v0.1.9 重构 archive 页面，带年份
 
 #
 #--> commit

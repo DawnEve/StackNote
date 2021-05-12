@@ -39,4 +39,12 @@
 		category:1,
 		tags: ["IGV", "测试", 'js'],
 	},
+
+	{
+		year: 2020,
+		title:"0101-test.md",
+		caption: "system test",
+		category:1,
+		tags: ["测试"],
+	},
 ]

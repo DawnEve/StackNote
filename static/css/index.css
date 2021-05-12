@@ -99,6 +99,11 @@ main > nav h3{
     margin: 0;
     padding: 11px 25px;
 }
+main > nav h3 a{
+    color:black;
+    text-decoration: none;
+}
+
 main > nav li{
     float: left;
     width: 43%;
@@ -185,7 +190,7 @@ main > nav li a{
 .post-meta a,
 .post-preview .post-info a {
   font-weight: 300;
-  color: #ccc;
+  color: #000;
   text-decoration: none;
   font-size: 12px;
 }
@@ -234,10 +239,16 @@ main > nav li a{
 
 
 .post-archive-container{ color:#ccc; }
-.post-archive-container li{ margin: 10px 0px;}
+.post-archive-container li{ margin: 10px 0px; list-style: none; margin-left:30px;}
 .post-archive-container a{ color: black; text-decoration: none}
 .post-archive-container a:hover{ text-decoration: underline;}
 .post-archive-container li span{ margin: 0px 10px;}
+.post-archive-container h2{ 
+    color:#ccc; 
+    margin-top:30px;
+    margin-bottom: 0;
+    margin-left:-30px;
+}
 
 
 .tag-cloud a{ 

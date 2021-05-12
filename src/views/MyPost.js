@@ -79,6 +79,9 @@ export default {
 				}else{
 					self.html=response.data;
 				}
+			}, function(err){
+				//console.log("1-->failed:",err)
+				self.html=marked("# 404 (Not Found)");
 			}).then(function(){
 				self.addContents();
 			});
