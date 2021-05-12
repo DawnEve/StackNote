@@ -26,6 +26,32 @@ v0.1.8 /tag/xx OK
 v0.1.9 重构 archive 页面，带年份
 v0.2.0 侧边栏md锚点用js生效，html锚点有点错位
 
+#################
+## coding.net
+https://dawneve.coding.net/p/StackNote/d/StackNote/git
+
+$ git remote add origin2 https://e.coding.net/dawneve/StackNote/StackNote.git
+$ git push -u origin2 master
+验证的是邮箱及密码。
+
+因无法使用 静态页面，弃用。
+git remote remove origin2
+git remote -v
+
+
+## gitee.com
+https://gitee.com/dawnEve/StackNote
+
+git remote add origin2 https://gitee.com/dawnEve/StackNote.git
+git push -u origin2 master
+验证的是用户名及密码。
+
+构建绿色网络环境，Pages 预计进行历时3个月的全面改造，期间服务不可用.(2021.5.12)
+#################
+
+v0.2.1 首页加 viewport，微调字号
+
+
 #
 #--> commit
 #----------> push to github dawneve/StackNote
@@ -33,3 +59,6 @@ v0.2.0 侧边栏md锚点用js生效，html锚点有点错位
 
 Web url: note.biomooc.com
 local url: blog3.dawneve.cc
+
+
+

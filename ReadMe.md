@@ -120,3 +120,7 @@ Then use web browser: localhost:12345
 - 怎么处理多个/data/子文件夹？
 - 移动端字体太小
 - 移动端隐藏侧栏
+- 说说
+- 友情链接
+- 打印版css表
+- 第三方留言 https://twikoo.js.org/
