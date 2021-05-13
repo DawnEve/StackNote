@@ -15,9 +15,7 @@ export default{
 			    <div class="post-meta"></div>
 
 
-				<div class='markdown'>
-					<div v-html="md"></div>
-				</div>
+				<div class='markdown' v-html="md"></div>
 			</div>
 		</article>
 		<aside></aside>

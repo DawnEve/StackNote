@@ -44,8 +44,8 @@ export default {
 
 
 
-			<div class='markdown' :class="[{'typora-export':suffix=='html'}]">
-				<div v-html="html"></div>
+			<div class='markdown' :class="[{'typora-export':suffix=='html'}]" v-html="html">
+				
 			</div>
 	</div>
 	</article>
