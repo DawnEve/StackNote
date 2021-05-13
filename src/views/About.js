@@ -5,7 +5,7 @@ export default{
 		<h1>About 关于</h1>
 
 		<h2>本项目</h2>
-		<p>该项目的本意是用来记录读文献/学英语/学编程的心得体会的，为方便自我监督，特别强调了创建日期。</p>
+		<p>StackNote <img src="/favicon.ico"> 的本意是用来记录读文献/学英语/学编程的心得体会的，为方便自我监督，特别强调了创建日期。</p>
 		<p>StackNote 是一个基于Vue3.0的管理 markdown 笔记的博客系统，还用了官方路由插件 vue-router。 
 			使用ajax获取md文件，并在浏览器内使用 marked.js 把 Markdown 文件转换为 html。</p>
 		<p>本项目使用Vue3.0的CDN模式，属于非常规编码。项目无需构建，直接静态服务器即可运行。

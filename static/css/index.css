@@ -71,6 +71,10 @@ aside .box{margin:20px; padding:10px; font-size:large;}
   main > nav{
     display: none;
   }
+
+  main > article {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 900px) { /*小屏幕：宽度小于800px时，不显示*/

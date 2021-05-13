@@ -57,9 +57,9 @@
 		{
 			year: 2020,
 			title:"0101-test.md",
-			caption: "system test",
+			caption: "StackNote logo and system test",
 			category:3,
-			tags: ["测试"],
+			tags: ["测试", 'logo'],
 		},
 	]
 
