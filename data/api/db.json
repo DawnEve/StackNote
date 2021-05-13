@@ -1,0 +1,56 @@
+{
+
+	categories:{1:"文献", 2:"英语", 3:"代码", 4:"杂谈" },
+
+	posts:[
+	 
+		{
+			year: 2021,
+			title:"0511-CSS_flex_and_grid.md",
+			caption: "CSS布局: flex and grid",
+			category:3,
+			tags: ['css', "flex", "grid"],
+		},
+
+		{
+			year: 2021,
+			title:"0510-English_words2.html",
+			caption: "English 英语单词2 html",
+			category:2,
+			tags: ['English', "words"],
+		},
+		
+		{
+			year: 2021,
+			title:"0509-English_words.md",
+			caption: "english 英语单词 .md",
+			category:2,
+			tags: ['English', "words"],
+		},
+
+		{
+			year: 2021,
+			title:"0509-Vue_learn.md",
+			caption: "Vue 从入门到精通",
+			category:3,
+			tags: ['js'],
+		},
+
+		{
+			year: 2021,
+			title:"0509-IGV.js_test.md",
+			caption: "IGV.js 测试",
+			category:1,
+			tags: ["IGV", "测试", 'js'],
+		},
+
+		{
+			year: 2020,
+			title:"0101-test.md",
+			caption: "system test",
+			category:3,
+			tags: ["测试"],
+		},
+	]
+
+}

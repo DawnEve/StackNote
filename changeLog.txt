@@ -52,6 +52,10 @@ git push -u origin2 master
 v0.2.1 首页加 viewport，微调字号
 v0.2.2 fix 移动端 tags 重叠问题
 v0.2.3 微调 /about
+-------------------------------> 基本可用了，GitHub 上发布 v0.2.3
+v0.2.4 文章分类信息 categories 集中到 /data/api/db.json; 顶部新增菜单并关联到一个md文件。
+
+
 
 
 #

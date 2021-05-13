@@ -2,6 +2,7 @@
 
 <head>
 	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +53,6 @@
 		    
 
 	</main>
-</div>
 
 
 
@@ -70,8 +70,11 @@
     		<a href="/#/about">Contact me</a>. | 
     		Fork me at <a target="_blank" href="https://github.com/DawnEve/StackNote">GitHub</a>. 
     	</p>
+    	<p>Set up for {{elapse}} days</p>
+    	<p>{{timestamp.toString()}}</p>
     </footer>
 
+</div>
 
 
 
@@ -92,26 +95,28 @@ var log=console.log;
 var app=Vue.createApp({
     data(){
         return {
-        	timestamp: new Date().getTime(), //vm.timestamp
+        	timestamp: new Date(), //vm.timestamp
 
-            //顶部目录
+            // 顶部目录
             topMenu:[
             	{path:'/', caption:'Home'},
             	{path:'/archive', caption:'Archive'},
             	{path:'/tags', caption:'Tags'},
             	{path:'/about', caption:'About'},
+
+            	{path:'/recipe', caption:'菜谱'},
             ],
 
             // 博客分类
-            categories: {1:"文献", 2:"英语", 3:"代码", 4:"杂谈" },
+            categories: {value:''},
+
+            // meta 数据
             posts: {value:''},
 
-            // cate 和 tag 计数字典
-            tagdict:{},
-            catdict:{},
-
-            //博客的年份
-            years:[],
+            // 本地计算
+            catdict:{}, // cate 计数字典
+            tagdict:{}, // tag 计数字典
+            years:[], //博客的年份
         }
     },
 
@@ -119,14 +124,22 @@ var app=Vue.createApp({
     	currentRoute(){
     		return this.$route.path;
     	},
+    	elapse(){
+    		return Math.round( (this.timestamp.getTime() - 1620665409601)/1000/3600/24, 2 );
+    	}
     },
 
 
 	methods:{
     	getPostList(){
     		var self=this;
-			axios.get('/data/api/posts', {} ).then(function(res){
-				var posts=eval(res.data);
+			axios.get('/data/api/db.json', {} ).then(function(res){
+				
+				var data=eval("("+res.data+")");
+
+				var posts=data.posts;
+				var categories=data.categories;
+
 				for(var i=0; i<posts.length;i++){
 					var post=posts[i];
 					// 计算属性
@@ -161,6 +174,7 @@ var app=Vue.createApp({
 
 				}
 				self.posts.value=posts;
+				self.categories.value=categories;
 			});
     	}
     },
@@ -195,7 +209,7 @@ import Tags from "/src/views/Tags.js"
 import About from "/src/views/About.js"
 import MyPost from "/src/views/MyPost.js" // 单个 md
 
-
+import Recipe from "/src/views/Recipe.js"
 
 //路由表
 const routes = [
@@ -208,6 +222,8 @@ const routes = [
   { path: '/about', component: About },
   { path: '/tag/:tag', component: Tags },
   { path: '/category/:cate', component: Category },
+
+  { path: '/recipe', component: Recipe },
 ]
 
 // 路由

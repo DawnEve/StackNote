@@ -19,7 +19,7 @@ export default{
 			<template v-for="post in posts.value" :id="post.title">
 
 
-				<li class="post-preview" v-if="$route.params.cate==categories[post.category]">
+				<li class="post-preview" v-if="$route.params.cate==categories.value[post.category]">
 				<div class="post-time">
 					{{post.time}}
 				</div>
@@ -28,8 +28,8 @@ export default{
 					<a :href="'#'+post.url"><h3>{{post.caption}}</h3></a>
 
 					<span class=cat>
-						<a title="category" :href="'#/category/'+categories[post.category]">
-							{{categories[post.category]}}</a>
+						<a title="category" :href="'#/category/'+categories.value[post.category]">
+							{{categories.value[post.category]}}</a>
 					</span> 
 					/ 
 					<span class=tags>tags: <post-tags :tags="post.tags"></post-tags> </span>

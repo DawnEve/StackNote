@@ -41,7 +41,7 @@ window.addEventListener('load',function(e){
 			var oTop = document.body.scrollTop || document.documentElement.scrollTop;
 			if(oTop > 0){
 				//scrollBy(0,-50);
-				scrollBy(0, -Math.max(oTop/20, 10) );
+				scrollBy(0, -Math.max(oTop/20, 50) );
 				timer = requestAnimationFrame(fn);
 			}else{
 				cancelAnimationFrame(timer);

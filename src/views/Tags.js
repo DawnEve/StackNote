@@ -27,8 +27,8 @@ export default{
 					<li class="post-archive" v-if="post.tags.includes($route.params.tag)">
 						<span>{{post.time}}</span>
 
-						<span>/<a title="category" :href="'#/category/'+categories[post.category]">
-									{{categories[post.category]}}</a>/</span>
+						<span>/<a title="category" :href="'#/category/'+categories.value[post.category]">
+									{{categories.value[post.category]}}</a>/</span>
 
 						<span><a :href="'#'+post.url">{{post.caption}}</a></span>
 					</li>
@@ -41,8 +41,8 @@ export default{
 				<li class="post-archive" v-for="post in posts.value" :id="post.title">
 					<span>{{post.time}}</span>
 
-					<span>/<a title="category" :href="'#/category/'+categories[post.category]">
-								{{categories[post.category]}}</a>/</span>
+					<span>/<a title="category" :href="'#/category/'+categories.value[post.category]">
+								{{categories.value[post.category]}}</a>/</span>
 
 					<span><a :href="'#'+post.url">{{post.caption}}</a></span>
 				</li>

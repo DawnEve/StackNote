@@ -25,9 +25,9 @@ https://github.com/DawnEve/jsLecture
 http://jslecture.biomooc.com/Vue/index.html
 ```
 
-## how to use named ancher without remoke router?
+## how to use named ancher without trigger router?
 
-[sf](https://stackoverflow.com/questions/42645964/vue-js-anchor-to-div-within-the-same-component)
+Ref [sf](https://stackoverflow.com/questions/42645964/vue-js-anchor-to-div-within-the-same-component)
 
 ```
 //P.S. the code is written for Vue 2.

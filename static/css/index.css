@@ -242,7 +242,7 @@ main > nav li a{
 
 
 .post-archive-container{ color:#ccc; padding-inline-start: 10px; }
-.post-archive-container li{ margin: 10px 0px; list-style: none;}
+.post-archive-container li{ margin: 5px 20px; list-style: none;}
 .post-archive-container a{ color: black; text-decoration: none}
 .post-archive-container a:hover{ text-decoration: underline;}
 .post-archive-container li span{ margin: 0px 10px;}

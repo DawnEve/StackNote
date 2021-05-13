@@ -11,7 +11,7 @@ export default {
 			html:"# Loading ...",
 			suffix: 'md',
 			//posts: this.$root.$data.posts,
-			post: 'xx', 
+			//post: 'xx', 
 
 		}
 	},
@@ -36,8 +36,8 @@ export default {
 				    </div>
 				    <div class="post-meta">
 						{{post.time}} / 
-						<a title="category" :href="'#/category/'+categories[post.category]">
-							{{categories[post.category]}}</a> /
+						<a title="category" :href="'#/category/'+categories.value[post.category]">
+							{{categories.value[post.category]}}</a> /
 						<span class=tags>tags: <post-tags :tags="post.tags"></post-tags> </span>
 					</div>
 				</template>
