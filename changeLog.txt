@@ -59,6 +59,7 @@ v0.2.5 fix 如果没设置tags，则不显示 tags
 	新增 明朝那些事儿 最后一个章节，字体字号还需要优化。
 #----------> push to github dawneve/StackNote
 v0.2.6 微调 footer
+v0.2.6-2 微调 分类菜单
 #
 #--> commit
 

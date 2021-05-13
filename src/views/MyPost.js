@@ -11,7 +11,6 @@ export default {
 			html:"# Loading ...",
 			suffix: 'md',
 			//posts: this.$root.$data.posts,
-			//post: 'xx', 
 
 		}
 	},
@@ -131,7 +130,11 @@ export default {
 			}
 			
 			//2.加入侧边菜单中
-			$("side_contents").getElementsByTagName("div")[0].append( oUl.cloneNode(true) );
+			if(aH.length!=0){
+				$("side_contents").getElementsByTagName("div")[0].append( oUl.cloneNode(true) );
+			}else{
+				$("side_contents").style.display="none";
+			}
 		},
 
 
