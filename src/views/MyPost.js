@@ -38,7 +38,7 @@ export default {
 						{{post.time}} / 
 						<a title="category" :href="'#/category/'+categories.value[post.category]">
 							{{categories.value[post.category]}}</a> /
-						<span class=tags>tags: <post-tags :tags="post.tags"></post-tags> </span>
+						<span class=tags> <post-tags :tags="post.tags"></post-tags> </span>
 					</div>
 				</template>
 			</template>

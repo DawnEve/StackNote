@@ -1,13 +1,20 @@
 // my-markdown-files filepath="/data/api/files/recipe.md"
 
 export default{
-	props:['filepath'],
+	props:['filepath', 'title'],
 
 	template:`
 		<nav></nav>
 		<article>
 			<div class=content>
 				<p class="path">Path: {{filepath}}</p>
+
+				<div class="post-title">
+			        {{title}}
+			    </div>
+			    <div class="post-meta"></div>
+
+
 				<div class='markdown'>
 					<div v-html="md"></div>
 				</div>
@@ -19,7 +26,7 @@ export default{
 
 	data(){
 		return{
-			md: "#  header 1",
+			md: "# Loading ...",
 		}
 	},
 
