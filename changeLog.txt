@@ -60,6 +60,7 @@ v0.2.5 fix 如果没设置tags，则不显示 tags
 v0.2.6 微调 footer
 v0.2.6-2 微调 分类菜单
 v0.2.6-3 微调 md 显示，删一层 div
+v0.2.6-4 fix 标题换行遮挡
 #
 #--> commit
 #----------> push to github dawneve/StackNote
@@ -67,9 +68,6 @@ v0.2.6-3 微调 md 显示，删一层 div
 
 Web url: note.biomooc.com
 local url: blog3.dawneve.cc
-
-
-
 
 
 

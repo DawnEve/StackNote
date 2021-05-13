@@ -4,7 +4,7 @@ export default{
 	<article class=about>
 		<h1>About 关于</h1>
 
-		<h2>关于本项目</h2>
+		<h2>本项目</h2>
 		<p>该项目的本意是用来记录读文献/学英语/学编程的心得体会的，为方便自我监督，特别强调了创建日期。</p>
 		<p>StackNote 是一个基于Vue3.0的管理 markdown 笔记的博客系统，还用了官方路由插件 vue-router。 
 			使用ajax获取md文件，并在浏览器内使用 marked.js 把 Markdown 文件转换为 html。</p>
@@ -14,7 +14,7 @@ export default{
 
 		<p>版本变化请关注 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/changeLog.txt">change log</a> 文件。</p>
 
-		<p>使用方法请阅读 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/ReadMe.md">Read Me</a> 文件。</p>
+		<p>使用方法请关注 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/ReadMe.md">Read Me</a> 文件。</p>
 
 
 

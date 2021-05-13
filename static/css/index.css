@@ -239,7 +239,7 @@ main > nav li a{
 .post-title {
     width: 100%;
     text-align: center;
-    line-height: 24px;
+    /*line-height: 24px;*/
     margin-top: 0;
     margin-bottom: 15px;
     color: #101010;
@@ -264,10 +264,10 @@ main > nav li a{
 
 
 .post-archive-container{ color:#ccc; padding-inline-start: 10px; }
-.post-archive-container li{ margin: 5px 20px; list-style: none;}
+.post-archive-container li{ margin: 5px 0px; list-style: none;}
 .post-archive-container a{ color: black; text-decoration: none}
 .post-archive-container a:hover{ text-decoration: underline;}
-.post-archive-container li span{ margin: 0px 10px;}
+.post-archive-container li span{ margin-left:5px;}
 .post-archive-container h2{ 
     color:#ccc; 
     margin-top:30px;
