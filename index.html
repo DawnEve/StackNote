@@ -63,15 +63,16 @@
     	<p><i>种一棵树最好的时间是十年前，其次是现在。</i></p>
     	<p>"The best time to plant a tree was 20 years ago. The second best time is now."</p>
     	<p>Copyright &copy;2021 - present 
-    		<a target="_blank" href="https://www.biomooc.com">biomooc.com</a>. 
+    		<a target="_blank" href="https://www.biomooc.com">BioMooc.com</a>. 
     		All Rights Reserved.
     	</p>
     	<p>
+    		<a target="_blank" href="https://guides.github.com/features/mastering-markdown/">Markdown guide</a>. | 
     		<a href="/#/about">Contact me</a>. | 
     		Fork me at <a target="_blank" href="https://github.com/DawnEve/StackNote">GitHub</a>. 
     	</p>
-    	<p>Set up for {{elapse}} days</p>
-    	<p>{{timestamp.toString()}}</p>
+
+    	<p>Today is {{timestamp.toString()}} | Set up for {{elapse}} days</p>
     </footer>
 
 </div>
@@ -124,8 +125,8 @@ var app=Vue.createApp({
     	currentRoute(){
     		return this.$route.path;
     	},
-    	elapse(){
-    		return Math.round( (this.timestamp.getTime() - 1620665409601)/1000/3600/24, 2 );
+    	elapse(){ // 自博客创建以来的天数，保留3位小数
+    		return ((this.timestamp.getTime() - 1620665409601)/1000/3600/24).toFixed(3);
     	}
     },
 
