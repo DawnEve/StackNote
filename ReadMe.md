@@ -1,8 +1,10 @@
 # StackNote 
 
+![logo](./static/images/StackNote_logo.png)
+
 > A serveless blog system based on Vue3.0
 
-Aim: 记录文献/英语/代码等，方便自我监督。
+Aim: 记录文献阅读/英语/代码等，方便自我监督。
 
 
 ## Supported Browsers
@@ -12,6 +14,8 @@ StackNote require a modern web browser with support for Javascript ECMAScript 20
 
 ## What's new?
 - 支持 快速新增顶部菜单，并对应到一个md文件。
+- 第二版 logo
+
 
 
 
@@ -127,9 +131,14 @@ $ http-server -p 12345
 
 or 
 $ npx http-server 
+
+
+or using python3
+## setup a http server at the current dir:
+$ python -m http.server --bind 127.0.0.1 12345
 ```
 
-Then use web browser: http://localhost:12345
+Then open your web browser: http://localhost:12345
 
 
 ## 5.how to add a new top menu liking to a md file?

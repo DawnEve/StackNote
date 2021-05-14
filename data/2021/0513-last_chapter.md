@@ -225,3 +225,5 @@
 　　无需害怕。
 　　无需绝望。
 　　要相信自己。
+
+[全文阅读](http://www.mingchaonaxieshier.com/)

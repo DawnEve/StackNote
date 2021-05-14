@@ -5,7 +5,14 @@
 	posts:[
 
 		
-	 
+		{
+			year: 2021,
+			title:"0514-how_to_find_position_info.md",
+			caption: "如何找事业单位招聘信息",
+			category:4,
+			tags: [],
+		},
+
 		{
 			year: 2021,
 			title:"0513-last_chapter.md",
