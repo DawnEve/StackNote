@@ -63,8 +63,9 @@ main {
     
 }
 main > nav     { order: 1; width: 200px; margin:10px;}
-main > article { order: 2; min-width: 12em; flex:1; margin:0 10px;}
+main > article { order: 2; min-width: 12em; flex:1; }
 main > aside   { order: 3; width: 200px; }
+
 aside .box{margin:20px; padding:10px; font-size:large;}
 
 @media screen and (max-width: 600px) { /*小屏幕：宽度小于600px时，不显示*/
@@ -72,9 +73,6 @@ aside .box{margin:20px; padding:10px; font-size:large;}
     display: none;
   }
 
-  main > article {
-    margin-right: 0;
-  }
 }
 
 @media screen and (max-width: 900px) { /*小屏幕：宽度小于800px时，不显示*/
@@ -93,6 +91,7 @@ aside .box{margin:20px; padding:10px; font-size:large;}
   main > aside   { width: 400px; }
 }
 
+article.about{margin:0 10px;}
 
 
 

@@ -63,6 +63,7 @@ v0.2.6-3 微调 md 显示，删一层 div
 v0.2.6-4 fix 标题换行遮挡
 v0.2.7 更新logo第二版
 v0.2.8 微调css
+v0.2.8-2 微调css
 #
 #--> commit
 #----------> push to github dawneve/StackNote
