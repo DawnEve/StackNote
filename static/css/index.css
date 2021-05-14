@@ -25,7 +25,7 @@ body,div{margin:0; padding:0;}
 	margin:0; padding:0;
     margin-bottom: 10px;
     background: white;
-    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 5%);
 }
 
 #topNav .logo a:hover,
@@ -49,6 +49,10 @@ body,div{margin:0; padding:0;}
 
     padding: 5px 10px;
     display: inline-block;
+    /*
+    font-weight: bold;
+    */
+    font-size: 16px;
 }
 
 #topNav a:hover{color:#666;text-decoration:underline}
@@ -269,13 +273,13 @@ main > nav li a{
 
 
 .post-archive-container{ color:#ccc; padding-inline-start: 10px; }
-.post-archive-container li{ margin: 5px 0px; list-style: none;}
+.post-archive-container li{ margin: 4px 0px; list-style: none;}
 .post-archive-container a{ color: black; text-decoration: none}
 .post-archive-container a:hover{ text-decoration: underline;}
-.post-archive-container li span{ margin-left:5px;}
+.post-archive-container li span{ margin-right:8px;}
 .post-archive-container h2{ 
     color:#ccc; 
-    margin-top:30px;
+    margin-top:10px;
     margin-bottom: 0;
     margin-left:-5px;
 }
