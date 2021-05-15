@@ -65,6 +65,7 @@ v0.2.7 更新logo第二版
 v0.2.8 微调css
 v0.2.8-2 微调css
 v0.2.8-3 微调css
+v0.2.8-4 新增记单词
 #
 #--> commit
 #----------> push to github dawneve/StackNote

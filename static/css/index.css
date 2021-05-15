@@ -64,13 +64,27 @@ main {
     display: flex; 
     /* 使元素成为flex容器，也可用 inline-flex，区别在于一个容器在文档流里是块级元素，一个是行内元素*/
     flex-direction: row; /* 沿水平方向从左往右排列*/
+
+    max-width: 1400px;
+    margin: 0 auto;
     
 }
 main > nav     { order: 1; width: 200px; margin:10px;}
 main > article { order: 2; min-width: 12em; flex:1; }
 main > aside   { order: 3; width: 200px; }
 
-aside .box{margin:20px; padding:10px; font-size:large;}
+aside .box{
+    margin:20px; 
+    padding:10px; 
+    font-size:large;
+
+    border:1px solid #6abe8333;
+    border-radius: 10px;
+    position: relative;
+    top:100px;
+}
+
+
 
 @media screen and (max-width: 600px) { /*小屏幕：宽度小于600px时，不显示*/
   main > nav{

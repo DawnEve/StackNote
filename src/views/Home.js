@@ -26,7 +26,7 @@ export default{
 
 				<div class="post-info">
 					<a :href="'#'+post.url"><h3>{{post.caption}}</h3></a>
-
+					/
 					<span class=cat>
 						<a title="category" :href="'#/category/'+categories.value[post.category]">
 							{{categories.value[post.category]}}</a>
