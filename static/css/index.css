@@ -60,6 +60,8 @@ body,div{margin:0; padding:0;}
 
 .about a{color:#0096ff; text-decoration:none;}
 .about a:hover{text-decoration:underline;}
+
+
 main { 
     display: flex; 
     /* 使元素成为flex容器，也可用 inline-flex，区别在于一个容器在文档流里是块级元素，一个是行内元素*/
@@ -67,8 +69,9 @@ main {
 
     max-width: 1400px;
     margin: 0 auto;
-    
 }
+    
+
 main > nav     { order: 1; width: 200px; margin:10px;}
 main > article { order: 2; min-width: 12em; flex:1; }
 main > aside   { order: 3; width: 200px; }
@@ -78,10 +81,10 @@ aside .box{
     padding:10px; 
     font-size:large;
 
-    border:1px solid #6abe8333;
+    /*border:1px solid #6abe8333;*/
     border-radius: 10px;
     position: relative;
-    top:100px;
+    top:50px;
 }
 
 
@@ -396,3 +399,19 @@ main > nav li a{
 #side_contents a.cur .text_menu span{color:#0096ff;}
 
 
+
+.saying{
+    font: 12px "Courier New";
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #F8F8F8;
+    line-height: 35px;
+    white-space: pre-wrap;
+
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin: 10px;
+
+    box-shadow: rgb(255 255 255 / 10%) 0 1px 0, rgb(0 0 0 / 80%) 0 1px 5px 0px inset;
+}

@@ -66,6 +66,8 @@ v0.2.8 微调css
 v0.2.8-2 微调css
 v0.2.8-3 微调css
 v0.2.8-4 新增记单词
+v0.2.9 添加心灵鸡汤模块，首页随机显示一条
+	数据文件在 /data/api/ChickenSoup.json
 #
 #--> commit
 #----------> push to github dawneve/StackNote

@@ -2,6 +2,8 @@
 import PostTags from "../components/PostTags.js"
 import MyCategory from "../components/MyCategory.js"
 
+import ChickenSoup  from "../components/ChickenSoup.js"
+
 
 export default{
 	inject:['categories', 'posts'],
@@ -44,9 +46,12 @@ export default{
 				Paper · English · R/Python · bioinfomatics · random thoughts
 			</div>
 		</div>
+
+
+		<chicken-soup></chicken-soup>
 	</aside>
 
 	`,
 
-    components:{ PostTags, MyCategory }
+    components:{ PostTags, MyCategory, ChickenSoup }
 }
