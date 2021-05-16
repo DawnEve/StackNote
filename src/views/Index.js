@@ -10,6 +10,10 @@ export default{
 			<p>» <a href="#/category/代码">代码研究：代码就是生产力</a> </p>
 			<p>» <a href="#/home">全部博客(Blog)</a>  </p>
 			
+
+			<img src="/static/images/StackNote_logo.png" />
+			<br>
+			<span>Powered by StackNote</span>
 		</div>
 
 	</div>		

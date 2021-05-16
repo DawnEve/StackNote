@@ -419,8 +419,9 @@ main > nav li a{
 
 #page-index{
     padding:10px;
-    height:100%;
 }
 
 #page-index a{color:black; text-decoration: none;}
 #page-index a:hover{text-decoration:underline;}
+
+#page-index span{line-height: 30px; padding:20px; color:#eee;}
