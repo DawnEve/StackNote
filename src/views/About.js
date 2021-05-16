@@ -20,7 +20,7 @@ export default{
 
 
 		<h2>About Me</h2>
-		<p>我是该博客框架的作者，有什么想法、建议与意见，推荐使用邮件联系我。</p>
+		<p>我是该博客框架的作者王吃瓜，有什么想法、建议与意见，推荐使用邮件联系我。</p>
 
 		<p>Email: jimmyMall at 163 dot com</p>
 

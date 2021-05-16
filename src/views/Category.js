@@ -2,7 +2,6 @@
 import PostTags from "../components/PostTags.js"
 import MyCategory from "../components/MyCategory.js"
 
-
 export default{
 	inject:['categories', 'posts'],
 
@@ -40,9 +39,18 @@ export default{
 			</template>
 		</ul>
 	</article>
-	<aside></aside>
+
+	<aside>
+		<div class=box>
+			<div class=light>
+				Paper · English · R/Python · bioinfomatics · random thoughts
+			</div>
+		</div>
+
+
+	</aside>
 
 	`,
 
-    components:{ PostTags, MyCategory }
+    components:{ PostTags, MyCategory,  }
 }

@@ -18,7 +18,10 @@
 	<script src="/static/js/my-main.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
-	<title>StackNote v0.2 | 学术笔记流水账 </title>
+	<title>
+		学术笔记流水账 | powered by StackNote 
+		v0.3
+	</title>
 </head>
 
 
@@ -27,7 +30,7 @@
 <div id="app1">
 	<header>
 		<ul id=topNav>
-			<b class=logo><a href="/">StackNote</a></b>
+			<b class=logo><a href="#/"><img src="/favicon.ico"></a></b>
 			<template v-for="menu in topMenu">
 				<li :class="{current: menu.path == currentRoute}">
 					<router-link :to="menu.path">{{menu.caption}}</router-link>
@@ -101,7 +104,7 @@ var app=Vue.createApp({
 
             // 顶部目录
             topMenu:[
-            	{path:'/', caption:'Home'},
+            	{path:'/home', caption:'Home'},
             	{path:'/archive', caption:'Archive'},
             	{path:'/tags', caption:'Tags'},
             	{path:'/about', caption:'About'},
@@ -202,7 +205,9 @@ var app=Vue.createApp({
 })
 
 // 载入所有的页面视图 组件
-import Home from "/src/views/Home.js" //首页 list
+import Index from "/src/views/Index.js" //自定义首页
+
+import Home from "/src/views/Home.js" // list 页
 import Archive from "/src/views/Archive.js"
 import Category from "/src/views/Category.js"
 import Tags from "/src/views/Tags.js"
@@ -215,7 +220,9 @@ import Recipe from "/src/views/Recipe.js"
 
 //路由表
 const routes = [
-  { path: '/', component: Home },
+  { path: '/', component: Index },
+
+  { path: '/home', component: Home },
   { path: '/post/:postPath+', component: MyPost },
 
 

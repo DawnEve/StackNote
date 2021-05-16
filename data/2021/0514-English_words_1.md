@@ -26,9 +26,55 @@ N-COUNT A pastime is something that you do in your spare time because you enjoy 
 
 `hurl`, 
 `eminent`,
+This attracted the attention of Richard Humphries who was then the most eminent boxer in England.
+
 
 
 
 
 ## line 2
+
+
+`excerpt`, ？
+
+`rob`, 
+
+"excess", 
+
+`consent`, ？
+
+
+
+
+
+## line 3
+
+"humble",
+"pickup", 
+
+"reservoir", ？ 
+`deposit`,
+
+"slap", 
+"designate",
+"mortal", 
+
+
+`precedent`, ？
+
+"dispose", n 处置
+
+`bleak`, ？
+
+`outfit`, ？
+"communism", ？
+
+
+
+
+
+
+
+
+
 
