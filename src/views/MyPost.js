@@ -57,7 +57,11 @@ export default {
 		</div>
 	</aside>
 
-		<link v-if="suffix=='md'" rel="stylesheet" type="text/css" href="/static/css/MarkDown.css" media="all">
+	<template v-if="suffix=='md'">
+		<link rel="stylesheet" type="text/css" href="/static/css/MarkDown.css" media="all">
+		<!--script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+		<script>markdown_highlight();</script-->
+	</template>
 	`,
 
 

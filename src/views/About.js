@@ -7,15 +7,20 @@ export default{
 		<h2>本项目</h2>
 		<p>StackNote <img src="/favicon.ico"> 的本意是用来记录读文献/学英语/学编程的心得体会的，为方便自我监督，特别强调了创建日期。</p>
 		<p>StackNote 是一个基于Vue3.0的管理 markdown 笔记的博客系统，还用了官方路由插件 vue-router。 
-			使用ajax获取md文件，并在浏览器内使用 marked.js 把 Markdown 文件转换为 html。</p>
+			使用ajax获取md文件，并在浏览器内使用 marked.js 把 Markdown 文件转换为 html。
+			为了最大程度的降低复杂度，决定不引入Vuex。未来还可能去掉 vue router插件。</p>
 		<p>本项目使用Vue3.0的CDN模式，属于非常规编码。项目无需构建，直接静态服务器即可运行。
-			目前博客仅提供前台显示部分，后台目录需要手工维护。文章书写推荐使用能编辑和预览 markdown 文件的 Typora 编辑器。</p>
-		<p>GitHub: <a target="_blank" href="https://github.com/DawnEve/StackNote">https://github.com/DawnEve/StackNote</a></p>
+			目前博客仅提供前台显示部分，后台目录需要手工维护。整个系统相当于是管理和有序显示markdown的。
+			而文章书写推荐使用功能完善的、能编辑和预览 markdown 文件的 
+			<a target="_blank" href="https://www.typora.io/">Typora 编辑器</a>。</p>
+		<p>项目源码: <a target="_blank" href="https://github.com/DawnEve/StackNote">https://github.com/DawnEve/StackNote</a></p>
 
-		<p>版本变化请关注 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/changeLog.txt">change log</a> 文件。</p>
+		<p>版本变化请关注 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/changeLog.txt">change log</a> 文件。
+		使用方法请关注 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/ReadMe.md">Read Me</a> 文件。</p>
 
-		<p>使用方法请关注 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/ReadMe.md">Read Me</a> 文件。</p>
-
+		<p class="smaller"><i>注: 我们和网页版的 <a target="_blank" href="https://stacknote.io/">stacknote.io</a> 没有关系，
+		与付费的 <a target="_blank" href="https://notestack.io/about">notestack.io</a> 也没有关系。 
+		我们只是不约而同的想到了同一个名字，来解决同一个问题：为技术人员提供一个自主可控的笔记文档管理系统。</i></p>
 
 
 
@@ -39,7 +44,35 @@ export default{
 			<li>js/php熟手交流群 369578518</li>
 		</ul>
 
+		<h2>友情链接</h2>
+		<p>主要包括我自己通过各种渠道看到的或精致或专业的个人博客，欢迎推荐自己的博客给我，如果我感兴趣也会添加到下面。</p>
+
+		<h3>web技术博客</h3>
+		<p v-html="linksWeb"></p>
+
+
+
+		<h3>生信技术博客</h3>
+		<p v-html="linksBioinfo"></p>
+
+
 	</article>
 	<aside></aside>
 	`,
+
+	data(){
+		return{
+			linksWeb: marked(`
+- [廖雪峰的官方网站](https://www.liaoxuefeng.com/): Git, Python, JavaScript, SQL,  
+- [阮一峰的网络日志](http://www.ruanyifeng.com/blog/): JavaScript,  
+- [灵感_idea](https://ideazhao.com/): 前端博客  
+
+			`),
+			linksBioinfo: marked(`
+- [徐洲更(生信脚本)](https://github.com/xuzhougeng/myscripts/blob/master/igv_web.py)
+
+			`)
+		}
+	}
 }
+

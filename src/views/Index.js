@@ -16,6 +16,10 @@ export default{
 			<span>Powered by StackNote</span>
 		</div>
 
+		<div id="clockdiv">
+		    <canvas id="dom" width="120" height="120">时钟canvas</canvas>
+		</div>
+
 	</div>		
 	`,
 

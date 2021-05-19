@@ -71,6 +71,7 @@ v0.2.9 添加心灵鸡汤模块，首页随机显示一条
 v0.3.0 微调
 =========> add MIT License
 v0.3.1 微调首页 index.js
+v0.3.2 修改about页面; add 文献阅读笔记
 #
 #--> commit
 #----------> push to github dawneve/StackNote
