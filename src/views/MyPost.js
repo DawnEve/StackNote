@@ -178,8 +178,11 @@ export default {
 		changeSideBarWidth(){
 			var oDiv=$("side_contents");
 			var oSide=document.getElementsByTagName('aside')[0];
+			window.wjl=oSide;
 
-			oDiv.style.width = getComputedStyle( oSide ).width
+			//fixed, 指定左侧，指定宽度(总宽度-左侧)
+			oDiv.style.left=oSide.offsetLeft+'px';
+			oDiv.style.width = window.innerWidth - oSide.offsetLeft -15 + 'px';
 		},
 
 

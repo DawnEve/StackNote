@@ -217,8 +217,8 @@ Collectively, these findings provide insights into how PCF11 ubiquitination affe
 Regulation of PCF11 Is Essential for MAGE-A11-Induced Tumorigenesis and APA
 
  we identified a non-degradable PCF11 mutant. 
- 
- 
+
+
 These results suggest that the ability of MAGE-A11 to regulate PCF11 is critical for its oncogenic activity.
 
 
@@ -318,7 +318,149 @@ These findings may have important implications on therapeutic strategies for tre
 
 
 
-## 4. 
+## 4. MAGE-A11的文献综述
+
+已知，APA 在不同的组织和发育阶段不同，所以APA指纹，远端和近端的使用，可以被发现。
+- 比如，相对于体细胞，male germ cell 相当多的APA现象导致很多转录本3’端缩短。
+- 特别的，polyA site选择在male germ cell 中是独特的，会导致睾丸特异的转录本(Li et al., 2016, MacDonald, 2019, MacDonald and Redondo, 2002). 
+- 没有完全理解，是什么导致的male germ cell中广泛的PolyA位点的改变，导致3‘缩短但是mRNA处理复合体可能有参与，包括CFIm(Edwalds-Gilbert et al., 1997, McMahon et al., 2006, Sartini et al., 2008, Takagaki and Manley, 1998). 
+
+本发现表明，MAGE-A11-HUWE1对于male germ cell的APA可能很重要。
+
+Consistently，HUWE1对精子发生过程中的分化和进入减数分裂很重要(Bose et al., 2017)。
+
+Furthermore，我们认为 MAGE-A11诱导肿瘤中APA并不是新现象，而是MAGE-A11在肿瘤和生殖细胞中的一个保守功能。
+
+
+
+## 5. 结尾: 泛素化调节mRNA3’端处理复合体来控制APA
+
+Overall, our results suggest that dynamic regulation of the mRNA 3′ end processing machinery by ubiquitination can serve as a mechanism to control APA in various biological and pathological states.
+
+
+
+
+
+
+
+
+# Methods
+大半是实验方法，略过。这里只细看分析方法。
+
+- DaPars	Xia et al., 2014	https://github.com/ZhengXia/dapars
+- MAT3UTR	Park et al., 2018	https://github.com/thejustpark/MAT3UTR
+- DESeq2	Anders and Huber, 2010	https://bioconductor.org/packages/release/bioc/html/DESeq2.html
+- HTSeq	Anders et al., 2015	https://htseq.readthedocs.io/en/release_0.11.1/count.html
+
+
+## RNA-seq
+
+Total RNA was extracted from cultured cells or xenograft tumors using RNeasy kit (QIAGEN) according to manufacturer’s instructions. RNA quality was assessed by 2100 Bioanalyzer RNA 6000 Nano assay (Agilent). Libraries were prepared using `TruSeq Stranded mRNA kits` (Illumina) and subjected to 100 cycle paired-end sequencing on the Illumina HiSeq platform.
+
+
+
+## TCGA 3′-UTR analysis
+
+The original TCGA RNA-seq gene expression data were obtained from the UCSC Cancer Genomics Hub (CGHub). 
+All of the patients in a tumor type were ranked based on the CPM (count per million) values of MAGE-A11 gene. `The top 10 most highly MAGE-A11-expressed patients and bottom 10 least MAGE-A11 expressed patients were chosen as two groups`. 
+The significant dynamics 3′-UTR usage genes between these two groups will be identified if the mean percentage of distal polyA usage (PDUI) change between these two groups is larger than 0.2 and mean fold change is larger than 1.5, also the p value calculated from Student’s t test is less than 0.05. 
+Finally, we observed MAGE-A11 promotes strong 3′-UTR shortening in two tumor types including ovarian cancer (OV) and lung squamous cell carcinoma (LUSC).
+
+---
+
+按照MAGE-A11基因表达量对样本排序。前10高的和后10低的作为2组。
+
+显著的3‘UTR动态基因筛选标准:
+- abs(delta(远端使用率)) >0.2
+- mean FC >1.5
+- t test P value < 0.05
+
+最后发现，在2类肿瘤中MAGE-A11导致3’UTR缩短效应最显著:  ovarian cancer (OV) and lung squamous cell carcinoma (LUSC).
+
+
+
+## RNA-seq data analysis
+
+RNA from cells with MAGE-A11 knocked out or overexpressed, and PCF mutant-expressing cells and controls were sequenced by HiSeq. 
+The raw paired-end RNA-seq reads were filtering out low-quality reads using Trim Galore, and then aligned to the human genome (hg19/GRCh37) using STAR version 2.5.2b (Dobin et al., 2013) using the following alignment parameters: `–outSAMtype BAM SortedByCoordinate –outSAMstrandField intronMotif –outFilterMultimapNmax 10 –outFilterMultimapScoreRange 1 –alignSJDBoverhangMin 1 –sjdbScore 2 –alignIntronMin 20 –alignSJoverhangMin 8`. 
+The resulted BAM files were converted into `bedgraph format` using bedtools version 2.17.0 (Quinlan and Hall, 2010). 
+For each gene, the read count were calculated by HTSeq (Anders et al., 2015), and then CPM values based on read count were used. 
+The read coverage was visualized at UCSC Genome Browsers (Goldman et al., 2015).
+Differential gene analysis was performed using DESeq2 (Anders and Huber, 2010).
+
+
+---
+
+工具列表: 
+```
+> Trim Galore -- STAR 
+> > bedtools -- UCSC Genome Browsers
+> > HTSeq -- DESeq2
+```
+
+---
+
+1. star的参数的意义？
+2. bam to bedgraph format using bedtools
+3. UCSC 可视化 read coverage
+4. 差异基因 DESeq2
+
+2和3见 txtBlog NGS/本地可视化；
+4 已知；
+1见下文:
+```
+我的bam中使用的: VN:STAR_2.5.2b 
+我的系统中 $ STAR --version  #STAR_2.5.2b
+
+$ STAR --help
+Usage: STAR  [options]... --genomeDir REFERENCE   --readFilesIn R1.fq R2.fq
+Spliced Transcripts Alignment to a Reference (c) Alexander Dobin, 2009-2015
+
+(1)–outSAMtype BAM SortedByCoordinate \ 输出格式，xx.sort.bam
+(2)–outSAMstrandField intronMotif \ 是否过滤掉非常规intron
+outSAMstrandField 默认None；字符类型string: Cufflinks-like strand field flag
+- None       not used
+- intronMotif strand derived from the intron motif. Reads with inconsistent and/or non-canonical introns are filtered out.
+
+(3)–outFilterMultimapNmax 10 \ 【默认】 输出 多比对 reads上限；超过的不比对，只统计到 Log.final.out 中的 "mapped to too many loci"。
+outFilterMultimapNmax 默认 10；整数类型int: maximum number of loci the read is allowed to map to. Alignments (all of them) will be output only if the read maps to no more loci than this value.
+  Otherwise no alignments will be output, and the read will be counted as "mapped to too many loci" in the Log.final.out .
+
+(4) –outFilterMultimapScoreRange 1 \ 【默认】 输出结果??
+outFilterMultimapScoreRange  默认 1；整型int: the score range below the maximum score for multimapping alignments
+
+(5)–alignSJDBoverhangMin 1 \ 注释剪切比对时 overhang最小距离 ??
+alignSJDBoverhangMin 默认 3; 正整数 int>0: minimum overhang (i.e. block size) for annotated (sjdb) spliced alignments
+
+(6) –sjdbScore 2 \ 【默认值】 跨过数据库紧邻区域的额外比对分数
+sjdbScore 默认 2; 整数int: extra alignment score for alignmets that cross database junctions
+
+(7) –alignIntronMin 20 \ 最小内含子长度，超过这个范围认为是intron，短于则认为是删除。
+alignIntronMin 默认 21; 最小内含子长度 minimum intron size: genomic gap is considered intron if its length>=alignIntronMin, otherwise it is considered Deletion
+
+(8) –alignSJoverhangMin 8 \ 剪切比对最小overhang??
+alignSJoverhangMin 默认5； 正整数int>0: minimum overhang (i.e. block size) for spliced alignments
+```
+
+
+
+## DaPars analysis
+
+DaPars (Feng et al., 2018, Xia et al., 2014) was used to identify the most significant APA events between two conditions. We require that significant APA events should meet three criteria. First, the adjusted p value of PDUI differences was controlled at 5%. Second, the absolute mean difference of PDUI must be no less than 0.2. Third, the mean PDUI fold change must be no less than 1.5.
+
+
+## CFIm25 motif analysis
+
+MAGE-A11 sensitive transcripts were defined as those transcripts with significant 3′-US upon MAGE-A11 overexpression, while MAGE-A11 insensitive transcripts were an equal number of randomly selected unaffected transcripts (PDUI differences less than 0.05; p value larger than 0.5). For each DaPars predicted PAS, the nearest annotated PAS was defined as the true PAS. The annotated PASs were compiled from multiple domains including Refseq, ENSEMBL, UCSC gene models and PolyA_DB version 3 (Wang et al., 2018) databases. The sequences of 200 nucleotides upstream and downstream of the PASs were used for motif analysis. The CFIm25 motif density was calculated by counting the number of UGUA motif (smoothed over 7 nucleotide) along these specified annotation features, which included proximal and distal PAS.
+
+## Trans-effect analysis of 3′-US
+
+We used MAT3UTR (Park et al., 2018) for the detection of trans-effect of MAGEA11-induced 3′-UTR shortening in ceRNA in two tumor types OV and LUSC. The Briefly, MAT3UTR can predict ceRNA partner expression changes by using its 3′-UTR shortening gene expression, 3′-UTR shortening gene level, microRNA binding sites and miRNA expression. The miRNA binding sites were compiled from a collection of TarBase, miRecords, miRTarBase and predicted miRNA-binding sites from TargetScanHuman version 6.2. Exon and CDS annotation for TCGA and miRNA expression were downloaded from Xena UCSC Genome browsers. The enrichment of ceRNA partner genes with tumor suppressor gene (TSG) and oncogene (OG) was calculated by fisher exact test. The annotation of TSG and OG were from TUSON prediction (Davoli et al., 2013) with top 500 genes (p < 0.01) selected.
+
+
+# Data and Code Availability
+
+Proteomics data are available at MassIVE MSV000084123. RNA-seq data are available at NCBI GEO: GSE134898.
 
 
 
@@ -335,9 +477,12 @@ These findings may have important implications on therapeutic strategies for tre
 
 
 
-# 熟词新意
 
-## pronounced
+
+# 英语学习
+
+##   熟词新意
+
 Moreover, this effect was more `pronounced` in comparison to siRNA-mediated knockdown of PCF11.
 
 pronounced 英 [prəˈnaʊnst]  美 [prəˈnaʊnst] 
@@ -346,23 +491,11 @@ vt. 发音；宣告；断言（pronounce 的过去式和过去分词）
 vi. 发音；作出判断（pronounce 的过去式和过去分词）
 
 
-# 生词
+## 生词
 endogenous [enˈdɒdʒənəs] adj. [生物] 内生的；内因性的
 stoichiometric [ˌstɔɪkɪəˈmetrɪk] adj. 化学计量的；化学计算的
 
 
 
-# 好句子
 
-## 1. 
-
-
-
-## 2.
-
-
-
-
-
-
-
+> 2021.5.20 End Reading.

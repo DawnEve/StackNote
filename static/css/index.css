@@ -105,11 +105,12 @@ aside .box{
 @media screen and (min-width: 900px) { /*大屏幕：宽度大于800px时，显示*/
   main > nav, main > aside{
     display:block;
-  } 
+  }
 }
 
 @media screen and (min-width: 1200px) { /*大屏幕：宽度大于1200px时*/
   main > aside   { width: 400px; }
+
 }
 
 article.about{margin:0 10px;}
@@ -169,10 +170,13 @@ main > nav li a{
 }
 
 @media screen and (min-width: 1500px){
+    .content{max-width: 800px;}
     .content p{
+        /*
         font-size: 1.5rem!important;
         margin-bottom: 1em!important;
         line-height: 1.9;
+        */
     }
 }
 .content p{

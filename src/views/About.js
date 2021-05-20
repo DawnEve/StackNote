@@ -70,6 +70,7 @@ export default{
 			`),
 			linksBioinfo: marked(`
 - [徐洲更(生信脚本)](https://github.com/xuzhougeng/myscripts/blob/master/igv_web.py)
+- [白墨石](https://zhenglei.blog.csdn.net/article/details/111247660): 统计学，生信文件格式
 
 			`)
 		}

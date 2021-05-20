@@ -72,6 +72,7 @@ v0.3.0 微调
 =========> add MIT License
 v0.3.1 微调首页 index.js
 v0.3.2 修改about页面; add 文献阅读笔记
+v0.3.3 修改右侧目录的宽度，尽可能宽
 #
 #--> commit
 #----------> push to github dawneve/StackNote
