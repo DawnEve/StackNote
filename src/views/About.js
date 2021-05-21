@@ -44,6 +44,9 @@ export default{
 			<li>js/php熟手交流群 369578518</li>
 		</ul>
 
+		<br>
+		<hr>
+
 		<h2>友情链接</h2>
 		<p>主要包括我自己通过各种渠道看到的或精致或专业的个人博客，欢迎推荐自己的博客给我，如果我感兴趣也会添加到下面。</p>
 
@@ -69,9 +72,14 @@ export default{
 
 			`),
 			linksBioinfo: marked(`
-- [徐洲更(生信脚本)](https://github.com/xuzhougeng/myscripts/blob/master/igv_web.py)
+- [徐洲更](https://github.com/xuzhougeng/myscripts/blob/master/igv_web.py): 生信脚本
 - [白墨石](https://zhenglei.blog.csdn.net/article/details/111247660): 统计学，生信文件格式
+- [Yunze Liu 博客](https://www.jieandze1314.com/): [单细胞分析](https://jieandze1314.osca.top/)
+	* [#TCGA](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU4NjU4ODQ2MQ==&action=getalbum&album_id=1642483079111835651&scene=173)
 
+
+- 公众号合集: 
+	* [#转录组研究](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MTcwNjA4NQ==&action=getalbum&album_id=1335351932285976579)
 			`)
 		}
 	}

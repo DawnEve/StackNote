@@ -20,7 +20,7 @@
 
 ## Graphical Abstract
 
-![Graphical Abstract](data/2021/images/05/0507-APA.jpg)
+![Graphical Abstract](data/2021/images/05/0517-APA.jpg)
 
 # Summary
 
@@ -448,19 +448,78 @@ alignSJoverhangMin 默认5； 正整数int>0: minimum overhang (i.e. block size)
 
 DaPars (Feng et al., 2018, Xia et al., 2014) was used to identify the most significant APA events between two conditions. We require that significant APA events should meet three criteria. First, the adjusted p value of PDUI differences was controlled at 5%. Second, the absolute mean difference of PDUI must be no less than 0.2. Third, the mean PDUI fold change must be no less than 1.5.
 
+---
+X. Feng, L. Li, E.J. Wagner, W. Li
+TC3A: The Cancer 3′ UTR Atlas
+Nucleic Acids Res., 46 (D1) (2018), pp. D1027-D1030
+不一定能打开 http://tc3a.org/
+
+比较2组间的显著的APA事件，
+3个筛选标准: adj p值<0.05, abs(delta(PDUI))>=0.2, mean PDUI fold change >=1.5
+
+
+
 
 ## CFIm25 motif analysis
 
-MAGE-A11 sensitive transcripts were defined as those transcripts with significant 3′-US upon MAGE-A11 overexpression, while MAGE-A11 insensitive transcripts were an equal number of randomly selected unaffected transcripts (PDUI differences less than 0.05; p value larger than 0.5). For each DaPars predicted PAS, the nearest annotated PAS was defined as the true PAS. The annotated PASs were compiled from multiple domains including Refseq, ENSEMBL, UCSC gene models and PolyA_DB version 3 (Wang et al., 2018) databases. The sequences of 200 nucleotides upstream and downstream of the PASs were used for motif analysis. The CFIm25 motif density was calculated by counting the number of UGUA motif (smoothed over 7 nucleotide) along these specified annotation features, which included proximal and distal PAS.
+MAGE-A11 sensitive transcripts were defined as those transcripts with significant 3′-US upon MAGE-A11 overexpression, while MAGE-A11 insensitive transcripts were an equal number of randomly selected unaffected transcripts (PDUI differences less than 0.05; p value larger than 0.5). 
+For each DaPars predicted PAS, the nearest annotated PAS was defined as the true PAS. 
+`The annotated PASs were compiled from multiple domains including Refseq, ENSEMBL, UCSC gene models and PolyA_DB version 3` (Wang et al., 2018) databases. 
+The sequences of 200 nucleotides upstream and downstream of the PASs were used for motif analysis. 
+The CFIm25 motif density was calculated by counting the number of UGUA motif (smoothed over 7 nucleotide) along these specified annotation features, which included proximal and distal PAS.
+
+- MAGE-A11敏感的转录本的定义：MAGE-A11高表达时有显著的3‘UTR缩短的转录本。
+- MAGE-A11不敏感的转录本，是同等数量的随机挑选的不受影响的转录本( abs(delta(PDUI))<=0.05, p>0.5).
+- 对于每个DaPars预测到的polyA site，它最近的注释的polyA site被定义为 真的polyA site。
+- 注释的polyA site 汇编自 Refseq, ENSEMBL, UCSC gene models 及 PolyA_DB3.
+- polyA site上下游200nt序列用来做motif分析。
+- CFIm25 motif 密度的计算：沿着指定的注释特征，计数 UGUA motif(7nt平滑化)，包括近端和远端polyA site。
+
+
+---
+最后一行没太懂，密度怎么计算的，怎么 along these specified annotation features //todo??
+
+![fig 5F](/data/2021/images/05/0517_fig5f.png)
+
+> Figure 5. MAGE-A11-Induced PCF11 Ubiquitination Dissociates CFIm25 from RNAPII
+> (F) The number of UGUA motifs within 3′ US or unaffected transcripts in MAGE-A11 overexpressing HEK293FT cells. Equal numbers of transcripts with no 3′ UTR changes were randomly selected.
+
+
 
 ## Trans-effect analysis of 3′-US
 
-We used MAT3UTR (Park et al., 2018) for the detection of trans-effect of MAGEA11-induced 3′-UTR shortening in ceRNA in two tumor types OV and LUSC. The Briefly, MAT3UTR can predict ceRNA partner expression changes by using its 3′-UTR shortening gene expression, 3′-UTR shortening gene level, microRNA binding sites and miRNA expression. The miRNA binding sites were compiled from a collection of TarBase, miRecords, miRTarBase and predicted miRNA-binding sites from TargetScanHuman version 6.2. Exon and CDS annotation for TCGA and miRNA expression were downloaded from Xena UCSC Genome browsers. The enrichment of ceRNA partner genes with tumor suppressor gene (TSG) and oncogene (OG) was calculated by fisher exact test. The annotation of TSG and OG were from TUSON prediction (Davoli et al., 2013) with top 500 genes (p < 0.01) selected.
+We used `MAT3UTR` (Park et al., 2018) for the detection of trans-effect of MAGEA11-induced 3′-UTR shortening in ceRNA in two tumor types OV and LUSC. 
+The Briefly, MAT3UTR can predict ceRNA partner expression changes by using its 3′-UTR shortening gene expression, 3′-UTR shortening gene level, microRNA binding sites and miRNA expression. 
+The ` miRNA binding sites were compiled from a collection of TarBase, miRecords, miRTarBase and predicted miRNA-binding sites from TargetScanHuman version 6.2`. 
+Exon and CDS annotation for TCGA and miRNA expression were downloaded from `Xena UCSC Genome browsers`. 
+The enrichment of ceRNA partner genes with tumor suppressor gene (TSG) and oncogene (OG) was calculated by fisher exact test. 
+The annotation of TSG and OG were from `TUSON prediction` (Davoli et al., 2013) with top 500 genes (p < 0.01) selected.
+
+---
+H.J. Park, P. Ji, S. Kim, Z. Xia, B. Rodriguez, L. Li, J. Su, K. Chen, C.P. Masamha, D. Baillat, et al.
+3′ UTR shortening represses tumor-suppressor genes in trans by disrupting ceRNA crosstalk
+Nat. Genet., 50 (2018), pp. 783-789
+https://github.com/thejustpark/MAT3UTR
+> http://162.105.205.69/index.php?s=/Index/scientific/id/2169/cid/12.html
+> 最后，可变聚腺苷酸化（alternative polyadenylation）导致的3'UTR缩短主要是通过破坏竞争性内源RNA (ceRNA) cross talk来反式抑制肿瘤抑制基因而不是顺式增强癌基因的表达。李教授组开发了名为MAT3UTR的生物信息软件来预测3'UTR缩短的反式靶标（Nature 2014; Nature Genetics 2018）。
+
+---
+Xena UCSC Genome browsers
+http://xena.ucsc.edu/
+
+---
+T. Davoli, A.W. Xu, K.E. Mengwasser, L.M. Sack, J.C. Yoon, P.J. Park, S.J. Elledge
+Cumulative haploinsufficiency and triplosensitivity drive aneuploidy patterns and shape the cancer genome
+Cell, 155 (2013), pp. 948-962
 
 
-# Data and Code Availability
 
-Proteomics data are available at MassIVE MSV000084123. RNA-seq data are available at NCBI GEO: GSE134898.
+
+
+## Data and Code Availability
+
+Proteomics data are available at MassIVE MSV000084123. 
+RNA-seq data are available at NCBI GEO: GSE134898.
 
 
 
@@ -485,8 +544,7 @@ Proteomics data are available at MassIVE MSV000084123. RNA-seq data are availabl
 
 Moreover, this effect was more `pronounced` in comparison to siRNA-mediated knockdown of PCF11.
 
-pronounced 英 [prəˈnaʊnst]  美 [prəˈnaʊnst] 
-adj. 显著的；断然的；讲出来的
+pronounced [prəˈnaʊnst]  adj. 显著的；断然的；讲出来的
 vt. 发音；宣告；断言（pronounce 的过去式和过去分词）
 vi. 发音；作出判断（pronounce 的过去式和过去分词）
 

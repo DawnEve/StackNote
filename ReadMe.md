@@ -71,7 +71,7 @@ In `/data/2021/` with a name like `0511`-how_to_use_xx.`md`,
 
 - We recommend using awesome [Typora](https://www.typora.io/) to edit your markdown file.
 - You can save both .md file and .html file ( `Fule - Output - html with style` ), and use html file in the note system, leaving the .md file to be edited in the future.
-- When insert pictures, using absolute path in markdown, like `/data/2021/images/05/xx.png` 
+- When insert pictures, using absolute path in markdown, like `/data/2021/images/05/xx.png`. We recommend using a dir for each month, like `/05/` for May. 
 
 
 

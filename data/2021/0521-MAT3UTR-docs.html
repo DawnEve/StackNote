@@ -1,0 +1,480 @@
+<meta charset="utf-8">
+
+https://github.com/thejustpark/MAT3UTR<br>
+原文档链接打不开，这是一个 必应快照。<a target="_blank" href="/data/2021/0521-MAT3UTR-docs.html">绝对地址</a>.
+<hr>
+
+
+
+<style type="text/css">.disclaimer{text-align:right;font-size:x-small}.banner{background-color:#fff;text-align:left}.cacheContent{position:relative}.b_vPanel>div{padding-bottom:10px}.b_vPanel>div:last-child{padding:0}.banner a{color:#001ba0}</style>
+<!--
+<base href="http://lilab.research.bcm.edu/dldcc-web/lilab/Lei/MAT3UTR/MAT3UTR.html" />
+-->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><!-- Banner:Start --><!--LocalizedDate:2021/4/6--><!--InvariantDate:4/6/2021--><div class="banner"><div class="b_vPanel"><div><!-- Title:Start -->You have reached the cached page for <strong><a href="http://lilab.research.bcm.edu/dldcc-web/lilab/Lei/MAT3UTR/MAT3UTR.html" h="ID=SERP,5003.1">http://lilab.research.bcm.edu/dldcc-web/lilab/Lei/MAT3UTR/MAT3UTR.html</a></strong><!-- Title:End --></div><div><!-- Content:Start -->Below is a snapshot of the Web page as it appeared on <strong>2021/4/6</strong> (the last time our crawler visited it). This is the version of the page that was used for ranking your search results. The page may have changed since we last cached it. To see what might have changed (without the highlights), <a href="http://lilab.research.bcm.edu/dldcc-web/lilab/Lei/MAT3UTR/MAT3UTR.html" h="ID=SERP,5003.2">go to the current page</a>.<!-- Content:End --></div><div><!-- Disclaimer:Start --><div class="disclaimer">Bing is not responsible for the content of this page.</div><!-- Disclaimer:End --></div><!-- Banner:End --></div></div><div class="cacheContent"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MAT3UTR: Model-based analysis of the trans effect of 3'UTR-shortening &mdash; MAT3UTR 0.9.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.9.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="MAT3UTR_Documents 0.9.1 documentation" href="#" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="#">MAT3UTR_Documents 0.9.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+<div class="section" id="MAT3UTR-dynamitic-analysis-of-alternative-polyadenylation-from-rna-seq">
+<h1>MAT3UTR: Model-based analysis of the trans effect of 3'UTR-shortening<a class="headerlink" href="#MAT3UTR-dynamitic-analysis-of-alternative-polyadenylation-from-rna-seq" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>MAT3UTR quantifies the trans effect of 3ʹ-UTR shortening to their affected ceRNA partner. MAT3UTR predicts ceRNA expression change using its 3ʹUS gene(s) expression and 3ʹ-UTR shortening level, miRNA-binding site(s), and miRNA expression(s) based on <a class="reference external" href="https://doi.org/10.1038/s41588-018-0118-8">3'UTR shortening represses tumor-suppressor genes in trans by disrupting ceRNA crosstalk.</a>)</p>
+<p>Please leave your questions and/or feedbacks at <a class="reference external" href="https://groups.google.com/forum/#!forum/mat3utr-discussion">Google group for MAT3UTR</a></p>
+</div>
+
+<div class="section" id="download">
+<h1>Download<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="MAT3UTR_0.9.4.tar.gz">Source code (v.0.9.4)</a> <br>
+<a class="reference internal" href="data_0.9.4.tar.gz">Test data</a></p>
+</div>
+
+<div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Prerequisite for Python codes: <a class="reference external" href="http://www.python.org/getit/releases/2.7/">python2.7</a>;  <a class="reference external" href="http://numpy.scipy.org/">numpy</a>; <a class="reference external" href="http://www.scipy.org/">scipy</a>; <a class="reference external" href="http://www.r-project.org/">R</a>; Recommend <a class="reference external" href="https://www.enthought.com/products/epd/">EPD</a> to install those python packages.</p>
+<p>Prerequisite for R code: glmnet.</p>
+<p>Install MAT3UTR:</p>
+<div class="highlight-python"><div class="highlight"><pre>tar -xvzf MAT3UTR_VERSION.tar.gz
+cd MAT3UTR-VERSION
+</pre></div>
+</div>
+</div>
+
+<div class="section" id="usage-information">
+<h1>Instruction<a class="headerlink" href="#usage-information" title="Permalink to this headline"></a></h1>
+<a class="reference internal image-reference" href="_static/overallDesign.png"><img alt="_static/overallDesign.png" src="_static/overallDesign.png" style="width: 800px; height: 180px;" /></a>  
+
+<p>Note that columns in files are separated by tab character. 
+<div class="section" id="step-1-Collect-threeUTR-information-of-genes">
+<h2>Step 1: Collect 3'UTR information of genes<a class="headerlink" href="#step-1-Collect-threeUTR-information-of-genes" title="Permalink to this headline"></a></h2>
+<p><b>threeUTRInfoFromRefSeqInfo.py</b> extracts <br> 1. 3'UTR location information of transcripts (start and end coordinate) with <br> 2. the corresponding gene name based on RefSeq gene models. <br><u>Its output can be used as an input file for <b>Step 3</b> and <b>Step 4</b> (for --threeUTRInfo).</u> </p>
+<p><b>Options:</b></p>
+<blockquote>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-h <var>help </var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Show this help message and exit.</a></td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-i <var>RefSeqModel, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>The gene model is RefSeq Genes track downloaded from <a class="reference external" href="http://genome.ucsc.edu/cgi-bin/hgTables?command=start">UCSC.</a></td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o <var>threeUTRInfo, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>The name of 3'UTR information file that will contain transcript ID, gene name, and the start and the end of 3'UTR. <br> Note that the start of 3'UTR is always the smaller coordinate value and the end of 3'UTR is the bigger value, regardless of the strand. </td></tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><b>Paramters in detail:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<ol>
+  <li>RefSeqModel</li>This file contains gene model information including their transcript and CDS coordinates, <br>downloaded from the UCSC Genome Browser as in the following. 
+<a class="reference internal image-reference" href="_static/RefSeq_UCSC.png"><img alt="_static/RefSeq_UCSC.png" src="_static/RefSeq_UCSC.png" style="width: 700px; height: 300px;" /></a>  
+</ol>
+</pre></div></div>
+
+<p><b>Example command:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+python threeUTRInfoFromRefSeqInfo.py  -i refGene_hg19.txt -o threeUTRInfo.txt
+</pre></div></div>
+
+<p><b>Example output:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<p>This file contains the information of 3'UTR regions of transcripts. <br>You may generate this file without referring to RefSeq gene models, since it is generic information as shown below.</p>
+<a class="reference internal image-reference" href="_static/threeUTRInfo.png"><img alt="_static/threeUTRInfo.png" src="_static/threeUTRInfo.png" style="width: 600px; height: 150px;" /></a>  
+
+</div>
+</div>
+<div class="section" id="output-format-step1">
+
+<div class="section" id="step-2-Collect-miRNA-binding">
+<h2>Step 2: Collect miRNA binding sites on transcripts<a class="headerlink" href="#step-2-Collect-miRNA-binding" title="Permalink to this headline"></a></h2>
+<p><b>combineMiRSites.py</b> is <u>an example</u> that shows how to collect miRNA binding information for each transcript. <br><u>Its output can be used as an input file for <b>Step 3</b> and <b>Step 4</b> (for --threeUTRInfo)</u>.<br>Since the collection process highly depends on the format of input data file, we hardcoded some input files we used just for illustration purpose.<u>However, we strongly suggest to write your own code with respect to your input file format.</u></p>
+<p><b>Options:</b>all input options are hardcoded in the source code. We recommend to write your own code that works for your input file.</p>
+<blockquote>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-h <var>help </var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Show this help message and exit.</a></td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o <var>miRSitesbyTx, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This name of the file containing transcript ID, gene name, miRNA ID, and their binding location. </td></tr>
+</tbody>
+</table>
+</div></blockquote>
+
+<p><b>Example command:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+python combineMiRSites.py -o miRSitesbyTx.txt
+</pre></div></div>
+
+<p><b>Example output:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<p>This file contains miRNA binding information. <br>Each row has transcript ID, gene name, miRNA family name, chromosome, <br>start and end coordinate of the binding, and strand information in each column.</p>
+<a class="reference internal image-reference" href="_static/MIR_TARGET_SITE.png"><img alt="_static/MIR_TARGET_SITE.png" src="_static/MIR_TARGET_SITE.png" style="width: 500px; height: 120px;" /></a>  
+</div>
+</div>
+
+<div class="section" id="step-3-Build-ceRNA-identify-3UTRceRNAs">
+<h2>Step 3: Build ceRNA network and identify 3'US ceRNA partners<a class="headerlink" href="#step-3-Build-ceRNA-identify-3UTRceRNAs" title="Permalink to this headline">¶</a></h2>
+<p><b>buildCeRNETforMAT3UTR.py</b> <br> 1. calculates co-expression in normal samples for transcript pairs with >5 miRNA binding site share <br> 2. identify the ceRNA partners of the given 3'UTR shortening genes <br> <u>Its output can be used as an input file for <b>Step 4</b> (for --APA_ceRNA).</u> </p>
+<p><b>Options:</b></p>
+<blockquote>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-h <var>help </var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Show this help message and exit.</a></td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-a <var>threeUTRInfo, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains the information of 3'UTR regions of transcripts. <br>Note that threeUTRInfoFromRefSeqInfo.py can produce this file. </a></td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-b <var>geneExprNormal, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains expression level of genes in normal condition (in log2).</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-c <var>miRSitesbyTx, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains transcript ID, gene name, miRNA ID, and their binding location. </td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-d <var>miRToInclude, optional</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains miRNA IDs to be considered in this analysis, one in a row. </td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-e <var>threeUS, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains information of significant 3'UTR shortening genes, namely transcript ID, alternative polyadenylation site location, PDUI value in tumor and normal, respecctively. </td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o <var>APA_ceRNA, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains a gene and significant 3'UTR shortening genes the gene is connected to in normal condition. <br> Note that this file can be used for MAT3UTR.py (for --APA_ceRNA). </td></tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+
+<p><b>Paramters in detail:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<ol>
+  <li>threeUTRInfo </li>This file contains the information of 3'UTR regions of transcripts. <br>Step 1 can generate this file.
+<a class="reference internal image-reference" href="_static/threeUTRInfo.png"><img alt="_static/threeUTRInfo.png" src="_static/threeUTRInfo.png" style="width: 600px; height: 150px;" /></a>  
+  <li>geneExprNormal </li>This file contains expression level of genes in log2, one row for each gene and one column for each sample.
+<a class="reference internal image-reference" href="_static/GENE_EXPRESSION.png"><img alt="_static/GENE_EXPRESSION.png" src="_static/GENE_EXPRESSION.png" style="width: 300px; height: 100px;" /></a>  
+  <li>miRSitesbyTx </li>This file contains miRNA binding information. <br>Each row has transcript ID, gene name, miRNA family name, chromosome, start and end coordinate of the binding<br>and strand information. Your implementation in accordance of Step 2 can generate this file. 
+<a class="reference internal image-reference" href="_static/MIR_TARGET_SITE.png"><img alt="_static/MIR_TARGET_SITE.png" src="_static/MIR_TARGET_SITE.png" style="width: 500px; height: 120px;" /></a>  
+  <li>miRToInclude </li>Each row has miRNA ID that we will consider in the analysis. <br>We used moderately expressed miRNAs (>1 and <100 in FPM) in this file. 
+<a class="reference internal image-reference" href="_static/miRsToInclude.png"><img alt="_static/miRsToInclude.png" src="_static/miRsToInclude.png" style="width: 400px; height: 100px;" /></a>  
+  <li>threeUS </li>Each row contains information of significant 3'UTR shortening gene, namely transcript ID, <br>alternative polyadenylation site location, PDUI value in tumor and normal, respecctively. <br>You can extract this information from <a class="reference external" href="https://github.com/ZhengXia/dapars">DaPars</a> result.
+<a class="reference internal image-reference" href="_static/THREE_UTR_SHORTENING.png"><img alt="_static/THREE_UTR_SHORTENING.png" src="_static/THREE_UTR_SHORTENING.png" style="width: 400px; height: 100px;" /></a>  
+</ol>
+</pre></div>
+</div>
+
+<p><b>Example command:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+python buildCeRNETforMAT3UTR.py -a threeUTRInfo.txt -b TCGAExprNormal.txt -c miRSitesbyTx.txt \<br>-d miRsNotHighLow.txt -e threeUS_TCGA.txt -o APA_ceRNA.txt
+</pre></div></div>
+
+<p><b>Example output:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<p>Each row represents a ceRNA partner (the first column) and its connected 3'UTR shortening genes (the second column).</p>
+<a class="reference internal image-reference" href="_static/APA_CERNA.png"><img alt="_static/APA_CERNA.png" src="_static/APA_CERNA.png" style="width: 400px; height: 150px;" /></a>  
+</div></div>
+
+<div class="section" id="step-4-Estimate-trans-effect">
+<h2>Step 4: Estimate 3'UTR shortening trans effect for each gene and miRNA.<a class="headerlink" href="#step-4-Estimate-trans-effect" title="Permalink to this headline">¶</a></h2>
+<p><b>MAT3UTR.py</b> will use information about genes (gene model, gene expression, and gene differential expression), ceRNAs, and microRNAs (microRNA family, microRNA site, and microRNA expression information)
+to generate a mtrix file containing APA trans effect on each gene contributed from each miRNA.</p>
+<p><b>Options:</b></p>
+<blockquote>
+<div>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-h <var>help </var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Show this help message and exit.</a></td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-a <var>threeUTRInfo, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains the information of 3'UTR regions of transcripts. <br>Step 1 can produce this file. </a></td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-b <var>geneExprNormal, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains expression level of genes in normal condition (in log2).</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-c <var>geneExprTumor, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains expression level of genes in tumor conditions (in log2).</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-d <var>APA_CERNA, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>gene name as ceRNA partners and their 3'UTR shortening genes and the 3'UTR shortening genes separated by comma.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-e <var>threeUS, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>gene name whose 3'UTR is shortened, its pUTR position, PDUI in tumor, PDUI in normal.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-f <var>miRSitesbyTx, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>This file contains transcript ID, gene name, miRNA ID, and their binding location (in the gene). </td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-g <var>miRNAExpr, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>miRNA name, (averaged) expression (FPM in log2) in normal and tumor.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o <var>matFile, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>MAT3UTR estimation of 3'US trans effect for each gene (row) and each miRNA (column). Note that it will be used for regressMAT3UTR.R. </td></tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+
+<p><b>Paramters in detail:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<ol>
+  <li>threeUTRInfo </li>This file contains information of 3'UTR regions of transcripts. You can generate this file from threeUTRInfoFromRefSeqInfo.py.
+<a class="reference internal image-reference" href="_static/threeUTRInfo.png"><img alt="_static/threeUTRInfo.png" src="_static/threeUTRInfo.png" style="width: 600px; height: 150px;" /></a>  
+  <li>geneExprNormal, geneExprTumor</li>This file contains FPKM values of genes in normal and tumor conditions; <br>Each row represent log2(FPKM) values of each gene starting with its name. 
+<a class="reference internal image-reference" href="_static/GENE_EXPRESSION.png"><img alt="_static/GENE_EXPRESSION.png" src="_static/GENE_EXPRESSION.png" style="width: 300px; height: 100px;" /></a>  
+  <li>APA_CERNA </li>This file contains ceRNA partners to 3'UTR shortening genes. <br>Each row represent a ceRNA partners (the first column) and its connected 3'UTR shortening genes (the second column). <br>Step 3 can produce this file.
+<a class="reference internal image-reference" href="_static/APA_CERNA.png"><img alt="_static/APA_CERNA.png" src="_static/APA_CERNA.png" style="width: 400px; height: 150px;" /></a>  
+  <li>threeUS </li>Each row contains information of significant 3'UTR shortening gene, namely transcript ID, <br>alternative polyadenylation site location, PDUI value in tumor and normal, respecctively. <br>You can extract this information from <a class="reference external" href="https://github.com/ZhengXia/dapars">DaPars</a> result.
+<a<a class="reference internal image-reference" href="_static/THREE_UTR_SHORTENING.png"><img alt="_static/THREE_UTR_SHORTENING.png" src="_static/THREE_UTR_SHORTENING.png" style="width: 300px; height: 150px;" /></a>  
+  <li>miRSitesbyTx </li>This file contains information of miRNA targeting genes. <br>Each row has transcript ID, gene name, miRNA family name, chromosome, start and end coordiantes, and strand information. <br>Your implementation in accordance of Step 2 can generate this file. 
+<a class="reference internal image-reference" href="_static/MIR_TARGET_SITE.png"><img alt="_static/MIR_TARGET_SITE.png" src="_static/MIR_TARGET_SITE.png" style="width: 600px; height: 150px;" /></a>  
+  <li>miRNAExpr </li> This file contains miRNA expression (miRNA family ID, its expression in normal, expression in tumor). 
+<a class="reference internal image-reference" href="_static/MIR_EXPRESSION.png"><img alt="_static/MIR_EXPRESSION.png" src="_static/MIR_EXPRESSION.png" style="width: 600px; height: 150px;" /></a>  
+</ol>
+</pre></div>
+</div>
+
+<p><b>Example command:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>python MAT3UTR.py -a threeUTRInfo.txt -b TCGAExprNormal.txt -c TCGAExprTumor.txt -d APA_ceRNA.txt -e threeUS_TCGA.txt \<br>-f miRSitesbyTx.txt -g miRsNotHighLow.txt -o MAT3UTR.txt
+</pre></div>
+<p><b>Example output:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<p>This file contains MAT3UTR's estimation of 3'US trans effect on each gene (row) from each miRNA (column).<br>Note that the rightmost column should have log2 fold change of the gene expression change (tumor vs. normal). Please note that this is a sparse matrix.</p>
+<a class="reference internal image-reference" href="_static/MAT3UTR.png"><img alt="_static/MAT3UTR.png" src="_static/MAT3UTR.png" style="width: 500px; height: 120px;" /></a>  
+</div>
+</div>
+</div>
+
+<div class="section" id="step-4-2-extract-differentially-expressed-genes">
+<h2>Step 4-2: (Optional) Extract differentially expressed genes from the result of Step 4.<a class="headerlink" href="#step-4-2-extract-differentially-expressed-genes" title="Permalink to this headline">¶</a></h2>
+<p>extractDEgenes.py simply extracts differentially expressed gene information from MAT3UTR result from previous step.</p>
+<p><b>Options:</b></p>
+<blockquote>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-h <var>help </var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Show this help message and exit.</a></td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-i <var>Differentially expressed genes, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Each gene in a row. <br><b>For TCGA breast cancer data analysis in the paper, differential expression analyses were carried out by edgeR (version 3.8.6) (tumor samples versus normal samples) with false discovery rate (FDR) control at 0.05.<b></td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-m <var>MAT3UTR, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>MAT3UTR estimation from Step4. </td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o <var>MAT3UTRwithDE, required</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>MAT3UTR estimation selected for genes in the input file. </td></tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><b>Paramters in detail:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<ol>
+  <li>Differentially expressed genes</li>This file contains names of differentially expressed genes. 
+<a class="reference internal image-reference" href="_static/DEgenes.png"><img alt="_static/DEgenes.png" src="_static/DEgenes.png" style="width: 150px; height: 200px;" /></a>  
+  <li>MAT3UTR</li>This file is a result from Step 4. 
+<a class="reference internal image-reference" href="_static/MAT3UTR.png"><img alt="_static/MAT3UTR.png" src="_static/MAT3UTR.png" style="width: 500px; height: 120px;" /></a>  
+</ol>
+</pre></div></div>
+
+<p><b>Example command:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+python extractDEgenes.py  -i DEgenes_TCGA.txt -m MAT3UTR.txt -o MAT3UTRwithDE.txt
+</pre></div></div>
+
+<p><b>Example output:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<p>This file is a result from Step 4 where only differentially expressed genes are selected.</p>
+<a class="reference internal image-reference" href="_static/MAT3UTR.png"><img alt="_static/MAT3UTR.png" src="_static/MAT3UTR.png" style="width: 500px; height: 120px;" /></a>  
+
+</div>
+</div>
+
+<div class="section" id="step-5-estimate-collective-MAT3UTR-score">
+<h2>Step 5: Conduct ridge regression on Step 4 result.<a class="headerlink" href="#step-5-estimate-collective-MAT3UTR-score" title="Permalink to this headline">¶</a></h2>
+<p>Run regressMAT3UTR.R with the result from Step1 by following the procedure below.</p>
+<div class="highlight-python"><div class="highlight">
+<ol>
+  <li>Place the result of Step 1 in the same folder as regressMAT3UTR.R</li>
+  <li>Set MATin variable in the script as the name of the result file (e.g. MAT_TCGA.txt)</li>
+  <li>Set MATout variable in the script as the name of the file for MAT3UTR score for each gene.</li>
+  <li>Run regressMAT3UTR.R</li>
+</ol>
+</pre></div>
+</div>
+<p><b>Example output:</b></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<p>Each row has gene name, response (log2 fold change (tumor vs. normal)) and the estimated MAT3UTR score.</p>
+<a class="reference internal image-reference" href="_static/Step2Output.png"><img alt="_static/Step2Output.png" src="_static/Step2Output.png" style="width: 400px; height: 150px;" /></a>
+</div></div>
+
+</div>
+
+<div class="section" id="release-history">
+<h1>Release history<a class="headerlink" href="#release-history" title="Permalink to this headline">¶</a></h1>
+<p>MAT3UTR v0.9.1</p>
+<ul class="simple">
+<li>Fixed some minor bugs.</li>
+<li>Improved documentation.</li>
+</ul>
+<p>MAT3UTR v0.9.2</p>
+<ul class="simple">
+<li>MAT3UTR is released.</li>
+</ul>
+<p>MAT3UTR v0.9.3</p>
+<ul class="simple">
+<li>Usability improved.</li>
+</ul>
+<p>MAT3UTR v0.9.4</p>
+<ul class="simple">
+<li>Reproducibility reassured.</li>
+</div>
+
+<div class="section" id="contact">
+<h1>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Hyun Jung Park: <a class="reference external" href="mailto:hyp15&#37;&#52;&#48;pitt&#46;edu">hyp15<span>&#64;</span>pitt<span>&#46;</span>edu</a></li>
+<li>Wei Li &lt;<a class="reference external" href="mailto:wl1&#37;&#52;&#48;bcm&#46;edu">wl1<span>&#64;</span>bcm<span>&#46;</span>edu</a>&gt;</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+	  </div>
+	  </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Model-based Analysis of the Trans effect of 3ʹ-UTR shortening</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage-information">Instruction</a><ul>
+<li><a class="reference internal" href="#step-1-Collect-threeUTR-information-of-genes">Step 1: Collect 3'UTR information of genes.</a></li>
+<li><a class="reference internal" href="#step-2-Collect-miRNA-binding">Step 2: Collect miRNA binding sites on transcripts.</a></li>
+<li><a class="reference internal" href="#step-3-Build-ceRNA-identify-3UTRceRNAs">Step 3: Build ceRNA network and identify 3'US ceRNA partners.</a></li>
+<li><a class="reference internal" href="#step-4-Estimate-trans-effect">Step 4: Estimate 3'UTR shortening trans effect for each gene and miRNA.</a></li>
+<li><a class="reference internal" href="#step-5-estimate-collective-MAT3UTR-score">Step 5: Conduct ridge regression on Step 4 result.</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#release-history">Release history</a></li>
+<li><a class="reference internal" href="#contact">Contact</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/MAT3UTR.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="#">MAT3UTR_Documents 0.9.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Hyun Jung Park.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b2.
+    </div>
+  </body>
+</html></div>
