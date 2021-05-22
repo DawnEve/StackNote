@@ -52,7 +52,7 @@ This attracted the attention of Richard Humphries who was then the most eminent 
 "humble",
 "pickup", 
 
-"reservoir", ？ 
+"reservoir", ?
 `deposit`,
 
 "slap", 
@@ -60,7 +60,7 @@ This attracted the attention of Richard Humphries who was then the most eminent 
 "mortal", 
 
 
-`precedent`, ？
+`precedent`, ?
 
 "dispose", n 处置
 
@@ -71,10 +71,87 @@ This attracted the attention of Richard Humphries who was then the most eminent 
 
 
 
+## line 4
+
+"symmetry", n 对称 ?
+"tram", ?
+"poke", 戳 ?
+"hail", 冰雹 ?
+"tramp", ?
+
+"advent", 出现
+"desolate", ?
+"ponder", 思考
+"arithmetic", 数学
+"feminine", ?
+"preach", 
+
+"temperament", 
+
+"horizon", 
+"shove" 
 
 
 
 
+## line 5
 
+"patron", ?
+"preceding", [prɪˈsiːdɪŋ] adj (previous)
+"conceive", 
+"pray", 
+"panorama", ?
+"scramble", ? vi 仓促行动
+"lateral", 侧面的
+"dew", ?
+`perplex`, ?
+"judicial", 
+"repertoire", 
+"allege" 声称
+
+
+
+
+## More in 句子
+- rampant [ˈræmpənt] adj. 猖獗的；蔓延的；狂暴的；奔放的
+
+Inflation is rampant and industry in decline.
+通货膨胀肆虐，工业生产下降。
+
+
+She alleged that there was rampant drug use among the male members of the group.
+她指称该组织中有大量的男性成员吸毒。
+
+
+- elucidate /ɪˈluːsɪˌdeɪt/ V-T/V-I If you elucidate something, you make it clear and easy to understand. 阐明; 解释 [正式]
+
+Haig went on to elucidate his personal principle of war.
+海格继续解释他个人的战争原则。
+
+
+
+
+# 熟词生意
+
+## reckon
+
+- reckon verb (THINK): to think or believe 想；认为，以为
+
+> I reckon it's going to rain.
+我觉得天要下雨了。
+
+
+- reckon verb (CONSIDER): [T] to consider or have the opinion that something is as stated 认为；把…看作
+
+> I don't reckon much to (US of) their chances of winning (= I do not think they will win).
+我认为他们获胜的希望不大。
+
+
+- reckon verb (CALCULATE): [ T ] [mainly UK] to calculate an amount 计算
+
+> Angela quickly reckoned the amount on her fingers.
+安吉拉掰着手指头快速计算了一下数量。
+The inflation rate is now reckoned to be 10 percent.
+据计算，现在的通货膨胀率是10%。
 
 

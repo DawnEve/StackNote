@@ -36,7 +36,7 @@ body,div{margin:0; padding:0;}
     
     border-bottom:2px solid white;
 }
-#topNav li:hover{background: #eee;}
+#topNav li:hover{background: #eee; border-bottom-color: rgba(0,150,255,0.4);}
 
 #topNav .current{
 	background: #fafafa;
@@ -55,7 +55,6 @@ body,div{margin:0; padding:0;}
     font-size: 16px;
 }
 
-#topNav a:hover{color:#666;text-decoration:underline}
 #topNav li.out a{color:#0096ff; }
 
 .about a{color:#0096ff; text-decoration:none;}
