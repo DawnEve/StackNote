@@ -75,6 +75,7 @@ v0.3.2 修改about页面; add 文献阅读笔记
 v0.3.3 修改右侧目录的宽度，尽可能宽
 v0.3.3-1 add post
 v0.3.3-2 add post
+v0.3.3-3 设置ssh key push
 #
 #--> commit
 #----------> push to github dawneve/StackNote
