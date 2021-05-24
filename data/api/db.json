@@ -7,6 +7,15 @@
 		
 		{
 			year: 2021,
+			title:"0524-Scientist-Yuan_Longping.md",
+			caption: "WP: Yuan Longping",
+			category:2,
+			tags: ['news', ],
+		},
+
+
+		{
+			year: 2021,
 			title:"0521-NG-Atlas_APA_3aQTL.md",
 			caption: "NG: 3’ APA QTL图谱 - 可解释约16.1%的人类复杂疾病和形状差异的遗传性",
 			category:1,

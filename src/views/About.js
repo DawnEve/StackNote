@@ -69,7 +69,7 @@ export default{
 - [廖雪峰的官方网站](https://www.liaoxuefeng.com/): Git, Python, JavaScript, SQL,  
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/): JavaScript,  
 - [灵感_idea](https://ideazhao.com/): 前端博客  
-
+- [南科大计科笔记](https://github.com/Sunt-ing/SUSTech-CS-Notes): CS-Notes
 			`),
 			linksBioinfo: marked(`
 - [徐洲更](https://github.com/xuzhougeng/myscripts/blob/master/igv_web.py): 生信脚本

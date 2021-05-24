@@ -81,7 +81,7 @@ Collectively，我们的结果
 
 # Results
 
-## An atlas of human 3′aQTLs
+## 1.An atlas of human 3′aQTLs
 为检测人主要组织中的APA事件，使用GTEx v0.7 项目的8277个RNA-seq样本总计46个组织类型，用DaPars v2.0 算法检测APA事件。
 
 ---
@@ -117,7 +117,7 @@ To account for correlations among the identified 3′aQTLs, due to linkage diseq
 
 
 
-## Patterns of tissue specificity for 3′aQTLs
+## 2.Patterns of tissue specificity for 3′aQTLs
 
 ---
 Q: MASH?? //todo
@@ -134,7 +134,7 @@ Considered collectively, these observations suggested that 3′aQTL effect sizes
 
 
 
-## 3′aQTLs have distinct molecular features
+## 3.3′aQTLs have distinct molecular features
 - 3aQTL显著富集在3’UTR和下游5k内。
 - 而eQTL显著富集在promoter区，上游5k区和5‘UTR区。
 - splicing QTLs (sQTLs)33 which are enriched primarily within gene bodies and splice regions (Extended Data Fig. 6).
@@ -155,7 +155,7 @@ Interestingly, 3′aQTLs are also highly enriched in conserved regions (Universi
 
 
 
-## Alterations of poly(A) motifs are associated with APA
+## 4.Alterations of poly(A) motifs are associated with APA
 
 遗传变体是怎么作用到APA事件的？
 - 可能是SNP改变了polyA motif? 
@@ -163,32 +163,207 @@ Interestingly, 3′aQTLs are also highly enriched in conserved regions (Universi
 > 9.Yoon, O. K., Hsu, T. Y., Im, J. H. & Brem, R. B. Genetics and regulatory impact of alternative polyadenylation in human B-lymphoblastoid cells. PLoS Genet. 8, e1002882 (2012).
 > 35.Thomas, L. F. & Sætrom, P. Single nucleotide polymorphisms can create alternative polyadenylation signals and affect gene expression through loss of microRNA-regulation. PLoS Comput. Biol. 8, e1002621 (2012).
 
-- 从数据库 PolyA_DB, UCSC, Ensembl 和RefSeq 注释文件中，上游50bp范围内的3aVariants 变体，搜索15个常见的polyA motif。
+- 从数据库 PolyA_DB 36, UCSC, Ensembl 和RefSeq 注释文件中，上游50bp范围内的3aVariants 变体，搜索15个常见的polyA motif。
 > 36.Lee, J. Y., Yeh, I., Park, J. Y. & Tian, B. PolyA_DB 2: mRNA polyadenylation sites in vertebrate genes. Nucleic Acids Res. 35, D165–D168 (2007).
 
 
-
-
-## APA-associated RBP binding sites and RNA secondary structure
-
-
-## 3′aQTL analysis facilitates the identification of APA regulators such as LARP4
-
-
-## 3′aQTLs can explain a significant proportion of disease heritability
-
-
-## Many trait-colocalizing 3′aQTLs are independent of gene expression
-
+经典motif: AATAAA, 其次是 ATTAAA. 
+不同的motif影响远端使用率的例子: 
+- c 是 A->C破坏了经典motif；
+- d是G->A出现经典motif
+- e是G->C破坏了U-rich motif，导致远端使用率降低。
+![motif-exp](/data/2021/images/05/0521-3QTL-motif-exp.png)
+Fig. 4: 3′aQTLs can alter PAS and uridylate-rich motifs in human tissues.
+**c**, Box plot showing the significant correlation between the 3′aQTL rs1130319 and ADI1 APA events for each genotype. Each dot represents a normalized PDUI value from a single sample. The center horizontal lines represent the median values and the boxes span from the 25th to the 75th percentile. The whiskers extend to 1.5× IQR (bottom). The coverage plot illustrates that this SNP could disrupt the canonical PAS. The red dotted line in the RefSeq gene structure indicates the location of the 3′aVariant. The PAS is shown, with the 3′aQTL highlighted in red. 
+**d**, Box plot showing that the 3′aQTL rs3211995 is strongly correlated with the SLC9A3R2 3′UTR change for each genotype. The coverage plot illustrates that this SNP could ‘create’ a canonical PAS. 
+**e**, Box plot showing that the 3′aQTL rs12359, which alters the uridylate-rich motif, is strongly associated with SYDE1 3′UTR usage for each genotype.
 
 
 
+---
+Q: U-rich motif 是什么？谁的motif？在什么位置？
 
+fig.4b polyA signal, U-rich motif
+b, Enrichment of 3′aVariants that alter PAS and uridylate-rich motifs and are `proximal to poly(A) sites, compared with the rest of the genome`. Data are presented as odds ratio and 95% CI. 
+怎么比较的？
+
+后面半段
+In addition to the PAS, we also investigated whether 3′aVariants could alter uridylate-rich elements, which are also important for 3′-end processing 4. 
+> 4.Tian, B. & Manley, J. L. Alternative polyadenylation of mRNA precursors. Nat. Rev. Mol. Cell Biol. 18, 18–30 (2017).
+
+The uridylate-rich motif variations on APA have been described before 37. 
+> 37.Sun, H. S. et al. A polymorphic 3′UTR element in ATP1B1 regulates alternative polyadenylation and is associated with blood pressure. PLoS ONE 8, e76290 (2013).
+
+
+
+---
+Q: recent saturation mutagenesis data，饱和突变数据分析APA ??//todo
+
+引用了2019 Cell 深度学习APA文章，印证不同的突变，能导致表达水平多大的差别。
+We validated our finding using recent saturation mutagenesis data23, where the same 3′aVariant disruption of the ADI1 canonical poly(A) motif resulted in a 20-fold decrease in the abundance of the long isoform (Extended Data Fig. 7a).
+
+> 23.Bogard, N., Linder, J., Rosenberg, A. B. & Seelig, G. A deep neural network for predicting and engineering alternative polyadenylation. Cell 178, 91–106.e23 (2019).
+
+
+Collectively, these results suggested that a small fraction of detectable APA events are the result of 3′aVariants alterations of PAS or uridylate-rich motifs.
+
+
+
+## 5.APA-associated RBP binding sites and RNA secondary structure
+
+3aQTL小部分通过影响polyA signal，大部分是其他途径。
+
+先检测3aQTL与靶基因的转录和转录后调控的互作。
+使用 `DeepBind v0.11` 38  基于深度神经网络的DNA和RNA结合蛋白特异性序列预测工具。
+> 38.Alipanahi, B., Delong, A., Weirauch, M. T. & Frey, B. J. Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning. Nat. Biotechnol. 33, 831–838 (2015).
+
+
+---
+Q: 超几何检验的方法和适用范围?? //todo
+
+Proteins associated with these 17 common motifs were significantly enriched (P = 1.06 × 10−5; `hypergeometric test`) with known poly(A) factors, such as PABP39, CPEB4 (refs. 39,40), SRSF7 (ref. 41), RBFOX1 (ref. 42) and HNRNPC, which was recently described as an APA regulator43.
+
+> 39.Matoulkova, E., Michalova, E., Vojtesek, B. & Hrstka, R. The role of the 3′ untranslated region in post-transcriptional regulation of protein expression in mammalian cells. RNA Biol. 9, 563–576 (2012).
+> 40.Bava, F.-A. et al. CPEB1 coordinates alternative 3′-UTR formation with translational regulation. Nature 495, 121–125 (2013).
+> 41.Müller-McNicoll, M. et al. SR proteins are NXF1 adaptors that link alternative RNA processing to mRNA export. Genes Dev. 30, 553–566 (2016).
+> 42.Chen, P.-F., Hsiao, J. S., Sirois, C. L. & Chamberlain, S. J. RBFOX1 and RBFOX2 are dispensable in iPSCs and iPSC-derived neurons and do not contribute to neural-specific paternal UBE3A silencing. Sci. Rep. 6, 25368 (2016).
+> 43.Gruber, A. J. et al. A comprehensive analysis of 3′ end sequencing data sets reveals novel polyadenylation signals and the repressive role of heterogeneous ribonucleoprotein C on cleavage and polyadenylation. Genome Res. 26, 1145–1159 (2016).
+
+
+---
+Q: RBP交联免疫共沉淀测序数据集  CLIP-seq ?? //todo
+
+We then analyzed 166 RBP cross-linking immunoprecipitation sequencing (CLIP-seq) datasets, which were available from the `Encyclopedia of DNA Elements (ENCODE) project`44.
+
+> 44.Dominguez, D. et al. Sequence, structure, and context preferences of human RNA binding proteins. Mol. Cell 70, 854–867.e9 (2018).
+
+这部分数据的RBP有81.2%没有出现在 DeepBind中。
+检测3aQTL，相对于随机序列数据集，是否富集在每个RBP的CLIP-seq的结合峰中？
+We examined whether 3′aQTLs were significantly enriched within the CLIP-seq binding peaks of each RBP compared with a random sequence dataset. 
+
+
+---
+Q: RNA二级结构?? //todo
+
+To evaluate the association between 3′aQTL and RNA structural features, we decided to use the `riboSNitch data` 45, which are defined as DNA variants affecting RNA secondary structure changes by parallel analysis of RNA structure experiments. 
+
+> 45.Wan, Y. et al. Landscape and variation of RNA secondary structure across the human transcriptome. Nature 505, 706–709 (2014).
+
+
+
+
+
+
+
+## 6. 3′aQTL analysis facilitates the identification of APA regulators such as LARP4
+
+Our observation that LARP4 binding involves regions enriched with 3′aQTLs suggests that LARP4 might be an APA regulator. 
+
+在293T细胞的LARP4基因中插入一个FLAG标签。
+To test the hypothesis that LARP4 regulates APA, we first CRISPR-engineered 293T cells to harbor a single FLAG epitope tag within both copies of the endogenous LARP4 gene (Fig. 5b). 
+
+然后加入靶向LARP4的 siRNA，观察到完整的KD。
+We then transfected these cells with either control small interfering RNA (siRNA) or LARP4-targeting siRNA and observed the robust depletion of FLAG-LARP4 (Fig. 5c).
+
+测序
+RNA was isolated from both control and knockdown cells and analyzed using 3′-end sequencing (poly(A)-ClickSeq (PAC-seq))47. 
+> 47.Routh, A. et al. Poly(A)-ClickSeq: click-chemistry for next-generation 3′-end sequencing without RNA enrichment or fragmentation. Nucleic Acids Res. 45, e112 (2017).
+
+根据预测，很多包含能改变APA结合位点的3aQTL的基因，在LARP4敲低后，也能展示稳定的APA。
+Importantly, several of the genes that contain 3′aQTLs that are predicted to alter LARP4 binding were also found to exhibit robust APA in response to LARP4 knockdown (Fig. 5e and Extended Data Fig. 9). 
+
+---
+可以使用3aQTL来发现APA调控子。
+Altogether, these results support a function of LARP4 in APA regulation and further validate the use of 3′aQTLs as a discovery tool for APA regulators.
+
+
+
+
+
+
+## 7. 3′aQTLs can explain a significant proportion of disease heritability
+
+---
+尝试使用 3aQTL 来解释非编码区特别是3’UTR的遗传变体。
+
+We hypothesized that 3′aQTLs could be used to interpret GWAS noncoding variants, particularly those located near 3′UTRs (Supplementary Figs. 19 and 20). 
+
+
+---
+Q: 名词 功能基因组关联分析?? //todo
+
+In this study, we compiled GWAS summary statistics for 23 common human diseases and traits from previously published studies (Supplementary Table 7) and evaluated the enrichment of 3′aVariants within trait-associated GWAS SNPs for each tissue using `functional genome-wide association analysis` 48.
+
+> 48.Pickrell, J. K. Joint analysis of functional genomic data and genome-wide association studies of 18 human traits. Am. J. Hum. Genet. 94, 559–573 (2014).
+
+
+---
+Q: LD score 回归？怎么确定SNP和遗传的关系?? //todo
+
+To quantify the proportion of regulatory variations associated with heritability for each trait, we conducted a `partitioned heritability analysis`, using `LD score regression` 49. 
+
+> 49.Finucane, H. K. et al. Partitioning heritability by functional annotation using genome-wide association summary statistics. Nat. Genet. 47, 1228–1235 (2015).
+
+
+
+---
+Notably, 3′aQTLs were particularly effective for explaining a large proportion of heritability associated with several autoimmune diseases, such as ulcerative colitis(溃疡性结肠炎), primary biliary cholangitis(原发性胆汁性胆管炎) and Alzheimer’s disease. 
+
+
+
+
+
+
+
+
+## 8. Many trait-colocalizing 3′aQTLs are independent of gene expression
+
+---
+Q: 共定位分析 ?? //todo
+
+We used `colocalization analysis`52, which identifies 3′aQTLs that share the same putative causal variants with trait-associated signals, to examine 15 complex diseases and traits with known `minor allele frequencies (MAFs)`. 
+
+> 52.Giambartolomei, C. et al. Bayesian test for colocalisation between pairs of genetic association studies using summary statistics. PLoS Genet. 10, e1004383 (2014).
+
+
+---
+Q: miRNA binding site density 怎么算?? //todo
+
+To explore the potential regulatory mechanisms, we cross-referenced the 3′UTR regions of 3′aGenes with the `TargetScan human v.6.2` (ref. 53) miRNA binding sites and `ENCODE RBP CLIP-seq peaks`.
+
+> 53.Agarwal, V., Bell, G. W., Nam, J.-W. & Bartel, D. P. Predicting effective microRNA target sites in mammalian mRNAs. eLife 4, e05005 (2015).
+
+We found that eQTL-overlapped 3′aGenes have overall greater `miRNA binding site density` within the 3′UTR region than non-eQTL-overlapped 3′aGenes (P = 5.695 × 10−5; Supplementary Fig. 22c).
+
+
+---
+Collectively, our data suggest that many 3′aQTLs contribute to human diseases and traits, independent of their roles in the regulation of gene expression.
 
 
 
 
 # Discussion
+
+## 1. 总结3aQRL的作用机制
+- GTex dataset + DaPars v.2
+- 3aQTL富集在3‘UTR区域
+- Mechanistically, 3′aQTLs likely induce changes in 3′UTR usage by either modulating the strength of poly(A) signal motifs, RNA secondary structure or RBP binding sites. 
+
+
+---
+最近的工作把DNA甲基化、基因环化、APA调控联系起来
+recent work revealing connections between DNA methylation, gene looping and APA regulation58,59.
+> 58.Nanavaty, V. et al. DNA methylation regulates alternative polyadenylation via CTCF and the cohesin complex. Mol. Cell 78, 752–764.e6 (2020).
+> 59.Mittleman, B. E. et al. Alternative polyadenylation mediates genetic regulation of gene expression. eLife 9, e57492 (2020).
+
+---
+Furthermore, we also validated the use of 3′aQTLs as a discovery tool for identifying APA regulators, such as LARP4.
+
+
+## 2.3aQTL与trait的遗传性
+
+Colocalization analyses found that 16.1% of trait-associated loci colocalized with 1 or more 3′aQTLs in human tissues. 
+
 
 
 
@@ -196,12 +371,104 @@ Interestingly, 3′aQTLs are also highly enriched in conserved regions (Universi
 
 # Methods
 
+只记录不是太熟悉的步骤和方法。
+
+
+## Covariate correction 不太懂怎么矫正的协变量?? //todo
+
+---
+To account for hidden batch effects and other unobserved covariates in each tissue, we first `corrected the sample genotype for population structure`. 
+
+- Briefly, we first removed sites marked as ‘wasSplit’ from the GTEx analysis freeze variant call format (VCF) using `BCFtools` v.1.3, leaving 39,741,769 biallelic sites. 
+- The variants were further filtered with a call rate of >99% and MAF >5%; 
+- LD pruning was performed using PLINK v.2.0.
+
+The top three principal components from the principal component analysis were consistent with the known three main subpopulations, including White, Black or African American and Asian, in the GTEx samples. 
+
+We further used `PEER`21 with sex, RNA integrity number, top 5 genotype principal components and genotyping platforms as the known covariates to estimate a set of latent covariates for the PDUI values in each tissue. 
+> 21.Stegle, O., Parts, L., Piipari, M., Winn, J. & Durbin, R. Using probabilistic estimation of expression residuals (PEER) to obtain increased power and interpretability of gene expression analyses. Nat. Protoc. 7, 500–507 (2012).
+
+
+
+## 3′aQTL mapping for each tissue
+
+Subset VCF data for each tissue were extracted, using `BCFtools`. VCF files were transformed into an SNP matrix file, including genotyping information, using `BioAlcidae `v.2.27.1 (ref. 62). SNPs with a MAF of <0.01 were filtered and at least 10 counts per allele were required.
+
+We then tested associations for SNPs within an interval of 1 Mb from the 3′UTR region, with normalized PDUI values, in each tissue, using `Matrix eQTL`22, in a linear regression framework.
+> 22.Shabalin, A. A. Matrix eQTL: ultra fast eQTL analysis via large matrix operations. Bioinformatics 28, 1353–1358 (2012).
+
+
+## 3′aQTL sharing and specificity analyses among tissues
+3′aQTL sharing and specificity among tissues were analyzed using `MASH`31. 
+
+--
+能分析出组织特异的3aQTL，学习一下这个包怎么用 //todo
+没看懂。
+
+- Prior covariance matrices were inferred via `Empirical Bayes matrix factorization`, implemented in `factors and loadings by adaptive shrinkage`; the multivariate 3′aQTL model was constructed using MASH.
+- Posterior effect sizes were computed by applying the trained model to the lead 3′aQTLs sets. MASH aims to elucidate the heterogeneity of 3′aQTL effect sizes across tissues (Fig. 2).
+- With MASH, we can learn about which 3′aQTLs have tissue-specific effect sizes and which have effect sizes consistent across tissues. 
+
+## Prediction of trans regulator of APA 【好思路!】
+这是个好思路，鉴定APA调控子:
+对于基因G，先按照表达量排序，分为高top10和低low10共2组，如果显著(FC>2, p<0.05)，则认定为基因G的ctrl和KD组。
+如果表达量显著差异，则看两组之间的3’UTR shorten 和 lengthen  显著的基因个数，
+如果P<0.05（怎么计算这个p值？），这个基因就会被认定为反式调控子。
+
+- For a gene G in a tissue type, all samples were ranked based on the expression levels of gene G. 
+- The top 10 most highly expressed samples and bottom 10 least expressed samples were chosen as the two groups. 
+- If the mean gene expression fold change between the two groups was >2 with P < 0.05, these two groups were treated as control and knockdown groups. 
+- Then, the PDUI values between the groups could be compared to identify significant dynamic APA genes between the high and low expression groups of gene G. 
+- Using this strategy, `we calculated the number of 3′UTR shortening or lengthening effect of each gene`, which regulates significant dynamic APA events between the high and low expression groups. 
+- The gene will be predicted as a trans regulator of APA if P < 0.05. 
+
+
+We have validated our method in a few known APA regulators, such as CSTF2, which was described as an APA regulator promoting 3′UTR shortening. We observed that there was a marked shift of 3′UTR shortening in individuals with highly expressed CSTF2 (Extended Data Fig. 8a). We also investigated our newly detected APA regulator, LARP4. We often observed many APA events when comparing LARP4high and LARP4low individuals (Extended Data Fig. 8b).
+
+
+
+## Colocalization analyses 共定位分析
+看3aQTL和eQTL是否共定位。不懂。
+
+We utilized `a Bayesian colocalization approach` to identify GWAS signals that could exhibit the same genetic effects between eQTLs and 3′aQTLs, using the coloc v.3.2-1 R package 52.
+
+> 52.Giambartolomei, C. et al. Bayesian test for colocalisation between pairs of genetic association studies using summary statistics. PLoS Genet. 10, e1004383 (2014).
+
+
+---
+Region visualization plots were constructed using `LocusZoom` v.1.4 (ref. 66). LDs between reference SNPs and 3′aQTLs were calculated using `PLINK`67.
+> 66.Pruim, R. J. et al. LocusZoom: regional visualization of genome-wide association scan results. Bioinformatics 26, 2336–2337 (2010).
+> 67.Purcell, S. et al. PLINK: a tool set for whole-genome association and population-based linkage analyses. Am. J. Hum. Genet. 81, 559–575 (2007).
+
+
+
+
+
+
+
+
+
 
 
 ## Code availability
 The open-source DaPars v.2.0 program is freely available at
 https://github.com/3UTR/DaPars2.
 文档 https://wlcb.oit.uci.edu/3aQTL/index.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -224,6 +491,9 @@ https://github.com/3UTR/DaPars2.
 这地图显示了其余西部区域，覆盖了9个州。
 
 
+## 生词
+sentinel  [ˈsentɪnl] n. 哨兵 vt. 守卫，放哨 //标记
+
 
 
 
@@ -231,3 +501,4 @@ https://github.com/3UTR/DaPars2.
 
 ---
 > 2021.5.22 reading
+> 2021.5.24 End Reading.
