@@ -3,8 +3,26 @@
 	categories:{1:"文献", 2:"英语", 3:"代码", 4:"杂谈" },
 
 	posts:[
+		
+		{
+			year: 2021,
+			title:"0526-Harry_potter_listening_status.md",
+			caption: "哈利波特听力练习记录",
+			category:2,
+			tags: ['listening', ],
+		},
+
 
 		
+		{
+			year: 2021,
+			title:"0525-NG-3UTR_shortening_tumorSuppressor_ceRNA.md",
+			caption: "NG 2018: 3’UTR缩短通过打扰ceRNA交谈，反式抑制抑癌基因",
+			category:1,
+			tags: ['APA', "李蔚组"],
+		},
+
+
 		{
 			year: 2021,
 			title:"0524-Scientist-Yuan_Longping.md",
