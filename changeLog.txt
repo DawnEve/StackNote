@@ -78,6 +78,7 @@ v0.3.3-2 add post
 v0.3.3-3 设置ssh key push
 v0.3.3-4 add post
 v0.3.3-5 add post
+v0.3.3-6 text
 #
 #--> commit
 #----------> push to github dawneve/StackNote

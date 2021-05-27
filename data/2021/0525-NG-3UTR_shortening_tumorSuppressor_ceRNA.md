@@ -12,6 +12,10 @@
 
 # Abstract
 
+![0521-NG-3UTR-ceRNA-fig3c.png](/data/2021/images/05/0521-NG-3UTR-ceRNA-fig3c.png)
+Fig.3c, 3′US genes (left) might repress their ceRNA partner PTEN in trans through miRNAs (middle) commonly released through 3′ UTR shortening. 
+
+
 ## 1. 引出反式作用
 通过APA形成的广泛的3‘UTR缩短，在体内促进肿瘤生长 2。
 > 2.Masamha, C. P. et al. CFIm25 links alternative polyadenylation to glioblastoma tumour suppression. Nature 510, 412–416 (2014).
@@ -46,6 +50,7 @@ Together, the results of our analysis suggest a major role of 3′ UTR shorten
 
 
 # Main
+一段一个序号。
 
 ## 1.3UTR可能不是帮原癌基因逃逸miRNA降解促肿瘤的 
 通过APA而3‘UTR缩短，通常出现在增强的细胞分裂和转化过程中。
@@ -233,15 +238,35 @@ fig.3h,i: 过表达 EPS15 3UTR 能上调PTEN阳性的细胞。
 
 Thus, EPS15 3′US may impact PTEN expression.
 
-## 10. 回顾NUDT21 KD数据
 
-To gain insights into the global cause-and-effect relationship between 3′US and the repression of tumor-suppressor genes, we revisited our previous data from NUDT21-knockdown HeLa cells, since NUDT21 is one of the master regulators of 3′US 2. 
+
+
+## 10. 回顾NUDT21 KD数据，研究3US和抑癌基因下调的关系
+
+To gain insights into the global cause-and-effect relationship between 3′US and the repression of tumor-suppressor genes, we revisited our previous data from `NUDT21-knockdown HeLa cells`, since NUDT21 is one of the master regulators of 3′US 2. 
 > 2.Masamha, C. P. et al. CFIm25 links alternative polyadenylation to glioblastoma tumour suppression. Nature 510, 412–416 (2014).
 
 
 - RISC (RNA-induced silencing complex) （RNA诱导沉默复合物）
-- 
+- 仅依靠miRNA结合位点重合情况（因为2重复的共表达估算效力低），从NUDT21 KD细胞中找到1168个 3US ceRNA。
+- 9914个与 3US没有显著miRNA重合的基因做对照，抑癌基因还是在3US ceRNA中强烈富集。
+	* 3US ceRNA中的57个抑癌基因中，33个(57.9%)在NUDT21 KD样本中受抑制。
+	* 而更小的比例44.5%(339*0.445 个)的对照 抑癌基因 受抑制。
+- 说明 NUDT21 介导的3US 反式地抑制 抑癌基因。
 
+> 下面的明天酌情删除
+
+In spite of potentially higher false positives due to lack of co-expression in ceRNA identification, these results are highly consistent with our observations in TCGA breast cancer. 
+
+On the basis of these results, we posit that repression of tumor-suppressor ceRNAs would correlate with increased occupancy of AGO2 in the RISC complex.
+
+To formally test this hypothesis, we isolated cytoplasmic fractions from control or NUDT21-knockdown cells and conducted RNA immunoprecipitation (RIP) using anti-AGO2 antibodies. On average, we observed ~200-fold enrichment of ceRNAs in Ago2 RIP complexes relative to control IgG (Supplementary Fig. 4b). 
+
+Reduced expression of NUDT21 does not impact AGO2/DICER1 expression and GAPDH messenger RNA binding to AGO2 (Fig. 4c,d and Supplementary Fig. 4b). 
+
+Furthermore, we sequenced miRNAs from control and NUDT21-knockdown cells, and found that miRNAs are equally likely to be upregulated or downregulated (Supplementary Fig. 4d), ruling out a general effect on miRNA biogenesis. 
+
+Importantly, we could detect increased association of multiple tumor-suppressor ceRNAs with AGO2 following NUDT21 depletion that ranged from 1.5-fold to nearly 7-fold (Fig. 4d). These results demonstrate that 3′US can lead to reduction of tumor-suppressor genes through their increased association with repressive AGO2 complexes.
 
 
 #
