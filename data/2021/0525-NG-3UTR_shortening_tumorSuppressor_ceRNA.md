@@ -241,7 +241,7 @@ Thus, EPS15 3′US may impact PTEN expression.
 
 
 
-## 10. 回顾NUDT21 KD数据，研究3US和抑癌基因下调的关系
+## 10. 回顾NUDT21 KD数据，3US导致抑癌基因下调是通过增加和AGO2复合体相关性实现的
 
 To gain insights into the global cause-and-effect relationship between 3′US and the repression of tumor-suppressor genes, we revisited our previous data from `NUDT21-knockdown HeLa cells`, since NUDT21 is one of the master regulators of 3′US 2. 
 > 2.Masamha, C. P. et al. CFIm25 links alternative polyadenylation to glioblastoma tumour suppression. Nature 510, 412–416 (2014).
@@ -253,31 +253,241 @@ To gain insights into the global cause-and-effect relationship between 3′US an
 	* 3US ceRNA中的57个抑癌基因中，33个(57.9%)在NUDT21 KD样本中受抑制。
 	* 而更小的比例44.5%(339*0.445 个)的对照 抑癌基因 受抑制。
 - 说明 NUDT21 介导的3US 反式地抑制 抑癌基因。
+- 虽然缺乏共表达导致ceRNA网络假阳性高，但是结果和TCGA 乳腺癌分析一致。
 
-> 下面的明天酌情删除
-
-In spite of potentially higher false positives due to lack of co-expression in ceRNA identification, these results are highly consistent with our observations in TCGA breast cancer. 
-
+---
+假说: 抑癌基因ceRNA的抑制，和RISC复合体中AGO2的被占用的增加有关。
 On the basis of these results, we posit that repression of tumor-suppressor ceRNAs would correlate with increased occupancy of AGO2 in the RISC complex.
 
-To formally test this hypothesis, we isolated cytoplasmic fractions from control or NUDT21-knockdown cells and conducted RNA immunoprecipitation (RIP) using anti-AGO2 antibodies. On average, we observed ~200-fold enrichment of ceRNAs in Ago2 RIP complexes relative to control IgG (Supplementary Fig. 4b). 
+![0521-NG-3UTR-ceRNA-fig4cd.png](/data/2021/images/05/0521-NG-3UTR-ceRNA-fig4cd.png)
+Fig. 4: NUDT21-mediated 3′ UTR shortening causes tumor-suppressor repression in trans.
+**c**, Knockdown of NUDT21 in HeLa cells using CRISPR/Cas9 and reduced NUDT21 was detected by western blot analysis in three independent experiments. 
+**d**, RIP was performed with anti-AGO2 antibody; normal mouse IgG served as a control. The RIP complexes were detected by western blot with a distinct AGO2 antibody from rat (inset). The indicated ceRNAs associated with AGO2 enrichment in NUDT21-knockdown cytoplasmic lysates versus the control are shown with average fold change ± standard deviation from three independent assays (P = 0.0002, P = 5.2 × 10−6, P = 0.0004, P = 0.0005, P = 0.0006, P = 0.01 and P = 5.47 × 10−7, two-sided t-test, * * P < 0.001, * P < 0.01).
 
-Reduced expression of NUDT21 does not impact AGO2/DICER1 expression and GAPDH messenger RNA binding to AGO2 (Fig. 4c,d and Supplementary Fig. 4b). 
-
-Furthermore, we sequenced miRNAs from control and NUDT21-knockdown cells, and found that miRNAs are equally likely to be upregulated or downregulated (Supplementary Fig. 4d), ruling out a general effect on miRNA biogenesis. 
-
-Importantly, we could detect increased association of multiple tumor-suppressor ceRNAs with AGO2 following NUDT21 depletion that ranged from 1.5-fold to nearly 7-fold (Fig. 4d). These results demonstrate that 3′US can lead to reduction of tumor-suppressor genes through their increased association with repressive AGO2 complexes.
-
-
-#
+> Q: 从NUDT21 KD 和 ctrl 细胞中提细胞质，使用anti-AGO2抗体做RNA IP(免疫沉淀)，怎么检测沉淀物中的抑癌基因的? 使用的 `qRT PCR`，方法学最后一页写了。
 
 
+验证假说：
+- 从ctrl和NUDT21 KD细胞分离细胞质组分，做使用anti-AGO2抗体做RNA免疫共沉淀。
+- 平均，观察到在Ago2 RIP复合物中 ~200倍的ceRNA富集，相对于ctrl IgG.
+- 降低NUDT21并不能影响 AGO2/DICER1 表达，和 GAPDH mRNA 结合到 AGO2.(fig. 4c,d)
+- `miRNA seq`，ctrl vs NUDT21 KD，排除掉对miRNA生物合成的general effect，miRNA也是同样的上调或下调。(fig.S4d)
+- 重要的是，在NUDT21删除后，能检测到多个抑癌基因ceRNA和AGO2相关性在1.5倍和7倍范围(Fig. 4d). 
 
-#
+
+--
+3US导致抑癌基因减少，是通过增加和抑制性的AGO2复合体的相关性。
+These results demonstrate that 3′US can lead to reduction of tumor-suppressor genes through their increased association with repressive AGO2 complexes.
 
 
 
-#
+
+## 11.另2个抑癌基因在NUDT21 KD后下调
+- 抑癌基因 PHF6，LARP1及其ceRNA伴侣 YOD1，LAMC1。
+- 在NUDT21 KD后，PHF6，LARP1下调，而 YOD1，LAMC1上调(fig.5a WB)。
+
+--
+为了验证是不是3UTR介导的这个效应
+- 转了一个 包含PHF6 or LARP1的3UTR的荧光素酶报告基因，到 ctrl or NUDT21KD 细胞，检测荧光素酶活性。
+- 发现 NUDT21 KD后，2个荧光素酶活性都下降了(fig.5b)。
+- PHF6 or LARP1此前被认为是 抑癌基因 9,18,19，且在HeLa中下调能增加细胞的生长速度，验证他们是抑癌基因(fig.S5)
+> 9.Davoli, T. et al. Cumulative haploinsufficiency and triplosensitivity drive aneuploidy patterns and shape the cancer genome. Cell 155, 948–962 (2013).
+> 18.Mets, E. et al. MicroRNA-128-3p is a novel oncomiR targeting PHF6 in T-cell acute lymphoblastic leukemia. Haematologica 99, 1326–1333 (2014).
+> 19.Selcuklu, S. D. et al. MicroRNA-9 inhibition of cell proliferation and identification of novel miR-9 targets by transcriptome profiling in breast cancer cells. J. Biol. Chem. 287, 29516–29528 (2012).
+
+
+## 12. 实验: NUDT21介导的3US导致抑癌基因下调是miRNA依赖的
+- 基于MAT3UTR分析和实验结果，选择 PHF6，研究抑癌基因下调的分子机制。
+- 选择2个靶向PHF6的miRNA，方程(3)打分最高和第6高的。
+- NUDT21 KD后，2个miRNA都没下调(fig.S4d)。
+- 但是加miRNA拮抗剂后，抗 miR-549后 PHF6部分恢复；抗 miR-3187-3p 后 PHF6完全恢复(fig.5d)；
+- 荧光素酶报告基因实验，Luc - PHF6 3UTR，加任意一个的拮抗剂，荧光部分恢复。
+
+
+---
+检验: 下调PHF6表达是否依赖YOD1水平？
+- 转染YOD1 cDNA到YOD1 KD细胞中，=====> cDNA不包含3 UTR吗? //todo
+- 发现重新表达YOD1并不能修复PHF6的表达(fig.5f)，
+- 也不能恢复YOD1 3UTR介导的荧光素酶(fig.5g)，
+- 表明，对PHF6的反式作用，是因为YOD1的3 UTR。
+
+
+---
+确定：PHF6和YOD1的crosstak是miRNA依赖的？
+- 删除DICER1，就废除了 PHF6和YOD1的crosstalk(fig.5h)
+
+
+---
+Collectively, the data strongly suggest that NUDT21-mediated 3′US causes tumor-suppressor gene repression in trans in a miRNA-dependent manner.
+
+## 13. 总结
+- 有文献建议做 3US的ceRNA crosstalk 20-22
+> 20.Tian, B. & Manley, J. L. Alternative cleavage and polyadenylation: the long and short of it. Trends Biochem. Sci. 38, 312–320 (2013).
+> 21.Mueller, A. A., Cheung, T. H. & Rando, T. A. All’s well that ends well: alternative polyadenylation and its implications for stem cell biology. Curr. Opin. Cell Biol. 25, 222–232 (2013).
+> 22.Li, L. et al. 3′UTR shortening identifies high-risk cancers with targeted dysregulation of the ceRNA network. Sci. Rep. 4, 5406 (2014).
+
+我们队97对 TCGA乳腺癌 RNA-seq数据的分析，及之后的实验验证表明，3US 通过反式，抑制 抑癌基因，是广泛存在的。
+
+---
+虽然这个反式效应进一步强调了肿瘤进展中APA的作用，它也提供了基因调控的另一层，强调了进一步研究其他能干扰ceRNA crosstakl的潜在机制的需要，比如 RNA editing，以及与RBP的竞争。
+While the trans effect further emphasizes the importance of APA in tumor progression, it also provides an additional layer of gene regulation and underscores the need for further investigation into other potential mechanisms23,24 that could perturb ceRNA crosstalk, such as RNA editing and competition with RNA-binding proteins.
+> 23.Tay, Y., Rinn, J. & Pandolfi, P. P. The multilayered complexity of ceRNA crosstalk and competition. Nature 505, 344–352 (2014).
+> 24.Wang, Y. et al. The emerging function and mechanism of ceRNAs in cancer. Trends Genet. 32, 211–224 (2016).
+
+
+
+# Methods
+
+
+## Tumor-suppressor genes and oncogenes 【抑癌基因和原癌基因list】
+
+分析8200肿瘤和正常样品对，根据原癌基因激活位点，和抑癌基因失活突变，定义tumor-suppressor genes and oncogenes。
+TUSON是一个分析肿瘤中突变模式，进而预测具体基因是抑癌基因或原癌基因的工具。
+按照P值排序，前500个基因，去掉重复的30个，得到470个抑癌基因或原癌基因，用于本文的富集分析，超几何检验。
+
+很少乳腺特有的抑癌基因和原癌基因(36个核3个q<0.05)，top500中90%是 泛癌预测。
+
+- The tumor-suppressor genes and oncogenes used in this study were defined by the `TUSON algorithm` from genome sequencing of >8,200 tumor/normal pairs 9, namely residue-specific activating mutations for oncogenes and discrete inactivating mutations for tumor-suppressor genes. 
+- TUSON is a computational method that analyzes patterns of mutation in tumors and predicts the likelihood that any individual gene functions as a tumor-suppressor gene or oncogene. 
+- We ranked genes by their TUSON prediction P values from the most to the least significant and used the top 500 genes (P < 0.01) as the reference tumor-suppressor genes or oncogenes. 
+- After removing 30 genes in common, 470 tumor-suppressor genes and oncogenes were used for the enrichment analysis. 
+
+> 9.Davoli, T. et al. Cumulative haploinsufficiency and triplosensitivity drive aneuploidy patterns and shape the cancer genome. Cell 155, 948–962 (2013).
+
+Note that there were `very few breast tumor-specific tumor-suppressor genes and oncogenes` (36 and 3 with breast q-value ≤ 0.5, respectively) and 90% of them were found in the top 500 pan-cancer predictions.
+
+
+
+## Previously identified 3′US genes in cancers 之前发现的肿瘤中的3US的基因
+- Xia et al. identified 1,187 3′US genes across 7 TCGA cancer types1. 
+- Mayr and Bartel selected 23 3′US genes from 27 cancer cell lines5. 
+- Fu et al. identified 428 3′US genes in human breast cancer cell lines6. 
+- Lin et al. reported 120 3′US genes in major cancers and tumor cell lines7. 
+- Morris et al. found 286 3′US genes in human colorectal tumor samples8. 
+
+The 3′US genes of Xia et al. were randomly sampled to 100 genes for a fair comparison.
+
+
+> 1.Xia, Z. et al. Dynamic analyses of alternative polyadenylation from RNA-Seq reveal landscape of 3′ UTR usage across 7 tumor types. Nat. Commun. 5, 5274, (2014).
+> 5.Mayr, C. & Bartel, D. P. Widespread shortening of 3′UTRs by alternative cleavage and polyadenylation activates oncogenes in cancer cells. Cell 138, 673–684 (2009).
+> 6.Fu, Y. et al. Differential genome-wide profiling of tandem 3′ UTRs among human breast cancer and normal cells by high-throughput sequencing. Genome Res. 21, 741–747 (2011).
+> 7.Lin, Y. et al. An in-depth map of polyadenylation sites in cancer. Nucleic Acids Res. 40, 8460–8471 (2012).
+
+
+
+
+
+## Selection of miRNA-binding sites 【汇编miRNA结合位点】
+
+Predicted miRNA-binding sites were obtained from TargetScanHuman version 6.2 25. 
+
+Only those with a preferentially conserved targeting score (Pct) more than 0 were used 1.
+
+实验验证过的miRNA结合位点：
+`Experimentally validated miRNA-binding sites` were obtained from 
+- TarBase version 5.0 26, 
+- miRecords version 4 27 
+- and miRTarBase version 4.5 28. 
+
+过滤掉间接方式获取的位点，如芯片实验或蛋白组学实验。
+The binding sites found `in indirect studies` such as microarray experiments and high-throughput proteomics measurements were `filtered out` 29. 
+
+另一个来源是从公开的AGO-CLIP数据构建出的miRNA靶点atlas中的显著位点(q<0.05):
+`Another source is the microRNA target atlas` composed of public AGO-CLIP data 30 with significant binding sites (q-value <0.05). 
+
+预测的和验证的位点信息，合并后用于本研究。
+The predicted and validated binding site information was then combined to use in this study.
+
+> 25.Lewis, B. P., Burge, C. B. & Bartel, D. P. Conserved seed pairing, often flanked by adenosines, indicates that thousands of human genes are microRNA targets. Cell 120, 15–20 (2005).
+> 26.Papadopoulos, G. L., Reczko, M., Simossis, V. A., Sethupathy, P. & Hatzigeorgiou, A. G. The database of experimentally supported targets: a functional update of TarBase. Nucleic Acids Res. 37, D155–D158 (2009).
+> 27.Xiao, F. et al. miRecords: an integrated resource for microRNA–target interactions. Nucleic Acids Res. 37, D105–D110 (2009).
+> 28.Hsu, S.-D. et al. miRTarBase update 2014: an information resource for experimentally validated miRNA–target interactions. Nucleic Acids Res. 42, D78–D85 (2014).
+> 29.Dvinge, H. et al. The shaping and functional consequences of the microRNA landscape in breast cancer. Nature 497, 378–382 (2013).
+> 30.Hamilton, M. P. et al. Identification of a pan-cancer oncogenic microRNA superfamily anchored by a central core seed motif. Nat. Commun. 4, 2730 (2013).
+
+
+## TCGA breast tumor RNA-Seq and miRNA-Seq data 【下载TCGA 数据 RNAseq, miRNA-seq】
+
+Quantified gene expression files (RNASeqV1) for primary breast tumors (TCGA sample code 01) and their matching solid normal samples (TCGA sample code 11) were downloaded from the TCGA Data Portal 31. 
+> 31.Goldman, M. et al. The UCSC Cancer Genomics Browser: update 2013. Nucleic Acids Res. 41, D949–D954 (2013).
+> https://genome-cancer.ucsc.edu/ -> http://xena.ucsc.edu/welcome-to-ucsc-xena/
+
+//todo 怎么使用 xena 下载数据集?? //todo
+
+---
+97个样品对。10868个表达的RefSeq基因(FPKM>=1 in 80%样本中)用于下游分析。
+We used 97 breast tumor samples that have matched normal tissues. A total of 10,868 expressed RefSeq genes (fragments per kilobase of transcript per million mapped reads (FPKM) ≥ 1 in >80% of all samples) were selected for downstream analyses. 
+
+---
+禁用CDS定量mRNA的表达。
+To better quantify gene expression in the presence of 3′US, we used only coding regions (CDS) to quantify mRNA expression. 
+
+Exon和CDS注释下载自 Sage Bionetworks’ Synapse 数据库. 
+- https://www.synapse.org/ 
+- https://cancercomplexity.synapse.org/Explore/Datasets
+- https://cancercomplexity.synapse.org/
+    - https://firecloud.terra.bio/
+    - https://www.cri-iatlas.org/resources/
+    - https://www.cbioportal.org/
+Exon and CDS annotation for TCGA data and miRNA expressions (syn1445790) were downloaded from Sage Bionetworks’ Synapse database.
+
+> 7个乳腺癌测序样品：https://cancercomplexity.synapse.org/Explore/Datasets
+> Single Cell RNA sequencing of Adult Human Breast Epithelial Cells [C1_Individual_3]
+> adult 1 https://cancercomplexity.synapse.org/Explore/Datasets/DetailsPage?datasetId=syn21795809
+> adult 2 https://cancercomplexity.synapse.org/Explore/Datasets/DetailsPage?datasetId=syn21795292
+> adult 3 https://cancercomplexity.synapse.org/Explore/Datasets/DetailsPage?datasetId=syn21792875
+> Single Cell RNA sequencing of Adult Human Breast Epithelial Cells https://cancercomplexity.synapse.org/Explore/Datasets/DetailsPage?datasetId=syn21793531
+> Single Cell RNA sequencing of Adult Human Breast Epithelial Cells [Individual 4..7] https://cancercomplexity.synapse.org/Explore/Datasets/DetailsPage?datasetId=syn21795279
+
+
+## CeRNA identification in TCGA breast tumors
+
+根据miRNA结合位点和表达量识别ceRNA。
+
+> 13.Sumazin, P. et al. An extensive microRNA-mediated network of RNA–RNA interactions regulates established oncogenic pathways in glioblastoma. Cell 147, 370–381 (2011).
+> 14.Ala, U. et al. Integrated transcriptional and competitive endogenous RNA networks are cross-regulated in permissive molecular environments. Proc. Natl Acad. Sci. USA 110, 7154–7159 (2013).
+
+---
+Q: 怎么计算miRNA结合位点的重合率的p值？ //todo
+
+只选择中等表达量的miRNA，用于捕捉动态互作。
+去掉少于6个miRNA结合位点的基因，选择基因对之间miRNA结合位点重合率显著(p.adj<0.05)。
+
+
+- CeRNAs were identified by miRNA-binding-site overlap and expression correlation 13,14. 
+- Only microRNAs with intermediate expression (between 0.01 and 100 in averaged fragments per million mapped fragments (FPM)) were used to capture dynamic interactions 14. 
+- After removing genes with fewer than six such miRNA-binding sites, gene pairs with significant miRNA-binding-site overlap (<0.05 in Benjamini–Hochberg-corrected P value) were selected. 
+
+
+---
+Q: 相关系数>0.6是怎么来的? p值p<1e-10又是怎么来的?? //todo
+
+还要满足表达量的相关系数>0.6, p<1e-10，才被认定为 ceRNA。
+看率3UTR的变异，只用CDS定量mRNA表达量。
+和>500 ceRNA 连接的基因被认定为hub 基因。
+
+- Among them, `pairs correlated (>0.6 in Pearson’s correlation coefficient) (P < 1 × 10−10) in gene expression` were defined as ceRNAs. 
+- To account for mRNAs with variable 3′ UTRs, we used only CDS to quantify mRNA expression. 
+- Genes that are connected with >500 ceRNAs were defined as hub genes.
+
+
+## Model-based analysis of trans effect of 3′US (MAT3UTR)
+有很多公式，先跳过。
+
+
+
+
+
+## Code availability
+The open source MAT3UTR program (version 0.9.2) is freely available at https://github.com/thejustpark/MAT3UTR with necessary example data for this analysis.
+
+## Data availability
+Raw and processed miRNA-Seq data for the NUDT21-depletion experiment have been deposited to GEO under the accession number [GSE78198](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78198).
+
+
+
+
+
 
 
 
@@ -289,3 +499,14 @@ permissive [pəˈmɪsɪv] dj. 许可的；自由的；宽容的；（两性关�
 disruption [dɪsˈrʌpʃn]  n. 扰乱，打乱，中断
 empirically [ɪmˈpɪrɪkli] adv. 以经验为主地
 posit [ˈpɒzɪt] vt. 安置；假定
+abolish [əˈbɒlɪʃ]  vt. 废除，废止；取消，革除
+
+underscore vt. 强调；划线于……下
+V-T If something such as an action or an event `underscores` another, it draws attention to the other thing and emphasizes its importance. 突出显示; 强调 [美国英语]
+
+tandem [ˈtændəm] n. 双人自行车；串联工作组 adj. 纵列的
+compose [kəmˈpəʊz] vt. 构成；写作；使平静；排…的版
+
+
+
+> 2021/5/28 End Reading.
