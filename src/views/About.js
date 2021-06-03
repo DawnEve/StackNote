@@ -71,9 +71,14 @@ export default{
 - [灵感_idea](https://ideazhao.com/): 前端博客  
 - [南科大计科笔记](https://github.com/Sunt-ing/SUSTech-CS-Notes): CS-Notes
 			`),
+
+
 			linksBioinfo: marked(`
+- [Firas Sadiyah](https://firas.io/post/): training 栏目挺好
 - [徐洲更](https://github.com/xuzhougeng/myscripts/blob/master/igv_web.py): 生信脚本
 - [白墨石](https://zhenglei.blog.csdn.net/article/details/111247660): 统计学，生信文件格式
+
+
 - [Yunze Liu 博客](https://www.jieandze1314.com/): [单细胞分析](https://jieandze1314.osca.top/)
 	* [#TCGA](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU4NjU4ODQ2MQ==&action=getalbum&album_id=1642483079111835651&scene=173)
 - [DAVE TANG'S BLOG](https://davetang.org/muse/learn/): 十年生信博主 english: COMPUTATIONAL BIOLOGY AND GENOMICS

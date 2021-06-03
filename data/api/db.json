@@ -3,7 +3,32 @@
 	categories:{1:"文献", 2:"英语", 3:"代码", 4:"杂谈" },
 
 	posts:[
-		
+
+
+
+
+
+
+		{
+			year: 2021,
+			title:"0603-zyxue.github.io.html",
+			caption: "博客目录: 某生信博主 zyxue.github.io",
+			category:3,
+			tags: ['生信', "博客"],
+		},
+
+
+
+
+		{
+			year: 2021,
+			title:"0528-FrontGenet-APA-Lung-ade-TME.md",
+			caption: "FrontGenet 2021:肺腺癌中，APA事件，与肿瘤微环境的关系。",
+			category:1,
+			tags: ['APA', "套路"],
+		},
+
+
 		{
 			year: 2021,
 			title:"0526-Harry_potter_listening_status.md",
@@ -35,7 +60,7 @@
 		{
 			year: 2021,
 			title:"0521-NG-Atlas_APA_3aQTL.md",
-			caption: "NG: 3’ APA QTL图谱 - 可解释约16.1%的人类复杂疾病和形状差异的遗传性",
+			caption: "NG 2021: 3’ APA QTL图谱 - 可解释约16.1%的人类复杂疾病和形状差异的遗传性",
 			category:1,
 			tags: ['APA', "李蔚组"],
 		},
@@ -52,7 +77,7 @@
 		{
 			year: 2021,
 			title:"0517-MolCell_ubi_drive_APA_By_ubi_3end_processing_complex.md",
-			caption: "Mol cell: 肿瘤特异的泛素连接酶，通过泛素化mRNA3’端处理复合体驱动APA",
+			caption: "Mol cell 2020: 肿瘤特异的泛素连接酶，通过泛素化mRNA3’端处理复合体驱动APA",
 			category:1,
 			tags: ['APA', "李蔚组"],
 		},

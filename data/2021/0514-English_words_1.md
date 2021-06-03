@@ -131,6 +131,30 @@ Haig went on to elucidate his personal principle of war.
 
 
 
+## constitute [ˈkɒnstɪtjuːt] vt. 组成，构成；建立；任命
+
+V-LINK If a number of things or people `constitute` something, they are the parts or members that form it. (某数量的物或人) 构成 (某事物) [no cont]
+
+China's ethnic minorities `constitute` less than 7 percent of its total population.
+中国的少数民族构成总人口的不到7%。
+
+
+## inset [ˈɪnset] v. 以（嵌入物）装饰；（在大图片、地图等中）套印（小图）
+The `inset` diagram indicates RNA features during cell cycle transitions. M represents the Mitosis phase.
+嵌入的插图显示了细胞周期转换过程中的RNA特征。M代表有丝分裂期。
+
+N-COUNT An `inset` is a small picture, diagram, or map that is inside a larger one. 大图中插入的小图
+
+I frequently paint between 10 and 20 `insets` for my murals.
+我经常给我的壁画绘10到20张画中画。
+
+mural [ˈmjʊərəl] n. 壁画
+
+
+
+
+
+
 # 熟词生意
 
 ## reckon

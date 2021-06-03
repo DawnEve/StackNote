@@ -428,3 +428,20 @@ main > nav li a{
 #page-index a:hover{text-decoration:underline;}
 
 #page-index span{line-height: 30px; padding:20px; color:#eee;}
+
+
+.icon, img.emoji {
+    height: 1em;
+    width: 1em;
+}
+
+.icon {
+    display: inline-block;
+    stroke: currentColor;
+    fill: none;
+    position: relative;
+    top: 2px;
+    color: #263238;
+}
+
+
