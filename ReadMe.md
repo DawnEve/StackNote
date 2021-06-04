@@ -157,10 +157,15 @@ Then open your web browser: http://localhost:12345
 
 ## 5.Editing methods
 
-#### How to add a new top menu pointing to a .md file?
+### How to add a new top menu pointing to a .md file?
 
 Add the info in /index.html, add router, import file
 make new file like src/views/Recipe.js
+
+
+### How wo edit links below every page?
+They are static and fixed in /index.html.
+
 
 
 
