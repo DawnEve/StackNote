@@ -77,6 +77,9 @@ export default{
 - [Firas Sadiyah](https://firas.io/post/): training 栏目挺好
 - [徐洲更](https://github.com/xuzhougeng/myscripts/blob/master/igv_web.py): 生信脚本
 - [白墨石](https://zhenglei.blog.csdn.net/article/details/111247660): 统计学，生信文件格式
+- [顾恺](https://www.bioinfo-scrounger.com/)
+
+
 
 
 - [Yunze Liu 博客](https://www.jieandze1314.com/): [单细胞分析](https://jieandze1314.osca.top/)

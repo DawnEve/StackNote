@@ -82,6 +82,7 @@ v0.3.3-6 text
 v0.3.3-7 paper
 v0.3.4 底部添加svg github logo
 v0.3.4-1 paper
+v0.3.4-2 paper
 #
 #--> commit
 #----------> push to github dawneve/StackNote
