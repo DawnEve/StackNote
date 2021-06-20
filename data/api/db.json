@@ -11,6 +11,15 @@
 
 		{
 			year: 2021,
+			title:"0619_how_to_get_answer_from_me.md",
+			caption: "如果你需要我回答你的问题",
+			category:4,
+			tags: ['提问', ],
+		},
+
+
+		{
+			year: 2021,
 			title:"0603-zyxue.github.io.html",
 			caption: "博客目录: 某生信博主 zyxue.github.io",
 			category:3,
@@ -32,7 +41,7 @@
 		{
 			year: 2021,
 			title:"0526-Harry_potter_listening_status.md",
-			caption: "哈利波特听力练习记录",
+			caption: "英语听力练习记录：哈利波特",
 			category:2,
 			tags: ['listening', ],
 		},

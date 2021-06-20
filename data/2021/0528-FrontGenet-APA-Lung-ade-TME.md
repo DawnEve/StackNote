@@ -670,7 +670,40 @@ Our analyses further indicate that different poly(A) site usage of SPARC may als
 
 
 
-## 4.
+## 4.APA对肿瘤的分层/亚类
+
+APA因子的表达量对肿瘤分4个亚类。
+4亚类的3UTR显著影响具体的mRNA转录组。
+之前研究表明，3‘端处理的调控基因，可以影响Wnt/β-catenin and NF-κB 通路的基因的3UTR长度，来决定肿瘤类型 (Ogorodnikov et al., 2018; Xiong et al., 2019).
+> |-- Transcriptome 3'end organization by PCF11 links alternative polyadenylation to formation and neuronal differentiation of neuroblastoma.
+Ogorodnikov A, Levin M, Tattikota S, Tokalov S, Hoque M, Scherzinger D, Marini F, Poetsch A, Binder H, Macher-Göppinger S, Probst HC, Tian B, Schaefer M, Lackner KJ, Westermann F, Danckwardt S
+Nat Commun. 2018 Dec 14; 9(1):5331.
+> |-- NUDT21 inhibits bladder cancer progression through ANXA2 and LIMK2 by alternative polyadenylation.
+Xiong M, Chen L, Zhou L, Ding Y, Kazobinka G, Chen Z, Hou T
+Theranostics. 2019; 9(24):7156-7167.
+
+3UTR 影响肿瘤免疫和缺氧状态，或者相反。
+有长3UTR的病人有高的免疫打分，和低的缺氧打分。
+分裂中的细胞，使用短3UTR，早就发现了(Sandberg et al., 2008)
+
+APA可能改变了代谢基因，创建类TME，促进它们的生存和增殖。
+Our results suggest that APA may contribute to the altered levels of metabolic genes which in turn create a TME that promote their survival and propagation.
+
+
+
+
+## 5.总结
+我们展示了LUAD中的3UTR图谱，着重是113个反复出现的APA改变及具体的因子，特别是2个关键调控子: CPSF2 and CPEB3，能调控APA pattern。
+In summary, we presented the comprehensive landscape of 3′ UTR in LUAD and highlighted 113 recurrent APA alterations and specific factors especially two key regulators, CPSF2 and CPEB3, regulating APA patterns.
+
+3UTR缩短常常和肿瘤发生相关，可能是基因的高表达或者miRNA结合位点的丢失。
+Consistent with previous analyses in other cancer types, 3′ UTR shortening is frequently associated with tumor occurrence in APA events, and it may contribute to elevated gene expression through loss of miRNA-binding sites.
+
+另外，APA事件及其调控者对肿瘤预后、分层有帮助。
+Moreover, APA events and their regulators were found to be useful for prognosis and cancer stratification in LUAD. 
+
+
+The resources provided herein should be valuable for understanding and exploring alternative 3′ UTR isoforms in LUAD and are expected to promote precision medicine in the future.
 
 
 
@@ -681,13 +714,8 @@ Our analyses further indicate that different poly(A) site usage of SPARC may als
 
 
 
-## 5.
 
 
-
-
-
-#
 
 
 
@@ -698,6 +726,8 @@ Our analyses further indicate that different poly(A) site usage of SPARC may als
 dismal prognosis 惨淡的预后
 dismal  [ˈdɪzməl]  adj. 凄凉的，忧郁的；阴沉的，沉闷的；差劲的；可怜的
 prognosis  [prɒɡˈnəʊsɪs]  n. [医] 预后；预知
+
+
 elucidate  [ɪˈluːsɪdeɪt]  vt. 阐明；说明
 accommodate  [əˈkɒmədeɪt]  vt. 容纳；使适应；供应；调解
 
@@ -714,5 +744,13 @@ infiltration  [ˌɪnfɪlˈtreɪʃn]  n. 渗透；渗透物
 glycolytic [ˌɡlaɪkəˈlɪtɪk] adj. 糖分解的
 
 
-#
+underscore [ʌndə'skɔː] vt. 强调；划线于……下
+> If something such as an action or an event `underscores` another, it draws attention to the other thing and emphasizes its importance. 突出显示; 强调 [美国英语]
+The Labour Department figures `underscore` the shaky state of the economic recovery.
+劳工部的数字突出显示了经济复苏的不稳定。
 
+
+
+
+
+> 2021/6/11 20:59 End Reading.

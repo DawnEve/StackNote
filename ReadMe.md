@@ -163,7 +163,7 @@ Add the info in /index.html, add router, import file
 make new file like src/views/Recipe.js
 
 
-### How wo edit links below every page?
+### How to edit links below every page?
 They are static and fixed in /index.html.
 
 
