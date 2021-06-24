@@ -84,6 +84,7 @@ v0.3.4 底部添加svg github logo
 v0.3.4-1 paper
 v0.3.4-2 paper
 v0.3.4-3 listening HP3_9
+v0.3.4-4 paper
 #
 #--> commit
 #----------> push to github dawneve/StackNote

@@ -9,6 +9,16 @@
 
 
 
+
+		{
+			year: 2021,
+			title:"0621_APA_in_human_cancer.md",
+			caption: "JNCI 2018：比较人肿瘤中的APA",
+			category:1,
+			tags: ['APA', ],
+		},
+
+
 		{
 			year: 2021,
 			title:"0619_how_to_get_answer_from_me.md",
