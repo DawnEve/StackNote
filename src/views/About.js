@@ -78,7 +78,7 @@ export default{
 - [徐洲更](http://xuzhougeng.top/): [生信脚本](https://github.com/xuzhougeng/myscripts/blob/master/igv_web.py)
 - [白墨石](https://zhenglei.blog.csdn.net/article/details/111247660): 统计学，生信文件格式
 - [顾恺](https://www.bioinfo-scrounger.com/)
-
+- [Alboukadel Kassambara (肿瘤生信)](https://www.alboukadel.com/): [统计 sthda](http://www.sthda.com/english/)、[可视化(ggpubr/factoextra/survminer)](https://rpkgs.datanovia.com/)
 
 
 

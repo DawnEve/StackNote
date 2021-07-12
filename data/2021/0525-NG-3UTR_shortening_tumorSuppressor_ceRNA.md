@@ -116,9 +116,15 @@ As expected, the loss of co-expression results in a much smaller (tenfold reduce
 - PTEN和EPS15有4个iRNA结合位点重合，在normal样本中是ceRNA对。
 - 然而，EPS15在23/68(33.8%)肿瘤中有3US，失去和PTEN竞争miRNA的能力，在肿瘤中就和PTEN不共表达了。(fig.2c)
 
+![0525_correlation](/data/2021/images/05/0525_correlation.png)
+
+
 ![PTEN-EPS15 co-expression](/data/2021/images/05/0521-NG-3UTR-ceRNA-PTEN_EPS15.png)
 Fig. 2: 3′UTR shortening contributes to ceRNET disruption.
-c, Gene expression of EPS15 (3′US gene) and PTEN (ceRNA partner) on 68 estrogen-receptor-positive (ERP) breast tumors and matched normal samples. The horizontal lines represent the mean expression values of PTEN, which is decreased in tumors (FDR = 2.1 × 10<sup>−10</sup>).
+**a**, Pearson’s correlation coefficients of 100,000 randomly selected transcript pairs with
+significant miRNA-binding-site overlap in breast tumors and matched normal tissues. 
+**b**, The number of ceRNA pairs in breast tumor and the matched normal ceRNETs. The numbers in parentheses are normalized to the number of edges shared between tumor and normal.
+**c**, Gene expression of EPS15 (3′US gene) and PTEN (ceRNA partner) on 68 estrogen-receptor-positive (ERP) breast tumors and matched normal samples. The horizontal lines represent the mean expression values of PTEN, which is decreased in tumors (FDR = 2.1 × 10<sup>−10</sup>).
 
 
 ---

@@ -5,10 +5,18 @@
 	posts:[
 
 
+//命名规范： 月日4位-杂志名-几个-关键词.md
 
 
 
 
+		{
+			year: 2021,
+			title:"0706-GB_ATAC-seq-review.md",
+			caption: "GB 2020: ATAC-seq 数据分析综述",
+			category:1,
+			tags: ['ATAC', ],
+		},
 
 		{
 			year: 2021,
