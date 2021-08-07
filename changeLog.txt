@@ -86,6 +86,8 @@ v0.3.4-2 paper
 v0.3.4-3 listening HP3_9
 v0.3.4-4 paper
 v0.3.4-5 paper
+v0.3.5 底部添加警示
+
 #
 #--> commit
 #----------> push to github dawneve/StackNote

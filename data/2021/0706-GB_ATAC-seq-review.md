@@ -49,7 +49,7 @@ Recently, single-cell ATAC-seq (scATAC-seq) has been described, using
 - fluorescence-activated cell sorting (FACS), 
 - microfluidic, 
 - and nano-well-based approaches [33,34,35]. 
- 
+
 ScATAC-seq can be applied in multiple situations including clinical specimens and developmental biology to study the heterogenous cell populations at single-cell resolution [23, 29].
 
 ## 5.小结：综述范围

@@ -43,6 +43,9 @@ export default{
 	<aside>
 		<div class=box>
 			<div class=light>
+				Genomics . Data . Science
+				<br>
+				<br>
 				Paper · English · R/Python · bioinfomatics · random thoughts
 			</div>
 		</div>

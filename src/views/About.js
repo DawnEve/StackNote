@@ -24,6 +24,10 @@ export default{
 
 
 
+
+
+
+
 		<h2>About Me</h2>
 		<p>我是该博客框架的作者王吃瓜，有什么想法、建议与意见，推荐使用邮件联系我。</p>
 
@@ -43,6 +47,18 @@ export default{
 			<li>英语读报-英文名著群 755650994</li>
 			<li>js/php熟手交流群 369578518</li>
 		</ul>
+
+
+	<h2>目的</h2>
+<p><b>阅读文献，追踪都有哪些玩家？</b></p>
+<p>某个生物学方向（发育、免疫、癌症）的大佬，强在领域的深耕，先进的技术平台，能产生高质量的data，第一作者和通讯一般都是搞实验的，生信最多也就是个共一，文章容易冲击CNS。【掌握实验材料、临床样本、测序数据】</p>
+<p>某个疾病（depression、SLE、HSCR）的遗传学家，主要就是借助genomics的技术来找疾病的variants和genes，以技术为主，文章不容易发大，除非data够大。</p>
+<p>大型Atlas合作项目，基本就是烧钱，作铺垫性的工作，短期内很难看到成效，文章基本能发到CNS。</p>
+<p>开发算法、模型和数据库的计算生物学家，针对前沿的数据（scRNA-seq，image data）和问题（pleiotropy），提出特定的解决方案，文章也不容易发大，以统计和算法为主。</p>
+
+
+
+
 
 		<br>
 		<hr>
@@ -79,6 +95,8 @@ export default{
 - [白墨石](https://zhenglei.blog.csdn.net/article/details/111247660): 统计学，生信文件格式
 - [顾恺](https://www.bioinfo-scrounger.com/)
 - [Alboukadel Kassambara (肿瘤生信)](https://www.alboukadel.com/): [统计 sthda](http://www.sthda.com/english/)、[可视化(ggpubr/factoextra/survminer)](https://rpkgs.datanovia.com/)
+- [陈雯-斑马鱼-lncRNA](http://blog.biochen.com/about)
+- [Digital-LI 生信文献](https://www.cnblogs.com/leezx/)：日常分享文献
 
 
 
