@@ -12,6 +12,15 @@
 
 		{
 			year: 2021,
+			title:"0823-SCRB-seq.md",
+			caption: "汇总：SCRB-seq",
+			category:1,
+			tags: ['测序', ],
+		},
+
+
+		{
+			year: 2021,
 			title:"0706-GB_ATAC-seq-review.md",
 			caption: "GB 2020: ATAC-seq 数据分析综述",
 			category:1,

@@ -96,7 +96,8 @@ export default{
 - [顾恺](https://www.bioinfo-scrounger.com/)
 - [Alboukadel Kassambara (肿瘤生信)](https://www.alboukadel.com/): [统计 sthda](http://www.sthda.com/english/)、[可视化(ggpubr/factoextra/survminer)](https://rpkgs.datanovia.com/)
 - [陈雯-斑马鱼-lncRNA](http://blog.biochen.com/about)
-- [Digital-LI 生信文献](https://www.cnblogs.com/leezx/)：日常分享文献
+- [Digital-LI 生信文献](https://www.cnblogs.com/leezx/)：日常分享文献, 按[tag](https://www.cnblogs.com/leezx/tag/)查看。
+- [yiweiniu ATAC](https://yiweiniu.github.io/blog/)
 
 
 

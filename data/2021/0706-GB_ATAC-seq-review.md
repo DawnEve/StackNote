@@ -35,6 +35,8 @@ Briefly, ATAC-seq incorporates a genetically engineered hyperactive **Tn5 transp
 
 During this process, the nick is repaired, leaving a 9-bp duplication [30, 31]. Paired-end sequencing is then performed to facilitate higher unique alignment rates of these open regions [32].
 
+
+
 ## 3. 起始量低，无需片段筛选(可识别核小体位置)
 The hyperactivity of Tn5 transposase makes the ATAC-seq protocol a simple, time-efficient method that requires **500–50,000 cells** [9]. 
 
@@ -148,7 +150,7 @@ For mammalian species, the suggested minimum number of mapped reads is 50 millio
 
 
 
-## 3.Post-alignment processing and quality control
+## 3.Post-alignment processing and quality control[9bp切刻调整]
 
 比对后对bam文件做质控: uniq map比率，重复序列百分数，插入片段长度分布等。
 After sequence alignment, as in most DNA sequencing data, basic metrics of the aligned BAM file, such as unique mapping reads/rates, duplicated read percentages, and fragment size distribution can be collected using Picard [50] and SAMtools [51]. 
@@ -182,6 +184,21 @@ These can be evaluated with the tool **ATACseqQC** [55].
 ---
 考虑到Tn5酶的9bp切刻，需要对正链+4bp，负链-5bp。方便做碱基分辨率的TF足迹和motif分析。
 Lastly, reads should be shifted + 4 bp and − 5 bp for positive and negative strand respectively, to account for the 9-bp duplication created by DNA repair of the nick by Tn5 transposase and achieve base-pair resolution of TF footprint and motif-related analyses [9, 33, 56]. 
+
+
+
+
+**看一下10x cell range atac怎么做的?**
+![9nt](/data/2021/images/07/0706_ATAC_9nt.png)
+[ref](https://support.10xgenomics.com/single-cell-atac/software/pipelines/latest/algorithms/overview)
+If the fragment passes these filters, Cell Ranger ATAC creates one entry in the fragments.tsv.gz file marking the start and end of the fragment after adjusting the 5' ends of the read-pair to account for transposition, during which the transposase occupies a region of DNA 9 base pairs long. 
+就是说只改变5’端，来调整这个切刻：正链+4bp，负链-5bp
+
+As the ends of each fragment are indicative of regions of open chromatin.
+片段的末端，就是切口位置。
+
+
+---
 
 以上大多QC都可以集成到 MultiQC，得到一个用户友好的交互式报告。
 Most aforementioned QC and analysis reports can be integrated using MultiQC [57] for an aggregated, user-friendly, and interactive presentation.
