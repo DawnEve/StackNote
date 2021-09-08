@@ -9,6 +9,25 @@
 
 
 
+		{
+			year: 2021,
+			title:"0908-APA_abstract.md",
+			caption: "2021_Q4 摘要阅读: APA",
+			category:1,
+			tags: ['测序', ],
+		},
+
+
+
+		{
+			year: 2021,
+			title:"0907-Single_cell_abstract.md",
+			caption: "2021_Q4 摘要阅读: 单细胞",
+			category:1,
+			tags: ['测序', ],
+		},
+
+
 
 		{
 			year: 2021,

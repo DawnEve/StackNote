@@ -2,7 +2,41 @@
 
 
 
-# 检索
+# SCRB-Seq info(iIllumina)
+https://emea.illumina.com/science/sequencing-method-explorer/kits-and-arrays/scrb-seq.html
+![0823_scSeq](/data/2021/images/08/0823_scrb-seq.png)
+
+SCRB-Seq is a cost-efficient, multiplexed, single-cell mRNA sequencing technique.
+
+SCRB-Seq isolates single cells into wells using FACS. After cell lysis, poly(A)+ mRNAs are annealed to a custom primer containing a poly(T) tract, UMI, well barcode, and biotin. 
+流式分选细胞到孔板。使用 带 polyT, UMI, well barcode 和 biotin 的引物扩增 polyA+ mRNA。
+
+Template-switching RT and PCR amplification reactions are carried out on the mRNA, generating barcoded, full-length cDNA. 
+链置换RT，PCR反应是在mRNA上进行的，产生带barcode的全长cDNA。
+
+cDNA strands from all wells are pooled together to be purified. They are PCR-amplified and purified further. 
+cDNA链混到一起纯化。然后PCR扩增和纯化。
+
+The cDNA libraries are prepared using the Nextera XT library preparation protocol, with modified i5 primers. The resultant cDNA fragments are size-selected for 300–800 bp and sequenced.
+cDNA库使用Nextera XT建库试剂盒流程，使用修改的i5引物。获得的cDNA筛选300-800bp的片段并测序。
+
+---
+**Pros: 优点**
+Cost-efficient, high-throughput, single-cell transcriptome profiling
+Highly sensitive gene-detection results compared to popular scRNA-Seq techniques1
+
+---
+**Cons: 缺点**
+Template-switching RT is heavily biased to full-length mRNA2
+模板转换RT严重偏向于全长mRNA。
+
+
+SCRB-Seq: Soumillon M., Cacchiarelli D., Semrau S., van Oudenaarden A. and Mikkelsen T. S. (2014). Characterization of directed differentiation by high-throughput single-cell RNA-Seq. bioRxiv
+
+
+
+
+# 文献检索
 
 https://pubmed.ncbi.nlm.nih.gov/?term=SCRB-seq&size=20 检索到3篇。可以再看看他们的引用。
 
@@ -13,7 +47,7 @@ https://pubmed.ncbi.nlm.nih.gov/?term=SCRB-seq&size=20 检索到3篇。可以再
 
 
 
-## 第一篇 细节 (2017 Mol Cell)
+## 方法比较paper (2017 Mol Cell)
 
 >Comparative Study | Mol Cell. 2017 Feb 16;65(4):631-643.e4. doi: 10.1016/j.molcel.2017.01.023.
 >**Comparative Analysis of Single-Cell RNA Sequencing Methods**
@@ -37,6 +71,9 @@ Keywords: cost-effectiveness; method comparison; power analysis; simulation; sin
 - Smart-seq/C1, 全长，no UMI, C1, 2芯片 （全长，跳过）
 - Smart-seq2 全长测序， no UMI, FACS, 2板 （全长，跳过）
 
+and SMART-seq2 was found to detect a median of 9,138 genes.
+
+
 ### 分子水平的建库过程？ 
 ![0823_scSeq](/data/2021/images/08/0823_scSeq2.jpg)
 
@@ -46,7 +83,7 @@ Keywords: cost-effectiveness; method comparison; power analysis; simulation; sin
 - SCRB-seq，cDNA扩增 PCR rGrGrG模板反转，建库时使用 Tn5 Tagmentation and 3'enrichment.
 - Smart-seq/c1 和 Smart-seq2 都是建库阶段Tagmentation，但是不做3‘富集。
 
-我们在分子处理上和 SCRB-seq一样，还没有加 UMI。
+我们在分子处理上和 SCRB-seq基本一样，最主要的区别是，我们的方法没有加 UMI。
 
 
 ### 费用上
@@ -76,6 +113,9 @@ GSM2220467	SCRBseqB_TTTCTT
 
 193: /home/wangjl/data/apa/SCRB-seq/raw/
 依赖 SraRunTable.txt 中的 样本信息，能把R1，R2配对。
+
+
+
 
 
 
@@ -169,7 +209,8 @@ SRR1058036
 SRR1058037
 ```
 
-### Computational analysis of sequence data
+### 分析方法
+**Computational analysis of sequence data**
 All second sequence reads were aligned to a reference database consisting of all human RefSeq mRNA sequences (obtained from the UCSC Genome Browser hg19 reference set:
 http://genome.ucsc.edu/), the human hg19 mitochondrial reference sequence and the ERCC
 RNA spike-in reference sequences using bwa version 0.7.4 4 with non-default parameter “-l 24”.
@@ -210,48 +251,124 @@ The UMI counts for each gene in the remaining wells were then normalized by divi
 
 
 
-### SCRB-Seq info(iIllumina)
-https://emea.illumina.com/science/sequencing-method-explorer/kits-and-arrays/scrb-seq.html
-![0823_scSeq](/data/2021/images/08/0823_scrb-seq.png)
-
-SCRB-Seq is a cost-efficient, multiplexed, single-cell mRNA sequencing technique.
-
-SCRB-Seq isolates single cells into wells using FACS. After cell lysis, poly(A)+ mRNAs are annealed to a custom primer containing a poly(T) tract, UMI, well barcode, and biotin. 
-流式分选细胞到孔板。使用 带 polyT, UMI, well barcode 和 biotin 的引物扩增 polyA+ mRNA。
-
-Template-switching RT and PCR amplification reactions are carried out on the mRNA, generating barcoded, full-length cDNA. 
-链置换RT，PCR反应是在mRNA上进行的，产生带barcode的全长cDNA。
-
-cDNA strands from all wells are pooled together to be purified. They are PCR-amplified and purified further. 
-cDNA链混到一起纯化。然后PCR扩增和纯化。
-
-The cDNA libraries are prepared using the Nextera XT library preparation protocol, with modified i5 primers. The resultant cDNA fragments are size-selected for 300–800 bp and sequenced.
-cDNA库使用Nextera XT建库试剂盒流程，使用修改的i5引物。获得的cDNA筛选300-800bp的片段并测序。
-
----
-**Pros: 优点**
-Cost-efficient, high-throughput, single-cell transcriptome profiling
-Highly sensitive gene-detection results compared to popular scRNA-Seq techniques1
-
----
-**Cons: 缺点**
-Template-switching RT is heavily biased to full-length mRNA2
-模板转换RT严重偏向于全长mRNA。
-
-
-SCRB-Seq: Soumillon M., Cacchiarelli D., Semrau S., van Oudenaarden A. and Mikkelsen T. S. (2014). Characterization of directed differentiation by high-throughput single-cell RNA-Seq. bioRxiv
 
 
 
-
-### 使用 SCRB-seq 的paper (mESC)  [NC, 2017]
+## SCRB-seq 发表 (mESC)  [NC, 2017]
 > 1. https://www.nature.com/articles/s41467-017-01076-4.pdf
 > Dynamics of lineage commitment revealed by single-cell transcriptomics of differentiating embryonic stem cells
 > https://www.biorxiv.org/content/10.1101/068288v1
 > https://www.nature.com/articles/s41467-017-01076-4
+> 补充材料 https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-017-01076-4/MediaObjects/41467_2017_1076_MOESM1_ESM.pdf
+
+Since population level measurements are not able to resolve population heterogeneity, we turned to the recently developed Single Cell RNA Barcoding and Sequencing method15 (SCRB-seq, Supplementary Fig. 2). 
+![0823_scrb-seq_figS2.png](/data/2021/images/08/0823_scrb-seq_figS2.png)
+
+
+实验设计:
+Bulk and single-cell RNA-seq (SCRB-seq and SMART-seq) of mouse embryonic stem cells after different periods of continuous exposure to retinoic acid. Bulk RNA-seq of cell lines derived after retinoic exposure and after differentiation with retinoic acid and MEK inhibitor combined.
+
+We quantified the transcriptional profiles of over 2000 single cells, sampled at 9 time points during differentiation, typically spaced 12 h apart.
+
+
+### 测序方法与数据
+The resulting sequencing library was purified with Agencourt AMPure XP magnetic beads (0.6x, Beckman Coulter), size selected (300–800 bp) on a E-Gel EX Gel, 2% (Life Technologies), purified using the QIAquick Gel Extraction Kit (Qiagen) and quantified on the Qubit 2.0 Flurometer using the dsDNA HS Assay (Life Technologies). Libraries were sequenced on Illumina Hiseq paired-end flow cells with 17 cycles on the first read to decode the well barcode and UMI, a 9 cycle index read to decode the i7 Nextera barcode and finally a 46 cycle second read to sequence the cDNA.
+
+还是太短，
+17bp: well barcode  + UMI
+9bp: i7 Nextera barcode
+46bp: cDNA;
+
+> https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE79578
+> https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA316219&o=acc_s%3Aa
+
+```
+GSM2098546	scrbseq_6h
+GSM2098547	scrbseq_12h
+GSM2098548	scrbseq_24h
+GSM2098549	scrbseq_36h
+GSM2098550	scrbseq_48h
+GSM2098551	scrbseq_60h
+GSM2098552	scrbseq_72h
+GSM2098553	scrbseq_96h
+
+对应着
+SRR3290188
+SRR3290190
+SRR3290193
+SRR3290196
+SRR3290199
+SRR3290202
+SRR3290203
+SRR3290204
+```
 
 
 
+
+### 分析方法
+
+**SCRB-seq and bulk RNA-seq read alignment**
+
+All second sequence reads were aligned to a reference database consisting of all mouse RefSeq mRNA sequences (obtained from the UCSC Genome Browser mm10 reference set: http://genome.ucsc.edu/), the mouse mm10 mitochondrial reference sequence and the ERCC RNA spike-in reference sequences using bwa version 0.7.4 with non-default parameter “-l 24”. 
+BWA 比对到 mm10.
+
+Read pairs for which the second read aligned to a mouse RefSeq gene were kept for further analysis if 1) the initial six bases of the first read all had quality scores of at least 10 and corresponded exactly to a designed well-barcode and 2) the next ten bases of the first read (the UMI) all had quality scores of at least 30. Digital gene expression (DGE) profiles were then generated by counting, for each microplate well and RefSeq gene, the number of unique UMIs associated with that gene in that well. Python scripts implementing the alignment and DGE derivation are available from the authors upon request.
+
+过滤: 1) 前6个碱基 Q>=10; 2)接下来10bp是UMI，Q>=30;
+
+
+---
+**Computational analysis SCRB-seq experiments**
+
+A histogram of the total number of UMIs detected per cell is shown in Supplementary Fig. 2a. To reduce the influence of technical noise we discarded cells with less than 2000 UMIs (red vertical line in Supplementary Fig. 2). This cutoff nearly minimized the upper bound of the counting error per gene (Supplementary Fig. 2b) estimated by
+
+
+while not significantly reducing the number of detected genes (13,720, Supplementary Fig. 2c)—defined as the number of genes, which had more than one UMI in more than one cell. Due to this cutoff 2451 out of 3456 measured cells were used for further analysis (Supplementary Fig. 2e), where these are the numbers of cells analyzed at each time point:
+
+In individual cells with more than 2000 total UMIs 850 genes were detected on average.
+
+
+## 分别命名3套数据
+- polyA-seq : 2021 Wang et al;
+- raw0/  2014        Magali Soumillon   : 2014 Soumillon et al;
+- raw/  2017MC    Christoph Ziegenhain: 2017 Ziegenhain et al;
+- raw2/  2017NC   Stefan Semrau: 2017 Semrau et al;
+
+
+# 找human smart-seq2 数据集
+
+在SRA搜索：
+https://www.ncbi.nlm.nih.gov/sra/?term=(smart_seq2)+AND+%22Homo+sapiens%22%5Borgn%3A__txid9606%5D
+
+按照sample查找GEO: 
+https://www.ncbi.nlm.nih.gov/geo/browse/?view=samples&search=Smart-seq2&sort=tax&display=100&page=7
+
+---
+
+- GSM5469133	Endo_B_cell_sample_1-15 共15个
+	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE180728
+- GSM5278574	Smart-seq2: Macrophages1-10，共10个
+	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149574
+- GSM4405613	P0305 (Smart-seq2) 共10个
+	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE146771
+
+
+
+
+
+
+# 其他要求
+## 要引用的三个文献
+```
+Rosonina...Blencowe, JBC, 2003; 
+	https://www.jbc.org/article/S0021-9258(20)82578-2/pdf
+Nagaike...Manley, Mol Cell 2011; 
+	https://www.cell.com/molecular-cell/comments/S1097-2765(11)00049-9
+	https://link.springer.com/protocol/10.1007%2F978-1-62703-971-0_6 书
+Ji...Tian, Mol Syst Biol, 2011
+	https://europepmc.org/article/PMC/3202805
+```
 
 
 
