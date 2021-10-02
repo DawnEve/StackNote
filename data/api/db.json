@@ -8,6 +8,25 @@
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
 
+		{
+			year: 2021,
+			title:"1003-snakemake_papers.md",
+			caption: "文献: snakemake 流程",
+			category:1,
+			tags: ['测序', '单细胞'],
+		},
+
+
+
+
+		{
+			year: 2021,
+			title:"1002-smart-seq2_dataset.md",
+			caption: "Smart-seq2 datasets",
+			category:1,
+			tags: ['测序', '单细胞'],
+		},
+
 
 		{
 			year: 2021,
@@ -24,7 +43,7 @@
 			title:"0907-Single_cell_abstract.md",
 			caption: "2021_Q4 摘要阅读: 单细胞",
 			category:1,
-			tags: ['测序', ],
+			tags: ['测序', '单细胞'],
 		},
 
 

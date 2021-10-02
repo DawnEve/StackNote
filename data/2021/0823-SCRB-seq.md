@@ -336,16 +336,18 @@ In individual cells with more than 2000 total UMIs 850 genes were detected on av
 - raw2/  2017NC   Stefan Semrau: 2017 Semrau et al;
 
 
+
+
+
+
+
+
 # 找human smart-seq2 数据集
 
-在SRA搜索：
-https://www.ncbi.nlm.nih.gov/sra/?term=(smart_seq2)+AND+%22Homo+sapiens%22%5Borgn%3A__txid9606%5D
-
-按照sample查找GEO: 
-https://www.ncbi.nlm.nih.gov/geo/browse/?view=samples&search=Smart-seq2&sort=tax&display=100&page=7
+=> 详情见专题：2021-10-2
+这里是实际分析的数据。
 
 ---
-
 - GSM5469133	Endo_B_cell_sample_1-15 共15个
 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE180728
 - GSM5278574	Smart-seq2: Macrophages1-10，共10个
@@ -353,7 +355,14 @@ https://www.ncbi.nlm.nih.gov/geo/browse/?view=samples&search=Smart-seq2&sort=tax
 - GSM4405613	P0305 (Smart-seq2) 共10个
 	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE146771
 
-
+```
+$ cat ReadMe.txt 
+zs      GSE134311 zs/stat Single DRG neurons, mouse Dorsal Root Ganglion neurons (DRG)
+sample2 GSE166927 human intestinal fibroblasts
+sample3 GSE108989 张泽民 CRC T cell
+sample4 SRP132313 https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC6454680/
+MEF     https://ngdc.cncb.ac.cn/gsa/browse/CRA002582  Single-Cell Transcriptome Analysis Reveals Six Subpopulations Reflecting Distinct Cellular Fates in Senescent Mouse Embryonic Fibroblasts
+```
 
 
 
@@ -372,6 +381,34 @@ Ji...Tian, Mol Syst Biol, 2011
 
 ## Rosonina...Blencowe, JBC, 2003
 
+
+
+
+
+
+
+# Amplification bias(PCR bias)
+
+---
+> https://pubmed.ncbi.nlm.nih.gov/29943302/
+> Review Adv Exp Med Biol. 2018
+> Emergence of Bias During the Synthesis and Amplification of cDNA for scRNA-seq
+
+In this review, we will describe how these biases emerge and impact scRNA-seq protocols. Moreover, we will introduce several current and convenient modified scRNA-seq methods that allow for bias to be decreased and estimated.
+
+
+
+---
+> https://pubmed.ncbi.nlm.nih.gov/32502143/
+> PLoS Comput Biol. 2020 Jun 5
+> Detecting differential alternative splicing events in scRNA-seq with or without Unique Molecular Identifiers
+
+However, compared to bulk RNA-seq, scRNA-seq data are much noisier due to high technical variability and low sequencing depth. Here we propose SCATS (Single-Cell Analysis of Transcript Splicing) for differential splicing analysis in scRNA-seq, which achieves high sensitivity at low coverage by accounting for technical noise. 
+SCATS models scRNA-seq data either with or without Unique Molecular Identifiers (UMIs).
+- For `non-UMI data`, SCATS explicitly models technical noise by accounting for capture efficiency and **amplification bias** through the use of **external spike-ins**; 
+- for `UMI data`, SCATS models capture efficiency and further accounts for **transcriptional burstiness**. 
+
+A key aspect of SCATS lies in its ability to group "exons" that originate from the same isoform(s). Grouping exons is essential in splicing analysis of scRNA-seq data as it naturally aggregates spliced reads across different exons, making it possible to detect splicing events even when sequencing depth is low.
 
 
 
