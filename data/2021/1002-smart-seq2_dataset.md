@@ -91,6 +91,8 @@ GSM2220598	SmartSeq2A_A1
 GSM2220754	SmartSeq2B_H9
 
 ```
+Smart-seq2 等6种方法检测到的基因数:
+![1002_Smart-seq2_6methods.png](data/2021/images/10/1002_Smart-seq2_6methods.png)
 
 
 
@@ -101,7 +103,7 @@ Mol Biol. 2019;1979:25-44. doi: 10.1007/978-1-4939-9240-9_3. PMID: 31028630.
 // Among the latter, Smart-seq2 is still considered the “gold standard” due to its sensitivity, precision, lower cost, scalability and for being easy to set up on automated platforms. 
 
 
-## 5: 激光显微镜 + smart-seq2 做空间转录组
+## 5: 激光显微镜 + smart-seq2 做空间转录组(2016)
 5: Nichterwitz S, Chen G, Aguila Benitez J, Yilmaz M, Storvall H, Cao M,
 Sandberg R, Deng Q, Hedlund E. Laser capture microscopy coupled with Smart-seq2
 for precise spatial transcriptomic profiling. Nat Commun. 2016 Jul 8;7:12139.
@@ -116,10 +118,15 @@ doi: 10.1038/ncomms12139. PMID: 27387371; PMCID: PMC4941116.
 
 
 6: Hashimshony T, Senderovich N, Avital G, Klochendler A, de Leeuw Y, Anavy L,
-Gennert D, Li S, Livak KJ, Rozenblatt-Rosen O, Dor Y, Regev A, Yanai I. CEL-
-Seq2: sensitive highly-multiplexed single-cell RNA-Seq. Genome Biol. 2016 Apr
+Gennert D, Li S, Livak KJ, Rozenblatt-Rosen O, Dor Y, Regev A, Yanai I. `CEL-
+Seq2`: sensitive highly-multiplexed single-cell RNA-Seq. Genome Biol. 2016 Apr
 28;17:77. doi: 10.1186/s13059-016-0938-8. PMID: 27121950; PMCID: PMC4848782.
 
+// 比第一代更好。 Here, we present CEL-Seq2, a modified version of our CEL-Seq method, with threefold higher sensitivity, lower costs, and less hands-on time. 
+
+//带UMI: We implemented CEL-Seq2 on Fluidigm's C1 system, providing its first single-cell, on-chip barcoding method, and we detected gene expression changes accompanying the progression through the cell cycle in **mouse fibroblast cells**.
+
+没有可用数据: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78779
 
 
 
@@ -127,28 +134,73 @@ Seq2: sensitive highly-multiplexed single-cell RNA-Seq. Genome Biol. 2016 Apr
 Jessberger S. Miniaturization of Smart-seq2 for Single-Cell and Single-Nucleus
 RNA Sequencing. STAR Protoc. 2020 Sep 18;1(2):100081. doi:
 10.1016/j.xpro.2020.100081. PMID: 33000004; PMCID: PMC7501729.
+// 改造：fACS 分选到384孔板，微量液体操作机器人。
+//无数据。方法学。
 
+---
+nuclei ['njuːklɪaɪ] n. 核心，核子；原子核（nucleus的复数形式）
+nucleus  [ˈnjuːkliəs] n. 原子核；细胞核；核心，中心；神经核；（彗星的）核
+organoid  [ˈɔːɡənɔɪd]  细胞器
+
+
+## 8-: Smart-seq2 / 3检测到的基因数
 8: Hagemann-Jensen M, Ziegenhain C, Chen P, Ramsköld D, Hendriks GJ, Larsson
 AJM, Faridani OR, Sandberg R. Single-cell RNA counting at allele and isoform
-resolution using Smart-seq3. Nat Biotechnol. 2020 Jun;38(6):708-714. doi:
+resolution using `Smart-seq3`. Nat Biotechnol. 2020 Jun;38(6):708-714. doi:
 10.1038/s41587-020-0497-0. Epub 2020 May 4. PMID: 32518404.
+// 升级: 
+-  Here we introduce Smart-seq3, which combines full-length transcriptome coverage with a 5′ unique molecular identifier RNA counting strategy that enables in silico reconstruction of thousands of RNA molecules per cell.
+- we identified substantial differences in isoform usage in different mouse strains and human cell types. 
+- Smart-seq3 greatly increased sensitivity compared to Smart-seq2, typically detecting thousands more transcripts per cell. 
+- fig.1d Smart-seq2 / 3检测到的基因数
+![1002_Smart-seq2](/data/2021/images/10/1002_Smart-seq2.png)
+
+---
+allelic [ə'li:lik]  adj. 等位基因的；等位的
+
+
 
 9: Baran-Gale J, Chandra T, Kirschner K. Experimental design for single-cell RNA
 sequencing. Brief Funct Genomics. 2018 Jul 1;17(4):233-239. doi:
 10.1093/bfgp/elx035. PMID: 29126257; PMCID: PMC6063265.
+//综述: 如何设计单细胞测序。
+//无数据。
+
 
 10: Picelli S. Single-cell RNA-sequencing: The future of genome biology is now.
 RNA Biol. 2017 May 4;14(5):637-650. doi: 10.1080/15476286.2016.1201618. Epub
 2016 Jul 21. PMID: 27442339; PMCID: PMC5449089.
+// 综述。无数据。
 
+
+## 11-: Tn5切割后的BA图谱：200bp单峰。
 11: Serra L, Chang DZ, Macchietto M, Williams K, Murad R, Lu D, Dillman AR,
 Mortazavi A. Adapting the Smart-seq2 Protocol for Robust Single Worm RNA-seq.
 Bio Protoc. 2018 Feb 20;8(4):e2729. doi: 10.21769/BioProtoc.2729. PMID:
 29564372; PMCID: PMC5857950.
+// 方法学: 做线虫。无数据。
+
+![1002_Smart-seq2_BA_profile.png](/data/2021/images/10/1002_Smart-seq2_BA_profile.png)
+>Figure 4.. Examples of Smart-seq2 BioAnalyzer profiles after tagmentation and library preparation. 
+**A**. An example of a sample that has been fully tagmented shows one peak around 200 bp. 
+**B**. An example of a sample that was not fully tagmented shows a broad distribution of fragments ranging from 150-1,000 bp.
+
+---
+nematode  [ˈnemətəʊd]  adj. 线虫类的 n. 线虫，线虫类
+worm [wɜːm] n. 虫，蠕虫；蜗杆；螺纹
+
+
 
 12: Chang D, Serra L, Lu D, Mortazavi A, Dillman A. A Revised Adaptation of the
 Smart-Seq2 Protocol for Single-Nematode RNA-Seq. Methods Mol Biol.
 2021;2170:79-99. doi: 10.1007/978-1-0716-0743-5_6. PMID: 32797452.
+// 适配: 植物线虫
+
+---
+parasitic  [ˌpærəˈsɪtɪk]  adj. 寄生的（等于parasitical）
+obligate  [ˈɒblɪɡeɪt] adj. 专性的；必需的
+
+
 
 13: Krishnaswami SR, Grindberg RV, Novotny M, Venepally P, Lacar B, Bhutani K,
 Linker SB, Pham S, Erwin JA, Miller JA, Hodge R, McCarthy JK, Kelder M,
@@ -157,32 +209,69 @@ N, McConnell MJ, Gage FH, Lasken RS. Using single nuclei for RNA-seq to capture
 the transcriptome of postmortem neurons. Nat Protoc. 2016 Mar;11(3):499-524.
 doi: 10.1038/nprot.2016.015. Epub 2016 Feb 18. PMID: 26890679; PMCID:
 PMC4941947.
+// 神经细胞。
+
+---
+postmortem  [pəust'mɔ:təm]  n. 验尸；检视；尸体检查 adj. 死后的；死后发生的
+
+
 
 14: van Kuijk K, Kuppe C, Betsholtz C, Vanlandewijck M, Kramann R, Sluimer JC.
 Heterogeneity and plasticity in healthy and atherosclerotic vasculature explored
 by single-cell sequencing. Cardiovasc Res. 2019 Oct 1;115(12):1705-1715. doi:
 10.1093/cvr/cvz185. PMID: 31350876; PMCID: PMC6873093.
+//综述。
+
+---
+atherosclerotic [,æθərəʊsklə'rɒtɪk] adj. 动脉粥样硬化的
+vasculature  [ˈvæskjʊlətʃə(r)] n. 脉管系统
+
+
+
 
 15: Yamazaki M, Hosokawa M, Arikawa K, Takahashi K, Sakanashi C, Yoda T,
 Matsunaga H, Takeyama H. Effective microtissue RNA extraction coupled with
 Smart-seq2 for reproducible and robust spatial transcriptome analysis. Sci Rep.
 2020 Apr 27;10(1):7083. doi: 10.1038/s41598-020-63495-6. PMID: 32341421; PMCID:
 PMC7184581.
+// 空间转录组：微组织提取 + Smart-set2
 
+
+## 16-: 非小细胞肺癌 PD-1抗体前后的外周T cell seq
 16: Zhang F, Bai H, Gao R, Fei K, Duan J, Zhang Z, Wang J, Hu X. Dynamics of
 peripheral T cell clones during PD-1 blockade in non-small cell lung cancer.
 Cancer Immunol Immunother. 2020 Dec;69(12):2599-2611. doi:
 10.1007/s00262-020-02642-4. Epub 2020 Jun 26. PMID: 32591861.
+// 4个病人。数据在 GSA: HRA000104
+> https://link.springer.com/article/10.1007%2Fs00262-020-02642-4
 
+- Here we performed Smart-seq2 single-cell RNA sequencing (scRNA-seq) analysis on 3,110 peripheral T cells of non-small cell lung cancer (NSCLC) patients before and after the initiation of programmed cell death protein 1 (PD-1) blockade. 
+
+
+## 17-: iSTARTRAC T cell
 17: Zhang Y, Zheng L, Zhang L, Hu X, Ren X, Zhang Z. Deep single-cell RNA
 sequencing data of individual T cells from treatment-naïve colorectal cancer
 patients. Sci Data. 2019 Jul 24;6(1):131. doi: 10.1038/s41597-019-0131-5. PMID:
 31341169; PMCID: PMC6656756.
+// 新工具: 网页版 TCR 分析。
+// As described in our related research paper11, the raw sequencing data have been deposited in the European Genome-phenome Archive database under study accession id EGAS00001002791 and dataset accession id EGAD0000100391031, which are available in FASTQ file format upon request and approval. 
+> iSTARTRAC  http://crctcell.cancer-pku.cn/
+> 11. Zhang, L. et al. Lineage tracking reveals dynamic relationships of T cells in colorectal cancer. Nature 564, 268–272 (2018).
+
+
 
 18: Dyer NP, Shahrezaei V, Hebenstreit D. LiBiNorm: an htseq-count analogue with
 improved normalisation of Smart-seq2 data and library preparation diagnostics.
 PeerJ. 2019 Feb 4;7:e6222. doi: 10.7717/peerj.6222. PMID: 30740268; PMCID:
 PMC6366399.
+//LiBiNorm：对 smart-seq2 的定量标准化方法。
+//data: [SRR1743160]( https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP051726)
+
+---
+analogue [ˈænəlɒɡ] adj. 类似的；相似物的；模拟计算机的
+
+
+
 
 19: Guillaumet-Adkins A, Rodríguez-Esteban G, Mereu E, Mendez-Lago M, Jaitin DA,
 Villanueva A, Vidal A, Martinez-Marti A, Felip E, Vivancos A, Keren-Shaul H,
