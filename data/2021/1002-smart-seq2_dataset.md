@@ -264,36 +264,98 @@ patients. Sci Data. 2019 Jul 24;6(1):131. doi: 10.1038/s41597-019-0131-5. PMID:
 improved normalisation of Smart-seq2 data and library preparation diagnostics.
 PeerJ. 2019 Feb 4;7:e6222. doi: 10.7717/peerj.6222. PMID: 30740268; PMCID:
 PMC6366399.
-//LiBiNorm：对 smart-seq2 的定量标准化方法。
-//data: [SRR1743160]( https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP051726)
+//`LiBiNorm`：对 smart-seq2 的定量标准化方法。
+// 使用的数据 SRA accession SRR1743160，Drosophila melanogaster 黑腹果蝇
+https://www.ncbi.nlm.nih.gov/sra/?term=SRR1743160
+https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP051726
 
 ---
 analogue [ˈænəlɒɡ] adj. 类似的；相似物的；模拟计算机的
 
 
 
-
+## 19: K562 cell 26个: 保存条件对测序的影响(不一定能用)
 19: Guillaumet-Adkins A, Rodríguez-Esteban G, Mereu E, Mendez-Lago M, Jaitin DA,
 Villanueva A, Vidal A, Martinez-Marti A, Felip E, Vivancos A, Keren-Shaul H,
 Heath S, Gut M, Amit I, Gut I, Heyn H. Single-cell transcriptome conservation in
 cryopreserved cells and tissues. Genome Biol. 2017 Mar 1;18(1):45. doi:
 10.1186/s13059-017-1171-9. PMID: 28249587; PMCID: PMC5333448.
+// GSE85534 冷藏保存的样本，测序后的差异: MARS-seq(HEK293), Smart-seq2(HEK293, K562), PBMC, mouse colon cells, patient-derived orthotopic ovarian tumor xenograft cells.
+
+> https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE85534
+> https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA338759 还是无法区分293的2种测序方法。略过。
+> EK293细胞，又叫人胚胎肾细胞293，是一个衍生自人胚胎肾细胞的细胞系，具有转染效率高，易于培养等特点.
+> K562_fresh 24个;  K562细胞是第一个人类髓性白血病人工培养的细胞
+```
+SRR5041217
+SRR5041218
+SRR5041219
+SRR5041220
+SRR5041221
+SRR5041222
+SRR5041223
+SRR5041224
+SRR5041225
+SRR5041226
+SRR5041227
+SRR5041228
+SRR5041229
+SRR5041230
+SRR5041231
+SRR5041232
+SRR5041233
+SRR5041234
+SRR5041235
+SRR5041236
+SRR5041237
+SRR5041238
+SRR5041239
+SRR5041240
+```
+---
+cryopreserve ['kraɪəʊ,prɪ'zɜːv] 冷藏保存的
+
 
 20: Miao Y, Wang P, Xie B, Yang M, Li S, Cui Z, Fan Y, Li M, Xiong B. BRCA2
 deficiency is a potential driver for human primary ovarian insufficiency. Cell
 Death Dis. 2019 Jun 17;10(7):474. doi: 10.1038/s41419-019-1720-0. PMID:
 31209201; PMCID: PMC6572856.
+// 卵母细胞，primary ovarian insufficiency (POI) 
+//无数据。
 
+
+## 21: barcoded-SmartSeq2(小神经胶质细胞)
 21: Alsema AM, Jiang Q, Kracht L, Gerrits E, Dubbelaar ML, Miedema A, Brouwer N,
 Hol EM, Middeldorp J, van Dijk R, Woodbury M, Wachter A, Xi S, Möller T, Biber
 KP, Kooistra SM, Boddeke EWGM, Eggen BJL. Profiling Microglia From Alzheimer's
 Disease Donors and Non-demented Elderly in Acute Human Postmortem Cortical
 Tissue. Front Mol Neurosci. 2020 Oct 28;13:134. doi: 10.3389/fnmol.2020.00134.
 PMID: 33192286; PMCID: PMC7655794.
+// 急性人死后皮层组织中阿尔茨海默病供体和非痴呆老年人的小胶质细胞分析
+//Microglia are the tissue-resident macrophages of the central nervous system (CNS). 
+//人脑皮质层的样本，其中 microglia 在AD和对照中无差别。
+//Notably, gene expression profiles and subcluster composition of microglia did not differ between AD donors and non-demented elderly in bulk RNA sequencing nor in single-cell sequencing.
+// https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE146639
+//Twenty-five microglia samples (13 LPS and 12 GFS) from 17 donors were sequenced as bulk samples, and 14 LPS samples from 14 donors were single-cell sequenced. Two donors were sequenced with both the 10X Genomics platform and the barcoded-SmartSeq2 protocol. Four donors (1 CTR, 3 CTR+) were included in both single-cell and bulk cohorts.
 
+---
+microglia [maɪkˈroʊɡlɪr] n. [组织] 小神经胶质；小神经胶质细胞；格子细胞
+cortical [ˈkɔːtɪkl]adj. 皮质的；[生物] 皮层的；外皮的
+AD: Alzheimer's Disease
+
+
+
+## 22-: 书的章节（推荐阅读）
 22: Villani AC, Shekhar K. Single-Cell RNA Sequencing of Human T Cells. Methods
 Mol Biol. 2017;1514:203-239. doi: 10.1007/978-1-4939-6548-9_16. PMID: 27787803.
 
+//**Understanding how populations of human T cells leverage cellular heterogeneity, plasticity, and diversity to achieve a wide range of functional flexibility, particularly during dynamic processes such as development, differentiation, and antigenic response, is a core challenge that is well suited for single-cell analysis.**
+
+//https://link.springer.com/protocol/10.1007%2F978-1-4939-6548-9_16
+//无数据
+
+
+## 23: 固有淋巴样细胞 ILC（数据 @EGA ）
 23: Mazzurana L, Czarnewski P, Jonsson V, Wigge L, Ringnér M, Williams TC,
 Ravindran A, Björklund ÅK, Säfholm J, Nilsson G, Dahlén SE, Orre AC, Al-Ameri M,
 Höög C, Hedin C, Szczegielniak S, Almer S, Mjösberg J. Tissue-specific
@@ -302,11 +364,40 @@ revealed by full-length single-cell RNA-sequencing. Cell Res. 2021
 May;31(5):554-568. doi: 10.1038/s41422-020-00445-x. Epub 2021 Jan 8. PMID:
 33420427; PMCID: PMC8089104.
 
+// The impact of the microenvironment on innate lymphoid cell (ILC)-mediated immunity in humans remains largely unknown.
+// CD127+ ILCs across four human tissues.:
+- Correlation analysis identified gene modules characterizing the migratory properties of tonsil and blood ILCs, 
+- and signatures of tissue-residency, activation and modified metabolism in colon and lung ILCs.
+
+//Data are from ten independent experiments with one tissue donor each (blood = 3, lung = 4 and colon = 3) integrated with data from
+//  tonsil data: GSE70580 
+//https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE150050 
+// raw data at EGA，没有找到编号 https://ega-archive.org/
+
+---
+human innate lymphoid 人类先天淋巴
+innate  [ɪˈneɪt] adj. 先天的；固有的；与生俱来的
+lymphoid [ˈlɪmfɔɪd]adj. 淋巴的；淋巴样的
+tonsil [ˈtɒnsl] n. [解剖] 扁桃体；扁桃腺
+alarmin  警报素
+imprint [ɪmˈprɪnt] n. 印记；痕迹；特征；版本说明 vt. 加特征；刻上记号
+
+
+
+
+
+## 24-: Tn5 切割后
 24: Trombetta JJ, Gennert D, Lu D, Satija R, Shalek AK, Regev A. Preparation of
 Single-Cell RNA-Seq Libraries for Next Generation Sequencing. Curr Protoc Mol
 Biol. 2014 Jul 1;107:4.22.1-17. doi: 10.1002/0471142727.mb0422s107. PMID:
 24984854; PMCID: PMC4338574.
+// 2014 综述。
 
+> Figure 5 Typical best-case results following Nextera library construction, pooling, and normalization. The ideal average fragment size for a Nextera library is 350–500 bp.
+![1002_Smart-seq2_BA_profile-2.png](/data/2021/images/10/1002_Smart-seq2_BA_profile-2.png)
+
+
+## 25: 多区域scRNA-seq CRC 免疫微环境
 25: Wang W, Zhong Y, Zhuang Z, Xie J, Lu Y, Huang C, Sun Y, Wu L, Yin J, Yu H,
 Jiang Z, Wang S, Wang C, Zhang Y, Huang Y, Han C, Zhong Z, Hu J, Ouyang Y, Liu
 H, Yu M, Wei X, Chen D, Huang L, Hou Y, Lin Z, Liu S, Ling F, Yao X. Multiregion
@@ -314,11 +405,22 @@ single-cell sequencing reveals the transcriptional landscape of the immune
 microenvironment of colorectal cancer. Clin Transl Med. 2021 Jan;11(1):e253.
 doi: 10.1002/ctm2.253. PMID: 33463049; PMCID: PMC7775989.
 
+// 华大的单细胞平台：[DNBelab C4](https://www.genomics.cn/solution-5644.html)
+//In this study, we have taken the advantage of two single-cell RNA sequencing technologies (Smart-seq2 and DNBelab C4) to generate an atlas of 15,115 immune and nonimmune cells from primary tumors and hepatic metastases of 18 colorectal cancer (CRC) patients. 
+
+//immune infiltration within CRC
+//data: 国家基因库 https://db.cngb.org/cnsa/, https://db.cngb.org/search/project/CNP0000916/
+
+
+
 26: Nichterwitz S, Benitez JA, Hoogstraaten R, Deng Q, Hedlund E. LCM-Seq: A
 Method for Spatial Transcriptomic Profiling Using Laser Capture Microdissection
 Coupled with PolyA-Based RNA Sequencing. Methods Mol Biol. 2018;1649:95-110.
 doi: 10.1007/978-1-4939-7213-5_6. PMID: 29130192.
+// 书章节。
 
+
+## 27:皮肤病(n=7304)
 27: Liu J, Chang HW, Huang ZM, Nakamura M, Sekhon S, Ahn R, Munoz-Sandoval P,
 Bhattarai S, Beck KM, Sanchez IM, Yang E, Pauli M, Arron ST, Fung-Leung WP,
 Munoz E, Liu X, Bhutani T, North J, Fourie AM, Rosenblum MD, Liao W. Single-cell
@@ -327,25 +429,73 @@ reveals distinctions between CD8<sup>+</sup> T cells in autoimmunity and cancer.
 J Allergy Clin Immunol. 2021 Jun;147(6):2370-2380. doi:
 10.1016/j.jaci.2020.11.028. Epub 2020 Dec 9. PMID: 33309739.
 
+//Methods: We used single-cell RNA sequencing to compare CD8+ T-cell transcriptomic heterogeneity between psoriatic and healthy skin.
+//support vector machine 支持向量机
+//data: [GSE146264](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE146264)
+//n=4574 passQC:  https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA609972&o=acc_s%3Aa
+
+
+---
+psoriatic [,sɔri'ætik] adj. 牛皮癣的 n. 牛皮癣患者
+
+
+## 28: 超声产科, 胎盘滋养层
 28: Cui D, Liu Y, Jiang X, Ding C, Poon LC, Wang H, Yang H. Single-cell RNA
 expression profiling of SARS-CoV-2-related ACE2 and TMPRSS2 in human
 trophectoderm and placenta. Ultrasound Obstet Gynecol. 2021 Feb;57(2):248-256.
 doi: 10.1002/uog.22186. PMID: 32851697; PMCID: PMC7461088.
 
+// 此前的数据，GEO上都没有标注怎么建库：
+- the datasets of the human placentae were from GSE89497, 
+- and the datasets of in-vitro cultured human embryos were from GSE109555. 
+
+
+---
+trophectoderm [trɔ'fektəudə:m]  n. 滋养外胚层
+placenta [pləˈsentə]  n. [胚] 胎盘；[植] 胎座
+trimester [traɪˈmestə(r)] n. 三个月；一学期
+
+
+
+## 29-: 10x vs Smart-seq2的比较
 29: Wang X, He Y, Zhang Q, Ren X, Zhang Z. Direct Comparative Analyses of 10X
 Genomics Chromium and Smart-seq2. Genomics Proteomics Bioinformatics. 2021 Mar
 2:S1672-0229(21)00048-6. doi: 10.1016/j.gpb.2020.02.005. Epub ahead of print.
-PMID: 33662621.
+PMID: [33662621](https://pubmed.ncbi.nlm.nih.gov/33662621/).
+
+- Smart-seq2 detected more genes in a cell, especially low abundance transcripts as well as alternatively spliced transcripts, but captured higher proportion of mitochondrial genes. 
+- The composite of Smart-seq2 data also resembled bulk RNA-seq data more.
+- For 10X-based data, we observed higher noise for mRNAs with low expression levels. 
+- Approximately 10%-30% of all detected transcripts by both platforms were from non-coding genes, with long non-coding RNAs (lncRNAs) accounting for a higher proportion in 10X. 
+- 10X-based data displayed more severe dropout problem, especially for genes with lower expression levels. 
+- However, 10X-data can detect rare cell types given its ability to cover a large number of cells. 
+- In addition, each platform detected distinct groups of differentially expressed genes between cell clusters, indicating the different characteristics of these technologies. 
+- Our study promotes better understanding of these two platforms and offers the basis for an informed choice of these widely used technologies.
+
+// data:https://ngdc.cncb.ac.cn/gsa/,  (GSA: HRA000063 and HRA000064), 
+- 10x https://ngdc.cncb.ac.cn/gsa-human/browse/HRA000063
+- 没有找到 Smart-seq2的数据：500 Error
+
+
+
 
 30: Treger RS, Pope SD, Xing X, Iwasaki A. Application of a Modified Smart-seq2
 Sample Preparation Protocol for Rare Cell Full-length Single-cell mRNA
 Sequencing to Mouse Oocytes. Bio Protoc. 2019 Aug 20;9(16):e3345. doi:
 10.21769/BioProtoc.3345. PMID: 33654848; PMCID: PMC7854224.
 
+// 应用到 卵母细胞
+// 无数据
+
+
 31: He B, Gu W, Wang L, Zheng Z, Shao Z, Huan L, Zhang B, Ma Y, Niu J, Xie X,
 Wang G. RNA-seq between asexual archeospores and meiosis-related conchospores in
 Neopyropia yezoensis using Smart-seq2. J Phycol. 2021 Jul 14. doi:
 10.1111/jpy.13197. Epub ahead of print. PMID: 34260752.
+
+// 
+
+
 
 32: Onsbring H, Tice AK, Barton BT, Brown MW, Ettema TJG. An efficient single-
 cell transcriptomics workflow for microbial eukaryotes benchmarked on Giardia

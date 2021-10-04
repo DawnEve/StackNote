@@ -57,3 +57,18 @@ https://pubmed.ncbi.nlm.nih.gov/34284136/
 - CoBRA provides a comprehensive state-of-the-art ChIP-seq and ATAC-seq analysis pipeline that can be used by scientists with limited computational experience.
 - This enables researchers to gain rapid insight into protein-DNA interactions and chromatin accessibility through sample clustering, differential peak calling, motif enrichment, comparison of sites to a reference database, and pathway analysis. 
 - CoBRA is publicly available online at https://bitbucket.org/cfce/cobra.
+
+
+
+## 综述或新闻
+
+1.Workflow systems turn raw data into scientific knowledge
+https://www.nature.com/articles/d41586-019-02619-z
+
+
+
+
+
+## 其他讨论
+https://www.biostars.org/p/258436/
+
