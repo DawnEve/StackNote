@@ -93,6 +93,7 @@ v0.3.5-3 abstract: APA
 v0.3.5-4 dataset: Smart-seq2 [2021/10/2]
 v0.3.5-5 paper: snakemake [2021/10/3]
 v0.3.5-6 paper: Smart-seq2(1-30) [2021/10/3]
+v0.3.5-7 paper: Smart-seq2(31-70) [2021/10/5]
 #
 #--> commit
 #----------> push to github dawneve/StackNote
