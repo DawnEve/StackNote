@@ -41,6 +41,14 @@ smart seq2 cell line: 10个
 ```
 
 
+## 中山大学 scRCAT-seq
+
+> Nat Commun. 2020 Oct 13;11(1):5148. doi: 10.1038/s41467-020-18976-7.
+> Single-cell RNA cap and tail sequencing (scRCAT-seq) reveals subtype-specific isoforms differing in transcript demarcation
+> https://pubmed.ncbi.nlm.nih.gov/33051455/
+> 
+
+
 
 # 详情(二级标题表示有data)
 
@@ -149,12 +157,17 @@ organoid  [ˈɔːɡənɔɪd]  细胞器
 AJM, Faridani OR, Sandberg R. Single-cell RNA counting at allele and isoform
 resolution using `Smart-seq3`. Nat Biotechnol. 2020 Jun;38(6):708-714. doi:
 10.1038/s41587-020-0497-0. Epub 2020 May 4. PMID: 32518404.
+> https://pubmed.ncbi.nlm.nih.gov/32518404/
+> https://www.nature.com/articles/s41587-020-0497-0
+
 // 升级: 
 -  Here we introduce Smart-seq3, which combines full-length transcriptome coverage with a 5′ unique molecular identifier RNA counting strategy that enables in silico reconstruction of thousands of RNA molecules per cell.
 - we identified substantial differences in isoform usage in different mouse strains and human cell types. 
 - Smart-seq3 greatly increased sensitivity compared to Smart-seq2, typically detecting thousands more transcripts per cell. 
 - fig.1d Smart-seq2 / 3检测到的基因数
 ![1002_Smart-seq2](/data/2021/images/10/1002_Smart-seq2.png)
+
+//data: https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8735/
 
 ---
 allelic [ə'li:lik]  adj. 等位基因的；等位的

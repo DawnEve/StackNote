@@ -8,6 +8,18 @@
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
 
+
+		{
+			year: 2021,
+			title:"1011-RNA_APA_relation.md",
+			caption: "文献: RNA 与 APA 的关系",
+			category:1,
+			tags: ['测序', 'APA'],
+		},
+
+
+
+
 		{
 			year: 2021,
 			title:"1003-snakemake_papers.md",

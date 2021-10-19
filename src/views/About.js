@@ -98,6 +98,7 @@ export default{
 - [陈雯-斑马鱼-lncRNA](http://blog.biochen.com/about)
 - [Digital-LI 生信文献](https://www.cnblogs.com/leezx/)：日常分享文献, 按[tag](https://www.cnblogs.com/leezx/tag/)查看。
 - [yiweiniu ATAC](https://yiweiniu.github.io/blog/)
+- [Zou Weige](https://www.jianshu.com/u/ec301f20ee2b): 单细胞, labmate
 
 
 
