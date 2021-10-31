@@ -11,6 +11,16 @@
 
 		{
 			year: 2021,
+			title:"1025-202108_BG_SCAPTURE.md",
+			caption: "(GB 2021) SCAPTURE: 深度学习 捕捉3'scRNA-seq 的APA信息",
+			category:1,
+			tags: ['测序', 'APA'],
+		},
+
+
+
+		{
+			year: 2021,
 			title:"1011-RNA_APA_relation.md",
 			caption: "文献: RNA 与 APA 的关系",
 			category:1,
@@ -23,7 +33,7 @@
 		{
 			year: 2021,
 			title:"1003-snakemake_papers.md",
-			caption: "文献: snakemake 流程",
+			caption: "文献: snakemake 流程框架",
 			category:1,
 			tags: ['测序', '单细胞'],
 		},
