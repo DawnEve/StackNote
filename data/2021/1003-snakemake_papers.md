@@ -61,10 +61,17 @@ https://pubmed.ncbi.nlm.nih.gov/34284136/
 
 ## 综述或新闻
 
-1.Workflow systems turn raw data into scientific knowledge
+1. Workflow systems turn raw data into scientific knowledge
 https://www.nature.com/articles/d41586-019-02619-z
 
 
+2. [nature methods, 2021.9] perspectives | Reproducible, scalable, and shareable analysis pipelines with bioinformatics workflow managers
+https://pubmed.ncbi.nlm.nih.gov/34556866/
+https://www.nature.com/articles/s41592-021-01254-9
+
+- [json](https://www.json.org/json-en.html)
+- [YAML](https://www.yaml.org)
+- [Dockstore](https://dockstore.org/) https://pubmed.ncbi.nlm.nih.gov/33978761/
 
 
 
@@ -478,7 +485,7 @@ Using Long-Read Nanopore Sequencing. Radiat Res. 2020 Feb;193(2):143-154. doi:
 
 // 放射暴露后的转录组，3代测序。
 
-
+---
 35: Schmied C, Steinbach P, Pietzsch T, Preibisch S, Tomancak P. An automated
 workflow for parallel processing of large multiview SPIM recordings.
 Bioinformatics. 2016 Apr 1;32(7):1112-4. doi: 10.1093/bioinformatics/btv706.
@@ -487,85 +494,192 @@ Epub 2015 Dec 1. PMID: 26628585; PMCID: PMC4896369.
 // 3D成像技术的结果处理。
 
 
-
+---
 36: Jackson M, Kavoussanakis K, Wallace EWJ. Using prototyping to choose a
 bioinformatics workflow management system. PLoS Comput Biol. 2021 Feb
 25;17(2):e1008622. doi: 10.1371/journal.pcbi.1008622. PMID: 33630841; PMCID:
 PMC7906312.
 
-// 选择合适的流程工具。
+// 如何基于 prototype 选择合适的流程工具。
 
+- To select a workflow management system, a rapid survey of available systems was undertaken, and candidates were shortlisted: **Snakemake, cwltool, Toil, and Nextflow**. 
 
-
+---
 37: Zentgraf J, Rahmann S. Fast lightweight accurate xenograft sorting.
 Algorithms Mol Biol. 2021 Apr 2;16(1):2. doi: 10.1186/s13015-021-00181-w. PMID:
 33810805; PMCID: PMC8017614.
 
+// patient-derived xenograft (PDX) models 测序分清人、鼠的reads。
+
+---
 38: Scholz A, Eggenhofer F, Gelhausen R, Grüning B, Zarnack K, Brüne B, Backofen
 R, Schmid T. uORF-Tools-Workflow for the determination of translation-regulatory
 upstream open reading frames. PLoS One. 2019 Sep 12;14(9):e0222459. doi:
 10.1371/journal.pone.0222459. PMID: 31513641; PMCID: PMC6742470.
 
+// 检测调控功能的上游ORF(uORFs)
+
+https://github.com/Biochemistry1-FFM/uORF-Tools
+
+
+---
 39: Cao J, Gursanscky NR, Fletcher SJ, Sawyer A, Wadia M, McKeough L, Coleman M,
 Dressel U, Taochy C, Mitter N, Vaucheret H, Carroll BJ. Can-Seq: a PCR and DNA
 sequencing strategy for identifying new alleles of known and candidate genes.
 Plant Methods. 2020 Feb 13;16:16. doi: 10.1186/s13007-020-0555-0. PMID:
 32082406; PMCID: PMC7017465.
 
+// 植物：基于PCR和DNA测序检测已知和候选基因的新位点
+* **Forward genetic screens** are a powerful approach for identifying the genes contributing to a trait of interest. 
+* 正向遗传筛选是一种有效的方法，可以识别出对某一特性有贡献的基因。
+* Subsequently, mutations in the known and candidate genes were identified using a custom Snakemake script (https://github.com/Carroll-Lab/can_seq), and PCR zygosity tests were then designed and used to identify the individual mutants carrying each mutation. 
+
+
+
+## 40-: 机器学习命令行工具，后台基于 smark
 40: Dirmeier S, Emmenlauer M, Dehio C, Beerenwinkel N. PyBDA: a command line
 tool for automated analysis of big biological data sets. BMC Bioinformatics.
 2019 Nov 12;20(1):564. doi: 10.1186/s12859-019-3087-8. PMID: 31718539; PMCID:
 PMC6849186.
 
+// 技术要点:
+- We developed a **novel machine learning command line tool** called PyBDA for automated, distributed analysis of big biological data sets.
+- By using **Apache Spark** in the backend, PyBDA scales to data sets beyond the size of current applications.
+
+https://pybda.readthedocs.io/en/latest/
+https://pubmed.ncbi.nlm.nih.gov/31718539/
+
+
+
+## 41:访问蛋白质组学数据 (MS 质谱数据库)
 41: Fondrie WE, Bittremieux W, Noble WS. ppx: Programmatic Access to Proteomics
 Data Repositories. J Proteome Res. 2021 Sep 3;20(9):4621-4624. doi:
 10.1021/acs.jproteome.1c00454. Epub 2021 Aug 3. PMID: 34342226; PMCID:
 PMC8457024.
 
+//
+- Here, we present ppx, a Python package that provides easy, programmatic access to the data stored in ProteomeXchange repositories, such as **PRIDE and MassIVE**. 
+- The ppx package can be used as either a **command line tool** or a **Python package** to retrieve the files and metadata associated with a project when provided its identifier.
+
+https://github.com/wfondrie/ppx
+- http://www.proteomexchange.org/
+- https://www.ebi.ac.uk/pride/
+	* 引用 https://www.ebi.ac.uk/pride/markdownpage/citationpage 
+- https://massive.ucsd.edu/ProteoSAFe/static/massive.jsp
+
+---
+envision [ɪnˈvɪʒn] vt. 想象；预想
+
+
+
+
+## 42: 非编码突变
 42: Drubay D, Gautheret D, Michiels S. A benchmark study of scoring methods for
 non-coding mutations. Bioinformatics. 2018 May 15;34(10):1635-1641. doi:
 10.1093/bioinformatics/bty008. PMID: 29340599.
+
+https://github.com/Oncostat/BenchmarkNCVTools
+结果
+- We compared the **leading scoring tools (CADD, FATHMM-MKL, Funseq2 and GWAVA)** and some **recent competitors (DANN, SNP and SOM scores)** for their ability to discriminate assumed pathogenic variants from **assumed benign variants (using the ClinVar, COSMIC and 1000 genomes project databases)**. 
+- Using the ClinVar benchmark, CADD was the best tool for detecting the pathogenic variants that are mainly located in protein coding gene regions. Using the COSMIC benchmark, FATHMM-MKL, GWAVA and SOMliver outperformed the other tools for pathogenic variants that are typically located in lincRNAs, pseudogenes and other parts of the non-coding genome. 
+
+
+---
+assume [əˈsjuːm]  vi. 设想；承担；采取 vt. 假定；僭取；篡夺；夺取；擅用；侵占
+
+
+
 
 43: Wolf SA, Epping L, Andreotti S, Reinert K, Semmler T. SCORE: Smart Consensus
 Of RNA Expression-a consensus tool for detecting differentially expressed genes
 in bacteria. Bioinformatics. 2021 Apr 20;37(3):426-428. doi:
 10.1093/bioinformatics/btaa681. PMID: 32717040.
 
+// 细菌RNA-seq
+
+
 44: Taravella Oill AM, Deshpande AJ, Natri HM, Wilson MA. PopInf: An Approach
 for Reproducibly Visualizing and Assigning Population Affiliation in Genomic
 Samples of Uncertain Origin. J Comput Biol. 2021 Mar;28(3):296-303. doi:
 10.1089/cmb.2019.0434. Epub 2020 Oct 19. PMID: 33074720; PMCID: PMC7994427.
 
+// 可视化人种SNP的PCA分析结果
+- In this study, we describe a flexible computational pipeline, PopInf, to visualize principal component analysis output and assign ancestry to samples with unknown genetic ancestry, given a reference population panel of known origins. 
+
+
+## 45: 贝叶斯模型分析单细胞转录本MerFish数据表达(2019)
 45: Köster J, Brown M, Liu XS. A Bayesian model for single cell transcript
 expression analysis on MERFISH data. Bioinformatics. 2019 Mar 15;35(6):995-1001.
 doi: 10.1093/bioinformatics/bty718. Erratum in: Bioinformatics. 2019 Jul
 1;35(13):2347. PMID: 30875429; PMCID: PMC6419903.
 
+https://pubmed.ncbi.nlm.nih.gov/30875429/
+https://zenodo.org/
+
+
+## 46:RNA-seq(ARMOR, 2019)
 46: Orjuela S, Huang R, Hembach KM, Robinson MD, Soneson C. ARMOR: An
 <u>A</u>utomated <u>R</u>eproducible <u>MO</u>dular Workflow for Preprocessing
 and Differential Analysis of <u>R</u>NA-seq Data. G3 (Bethesda). 2019 Jul
 9;9(7):2089-2096. doi: 10.1534/g3.119.400185. PMID: 31088905; PMCID: PMC6643886.
+
+https://pubmed.ncbi.nlm.nih.gov/31088905/
+https://github.com/csoneson/ARMOR //snakemake 怎么使用conda?
+
+摘要: 输入fq，输出 shiny 网页
+- We present ARMOR, which performs an end-to-end **RNA-seq data analysis**, from raw read files, via quality checks, alignment and quantification, to differential expression testing, geneset analysis and browser-based exploration of the data. 
+- ARMOR is implemented using the **Snakemake** workflow management system and leverages **conda environments**; Bioconductor objects are generated to facilitate downstream analysis, ensuring seamless integration with many R packages. 
+
+
+
 
 47: Werner J, Géron A, Kerssemakers J, Matallana-Surget S. mPies: a novel
 metaproteomics tool for the creation of relevant protein databases and
 automatized protein annotation. Biol Direct. 2019 Nov 14;14(1):21. doi:
 10.1186/s13062-019-0253-x. PMID: 31727118; PMCID: PMC6854712.
 
+// 微生物蛋变质组数据工具
+https://github.com/johanneswerner/mPies/
+
+
+
+
+## 48: 比较scRNA-seq自动细胞类型注释工具(2019)
 48: Abdelaal T, Michielsen L, Cats D, Hoogduin D, Mei H, Reinders MJT, Mahfouz
 A. A comparison of automatic cell identification methods for single-cell RNA
 sequencing data. Genome Biol. 2019 Sep 9;20(1):194. doi:
 10.1186/s13059-019-1795-z. PMID: 31500660; PMCID: PMC6734286.
 
+摘要:
+- A major limitation in most analysis pipelines is the reliance on manual annotations to **determine cell identities**, which are time-consuming and irreproducible. 
+- Here, we benchmarked **22 classification methods** that automatically assign cell identities including single-cell-specific and general-purpose classifiers.
+- 评价指标: We use 2 experimental setups to evaluate the performance of each method for **within dataset predictions (intra-dataset)** and **across datasets (inter-dataset)** based on **accuracy, percentage of unclassified cells, and computation time**.
+- We further evaluate the methods' **sensitivity to the input features, number of cells per population, and their performance across different annotation levels and datasets**.
+- The general-purpose **support vector machine classifier** has overall the best performance across the different experiments.
+
+https://github.com/tabdelaal/scRNAseq_Benchmark
+
+
+
+
+---
 49: Milosavljevic S, Kuo T, Decarli S, Mohn L, Sese J, Shimizu KK, Shimizu-
 Inatsugi R, Robinson MD. ARPEGGIO: Automated Reproducible Polyploid EpiGenetic
 GuIdance workflOw. BMC Genomics. 2021 Jul 17;22(1):547. doi:
 10.1186/s12864-021-07845-2. PMID: 34273949; PMCID: PMC8285871.
 
+// 多倍体表观(甲基化)检测
+https://github.com/supermaxiste/ARPEGGIO
+
+
+---
 50: Qiu X, Feit AS, Feiglin A, Xie Y, Kesten N, Taing L, Perkins J, Gu S, Li Y,
 Cejas P, Zhou N, Jeselsohn R, Brown M, Shirley Liu X, Long HW. CoBRA:
 Containerized Bioinformatics Workflow for Reproducible ChIP/ATAC-seq Analysis.
 Genomics Proteomics Bioinformatics. 2021 Jul 17:S1672-0229(21)00154-6. doi:
 10.1016/j.gpb.2020.11.007. Epub ahead of print. PMID: 34284136.
+
+
 
 51: Hoek A, Maibach K, Özmen E, Vazquez-Armendariz AI, Mengel JP, Hain T, Herold
 S, Goesmann A. WASP: a versatile, web-accessible single cell RNA-Seq processing
