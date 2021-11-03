@@ -97,6 +97,7 @@ v0.3.5-7 paper: Smart-seq2(31-70) [2021/10/5]
 v0.3.5-8 paper: cor(APA, RNA) [2021/10/19]
 v0.3.5-9 paper:snakemake 36/63 [2021/10/31]
 v0.3.6-0 paper:snakemake 50/63 [2021/11/1]
+v0.3.6-1 paper:snakemake 63/63 [2021/11/3]
 #
 #--> commit
 #----------> push to github dawneve/StackNote
