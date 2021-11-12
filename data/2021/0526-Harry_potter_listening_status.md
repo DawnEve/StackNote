@@ -4,7 +4,7 @@
 > text: http://ielts.dawneve.cc/reading/novelReader.html?url=novel/HarryPoter_1-7.txt
 > mp3: http://y.biomooc.com:8000/list?fpath=./audio/
 > player: http://ielts.dawneve.cc/listening/player.html
-> 单词记录: [/IELTS/listening/words_HarryPotter.html](https://github.com/DawnEve/IELTS/blob/master/listening/words_HarryPotter.html)
+> 单词记录 /IELTS/listening/words_HarryPotter.html: [github](https://github.com/DawnEve/IELTS/blob/master/listening/words_HarryPotter.html), [web](http://ielts.biomooc.com/listening/words_HarryPotter.html)
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-# 记录 2021 Q2(4,5,6月)
+# 听力 2021 Q2(4,5,6月)
 每周总结，听力小时数
 
 
@@ -96,7 +96,7 @@
 
 
 
-# 记录 2021 Q3(7,8,9月)
+# 听力 2021 Q3(7,8,9月)
 
 ## 7月 Jul. (3.33h)
 
@@ -159,11 +159,31 @@
 
 
 
-# 记录 2021 Q4 (10,11,12月)
+# 听力 2021 Q4 (10,11,12月)
 
-## 10月 Oct.
+## 10月 Oct.(7.91h)
 2021.10.2 六 40min; 38%
 	10.3 日 60min; 70.5%;
 	10.6 三 55min; 100%
 ==> HP3_14
+2021.10.12 二 60min; 25%
+	10.15 五 35min; 37%
+	10.16 六 60min; 55.8%
+	10.20 三 100min; 100%
+==> HP3_15
+2021.10.21 四 20min; 11.7%
+	10.31 日 45min; 26.5%
+
+---
+> **十月 475 min = 7.91 h**, 平均 15.8min/day;
+
+
+
+
+
+## 11月 Nov.
+2021.11.2 二 50min; 40%
+	11.8 一 44min; 49%;
+	11.12 五 40min; 63%
+
 

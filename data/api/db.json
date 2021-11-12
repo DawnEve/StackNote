@@ -11,6 +11,16 @@
 
 		{
 			year: 2021,
+			title:"1105-Genome_research_MS.md",
+			caption: "2021: Genome_research 投稿要求",
+			category:2,
+			tags: ['杂志', '投稿'],
+		},
+
+
+
+		{
+			year: 2021,
 			title:"1025-202108_BG_SCAPTURE.md",
 			caption: "(GB 2021) SCAPTURE: 深度学习 捕捉3'scRNA-seq 的APA信息",
 			category:1,
