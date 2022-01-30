@@ -10,6 +10,81 @@
 
 
 		{
+			year: 2022,
+			title:"0130-scAPAdb.md",
+			caption: "单细胞APA数据库: scAPA db",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+		{
+			year: 2022,
+			title:"0123-mutation_gene_affect_APA.md",
+			caption: "筛选数据集: mutation 基因polyA signal后影响 APA 和 cell cycle 的paper",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+
+
+		{
+			year: 2022,
+			title:"0115-Sierra-APA.md",
+			caption: "(GB 2020)Sierra: 分析APA的R包",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+
+
+//2022 above
+
+		{
+			year: 2021,
+			title:"1224_bioinfoBlog.md",
+			caption: "生信分析的活跃博客列表",
+			category:3,
+			tags: ['blogs'],
+		},
+
+
+
+		{
+			year: 2021,
+			title:"1220-Code_for_single_cell_analysis.md",
+			caption: "单细胞分析的源代码",
+			category:3,
+			tags: ['scRNA-seq'],
+		},
+
+
+
+
+		{
+			year: 2021,
+			title:"1219-immunology_cells_and_molecules.md",
+			caption: "免疫细胞及分子",
+			category:1,
+			tags: ['免疫学', "教科书"],
+		},
+
+
+
+		{
+			year: 2021,
+			title:"1124-Nuetrophil-mouse.md",
+			caption: "2021: mouse 中性粒细胞综述",
+			category:1,
+			tags: ['单细胞', '中性粒细胞'],
+		},
+
+
+
+
+		{
 			year: 2021,
 			title:"1105-Genome_research_MS.md",
 			caption: "2021: Genome_research 投稿要求",

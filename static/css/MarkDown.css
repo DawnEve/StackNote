@@ -8,7 +8,12 @@ taobaoUED: http://ued.taobao.org/blog/2012/07/getting-started-with-markdown/
 
 .markdown{padding: 5px;word-wrap: break-word;background-color: #fff;/*padding: 45px;border: 1px solid #ddd;*/border-bottom-right-radius:3px;    border-bottom-left-radius: 3px;}
 
-.markdown{font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;font-size:16px;line-height:1.4;word-wrap:break-word}
+.markdown{font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+
+	word-wrap:break-word;
+}
 .markdown:before{display:table;content:""}
 .markdown:after{display:table;clear:both;content:""}
 .markdown>*:first-child{margin-top:0 !important}
@@ -30,9 +35,15 @@ taobaoUED: http://ued.taobao.org/blog/2012/07/getting-started-with-markdown/
 .markdown h1 tt,.markdown h1 code,.markdown h2 tt,.markdown h2 code,.markdown h3 tt,.markdown h3 code,.markdown h4 tt,.markdown h4 code,.markdown h5 tt,.markdown h5 code,.markdown h6 tt,.markdown h6 code{font-size:inherit}
 .markdown h1{padding-bottom:0.3em;font-size:2.25em;line-height:1.2;border-bottom:1px solid #eee}
 .markdown h1 .anchor{line-height:1}
-.markdown h2{padding-bottom:0.3em;font-size:1.75em;line-height:1.225;border-bottom:1px solid #eee}
+.markdown h2{padding-bottom:0.3em;
+	/*font-size:1.75em;*/
+	font-size:24px;
+	line-height:1.225;border-bottom:1px solid #ccc}
 .markdown h2 .anchor{line-height:1}
-.markdown h3{font-size:1.5em;line-height:1.43}
+.markdown h3{
+	/*font-size:1.5em;*/
+	font-size:18px;
+	line-height:1.43}
 .markdown h3 .anchor{line-height:1.2}
 .markdown h4{font-size:1.25em}
 .markdown h4 .anchor{line-height:1.2}
@@ -40,8 +51,15 @@ taobaoUED: http://ued.taobao.org/blog/2012/07/getting-started-with-markdown/
 .markdown h5 .anchor{line-height:1.1}
 .markdown h6{font-size:1em;color:#777}
 .markdown h6 .anchor{line-height:1.1}
-.markdown p,.markdown blockquote,.markdown ul,.markdown ol,.markdown dl,.markdown table,.markdown pre{margin-top:0;margin-bottom:10px}
-/*.markdown p{text-indent: 2em;}*/
+.markdown p,.markdown blockquote,.markdown ul,.markdown ol,.markdown dl,.markdown table,.markdown pre{
+	margin-top:0;
+	margin-bottom:15px;
+}
+
+.markdown p{text-indent: 2em;
+	display: inline-block;
+	text-align: justify;
+}
 .markdown ol p{text-indent: 0;}
 
 .markdown ol,

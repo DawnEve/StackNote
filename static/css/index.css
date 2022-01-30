@@ -179,8 +179,9 @@ main > nav li a{
     }
 }
 .content p{
-    line-height: 1.8;
+    /*line-height: 1.8;
     tab-size: 4;
+	*/
     word-wrap: break-word;
     /*margin-bottom: 1em!important;*/
 }
@@ -369,7 +370,7 @@ main > nav li a{
     /*
     bottom: 10px;
     */
-
+	font-size: 14px;
     background: white;
     border:1px solid #eee;
 

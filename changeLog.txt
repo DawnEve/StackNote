@@ -98,6 +98,12 @@ v0.3.5-8 paper: cor(APA, RNA) [2021/10/19]
 v0.3.5-9 paper:snakemake 36/63 [2021/10/31]
 v0.3.6-0 paper:snakemake 50/63 [2021/11/1]
 v0.3.6-1 paper:snakemake 63/63 [2021/11/3]
+v0.3.6-2 听力; 文献;[2021/11/12]
+v0.3.6-3 change css(smaller fonts); paper: mutate polyA signal, change cell cycle [2022/1/30]
+	中性粒细胞; 张泽民lab code; 
+	bioinfo blog;
+	Sierra-APA;
+	scAPA-db;
 #
 #--> commit
 #----------> push to github dawneve/StackNote
@@ -112,5 +118,6 @@ local url: blog3.dawneve.cc
 
 
 
-#
+#TO-Read
+https://pubmed.ncbi.nlm.nih.gov/34998928/ RNA polyadenylation patterns in the human transcriptome
 

@@ -99,7 +99,7 @@ export default{
 - [Digital-LI 生信文献](https://www.cnblogs.com/leezx/)：日常分享文献, 按[tag](https://www.cnblogs.com/leezx/tag/)查看。
 - [yiweiniu ATAC](https://yiweiniu.github.io/blog/)
 - [Zou Weige](https://www.jianshu.com/u/ec301f20ee2b): 单细胞, labmate
-
+- a-[小xuo生](https://www.cnblogs.com/jessepeng/p/?page=14): 生信R语言/机器学习，植物
 
 
 - [Yunze Liu 博客](https://www.jieandze1314.com/): [单细胞分析](https://jieandze1314.osca.top/)
