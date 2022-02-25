@@ -104,6 +104,7 @@ v0.3.6-3 change css(smaller fonts); paper: mutate polyA signal, change cell cycl
 	bioinfo blog;
 	Sierra-APA;
 	scAPA-db;
+v0.3.6-4 important genes in cell cycle [2022/2/25]
 #
 #--> commit
 #----------> push to github dawneve/StackNote

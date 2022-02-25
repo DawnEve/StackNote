@@ -242,14 +242,18 @@ SRR5227988 GSM2476257
 
 # cell cycle 中的AS
 
-
 https://pubmed.ncbi.nlm.nih.gov/32817123/
 G3 (Bethesda). 2020 Oct 5;10(10):3797-3810. doi: 10.1534/g3.120.401622.
 Alternative Splicing During the Chlamydomonas reinhardtii Cell Cycle
 
 
 
+# important genes in cell cycle
 
+* MAP3K2:
+	- https://pubmed.ncbi.nlm.nih.gov/32719439/ Mechanistically, rather than decreasing target mRNA levels as expected, miR-93-5p binds to the 3'-untranslated region (UTR) of mitogen-activated protein kinase kinase kinase 2 (MAP3K2) to directly upregulate its expression and downstream p38 and c-Jun N-terminal kinase (JNK) pathway, thereby leading to cell cycle progression in HCC.
 
-
+* DIAPH3 
+	- https://pubmed.ncbi.nlm.nih.gov/33899739/ DIAPH3-deficient cells display disorganized cytoskeleton and multipolar spindles.
+	- https://pubmed.ncbi.nlm.nih.gov/33893302/ While activation of the formin DIAPH3 at the cytokinetic furrow underlies β-actin filament production, we show that the γ-actin network is specifically depleted at the cell poles through the localized deactivation of the formin DIAPH1. 
 
