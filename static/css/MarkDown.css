@@ -80,6 +80,7 @@ taobaoUED: http://ued.taobao.org/blog/2012/07/getting-started-with-markdown/
 .markdown blockquote{padding: 20px 10px;margin: 15px 0;border: 1px solid #eee;border-left: 10px solid #eee;background: #fff;}
 .markdown blockquote>:first-child{margin-top:0}
 .markdown blockquote>:last-child{margin-bottom:0}
+.markdown blockquote p {text-indent: 0;}
 
 .markdown table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}
 .markdown table th{font-weight:bold}
