@@ -104,9 +104,10 @@ export default{
 
 - [Yunze Liu 博客](https://www.jieandze1314.com/): [单细胞分析](https://jieandze1314.osca.top/)
 	* [#TCGA](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU4NjU4ODQ2MQ==&action=getalbum&album_id=1642483079111835651&scene=173)
-- [DAVE TANG'S BLOG](https://davetang.org/muse/learn/): 十年生信博主 english: COMPUTATIONAL BIOLOGY AND GENOMICS
+- [DAVE TANGs BLOG](https://davetang.org/muse/learn/): 十年生信博主 english: COMPUTATIONAL BIOLOGY AND GENOMICS
 	* [Ming Tang](https://divingintogeneticsandgenomics.rbind.io/): 生信个人主页
 	* [可重复性研究](https://davetang.github.io/reproducible_bioinformatics/index.html)
+- [基迪奥生物](https://www.zhihu.com/org/ji-di-ao-sheng-wu): R语言绘图、文献思路等
 
 - 公众号合集: 
 	* [#转录组研究](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MTcwNjA4NQ==&action=getalbum&album_id=1335351932285976579)
