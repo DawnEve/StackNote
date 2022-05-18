@@ -107,6 +107,9 @@ v0.3.6-3 change css(smaller fonts); paper: mutate polyA signal, change cell cycl
 v0.3.6-4 important genes in cell cycle [2022/2/25]
 v0.3.6-5 add APA paper scan [2022.3.16]
 v0.3.6-6 go to school [2022.4.6]
+
+v0.3.6-7@sust Neu_B_Catenin [2022.5.18]
+
 #
 #--> commit
 #----------> push to github dawneve/StackNote

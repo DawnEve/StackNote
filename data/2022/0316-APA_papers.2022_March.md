@@ -273,10 +273,13 @@ fibrosis [faɪˈbrəʊsɪs] n. [医] 纤维化，[病理] 纤维变性
 
 
 
-# 2022 February 19 //todo
+# 2022 February 19
 
 
-
+##  RBBP6 在哺乳动物pre-mRNA 3'端处理中处于中心作用
+> Reconstitution of 3' end processing of mammalian pre-mRNA reveals a central role of RBBP6
+> Genes Dev. 2022 Feb 17. doi: 10.1101/gad.349217.121. Online ahead of print.
+> 1 Institute of Biochemistry and Biotechnology, Charles Tanford Protein Center, Martin Luther University Halle-Wittenberg, 06099 Halle, Germany.
 
 
 
