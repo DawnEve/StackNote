@@ -109,7 +109,7 @@ v0.3.6-5 add APA paper scan [2022.3.16]
 v0.3.6-6 go to school [2022.4.6]
 
 v0.3.6-7@sust Neu_B_Catenin [2022.5.18]
-
+v0.3.6-8@sust APA 摘要 [2022.5.18]
 #
 #--> commit
 #----------> push to github dawneve/StackNote
