@@ -7,6 +7,17 @@
 
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
+
+
+		{
+			year: 2022,
+			title:"0702-Effective_R.md",
+			caption: "[Book] Effective R lang / 高效的R语言",
+			category:3,
+			tags: ['R', "Book"],
+		},
+
+
 		{
 			year: 2022,
 			title:"0604-APA_papers.2022_June.md",

@@ -51,7 +51,7 @@ StackNote require a modern web browser with support for Javascript ECMAScript 20
 
 用户的可编辑部分大都在 /data/ 文件夹下。
 顶部菜单是在 /index.html 中定义的。
-
+首页的文字、图片和链接在 views/index.js 中定义。
 
 
 
