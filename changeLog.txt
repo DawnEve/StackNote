@@ -112,6 +112,7 @@ v0.3.6-7@sust Neu_B_Catenin [2022.5.18]
 v0.3.6-8@sust APA 摘要 [2022.5.18]
 v0.3.6-9@sust APA 摘要 [2022.6.20]
 v0.3.7-0@sust 添加闹钟 [2022.7.2]
+v0.3.7-1@sust 完善闹钟 [2022.7.4]
 #
 #--> commit
 #----------> push to github dawneve/StackNote
