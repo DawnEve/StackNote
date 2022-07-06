@@ -28,6 +28,16 @@ export default{
 		    <canvas id="canvas-clock" width="210" height="210">时钟canvas</canvas>
 		</div>
 
+
+
+
+		<div id="page-index">
+			<h2>LTS books (long term support)</h2>
+			<p>» <a href="#/post/2022/0702-Effective_R.md">Effective_R(Book)</a>  </p>
+		</div>
+
+
+
 	</div>		
 	`,
 
@@ -49,8 +59,8 @@ export default{
 
 				//1. settings
 				var marginLength=10; //四边空白部分
-				var tickLengthL=30; //表盘刻度长度，长刻度 1-12
-				var tickLengthS=20; //表盘刻度长度，短刻度 1-2中间5格
+				var tickLengthL=35; //表盘刻度长度，长刻度 1-12
+				var tickLengthS=25; //表盘刻度长度，短刻度 1-2中间5格
 				var centerR=8; //中心点的半径
 
 				var ratioH=0.45; //时针半径与表盘的比例
@@ -60,12 +70,11 @@ export default{
 				//(2).设置前景色、背景色
 				var fColor="#000"; //daylight
 				var bColor="#fff";
-				//晚上黑北京: 18点后 6点前。
-				if(hour >18 || hour<6){
-					fColor="#fff"; //night
+				//晚上黑北京: 21点后 6点前。
+				if(hour >21 || hour < 6){
+					fColor="#dcff50"; //night
 					bColor="#000";
 				}
-
 
 				//2. begin to draw
 				// (1)清空画布
@@ -82,18 +91,6 @@ export default{
 				//
 				ctx.lineWidth=marginLength; //描边宽度
 				ctx.strokeStyle="#000";
-				ctx.stroke(); //描边
-				//
-				ctx.lineWidth=marginLength*0.9; //描边宽度
-				ctx.strokeStyle="#555";
-				ctx.stroke(); //描边
-				//
-				ctx.lineWidth=marginLength*0.5; //描边宽度
-				ctx.strokeStyle="#999";
-				ctx.stroke(); //描边
-				//
-				ctx.lineWidth=marginLength*0.2; //描边宽度
-				ctx.strokeStyle="#fff";
 				ctx.stroke(); //描边
 
 				//填充 背景色
@@ -113,12 +110,13 @@ export default{
 				//大刻度线
 				var Rh=(canvas.width-tickLengthL)/2; //时针内圈的半径
 				var angle=Math.PI/180; //PI*2==360度, 
+				var startRatio=0.97; //刻度起始位置
 				for(var i=0; i<360; i+=30){
 					//console.log(i/30);
 					ctx.beginPath();
-					ctx.moveTo(cX+R*Math.cos(angle*i), cX+R*Math.sin(angle*i));
+					ctx.moveTo(cX+startRatio*R*Math.cos(angle*i), cX+startRatio*R*Math.sin(angle*i));
 					ctx.lineTo(cX+Rh*Math.cos(angle*i), cX+Rh*Math.sin(angle*i));
-					ctx.lineWidth=2;
+					ctx.lineWidth=3.5;
 					ctx.strokeStyle=fColor;
 					ctx.stroke();
 				}
@@ -128,7 +126,7 @@ export default{
 				for(var i=0; i<360; i+=6){
 					//console.log(i/6);
 					ctx.beginPath();
-					ctx.moveTo(cX+R*Math.cos(angle*i), cX+R*Math.sin(angle*i));
+					ctx.moveTo(cX+startRatio*R*Math.cos(angle*i), cX+startRatio*R*Math.sin(angle*i));
 					ctx.lineTo(cX+Rm*Math.cos(angle*i), cX+Rm*Math.sin(angle*i));
 					ctx.lineWidth=1;
 					ctx.strokeStyle=fColor;

@@ -167,6 +167,13 @@ make new file like src/views/Recipe.js
 They are static and fixed in /index.html.
 
 
+## 6.How to add style tag in `template`?
+As shown in components/ChickenSoup.js
+```
+	<component is="style" scoped>
+	    pre.box{font-weight:bold; color:#bbb;}
+	</component>
+```
 
 
 

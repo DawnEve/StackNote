@@ -1,6 +1,13 @@
 export default{
 	template:`
 		<pre v-if="sentence!=''" class="box saying">{{sentence}}</pre>
+
+		<component is="style" scoped>
+		/*
+		https://cloud.tencent.com/developer/ask/sof/1004033
+		*/
+		    pre.box{font-weight:bold; color:#bbb;}
+		</component>
 	`,
 	data(){
 		return{
