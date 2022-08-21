@@ -143,6 +143,8 @@ var app=Vue.createApp({
             	{path:'/tags', caption:'Tags'},
             	{path:'/about', caption:'About'},
 
+                {path:'/ReadMe', caption:'ReadMe'},
+
             	{path:'/recipe', caption:'菜谱'},
             ],
 
@@ -250,6 +252,7 @@ import Tags from "/src/views/Tags.js"
 import About from "/src/views/About.js"
 import MyPost from "/src/views/MyPost.js" // 单个 md
 
+import ReadMe from "/src/views/ReadMe.js"
 import Recipe from "/src/views/Recipe.js"
 
 //路由表
@@ -266,6 +269,7 @@ const routes = [
   { path: '/tag/:tag', component: Tags },
   { path: '/category/:cate', component: Category },
 
+  { path: '/ReadMe', component: ReadMe },
   { path: '/recipe', component: Recipe },
 ]
 

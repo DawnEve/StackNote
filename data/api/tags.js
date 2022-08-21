@@ -8,5 +8,6 @@ var tags=[
       'js',
       'English', 'words',
       'IGV',
+      '观点',
 
 ]

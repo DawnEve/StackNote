@@ -71,7 +71,7 @@ export default{
 				var fColor="#000"; //daylight
 				var bColor="#fff";
 				//晚上黑北京: 21点后 6点前。
-				if(hour >21 || hour < 6){
+				if(hour >=21 || hour < 6){
 					fColor="#dcff50"; //night
 					bColor="#000";
 				}

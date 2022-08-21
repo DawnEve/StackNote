@@ -7,6 +7,34 @@
 
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
+		{
+			year: 2022,
+			title:"0803-APA_papers.2022_Aug.md",
+			caption: "APA papers: 2022 August",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+		{
+			year: 2022,
+			title:"0721-how-research-should-be-done.md",
+			caption: "该怎么做科研？",
+			category:4,
+			tags: ['观点'],
+		},
+
+
+
+		{
+			year: 2022,
+			title:"0706-APA_papers.2022_July.md",
+			caption: "APA papers: 2022 July(CCL8+ Macrophage)",
+			category:1,
+			tags: ['APA', 'macrophage'],
+		},
+
+
 
 
 		{
@@ -21,7 +49,7 @@
 		{
 			year: 2022,
 			title:"0604-APA_papers.2022_June.md",
-			caption: "APA papers: 2022 June(1 Lecture)",
+			caption: "APA papers: 2022 June(1 Lecture): MCF7 Cell line, Cell cycle",
 			category:1,
 			tags: ['APA'],
 		},
