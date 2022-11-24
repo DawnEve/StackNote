@@ -7,6 +7,37 @@
 
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
+
+		{
+			year: 2022,
+			title:"1124-single-cell.2022.md",
+			caption: "single-cell: 2022(单细胞 & 空间转录组)",
+			category:1,
+			tags: ['scRNA-seq'],
+		},
+
+
+
+		{
+			year: 2022,
+			title:"1120-APA-funds.2022.md",
+			caption: "APA(多聚腺苷酸化)的基金: 已结项的7个基金",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+
+
+		{
+			year: 2022,
+			title:"0930-APA_papers.2022_Sep.md",
+			caption: "APA papers: 2022 September",
+			category:1,
+			tags: ['APA'],
+		},
+
+
 		{
 			year: 2022,
 			title:"0803-APA_papers.2022_Aug.md",

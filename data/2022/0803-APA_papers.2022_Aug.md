@@ -71,7 +71,11 @@ Tissue labels of the reference cells were randomly permuted 1,000 times to evalu
 
 
 
+
+
+
 # [Cancer Res. 2022] Characterization of immune-related alternative polyadenylation events in cancer immunotherapy
+
 > Shanghai Jiao Tong University School of Medicine, Shanghai, China.
 > https://pubmed.ncbi.nlm.nih.gov/35930727/
 
@@ -108,3 +112,150 @@ Overall, the characterization of immune-related APA that correspond to tumor pro
 Alternative polyadenylation (APA) enhances gene regulatory potential by increasing the diversity of mRNA transcripts. 
 
 3' UTR shortening through APA correlates with enhanced cellular proliferation and is a widespread phenomenon in tumor cells. Here, we show that the ubiquitously expressed transcription factor Sp1 binds RNA in vivo and is a common repressor of distal poly(A) site usage. RNA sequencing identified 2,344 genes (36% of the total mapped mRNA transcripts) with lengthened 3' UTRs upon Sp1 depletion. Sp1 preferentially binds the 3' UTRs of such lengthened transcripts and inhibits cleavage at distal sites by interacting with the subunits of the core cleavage and polyadenylation (CPA) machinery. The 3' UTR lengths of Sp1 target genes in breast cancer patient RNA-seq data correlate with Sp1 expression levels, implicating Sp1-mediated APA regulation in modulating tumorigenic properties. Taken together, our findings provide insights into the mechanism for dynamic APA regulation by unraveling a previously unknown function of the DNA-binding transcription factor Sp1.
+
+
+
+
+
+
+
+
+
+
+# [Cancer Res] Characterization of immune-related alternative polyadenylation events in cancer immunotherapy(癌症免疫相关APA打分)
+Cancer Res. 2022 Aug 5;CAN-22-1417. doi: 10.1158/0008-5472.CAN-22-1417. Online ahead of print.
+> Shanghai Jiao Tong University School of Medicine, Shanghai, China.
+> https://pubmed.ncbi.nlm.nih.gov/35930727/
+
+分析了 31 种肿瘤 10,303个肿瘤样本的编码基因的 3'UTR ，和肿瘤免疫反应，识别 免疫相关的APA事件打分。
+
+Here, we performed an in-depth analysis of the 3'UTR usage of protein-coding genes and tumor immune response in 10,303 tumor samples across 31 cancer types to develop the immune-related APA event (ImmAPA) score pipeline, an integrated algorithm to characterize the regulatory landscape of APA events in cancer immunity-related pathways.
+
+Overall, the characterization of immune-related APA that correspond to tumor progression and tumor immunity highlights the clinical utility of APA events as potential biomarkers in cancer immunotherapy.
+
+
+
+
+
+
+
+# [Exp Cell Res] Regulation of myogenic gene expression(综述：肌原基因的调控)
+> Centro Andaluz de Biología Del Desarrollo, CSIC-UPO-JA, Universidad Pablo de Olavide, 41013, Sevilla, Spain.
+> https://pubmed.ncbi.nlm.nih.gov/35926660/
+
+骨骼肌受这几个基因的调控:
+Skeletal muscle development and regeneration is governed by the combined action of Myf5, MyoD, Mrf4 and MyoG, also known as the myogenic regulatory factors (MRFs). 
+
+不同肌肉群，这几个TF表达有高度时空特异性。
+These transcription factors are expressed in a highly spatio-temporal restricted manner, ensuring the significant functional and metabolic diversity observed between the different muscle groups. 
+
+
+
+In this review, we will discuss the multiple layers of regulation that contribute to the control of the exquisite expression patterns of the MRFs in particular, and of myogenic genes in general. 
+
+
+We will highlight all major regulatory processes that play a role in myogenesis: from those that modulate chromatin status and transcription competence, 
+
+
+such as DNA methylation, 
+histone modification, 
+chromatin remodeling, 
+or non-coding RNAs, 
+
+to those that control transcript and protein processing and modification, such as 
+alternative splicing, 
+polyadenylation, 
+other mRNA modifications, 
+or post-translational protein modifications. 
+
+All these processes are exquisitely and tightly coordinated to ensure the proper activation, maintenance and termination of the myogenic process.
+
+
+
+
+
+
+
+
+# [Cancers] Pathogenic Roles of RNA-Binding Proteins in Sarcomas(肉瘤中RNA结合蛋白的致病作用)
+Cancers (Basel). 2022 Aug 5;14(15):3812. doi: 10.3390/cancers14153812.
+> Cancer RNA Research Unit, National Cancer Center Research Institute, Tokyo 104-0045, Japan.
+
+RNA-binding proteins (RBPs) are proteins that physically and functionally bind to RNA to regulate the RNA metabolism such as alternative splicing, polyadenylation, transport, maintenance of stability, localization, and translation. 
+
+There is accumulating evidence that dysregulated RBPs play an essential role in the pathogenesis of malignant tumors including a variety of types of sarcomas. On the other hand, prognosis of patients with sarcoma, especially with sarcoma in advanced stages, is very poor, and almost no effective standard treatment has been established for most of types of sarcomas so far, highlighting the urgent need for identifying novel therapeutic targets based on the deep understanding of pathogenesis. Therefore, defining the network of interactions between RBPs and disease-related RNA targets will contribute to a better understanding of sarcomagenesis and identification of a novel therapeutic target for sarcomas.
+
+
+
+
+
+
+# [Wiley Interdiscip Rev RNA] (综述)The emerging roles of CFIm25 (NUDT21/CPSF5) in human biology and disease
+> Wiley Interdiscip Rev RNA. 2022 Aug 14;e1757. doi: 10.1002/wrna.1757. Online ahead of print.
+> https://pubmed.ncbi.nlm.nih.gov/35965101/
+> Department of Pharmaceutical Sciences, College of Pharmacy and Health Sciences, Butler University, Indianapolis, Indiana, USA.
+
+
+- 蛋白名: CFIM25
+- 基因名字: NUDT21, CPSF5
+
+
+CFIm25 结合到UGUA序列上，切割形成polyA尾的转录本。
+The mammalian cleavage factor I subunit CFIm25 (NUDT21) binds to the UGUA sequences of precursor RNAs. Traditionally, CFIm25 is known to facilitate 3' end formation of pre-mRNAs resulting in the formation of polyadenylated transcripts. 
+
+
+最新研究表明，它可能也参与有UGUA 基序的环状RNA的形成。
+Recent studies suggest that CFIm25 may be involved in the cyclization and hence generation of circular RNAs (circRNAs) that contain UGUA motifs. 
+
+环状RNA作为内源性竞争RNA，干扰 ceRNA-miRNA-mRNA 轴。
+These circRNAs act as competing endogenous RNAs (ceRNAs) that disrupt the ceRNA-miRNA-mRNA axis. 
+
+CFIm25 的其他功能，包括调控剪切和APA。
+Other emerging roles of CFIm25 include regulating both alternative splicing and alternative polyadenylation (APA). 
+
+APA产生不同转录本，或者不同3UTR的转录本。
+APA generates different sized transcripts that may code for different proteins, or more commonly transcripts that code for the same protein but differ in the length and sequence content of their 3' UTRs (3' UTR-APA). 
+
+
+CFIm25介导的全局3UTR APA影响包括精子生成、细胞命运决定等过程。
+CFIm25 mediated global changes in 3' UTR-APA affect human physiology including spermatogenesis and the determination of cell fate. 
+
+
+CFIm25 失调和 3UTR APA的改变预示着很多人类疾病，包括肿瘤。
+Deregulation of CFIm25 and changes in 3' UTR-APA have been implicated in several human diseases including cancer. 
+
+很多肿瘤中，CFIm25作为抑癌基因。
+In many cancers, CFIm25 acts as a tumor suppressor. 
+
+有些肿瘤中，促癌。
+However, there are some cancers where CFIm25 has the opposite effect. 
+
+CFIm25驱动的3UTR还在神经功能紊乱和纤维化中起作用。
+Alterations in CFIm25-driven 3' UTR-APA may also play a role in neural dysfunction and fibrosis. 
+
+
+CFIm25 介导的 3UTR APA 改变可以作为一种潜在的诊断指标。
+CFIm25 mediated 3' UTR-APA changes can be used to generate specific signatures that can be used as potential biomarkers in development and disease. 
+
+
+Due to the emerging role of CFIm25 as a regulator of the aforementioned RNA processing events, modulation of CFIm25 levels may be a novel viable therapeutic approach. 
+
+This article is categorized under: RNA Processing > 3' End Processing RNA in Disease and Development > RNA in Disease.
+
+
+
+
+
+
+
+
+
+# tencent刚发的scBERT文章
+
+- https://github.com/TencentAILabHealthcare/scBERT
+- https://www.nature.com/articles/s42256-022-00534-z.pdf
+
+
+
+
+
