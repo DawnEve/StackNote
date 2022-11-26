@@ -246,14 +246,85 @@ This article is categorized under: RNA Processing > 3' End Processing RNA in Dis
 
 
 
+# 寨卡病毒感染导致胎盘细胞APA变化(Pathogens, 2022)
+> Zika Virus Infection Alters Gene Expression and Poly-Adenylation Patterns in Placental Cells
+> Department of Biochemistry & Molecular Biology, University of Texas Medical Branch, Galveston, TX 77555, USA.
+> Pathogens. 2022 Aug 18;11(8):936. doi: 10.3390/pathogens11080936.
+> PMID: 36015056
+
+While flaviviruses are known to disrupt splicing patterns in host cells, little is known about how flaviviruses such as ZIKV impact the alternative polyadenylation (APA) of host transcripts. 
+
+These results indicate that ZIKV infection makes JEG3 cells more permissive to non-canonical poly-adenylation signals.
+
+--- 
+
+placental [pləˈsentl] adj. 胎盘的；胎座的
 
 
 
 
-# tencent刚发的scBERT文章
 
-- https://github.com/TencentAILabHealthcare/scBERT
-- https://www.nature.com/articles/s42256-022-00534-z.pdf
+
+# (综述) APA的调控: polyA的顺序 (Transcription, IF4.7, 2022)
+> Alternative polyadenylation regulation: insights from sequential polyadenylation
+> Transcription. 2022 Aug
+> State Key Laboratory of Virology, College of Life Sciences, RNA Institute, Wuhan University, Wuhan, P. R. China.
+> https://pubmed.ncbi.nlm.nih.gov/36004392/
+
+Here, we review the established mechanisms for APA regulation and then discuss the additional insights into APA regulation from the perspective of sequential polyadenylation, resulting in a unified leverage model for understanding the mechanisms of regulated APA.
+
+
+
+
+
+# （小鼠肝脏）节律对APA的调控(2018)
+> Identification and Characterization of Transcripts Regulated by Circadian Alternative Polyadenylation in Mouse Liver
+> https://pubmed.ncbi.nlm.nih.gov/30181259/
+
+
+Alternative polyadenylation (APA) is an emerging post-transcriptional mechanism that changes the 3'-ends of transcripts by alternating poly(A) site usage. APA can thus result in changes in RNA processing, such as mRNA localization, stability, translation efficiency, and sometimes even in the localization of the encoded protein. It remains unclear, however, if and how APA is regulated by the circadian clock. 
+
+Among all expressed genes, 2.9% of genes alternate their poly(A) site usage with a circadian (i.e., approximately 24 hr) period. 
+
+Circadian APA transcripts also harbor longer 3'UTRs, making them more susceptible to post-transcriptional regulation.
+
+
+
+# PI3K/Akt 信号级联反应 和 Pten APA 中 CFIm59和 CFIm68的不同、相反功能(NAR, 2022)
+> Distinct, opposing functions for CFIm59 and CFIm68 in mRNA alternative polyadenylation of Pten and in the PI3K/Akt signalling cascade
+> Nucleic Acids Res.2022 Aug 22;
+> Rosalind and Morris Goodman Cancer Institute, McGill University, Montréal H3G 1Y6, Canada.
+> https://pubmed.ncbi.nlm.nih.gov/35993810/
+
+Abstract
+
+保持 PTEN 浓度对抗肿瘤很重要。
+Precise maintenance of PTEN dosage is crucial for tumor suppression across a wide variety of cancers. 
+
+转录后调控Pten严重依赖其3'UTR.
+Post-transcriptional regulation of Pten heavily relies on regulatory elements encoded by its 3'UTR. 
+
+之前报道过Pten通过APA产生很多变体。
+We previously reported the important diversity of 3'UTR isoforms of Pten mRNAs produced through alternative polyadenylation (APA). 
+
+这里，揭示了CFIm复合体对Pten APA的直接调控，有助于保持PTEN蛋白浓度。
+Here, we reveal the direct regulation of Pten APA by the mammalian cleavage factor I (CFIm) complex, which in turn contributes to PTEN protein dosage. 
+
+CFIm 包括CFIm25，及APA调控单位 CFIm59或CFIm68.
+CFIm consists of the UGUA-binding CFIm25 and APA regulatory subunits CFIm59 or CFIm68. 
+
+敲除前后的细胞系测序比较，...
+Deep sequencing analyses of perturbed (KO and KD) cell lines uncovered the differential regulation of Pten APA by CFIm59 and CFIm68 and further revealed that their divergent functions have widespread impact for APA in transcriptomes. 
+
+差异调控的基因包括 PI3K/Akt 这个 PTEN 反调节的信号通路。
+Differentially regulated genes include numerous factors within the phosphoinositide 3-kinase (PI3K)/protein kinase B (Akt) signalling pathway that PTEN counter-regulates. 
+
+
+We further reveal a stratification of APA dysregulation among a subset of PTEN-driven cancers, with recurrent alterations among PI3K/Akt pathway genes regulated by CFIm. 
+
+Our results refine the transcriptome selectivity of the CFIm complex in APA regulation, and the breadth of its impact in PTEN-driven cancers.
+
+
 
 
 
