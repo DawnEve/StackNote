@@ -117,6 +117,7 @@ v0.3.7-2@sust 在 template 中添加 style [2022.7.6]
 v0.3.7-3@sust add real recipe [2022.8.21]
 v0.3.7-4@sust add APA Funds [2022.11.24]
 v0.3.7-5@sust read APA Abstract [2022.11.26]
+v0.3.7-6@sust read APA Abstract: CPEB4, m6A [2022.12.3]
 #
 #--> commit
 #----------> push to github dawneve/StackNote
