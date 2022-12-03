@@ -375,18 +375,40 @@ Collectively, YTHDC1 as an m6 A "reader" links m6 A modification with pre-mRNA 3
 
 
 
-# 在B细胞急性淋巴细胞白血病中，NUDT21通过 APA 限制CD19水平(Nat Immunol IF31.25, 2022)
+# *9*{值得看}在B细胞急性淋巴细胞白血病中，NUDT21通过 APA 限制CD19水平(Nat Immunol IF31.25, 2022)
 > NUDT21 limits CD19 levels through alternative mRNA polyadenylation in B cell acute lymphoblastic leukemia
 > Nat Immunol. 2022 Sep 22.
 > Department of Pathology and Laura & Isaac Perlmutter Cancer Center, NYU School of Medicine, New York, NY, USA. matthew.witkowski@cuanschutz.edu.
 > https://pubmed.ncbi.nlm.nih.gov/36138187/
-
-B cell progenitor acute lymphoblastic leukemia (B-ALL) treatment has been revolutionized by T cell-based immunotherapies-including chimeric antigen receptor T cell therapy (CAR-T) and the bispecific T cell engager therapeutic, blinatumomab-targeting surface glycoprotein CD19. Unfortunately, many patients with B-ALL will fail immunotherapy due to 'antigen escape'-the loss or absence of leukemic CD19 targeted by anti-leukemic T cells. In the present study, we utilized a genome-wide CRISPR-Cas9 screening approach to identify modulators of CD19 abundance on human B-ALL blasts. These studies identified a critical role for the transcriptional activator ZNF143 in CD19 promoter activation. Conversely, the RNA-binding protein, NUDT21, limited expression of CD19 by regulating CD19 messenger RNA polyadenylation and stability. NUDT21 deletion in B-ALL cells increased the expression of CD19 and the sensitivity to CD19-specific CAR-T and blinatumomab. In human B-ALL patients treated with CAR-T and blinatumomab, upregulation of NUDT21 mRNA coincided with CD19 loss at disease relapse. Together, these studies identify new CD19 modulators in human B-ALL.
-
-
+> https://www.nature.com/articles/s41590-022-01314-y
+> Fig.1e 用到 ENCODE 项目 //todo 
 
 
 
+基于T细胞的治疗方法 -- CAR-T, 双特异性T细胞疗法，靶向表面糖蛋白CD19的单抗--已经彻底改变了B细胞前体急性淋巴细胞白血病 (B-ALL) 的治疗。
+B cell progenitor acute lymphoblastic leukemia (B-ALL) treatment has been revolutionized by T cell-based immunotherapies-including chimeric antigen receptor T cell therapy (CAR-T) and the bispecific T cell engager therapeutic, blinatumomab-targeting surface glycoprotein CD19. 
+
+不幸的是，很多B-ALL病人因为“抗原逃逸”(抗白血病T细胞靶向的白血病CD19的丢失或缺失)而免疫治疗失败。
+Unfortunately, many patients with B-ALL will fail immunotherapy due to 'antigen escape'-the loss or absence of leukemic CD19 targeted by anti-leukemic T cells. 
+
+本文：使用 CRISPR-Cas9 筛选技术找到调节 CD19 丰度的调控子。
+In the present study, we utilized a genome-wide CRISPR-Cas9 screening approach to identify modulators of CD19 abundance on human B-ALL blasts. 
+
+发现 ZNF143 促进 CD19 启动子的激活。
+These studies identified a critical role for the transcriptional activator ZNF143 in CD19 promoter activation. 
+
+相反，NUDT21 通过调控mRNA的polyA和稳定性，限制CD19的表达。
+Conversely, the RNA-binding protein, NUDT21, limited expression of CD19 by regulating CD19 messenger RNA polyadenylation and stability. 
+
+
+在删除 NUDT21 的B-ALL细胞中，CD19表达上升，对靶向CD19的CAR-T和单抗敏感度上升。
+NUDT21 deletion in B-ALL cells increased the expression of CD19 and the sensitivity to CD19-specific CAR-T and blinatumomab. 
+
+在人类 B-ALL 病人中使用CART和抗体复发的病人中，NUDT21 mRNA的上升和CD19的下降密切相关。
+In human B-ALL patients treated with CAR-T and blinatumomab, upregulation of NUDT21 mRNA coincided with CD19 loss at disease relapse. 
+
+这些结果说明：找到了人类B-ALL中新的CD19调控子。
+Together, these studies identify new CD19 modulators in human B-ALL.
 
 
 
@@ -401,14 +423,54 @@ B cell progenitor acute lymphoblastic leukemia (B-ALL) treatment has been revolu
 
 
 
-# 在去势抵抗性前列腺癌中, CYCLIN K下调诱导 雄激素受体基因 内含子聚腺苷酸化、变异表达和PARP抑制剂易损(PNAS, 2022)
+
+
+
+
+
+# *7*{Good}在去势抵抗性前列腺癌中, CYCLIN K下调诱导 雄激素受体基因 内含子聚腺苷酸化、变异表达和PARP抑制剂易损(PNAS, 2022)
 > CYCLIN K down-regulation induces androgen receptor gene intronic polyadenylation, variant expression and PARP inhibitor vulnerability in castration-resistant prostate cancer
 > Proc Natl Acad Sci U S A. 2022 Sep
 > Department of Biochemistry and Molecular Biology, Mayo Clinic College of Medicine and Science, Rochester, MN 55905.
 > https://pubmed.ncbi.nlm.nih.gov/36129942/
 
+* what's new? //todo
+* Fig.3C 用到 TCGA 的突变数据。 
+* Fig.4 TCGA 的IPA reads? 及 生存期分析。
+
+
 Abstract
-Androgen receptor (AR) messenger RNA (mRNA) alternative splicing variants (AR-Vs) are implicated in castration-resistant progression of prostate cancer (PCa), although the molecular mechanism underlying the genesis of AR-Vs remains poorly understood. The CDK12 gene is often deleted or mutated in PCa and CDK12 deficiency is known to cause homologous recombination repair gene alteration or BRCAness via alternative polyadenylation (APA). Here, we demonstrate that pharmacological inhibition or genetic inactivation of CDK12 induces AR gene intronic (intron 3) polyadenylation (IPA) usage, AR-V expression, and PCa cell resistance to the antiandrogen enzalutamide (ENZ). We further show that AR binds to the CCNK gene promoter and up-regulates CYCLIN K expression. In contrast, ENZ decreases AR occupancy at the CCNK gene promoter and suppresses CYCLIN K expression. Similar to the effect of the CDK12 inhibitor, CYCLIN K degrader or ENZ treatment promotes AR gene IPA usage, AR-V expression, and ENZ-resistant growth of PCa cells. Importantly, we show that targeting BRCAness induced by CYCLIN K down-regulation with the PARP inhibitor overcomes ENZ resistance. Our findings identify CYCLIN K down-regulation as a key driver of IPA usage, hormonal therapy-induced AR-V expression, and castration resistance in PCa. These results suggest that hormonal therapy-induced AR-V expression and therapy resistance are vulnerable to PARP inhibitor treatment.
+
+雄性激素受体 选择性剪切变体(AR-Vs)，在前列腺癌中去势抵抗进展有关，机制未知。
+Androgen receptor (AR) messenger RNA (mRNA) alternative splicing variants (AR-Vs) are implicated in castration-resistant progression of prostate cancer (PCa), although the molecular mechanism underlying the genesis of AR-Vs remains poorly understood. 
+
+PC中CDK12基因常常删除或突变，已知CDK12缺失可通过APA导致通过同源重组修复基因或BRCAness。
+The CDK12 gene is often deleted or mutated in PCa and CDK12 deficiency is known to cause homologous recombination repair gene alteration or BRCAness via alternative polyadenylation (APA). 
+
+本文：药物抑制CDK12导致AR基因3号内含子pA使用，AR-V变体表达，前列腺癌细胞抵抗雄性激素。
+Here, we demonstrate that pharmacological inhibition or genetic inactivation of CDK12 induces AR gene intronic (intron 3) polyadenylation (IPA) usage, AR-V expression, and PCa cell resistance to the antiandrogen enzalutamide (ENZ). 
+
+我们进一步展示了AR结合到CCNK基因启动子上，上调 CYCLIN K表达。
+We further show that AR binds to the CCNK gene promoter and up-regulates CYCLIN K expression. 
+
+相反，抗雄激素ENZ降低了AR在CCNK基因启动子区的结合，抑制了CYCLIN K的表达。
+In contrast, ENZ decreases AR occupancy at the CCNK gene promoter and suppresses CYCLIN K expression. 
+
+和 CDK12 抑制剂作用类似，CYCLIN K降解或ENZ治疗促进AR基因IPA使用，AR-V表达，以及PC细胞的ENZ抗性生长。
+Similar to the effect of the CDK12 inhibitor, CYCLIN K degrader or ENZ treatment promotes AR gene IPA usage, AR-V expression, and ENZ-resistant growth of PCa cells. 
+
+重要的是，通过 PARP 抑制剂 靶向 BRCAness 能克服 ENZ抗性。
+Importantly, we show that targeting BRCAness induced by CYCLIN K down-regulation with the PARP inhibitor overcomes ENZ resistance. 
+
+结论：CYCLIN K下调促进IPA的使用。
+Our findings identify CYCLIN K down-regulation as a key driver of IPA usage, hormonal therapy-induced AR-V expression, and castration resistance in PCa. 
+
+激素治疗诱导的AR-V表达和治疗抗性，能通过 PARP 抑制剂中和掉。
+These results suggest that hormonal therapy-induced AR-V expression and therapy resistance are vulnerable to PARP inhibitor treatment.
+
+---
+
+androgen [ˈændrədʒən] n. 雄性激素；男性荷尔蒙
 
 
 
@@ -430,12 +492,44 @@ Androgen receptor (AR) messenger RNA (mRNA) alternative splicing variants (AR-Vs
 > Clin Transl Sci. 2022 Sep 20.
 > Department of Molecular Pharmacology and Experimental Therapeutics, Mayo Clinic, Rochester, Minnesota, USA.
 > https://pubmed.ncbi.nlm.nih.gov/36128656/
+> Fig3 表达水平和APA水平变化的基因，GO结果不同。
+> Fig5 IRF5 基因有细胞特异性的APA。 我看到相邻的基因 INPO3 基因也有APA.
 
 Abstract
-Alternative polyadenylation (APA) is a common genetic regulatory mechanism that generates distinct 3' ends for RNA transcripts. Changes in APA have been associated with multiple biological processes and disease phenotypes. However, the role of hormones and their drug analogs in APA remains largely unknown. In this study, we investigated transcriptome-wide the impact of glucocorticoids on APA in 30 human B-lymphoblastoid cell lines. We found that glucocorticoids could regulate APA for a subset of genes, possibly by changing the expression of 142 RNA-binding proteins, some with known APA-regulating properties. Interestingly, genes with glucocorticoid-mediated APA were enriched in viral translation-related pathways, while genes with glucocorticoid-mediated expression were enriched in interferon and interleukin pathways, suggesting that glucocorticoid-mediated APA might result in functional consequences distinct from gene expression. For example, glucocorticoids, a pharmacotherapy for severe COVID-19, were found to change the APA but not the expression of LY6E, an important antiviral inhibitor in coronavirus diseases. Glucocorticoid-mediated APA was also cell-type-specific, suggesting an action of glucocorticoids that may be unique to immune regulation. We also observed evidence for genotype-dependent glucocorticoid-mediated APA (referred to as pharmacogenomic-alterative polyadenylation quantitative trait loci), providing potential functional mechanisms for a series of common genetic variants that had previously been associated with immune disorders, but without a clear mechanism. In summary, this study reports a series of observations regarding the impact of glucocorticoids on APA, raising the possibility that this mechanism might have implications for both disease pathophysiology and drug therapy.
 
 
+Alternative polyadenylation (APA) is a common genetic regulatory mechanism that generates distinct 3' ends for RNA transcripts. Changes in APA have been associated with multiple biological processes and disease phenotypes. 
 
+未知: 激素和药物类似物在APA中的作用还是未知的。
+However, the role of hormones and their drug analogs in APA remains largely unknown. 
+
+本文：糖皮质激素在30个B淋巴母细胞 细胞系中的转录组影响。
+In this study, we investigated transcriptome-wide the impact of glucocorticoids on APA in 30 human B-lymphoblastoid cell lines. 
+
+发现：糖皮质激素能影响一个子集基因的APA，可能是通过改变 142个RBP，它们有些受APA调控。
+We found that glucocorticoids could regulate APA for a subset of genes, possibly by changing the expression of 142 RNA-binding proteins, some with known APA-regulating properties. 
+
+
+GO富集到：APA改变的基因 富集到 病毒翻译，而转录组的差异 则富集到 干扰素、白介素通路，表明APA和RNA的功能不同。
+Interestingly, genes with glucocorticoid-mediated APA were enriched in viral translation-related pathways, while genes with glucocorticoid-mediated expression were enriched in interferon and interleukin pathways, suggesting that glucocorticoid-mediated APA might result in functional consequences distinct from gene expression. 
+
+
+比如：糖皮质激素影响LY6E的APA，但是不影响表达。LY6E是新冠中重要的抗病毒抑制剂。
+For example, glucocorticoids, a pharmacotherapy for severe COVID-19, were found to change the APA but not the expression of LY6E, an important antiviral inhibitor in coronavirus diseases. 
+
+
+糖皮质激素介导的APA也是细胞特异的，表明可能对免疫调控的反应是唯一的。
+Glucocorticoid-mediated APA was also cell-type-specific, suggesting an action of glucocorticoids that may be unique to immune regulation. 
+
+还发现几个此前发现和免疫失调有关的位点，但是机制未名。
+We also observed evidence for genotype-dependent glucocorticoid-mediated APA (referred to as pharmacogenomic-alterative polyadenylation quantitative trait loci), providing potential functional mechanisms for a series of common genetic variants that had previously been associated with immune disorders, but without a clear mechanism. 
+
+总结：糖皮质激素对APA的影响，对疾病和药物的机制可能有帮助。
+In summary, this study reports a series of observations regarding the impact of glucocorticoids on APA, raising the possibility that this mechanism might have implications for both disease pathophysiology and drug therapy.
+
+---
+
+glucocorticoids [,glu:kəu'kɔ:ti,kɔid] n. [生化]糖皮质激素（glucocorticoid 的复数）
 
 
 
