@@ -119,6 +119,7 @@ v0.3.7-4@sust add APA Funds [2022.11.24]
 v0.3.7-5@sust read APA Abstract [2022.11.26]
 v0.3.7-6@sust read APA Abstract: CPEB4, m6A [2022.12.3]
 v0.3.7-7@sust read APA Abstract: 雄性激素与APA, 糖皮质激素与APA [2022.12.3]
+v0.3.7-8@sust read APA Abstract: 4种RNA修饰与APA [2022.12.4]
 #
 #--> commit
 #----------> push to github dawneve/StackNote

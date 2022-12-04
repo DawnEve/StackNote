@@ -493,7 +493,7 @@ androgen [ˈændrədʒən] n. 雄性激素；男性荷尔蒙
 > Department of Molecular Pharmacology and Experimental Therapeutics, Mayo Clinic, Rochester, Minnesota, USA.
 > https://pubmed.ncbi.nlm.nih.gov/36128656/
 > Fig3 表达水平和APA水平变化的基因，GO结果不同。
-> Fig5 IRF5 基因有细胞特异性的APA。 我看到相邻的基因 INPO3 基因也有APA.
+> Fig5 IRF5, CCR7(?) 基因有细胞特异性的APA。 我看到相邻的基因 INPO3 基因也有APA.
 
 Abstract
 
@@ -551,7 +551,29 @@ glucocorticoids [,glu:kəu'kɔ:ti,kɔid] n. [生化]糖皮质激素（glucocorti
 > Department of Genetics and Genome Sciences, Case Western Reserve University, Cleveland, Ohio, USA.
 > https://pubmed.ncbi.nlm.nih.gov/36123820/
 
-Balanced mRNA isoform diversity and abundance are spatially and temporally regulated throughout cellular differentiation. The proportion of expressed isoforms contributes to cell type specification and determines key properties of the differentiated cells. Neurons are unique cell types with intricate developmental programs, characteristic cellular morphologies, and electrophysiological potential. Neuron-specific gene expression programs establish these distinctive cellular characteristics and drive diversity among neuronal subtypes. Genes with neuron-specific alternative processing are enriched in key neuronal functions, including synaptic proteins, adhesion molecules, and scaffold proteins. Despite the similarity of neuronal gene expression programs, each neuronal subclass can be distinguished by unique alternative mRNA processing events. Alternative processing of developmentally important transcripts alters coding and regulatory information, including interaction domains, transcript stability, subcellular localization, and targeting by RNA binding proteins. Fine-tuning of mRNA processing is essential for neuronal activity and maintenance. Thus, the focus of neuronal RNA biology research is to dissect the transcriptomic mechanisms that underlie neuronal homeostasis, and consequently, predispose neuronal subtypes to disease. This article is categorized under: RNA in Disease and Development > RNA in Disease RNA in Disease and Development > RNA in Development.
+- 英语主句: diversity and abundance are regulated.
+- Balanced mRNA isoform diversity and abundance are spatially and temporally regulated throughout cellular differentiation.
+
+不同的神经特异过程的基因，富集到关键的神经功能上，包括: 突触蛋白、黏连分子、骨架蛋白等。
+Genes with neuron-specific alternative processing are enriched in key neuronal functions, including synaptic proteins, adhesion molecules, and scaffold proteins. 
+
+虽然神经基因表达谱相似，但是每个神经子集都有自己独特的 mRNA处理事件。
+Despite the similarity of neuronal gene expression programs, each neuronal subclass can be distinguished by unique alternative mRNA processing events. 
+
+
+Alternative processing of developmentally important transcripts alters coding and regulatory information, including interaction domains, transcript stability, subcellular localization, and targeting by RNA binding proteins. 
+
+---
+
+- APA 的定义: Alternative polyadenylation refers to regulated changes in the 3′ UTR of an mRNA molecule, most often observed as tandem 3′ UTRs, in which multiple polyadenylation signals are available within a single transcript for cleavage and polyadenylation (Figure 2; E. T. Wang et al., 2008). However, some AS events can coincide with APA events, namely, alternative last exons or splicing that retains a functional intronic or coding sequence polyadenylation signal
+- mRNA增长与什么有关？分化与发育。General lengthening of mRNA 3′ UTRs is associated with differentiation and development, with neurons expressing the longest 3′ UTRs (Agarwal et al., 2021; Guvenek & Tian, 2018; Hilgers et al., 2011; Miura et al., 2013).
+- 长的UTR含有什么调控元件？共三类: miRNA结合位点、RBP调控位点，细胞亚定位信号。Over 70% of neuron-enriched genes express multiple 3′ UTR isoforms (Tushev et al., 2018), each containing an array of regulatory information, including miRNA binding sites, sites of RBP recognition, and molecular “barcodes” which determine subcellular localization (Figure 3).
+- 短的UTR有什么作用？截断的蛋白，导致截断的蛋白、或损失长度依赖的调控机制，能快速和稳定的翻译mRNA。
+Shortening of 3′ UTRs in response to neuronal activation often results in truncations of the coding sequence, leading to alternative protein function, or removal of length-dependent inhibitory mechanisms, allowing for rapid and robust mRNA translation (Flavell et al., 2008; Lau et al., 2010).
+- RBP有哪些？ 
+various RBP family proteins, such as PTBP, FOX, NOVA, and MNBL, which are crucial for tissue- and temporally regulated alternative mRNA processing, especially within neurons (Weyn-Vanhentenryck et al., 2018).
+
+
 
 
 
@@ -575,7 +597,11 @@ Balanced mRNA isoform diversity and abundance are spatially and temporally regul
 > Department of Breast Surgery, Key Laboratory of Breast Cancer in Shanghai, Fudan University Shanghai Cancer Center, Shanghai, China.
 > https://pubmed.ncbi.nlm.nih.gov/36118888/
 
+四种RNA修改，算是表观遗传学相关的RNA修饰。
 Breast cancer (BC) is the most common malignant tumour, and its heterogeneity is one of its major characteristics. N6-methyladenosine (m6A), N1-methyladenosine (m1A), alternative polyadenylation (APA), and adenosine-to-inosine (A-to-I) RNA editing constitute the four most common adenosine-associated RNA modifications and represent the most typical and critical forms of epigenetic regulation contributing to the immunoinflammatory response, tumorigenesis and tumour heterogeneity.
+
+
+
 
 
 
@@ -593,12 +619,10 @@ Breast cancer (BC) is the most common malignant tumour, and its heterogeneity is
 > Department of Thoracic Surgery, National Cancer Center/National Clinical Research Center for Cancer/Cancer Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing, China.
 > https://pubmed.ncbi.nlm.nih.gov/36116215/
 
+四种RNA修饰对肿瘤免疫微环境的影响。
 Background: RNA modifications, including adenosine-to-inosine RNA editing, alternative polyadenylation, m1A and m6A, play a significant role in tumorigenesis and tumor immunity. However, the functions of RNA modification enzymes (writers) in immunotherapy and tumor microenvironment (TME) remain unknown.
 
-Methods: Nonnegative matrix factorization clustering was applied to identify RNA modification clusters in lung adenocarcinoma, one of the most prevalent subtypes of non-small cell lung cancer (NSCLC). CIBERSORT and ESTIMATE algorithms were performed to depict TME characteristics. Additionally, a scoring system called Writer-Score was established to quantify RNA modification patterns and subsequently predict clinical outcomes. We subsequently used RNA sequencing, targeted DNA sequencing and multiplex immunofluorescence to further evaluate the efficacy of Writer-Score in NSCLC patients receiving neoadjuvant immunotherapy.
-
-Findings: We identified three distinct RNA modification clusters and two DEGclusters, which were shown to be strongly associated with a variety of TME features and biological processes. Additionally, the Writer-Score served as an important factor in post-transcriptional events and immunotherapy. The Writer-Score was capable of properly predicting the prognosis of NSCLC patients receiving neoadjuvant PD-1 inhibitor therapy.
-
+感觉和上一篇(四种RNA修饰蛋白)是一个 paper mill 造出来的。
 Interpretation: Our work systematically analyzed four types of RNA modifications and constructed a scoring system to guide neoadjuvant immunotherapy in NSCLC, which highlighted the writers' roles in post-transcriptional events, TME and neoadjuvant immunotherapy.
 
 
