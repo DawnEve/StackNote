@@ -28,6 +28,15 @@
 
 
 
+		{
+			year: 2022,
+			title:"1030-APA_papers.2022_Oct.md",
+			caption: "APA papers: 2022 October",
+			category:1,
+			tags: ['APA'],
+		},
+
+
 
 		{
 			year: 2022,
