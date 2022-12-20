@@ -10,6 +10,15 @@
 
 		{
 			year: 2022,
+			title:"1219-harry-potter-Crouch.md",
+			caption: "《哈利·波特》：出身名门的小巴蒂·克劳奇，为何会成为食死徒？",
+			category:4,
+			tags: ['harry-potter'],
+		},
+
+
+		{
+			year: 2022,
 			title:"1124-single-cell.2022.md",
 			caption: "single-cell: 2022(单细胞 & 空间转录组)",
 			category:1,

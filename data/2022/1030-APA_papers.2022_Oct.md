@@ -205,3 +205,49 @@ In this study, we found that the 3'UTR of KHDRBS1 is generally shortened in GC t
 
 Overexpression of KHDRBS1, especially KHDRBS1 with a shortened 3'UTR, promotes the growth and metastasis of GC in vivo and in vitro.
 
+
+
+
+# polyA signal: AATAAA and (TC)n [Biology, IF5.1, 2022]
+> Tail Wags Dog's SINE: Retropositional Mechanisms of Can SINE Depend on Its A-Tail Structure
+> Biology (Basel). 2022 Sep
+> Laboratory of Eukaryotic Genome Evolution, Engelhardt Institute of Molecular Biology, Russian Academy of Sciences, 119991 Moscow, Russia.
+> https://pubmed.ncbi.nlm.nih.gov/36290307/
+
+The transcription of various Can constructs transfected into HeLa cells proposed AATAAA and (TC)n as functional polyadenylation signals.
+
+
+
+
+
+# (果蝇)神经分化开始时 ELAV/Hu 依赖 mRNA 信号的关键发育窗口 (Cell Rep, IF8.28, 2022)
+> A critical developmental window for ELAV/Hu-dependent mRNA signatures at the onset of neuronal differentiation
+> Cell Rep. 2022 Oct 25
+> Max-Planck-Institute of Immunobiology and Epigenetics, 79108 Freiburg, Germany; Faculty of Biology, Albert Ludwig University, 79104 Freiburg, Germany; International Max Planck Research School for Molecular and Cellular Biology (IMPRS-MCB), 79108 Freiburg, Germany.
+> https://pubmed.ncbi.nlm.nih.gov/36288718/
+
+虫子的爬行能力。
+
+Cell-type-specific gene regulatory programs are essential for cell differentiation and function.
+
+In animal neurons, the highly conserved ELAV/Hu family of proteins promotes alternative splicing and polyadenylation of mRNA precursors to create unique neuronal transcript isoforms.
+
+
+> ELAV/Hu 家族是啥？
+
+ELAV / Hu 是一类含有 3 个 RRMs、高度保守的神经细胞 RNA 结合蛋白家族。
+
+
+
+
+
+
+# APA在抗病毒先天免疫反应中的作用 (NC, 2017)
+> The role of alternative polyadenylation in the antiviral innate immune response
+> Nat Commun. 2017 Feb 24;8:14605. doi: 10.1038/ncomms14605.
+> State Key Laboratory of Biocontrol, Department of Biochemistry, School of Life Sciences, Sun Yat-Sen University, Guangzhou 510275, People's Republic of China.
+> https://pubmed.ncbi.nlm.nih.gov/28233779/
+
+However, the extent of 3' UTR variation and the function of APA during the innate antiviral immune response are unclear.
+
+
