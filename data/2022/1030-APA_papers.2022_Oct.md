@@ -251,3 +251,20 @@ ELAV / Hu 是一类含有 3 个 RRMs、高度保守的神经细胞 RNA 结合蛋
 However, the extent of 3' UTR variation and the function of APA during the innate antiviral immune response are unclear.
 
 
+
+
+
+
+
+
+# 工具 ReadZS 检测单细胞细胞类型特异性APA(Genome Biol. 2022, IF=11.9)
+> ReadZS detects cell type-specific and developmentally regulated RNA processing programs in single-cell RNA-seq
+> Genome Biol. 2022 Oct 25
+> Department of Biochemistry, Stanford University, Stanford, CA, 94305, USA.
+> https://pubmed.ncbi.nlm.nih.gov/36284317/
+
+... global 3' UTR shortening in human spermatogenesis. 
+
+ReadZS also discovers global 3' UTR lengthening in Arabidopsis development, highlighting the usefulness of this method in under-annotated transcriptomes.
+
+

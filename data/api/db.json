@@ -10,6 +10,16 @@
 
 		{
 			year: 2022,
+			title:"1220-APA_papers.2022_Nov.md",
+			caption: "APA papers: 2022 November",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+
+		{
+			year: 2022,
 			title:"1219-harry-potter-Crouch.md",
 			caption: "《哈利·波特》：出身名门的小巴蒂·克劳奇，为何会成为食死徒？",
 			category:4,
