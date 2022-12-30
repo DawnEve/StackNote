@@ -12,8 +12,10 @@ Style ref:
 .markdown{padding: 5px;word-wrap: break-word;background-color: #fff;/*padding: 45px;border: 1px solid #ddd;*/border-bottom-right-radius:3px;    border-bottom-left-radius: 3px;}
 
 .markdown{
-	/*font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;*/
+	font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;
+	/*
 	font-family: Lato,Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3",Microsoft JhengHei,WenQuanYi Micro Hei,"Microsoft YaHei",sans-serif;
+	*/
     font-size: 16px;
     line-height: 20px;
 

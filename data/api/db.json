@@ -10,6 +10,16 @@
 
 		{
 			year: 2022,
+			title:"1230-APA_papers.2022_Dec.md",
+			caption: "APA papers: 2022 December",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+
+		{
+			year: 2022,
 			title:"1220-APA_papers.2022_Nov.md",
 			caption: "APA papers: 2022 November",
 			category:1,
