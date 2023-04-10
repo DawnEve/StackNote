@@ -101,6 +101,10 @@ export default{
 - [yiweiniu ATAC](https://yiweiniu.github.io/blog/)
 - [Zou Weige](https://www.jianshu.com/u/ec301f20ee2b): 单细胞, labmate
 - a-[小xuo生](https://www.cnblogs.com/jessepeng/p/?page=14): 生信R语言/机器学习，植物
+- [TAO YAN(严涛)](https://github.com/YTLogos) (湖南农大讲师 2021): 农学博客介绍 shiny 的使用
+- 杭州姑娘的博客(QQ 随处可见的温柔): [木之如水@csdn](https://blog.csdn.net/weixin_43949246?type=blog), 生信豆芽菜@公众号(文章套路解析)
+
+
 
 
 - [Yunze Liu 博客](https://www.jieandze1314.com/): [单细胞分析](https://jieandze1314.osca.top/)
@@ -109,6 +113,10 @@ export default{
 	* [Ming Tang](https://divingintogeneticsandgenomics.rbind.io/): 生信个人主页
 	* [可重复性研究](https://davetang.github.io/reproducible_bioinformatics/index.html)
 - [基迪奥生物](https://www.zhihu.com/org/ji-di-ao-sheng-wu): R语言绘图、文献思路等
+
+
+
+
 
 - 公众号合集: 
 	* [#转录组研究](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MTcwNjA4NQ==&action=getalbum&album_id=1335351932285976579)

@@ -7,6 +7,76 @@
 
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
+		{
+			year: 2023,
+			title:"0407-bone_marrow_DNA-seq_SNP.md",
+			caption: "基于SNP的骨髓移植后嵌合性分析方法",
+			category:1,
+			tags: ['SNP', "DNA-seq"],
+		},
+
+
+		{
+			year: 2023,
+			title:"0404-3aTWAS-brain.md",
+			caption: "Nat Commun.2023: 3a'TWAS识别 大脑疾病中 APA 连锁易感基因",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+		{
+			year: 2023,
+			title:"0401-APA_papers.2023_April.md",
+			caption: "APA papers: 2023.04",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+
+		{
+			year: 2023,
+			title:"0303-AML-fund.2023_March.md",
+			caption: "白血病基金构思: 2023",
+			category:1,
+			tags: ['AML'],
+		},
+
+
+
+		{
+			year: 2023,
+			title:"0124-ATAC-seq.2023_Jan.md",
+			caption: "ATAC-seq papers: 2023",
+			category:1,
+			tags: ['ATAC-seq'],
+		},
+
+
+		{
+			year: 2023,
+			title:"0118-APA_papers.2023_Jan.md",
+			caption: "APA papers: 2023 January",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+
+		{
+			year: 2023,
+			title:"0101-about_future.md",
+			caption: "关于自己的中长期未来(2023年初)",
+			category:4,
+			tags: ['鸡汤'],
+		},
+
+
+
+
+
+
 
 		{
 			year: 2022,
