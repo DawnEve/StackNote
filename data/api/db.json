@@ -7,6 +7,16 @@
 
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
+
+		{
+			year: 2023,
+			title:"0610-single-cell.Jun.2023.md",
+			caption: "单细胞文献 2023.6",
+			category:1,
+			tags: ['单细胞'],
+		},
+
+
 		{
 			year: 2023,
 			title:"0407-bone_marrow_DNA-seq_SNP.md",

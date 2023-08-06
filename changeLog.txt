@@ -125,11 +125,13 @@ v0.3.8-0@sust update css; add 哈利波特评论 [2022.12.20]
 v0.3.8-1@sust read APA Abs [2022.12.28]
 v0.3.8-2@sust read APA Abs [2022.12.30]
 v0.3.8-3@sust DNA-seq: 嵌合度分析 [2023.4.10]
+v0.3.8-4@hzNB 更新，添加 gitee 源 [2023.8.6]
 #
 #--> commit
 #----------> push to github dawneve/StackNote
 
 
+核心目录 data/api/db.json
 Web url: note.biomooc.com
 local url: blog3.dawneve.cc
 
