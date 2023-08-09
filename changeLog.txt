@@ -126,6 +126,7 @@ v0.3.8-1@sust read APA Abs [2022.12.28]
 v0.3.8-2@sust read APA Abs [2022.12.30]
 v0.3.8-3@sust DNA-seq: 嵌合度分析 [2023.4.10]
 v0.3.8-4@hzNB 更新，添加 gitee 源 [2023.8.6]
+v0.3.8-5@hzNB 阅读 2023.7 HuBMAP 大文章 [2023.8.9]
 #
 #--> commit
 #----------> push to github dawneve/StackNote

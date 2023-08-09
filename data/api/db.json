@@ -10,6 +10,14 @@
 
 		{
 			year: 2023,
+			title:"0808-single-cell.Aug.2023.md",
+			caption: "单细胞文献 2023.8",
+			category:1,
+			tags: ['单细胞'],
+		},
+
+		{
+			year: 2023,
 			title:"0610-single-cell.Jun.2023.md",
 			caption: "单细胞文献 2023.6",
 			category:1,
