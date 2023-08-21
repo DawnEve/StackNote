@@ -10,8 +10,16 @@
 
 		{
 			year: 2023,
+			title:"0821-APA-paper.Aug.2023.md",
+			caption: "APA papers: 2023.8",
+			category:1,
+			tags: ['APA'],
+		},
+
+		{
+			year: 2023,
 			title:"0808-single-cell.Aug.2023.md",
-			caption: "单细胞文献 2023.8",
+			caption: "单细胞文献: HuBMAP 大文章9篇 2023.8",
 			category:1,
 			tags: ['单细胞'],
 		},

@@ -450,12 +450,12 @@ main > nav li a{
 
 
 .content h1{
-    color: #07c160;
+    color: #0096ff;
     padding: 5px 10px;
 }
 
 .content h2{
-    border-left: 10px solid #07c160;
+    border-left: 10px solid #0096ff;
 	padding-left: 10px;
-	color:#07c160;
+	color:#0096ff;
 }
