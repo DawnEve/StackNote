@@ -182,6 +182,7 @@ main > nav li a{
     /*line-height: 1.8;
     tab-size: 4;
 	*/
+    font: 20px/1.7 Georgia,'Arial','Microsoft YaHei';
     word-wrap: break-word;
     /*margin-bottom: 1em!important;*/
 }
@@ -450,12 +451,51 @@ main > nav li a{
 
 
 .content h1{
-    color: #0096ff;
+    /* color: #0096ff; */
+    margin-top: 60px!important;
     padding: 5px 10px;
 }
 
 .content h2{
-    border-left: 10px solid #0096ff;
 	padding-left: 10px;
-	color:#0096ff;
+    /* color:#0096ff; 
+    border-left: 10px solid #000;
+    */
+}
+
+.markdown blockquote p{
+    font-size: 14px;
+}
+
+
+
+/* 手动 html 块*/
+.markdown .block{
+    border-left-width: 0.5rem;
+    border-left-style: solid;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    display: block;
+}
+.block.info{
+    background-color: #E2EBE7;
+    border-color: #42b983;
+    color: #188956;
+}
+.block.warning {
+    /* 标准 */
+    background-color: rgba(255,229,100,.3);
+    border-color: #e7c000;
+    color: #6b5900;
+}
+.block.error {
+    background-color: #FEE2E2;
+    border-color: #EF4444;
+    color: #7F1D1D;
+}
+
+
+
+.content ul>li, .content ul>p{
+    white-space: normal;
 }

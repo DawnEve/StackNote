@@ -10,6 +10,14 @@
 
 		{
 			year: 2023,
+			title:"0831-RBP-eCLIP-paper.Aug.2023.md",
+			caption: "RBP / eCLIP papers: 2023.8",
+			category:1,
+			tags: ['APA', 'RBP'],
+		},
+
+		{
+			year: 2023,
 			title:"0821-APA-paper.Aug.2023.md",
 			caption: "APA papers: 2023.8",
 			category:1,

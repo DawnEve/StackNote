@@ -49,7 +49,7 @@ Top upstream regulators identified included:
 
 
 
-# mRNA 3'UTR 增长，降低炎症反应，与流感A病毒毒力相关 (NC, )
+# 通过 APA 的 mRNA 3'UTR 增长，降低炎症反应，与流感A病毒毒力相关 (NC, 2023)
 > mRNA 3'UTR lengthening by alternative polyadenylation attenuates inflammatory responses and correlates with virulence of Influenza A virus
 > Nat Commun. 2023 Aug
 > Institute of Virology, TUM School of Medicine, Technical University of Munich, Munich, Germany. / Max Planck Institute of Biochemistry, Munich, Germany.
@@ -79,7 +79,7 @@ Collectively, we propose that targeting of the CPSF complex, leading to widespre
 
 
 
-# 预测轴突mrna的rna结合蛋白规则组 (Genome Res)
+# 预测轴突 mRNA 的 RNA 结合蛋白规则组 (Genome Res)
 > The predicted RNA-binding protein regulome of axonal mRNAs
 > Genome Res. 2023 Aug 15
 > Idiap Research Institute; raphaelle.luisier@idiap.ch. /University College London.
@@ -102,20 +102,31 @@ However, how 3' UTRs contribute to mRNA metabolism and the nature of RBP complex
 然而，3' utr如何促进mRNA代谢以及负责这些功能的RBP复合物的性质仍然是未知的。
 
 
-方法:
+方法: 从(NFG or NT-3处理的)交感神经神经元的`细胞体 和 轴突` 分别提取RNA，做3端测序。
 We performed 3' end sequencing of RNA isolated from cell bodies and axons of sympathetic neurons exposed to either Nerve Growth factor (NGF) or Neurotrophin 3 (NT-3). 
 
+- sympathetic [ˌsɪmpəˈθetɪk] adj. 同情的，有同情心的；交感神经的，自主神经系统的；
+
 NGF and NT-3 are growth factors essential for sympathetic neuron development through distinct signalling mechanisms. Whereas NT-3 acts mostly locally, NGF signal is retrogradely transported from axons to cell bodies. 
+
+- NT-3: 局部起作用
+- NGF: 从轴突转运到细胞体
 
 
 结果:
 We discovered that both NGF and NT-3 affect transcription and alternative polyadenylation in the nucleus and induce the localization of specific 3'UTR isoforms to axons, including short 3'UTR isoforms found exclusively in axons. 
+在轴突也发现 短转录本。
 
 整合 CLIP 测序数据: 长UTR转录本结合RBP，到达轴突后，变成短转录本。
 The integration of our data with CLIP sequencing data supports a model whereby long 3'UTR isoforms associate with RBP complexes in the nucleus, and upon reaching the axons, are remodelled locally into shorter isoforms. 
 
 结论:
 Our findings shed new light into the complex relationship between nuclear polyadenylation, mRNA localisation and local 3'UTR remodelling in developing neurons.
+细胞核 polyA，mRNA亚定位，然后细胞质 3UTR 重塑。
+
+<span class="block error">
+todo: 细胞核外还可以发生APA? 有什么证据？机制是什么？
+</span>
 
 
 
@@ -123,14 +134,13 @@ Our findings shed new light into the complex relationship between nuclear polyad
 
 
 
-# 基于 Nanopore 三代测序 的 太平洋牡蛎 长度长数据库及基因组注释
+# 基于 Nanopore 三代测序 的 太平洋牡蛎 长度长数据库及基因组注释 (Genomics, IF=4.4)
 > Development of Nanopore sequencing-based full-length transcriptome database toward functional genome annotation of the Pacific oyster, Crassostrea gigas
 > Genomics. 2023 Aug
 > Key Laboratory of Mariculture (Ocean University of China), Ministry of Education, and College of Fisheries, Ocean University of China, Qingdao 266003, China.
 > PMID: 37567397
 
 The Pacific oyster (Crassostrea gigas) is a widely cultivated shellfish in the world, while its transcriptome diversity remains less unexplored due to the limitation of short reads.
-
 
 We further developed a Drupal based webserver, Cgtdb, which can be used for transcriptome visualization, sequence alignment, and functional genome annotation analyses.
 
@@ -142,3 +152,33 @@ This work provides valuable resources and a useful tool for integrative analysis
 
 
 
+
+
+# 主导的polyA信号可用于变异分类(Hum Mol Genet, IF=5.121)
+> Genome-wide identification of dominant polyadenylation hexamers for use in variant classification
+> Hum Mol Genet. 2023 Aug 22
+> Center for Precision Health Research. UK
+> PMID: 37606238
+
+Yet, only 14 Mendelian disorders have been associated with hexamer variants. This is likely an under-ascertainment as hexamers are not well defined and not routinely examined in molecular analysis.
+
+在种群中，
+主导的polyA信号，其相关变异较低，相对于非主导对照和三聚体。
+The predominant hexamers had fewer observed variants compared to non-predominant hexamers and trimer controls, and CADD scores for variants in these hexamers were significantly higher than controls.
+
+
+我们建议：这些主导polyA信号可用于研究 外显子和基因组数据。
+We suggest this list of predominant hexamers can be used to interrogate exome and genome data. 
+
+这些主导polyA信号区域的变异，可以作为人类疾病的候选，为此，提出六聚体突变作为疾病分类标准。
+Variants in these predominant hexamers should be considered candidates for pathogenic variation in human disease, and to that end we suggest pathogenicity criteria for classifying hexamer variants.
+
+
+
+
+
+
+
+
+
+# 
