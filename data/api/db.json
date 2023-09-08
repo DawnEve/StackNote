@@ -8,6 +8,16 @@
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
 
+
+		{
+			year: 2023,
+			title:"0907-APA-paper.Sep.2023.md",
+			caption: "APA papers: 2023.9",
+			category:1,
+			tags: ['APA'],
+		},
+
+
 		{
 			year: 2023,
 			title:"0831-RBP-eCLIP-paper.Aug.2023.md",
@@ -19,7 +29,7 @@
 		{
 			year: 2023,
 			title:"0821-APA-paper.Aug.2023.md",
-			caption: "APA papers: 2023.8 | 类器官（Organoids）",
+			caption: "APA papers: 2023.8 | 类器官（Organoids）| Cell",
 			category:1,
 			tags: ['APA'],
 		},

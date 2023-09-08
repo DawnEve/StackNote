@@ -319,7 +319,7 @@ Functionally, PABPN1 acts as an oncofetal splicing regulator in HB by promoting 
 
 
 
-# 转录起始位点驱动mRNA异构体选择 (Cell, IF=66)
+# 转录起始位点驱动mRNA异构体选择: TSS 决定 PAS 选择 (Cell, IF=66)
 > Sites of transcription initiation drive mRNA isoform selection.
 > Alfonso-Gonzalez C, ..., Hilgers V.
 > Cell. 2023 May 25
@@ -351,12 +351,49 @@ In vivo deletion or overexpression of dominant promoters as well as p300/CBP los
 Our study demonstrates the crucial impact of TSS choice on the regulation of transcript diversity and tissue identity.
 
 
-## p300/CBP
-
-- p300/CBP所介导的组蛋白超乙酰化(hyper-acetylation)
 
 
 
+
+## p300/CBP 所介导的组蛋白超乙酰化 (hyper-acetylation)
+
+- p300: EP300(NCBI), E1A binding protein p300 [Homo sapiens (human)]，别名：KAT3B, MKHK2, RSTS2, p300
+
+> This gene encodes the adenovirus E1A-associated cellular p300 transcriptional co-activator protein. It functions as histone acetyltransferase that regulates transcription via chromatin remodeling and is important in the processes of cell proliferation and differentiation. It mediates cAMP-gene regulation by binding specifically to phosphorylated CREB protein. This gene has also been identified as a co-activator of HIF1A (hypoxia-inducible factor 1 alpha), and thus plays a role in the stimulation of hypoxia-induced genes such as VEGF. Defects in this gene are a cause of Rubinstein-Taybi syndrome and may also play a role in epithelial cancer. [provided by RefSeq, Jul 2008]
+> 该基因编码腺病毒 E1A 相关细胞p300转录共激活子蛋白。它作为组蛋白乙酰转移酶，通过染色质重塑调节转录，在细胞增殖和分化过程中起重要作用。它通过特异性结合磷酸化的CREB蛋白介导 cAMP 基因调控。该基因还被鉴定为HIF1A(缺氧诱导因子1 α)的共激活因子，因此在缺氧诱导的基因如VEGF的刺激中起作用。这种基因的缺陷是导致鲁宾斯坦-泰比综合征的原因之一，可能在 上皮肿瘤 中起作用。
+> 
+> Expression
+> Ubiquitous expression in bone marrow (RPKM 27.3), testis (RPKM 17.5) and 25 other tissues See more
+> [Protein Atlas Paper](https://pubmed.ncbi.nlm.nih.gov/24309898/): RNA-seq was performed of tissue samples from `95 human individuals` representing `27 different tissues` in order to determine tissue-specificity of all `protein-coding genes`
+
+- 乙酰转移酶 / 乙酰化酶（histone acetyltransferase，HAT）
+
+> 在细胞核内，组蛋白乙酰化与组蛋白去乙酰化过程处于动态平衡，并由`组蛋白乙酰化转移酶（histoneacetyltransferase,HAT）`和`组蛋白去乙酰化酶（histonedeacetylase,HDAC）`共同调控。HAT将乙酰辅酶A的乙酰基转移到组蛋白氨基末端特定的赖氨酸残基上，HDAC使组蛋白去乙酰化，与带负电荷的DNA紧密结合，染色质致密卷曲，基因的转录受到抑制。
+
+
+
+- CBP: PAG1(NCBI) ID:55824, phosphoprotein membrane anchor with glycosphingolipid microdomains 1 [Homo sapiens (human)], Chromosome 8, NC_000008.11 (80967810..81112068, complement), 别名：CBP, PAG.	MIM:605767
+
+
+### (1) 青年基金: P300/CBP介导调控神经病理性疼痛的表观遗传学研究
+
+E1A结合蛋白（E1A-binding protein, p300）和CREB结合蛋白（CREB-binding protein，CBP）是一类基因转录过程中的辅激活因子，具有组蛋白乙酰转移酶功能，可能通过组蛋白乙酰化表观遗传学机制调控多种疼痛基因的表达。
+
+本项目通过构建大鼠坐骨神经慢性缩窄伤模型，验证了P300/CBP在神经病理性疼痛中的作用，得到了以下结果：
+
+- 大鼠神经损伤后脊髓P300/CBP与神经病理性疼痛的发展有直接联系；
+- P300/CBP通过组蛋白乙酰转移酶作用介导上调环氧合酶-2(Cyclooxygenase-2, COX-2)基因，胆囊收缩素（cholecystokinin, CCK）基因和酪氨酸激酶B (Tyrosine-related kinase B, TrKB)基因等疼痛相关基因表达，可能是它们参与神经病理性疼痛发病的重要作用机制；
+- P300/CBP对下游基因存在基因特异性的调控作用，不同的下游基因可能分别或同时受到P300和CBP的调节。
+
+> 通过该课题研究，我们首次证实P300/CBP可能是神经病理性疼痛治疗的靶点。
+
+
+### (2) [Mol Cell] p300/CBP sustains Polycomb silencing by non-enzymatic functions
+
+PRC2介导的 H3K27me3三甲基化是PcG靶基因抑制染色质状态的标志，而TrxG蛋白则能通过H3K27去甲基化酶UTX以及招募组蛋白乙酰转移酶（HAT）CREB结合蛋白（CBP）及其旁系同源物p300来抵消PcGs的作用，也就是说H3K27是PcG介导的基因抑制和TrXG介导的基因激活之间的重要开关。尽管目前已经知道PcG蛋白能诱导染色质压缩，但对于它如何进入致密的染色质以实现长期基因沉默的机制知之甚少。
+
+证明了p300/CREB结合蛋白（CBP）独立于其组蛋白乙酰转移酶活性的、在与PcG结合的抑制位点稳定RNA聚合酶II(Pol II)并促进Pol II暂停的作用，
+证明了CBP和Pol II暂停是RNA-DNA杂合体（R环）形成和Polycomb响应元件（PRE）处核小体消耗所必需的，揭示了染色质调节剂相互作用如何维持转录状态。
 
 
 
@@ -391,8 +428,6 @@ Alfonso-Gonzalez et al.1 present an innovative combination of long-read-sequenci
 
 
 
-
-
 # 小paper
 
 ## 表型筛选(Phenotypic screening)发现 APA 调节剂 (IF=3.15)
@@ -405,6 +440,67 @@ In this study, using global proteomic analysis, we identified a novel Cyclin K d
 
 T4 and TR-213 are structurally distinct from other Cyclin K degraders and can be used as novel chemical tools to further analyze the degradation of Cyclin K and the regulation of alternative polyadenylation.
 
+
+
+
+
+## 胎儿肝脏 终端红细胞 转录组分析 (Yongshuai Han)
+> Comprehensive Characterization and Global Transcriptome Analyses of Human Fetal Liver Terminal Erythropoiesis
+> School of Life Sciences, Zhengzhou University, Zhengzhou 450001, China; Laboratory of Membrane Biology, New York Blood Center, New York, NY 10065, USA.
+> Genomics Proteomics Bioinformatics. 2023 Aug 
+> https://pubmed.ncbi.nlm.nih.gov/37657739/
+> 暂时无图片
+
+Notably, the expression of genes enriched in proteolysis and autophagy was upregulated in orthochromatic erythroblasts (OrthoE), suggesting the involvement of these pathways in enucleation. 
+
+- fetal [ˈfiːt(ə)l] adj. 胎的，胎儿的
+- proteolysis [ˌprəʊtɪˈɒlɪsɪs] n. [生化] 蛋白质水解；蛋白水解作用
+- autophagy [ɔːˈtɑfədʒi] n. 自我吞噬；自食症；自体吞噬
+- orthochromatic [ˌɔːθəʊkrəʊˈmætɪk] adj. [摄] 正色的
+- erythroblast [ɪˈrɪθrə(ʊ)blæst] n. 有核红血球；成红血球细胞
+- enucleation [enˈjuːkliːʃən] n. [外科] 摘出术；[生物][医] 去核
+
+
+
+
+## PABPN1 促进 透明细胞肾细胞癌 进展，通过SGPL1 and CREG1的APA(IF=4.9)
+> PABPN1 Promotes clear cell Renal Cell Carcinoma progression by suppressing the alternative polyadenylation of SGPL1 and CREG1
+> Carcinogenesis. 2023 Jul 
+> Department of Urology, Union Hospital, Tongji Medical College, Huazhong University of Science and Technology, Wuhan, China.
+> https://pubmed.ncbi.nlm.nih.gov/37452741/
+
+Alternative polyadenylation (APA) is an important post-transcriptional regulatory mechanism in cancer development and progression. 
+
+PABPN1是一个编码丰富核蛋白的基因，与新生多聚(A)尾部高亲和力结合，对3'-UTR (3'- 非翻译区) APA至关重要。
+PABPN1 is a gene that encodes abundant nuclear protein, binds with high affinity to nascent poly(A) tails, and is crucial for 3'-UTR (3'-untranslated region) APA. 
+
+未知： PABPN1虽是调控APA的主力，机制未知；它调控的基因也未鉴定。
+Although PABPN1 has been recently reported as a dominant master APA regulator in clear cell renal cell carcinoma (ccRCC), the underlying functional mechanism remain unclear and the genes subject to PABPN1 regulation that contribute to ccRCC progression have not been identified. 
+
+上调，与癌症进展相关。
+Here, we found that PABPN1 is upregulated in ccRCC, and its expression is highly associated with the clinical prognosis of ccRCC patients. 
+
+PABPN1 促进 ccRCC 增殖，迁徙，侵袭，影响鞘脂类代谢，细胞周期。
+PABPN1 promotes ccRCC cell proliferation, migration, invasion, and exerts an influence on sphingolipid metabolism and cell cycle. 
+
+- sphingolipid [ˌsfɪŋɡəʊˈlɪpɪd] n. [生化] 鞘脂类
+
+PABPN1删除后，通过诱导细胞周期阻滞和凋亡，抑制癌细胞生长。
+Moreover, PABPN1 depletion significantly suppressed cancer cell growth via induction of cell cycle arrest and apoptosis. 
+
+PABPN1 调控 SGPL1 and CREG1 基因，促进 ccRCC 进展。
+In particular, we characterized PABPN1-regulated 3'-UTR APA of SGPL1 and CREG1, which contribute to ccRCC progression. 
+
+PABPN1 促进 ccRCC 进展，部分通过抑制 SGPL1 and CREG1 。
+Collectively, our data revealed that PABPN1 promotes ccRCC progression at least in part, by suppressing SGPL1 and CREG1. 
+
+PABPN1 可能是 ccRCC 潜在治疗靶点。
+Thus, PABPN1 may be a potential therapeutic target in ccRCC.
+
+<span class="block error">
+todo: PABPN1 通过什么机制 影响细胞周期 促进 ccRCC 癌细胞分裂?? <br>
+哪个基因的表达?? 哪个基因的APA?? 也是 SGPL1 and CREG1?
+</span>
 
 
 
