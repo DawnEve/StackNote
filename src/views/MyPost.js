@@ -195,6 +195,13 @@ export default {
 
     	this.changeSideBarWidth();
     	window.addEventListener('resize', this.changeSideBarWidth, true);
+
+    	// change doc title
+    	setTimeout(function(){
+    		var title=document.getElementsByClassName("post-title")[0].innerHTML;
+    		document.title = title;
+    	}, 70)
+
     },
 
     // 离开组件要销毁监听
