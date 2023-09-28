@@ -8,6 +8,23 @@
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
 
+		{
+			year: 2023,
+			title:"0926-APA-in-triple-negative-breast-cancers.md",
+			caption: "三阴乳腺癌中 APA 的异质性 | 乳腺癌",
+			category:1,
+			tags: ['APA', "精读"],
+		},
+
+
+		{
+			year: 2023,
+			title:"0925-good-landmark-reviews.md",
+			caption: "标志性综述 列表",
+			category:1,
+			tags: ['免疫'],
+		},
+
 
 		{
 			year: 2023,
@@ -20,7 +37,7 @@
 		{
 			year: 2023,
 			title:"0911-APA-and-infection.md",
-			caption: "APA and infection 感染与APA: 2023.9",
+			caption: "APA and infection 感染与APA: 2023.9 | 2018 Science 李斯特菌感染后 scRNA-seq dataset",
 			category:1,
 			tags: ['APA'],
 		},
@@ -28,9 +45,9 @@
 		{
 			year: 2023,
 			title:"0907-APA-paper.Sep.2023.md",
-			caption: "APA papers: 2023.9 | 2018 Science 李斯特菌感染后 scRNA-seq dataset",
+			caption: "APA papers: 2023.9",
 			category:1,
-			tags: ['APA', "scRNA-seq"],
+			tags: ['APA', "scRNA-seq", 'fund'],
 		},
 
 
