@@ -1,6 +1,17 @@
 
 
 
+# //todo
+> An Alternatively Spliced p62 Isoform Confers Resistance to Chemotherapy in Breast Cancer
+> DOI: 10.1158/0008-5472.CAN-22-0909
+> https://www.sohu.com/a/658443883_121228254
+> https://mp.weixin.qq.com/s/mULz7LYlen35ld1qUgbTrA
+
+APA的生信分析思路
+
+
+
+
 
 
 

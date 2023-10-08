@@ -10,6 +10,14 @@
 
 		{
 			year: 2023,
+			title:"1005-APA-cell-cycle.md",
+			caption: "癌细胞中的细胞周期与APA",
+			category:1,
+			tags: ['APA', "细胞周期"],
+		},
+
+		{
+			year: 2023,
 			title:"0926-APA-in-triple-negative-breast-cancers.md",
 			caption: "三阴乳腺癌中 APA 的异质性 | 乳腺癌",
 			category:1,
