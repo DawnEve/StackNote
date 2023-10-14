@@ -943,11 +943,6 @@ $ sudo iptables -I INPUT -p tcp --dport 8893 -j ACCEPT
 
 
 
-## CD34+ dataset //todo
-
-- https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92274
-
-
 
 
 

@@ -10,6 +10,23 @@
 
 		{
 			year: 2023,
+			title:"1013-AML-scRNA-seq-pubmed.md",
+			caption: "AML scRNA-seq in pubmed",
+			category:1,
+			tags: ['AML', "scRNA-seq"],
+		},
+
+
+		{
+			year: 2023,
+			title:"1009-AML-cell-line.md",
+			caption: "AML 细胞系及对应的试验",
+			category:1,
+			tags: ['AML', "细胞系"],
+		},
+
+		{
+			year: 2023,
 			title:"1005-APA-cell-cycle.md",
 			caption: "癌细胞中的细胞周期与APA",
 			category:1,
