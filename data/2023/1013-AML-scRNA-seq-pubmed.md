@@ -1,10 +1,71 @@
-重点是 dataset
+重点是 dataset: BMMC scRNA-seq
 
 关键词: 
 
 AML scRNA-seq
 
 
+# 数据集 汇总
+
+相关数据：按照年份，最新的在上面
+
+```
+
+# HRA002637:https://ngdc.cncb.ac.cn/gsa-human/browse/HRA002637
+PRJCA010386: 3个样本
+Revealing the intratumoral heterogeneity of non-DS acute megakaryoblastic leukemia in single cell resolution
+发布日期：2022-08-12
+We performed single-cell RNA sequencing (scRNA-seq) of bone marrow from two CBFA2T3-GLIS2 fusion positive and one RBM15-MKL1 fusion positive non-DS-AMKL children.
+
+
+# EGAS00001006512(RNA-Seq) https://www.nature.com/articles/s41375-022-01697-9
+表达: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE211595
+raw: 在 EGA
+We focussed on acute myeloid leukemia (AML) as a paradigm of the CSC model and developed a patient-derived system termed OCI-AML22 that recapitulates the cellular hierarchy driven by leukemia stem cells (LSC). 
+
+
+
+# GSE92274(2018): Microwell-seq
+We sampled 7 batches (CD34+_b1-7) of Human CD34+ mobilized peripheral blood stem cells (PBSCs); 2 batches (CD34+_thawed_l6-7) of thawed Human CD34+ mobilized peripheral blood stem cells (PBSCs) and 2 batches (CD34-_b1-2) of thawed Human CD34- mobilized peripheral blood stem cells (PBSCs), around 5000 single cells per sample.
+https://www.jianshu.com/p/7e893c8f1b12
+
+```
+
+
+
+
+
+
+## 简介证据：SCCPDH 探针
+
+- https://www.ncbi.nlm.nih.gov/geo/geo2r/?acc=GSE37642&platform=GPL96
+
+201825_s_at	AL572542		Homo sapiens	Oct 6, 2014	Consensus sequence	GenBank	Consensus includes gb:AL572542 /FEA=EST /DB_XREF=gi:12930912 /DB_XREF=est:AL572542 /CLONE=CS0DI008YC09 (3 prime) /UG=Hs.238126 CGI-49 protein /FL=gb:AF151807.1 gb:NM_016002.1	AL572542	saccharopine dehydrogenase (putative)	SCCPDH	51097	NM_016002	0055114 // oxidation-reduction process // inferred from electronic annotation	0005634 // nucleus // inferred from direct assay /// 0005739 // mitochondrion // inferred from direct assay /// 0005811 // lipid particle // inferred from direct assay /// 0016020 // membrane // inferred from direct assay /// 0030496 // midbody // inferred from direct assay	0016491 // oxidoreductase activity // inferred from electronic annotation
+201826_s_at	NM_016002		Homo sapiens	Oct 6, 2014	Exemplar sequence	GenBank	gb:NM_016002.1 /DEF=Homo sapiens CGI-49 protein (LOC51097), mRNA. /FEA=mRNA /GEN=LOC51097 /PROD=CGI-49 protein /DB_XREF=gi:7705766 /UG=Hs.238126 CGI-49 protein /FL=gb:AF151807.1 gb:NM_016002.1	NM_016002	saccharopine dehydrogenase (putative)	SCCPDH	51097	NM_016002	0055114 // oxidation-reduction process // inferred from electronic annotation	0005634 // nucleus // inferred from direct assay /// 0005739 // mitochondrion // inferred from direct assay /// 0005811 // lipid particle // inferred from direct assay /// 0016020 // membrane // inferred from direct assay /// 0030496 // midbody // inferred from direct assay	0016491 // oxidoreductase activity // inferred from electronic annotation
+
+
+- https://www.ncbi.nlm.nih.gov/geo/geo2r/?acc=GSE37642&platform=GPL570 带生存期数据
+
+- SCCPDH participant CRISPR screens https://orcs.thebiogrid.org/Gene/51097
+
+
+
+
+
+
+
+
+# 研究思路
+
+```
+# 代谢角度
+IF27+文章带你了解细胞能量代谢，Seahorse XF助力高分SCI、拿下国自然
+https://www.1633.com/article/65701.html
+
+
+
+
+```
 
 
 

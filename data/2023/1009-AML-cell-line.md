@@ -1,5 +1,10 @@
 1009-AML-cell-line.md
 
+```
+14株人类肿瘤细胞（HL60,Molm14,MV4-11,RS4:11,HepG2,Huh7,Skhep1,BT-549,MDM-BA231,MCF7,skBr3,H358,H1299以及Hela）
+
+作者进一步研究了化合物11h对白血病细胞系（MV4-11、Molm14、RS4;11）和p53细胞系（U937、HL60）的抑制活性
+```
 
 
 # Blood: 怎么证明分化能力？
@@ -11,7 +16,15 @@
 - ` Inhibiting MTCH2 in AML cells increased nuclear pyruvate and pyruvate dehydrogenase (PDH), which induced histone acetylation and subsequently promoted the differentiation of AML cells. `
 
 
-## 细胞系
+
+
+
+
+
+
+
+
+# 细胞系 背景信息 / Cell line info
 
 `OCI-AML2, HL60, K562, U937, and NB4` were cultured in Iscove modified Dulbecco medium and RPMI medium with 10% fetal calf serum, 100 U/mL streptomycin, and 100 mg/mL penicillin, respectively.
 
@@ -25,18 +38,336 @@ After selection, the Cas9-expressing clonal population was subject to 2 rounds o
 
 
 
-## 分化 Kasumi-1 & NB4
+## 表观修饰：甲基化 / ATAC /
+
+- https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE97346 芯片: 呼吸链抑制剂处理24h后
+Gene expression of AML cell lines (HL60, KG1a, MOLM14 and U937) untreated or treated with metformin
+
+- 化疗耐药 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78102 (Fig 3E, KM plot dataset 2; Cell line HL60/MOLM14/KG1a/U937/KG1/MV4-11)
+
+
+- https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200454 NA-seq of MV4;11 cells treated with Methyl Bestatin or Brefeldin A
+- 甲基 苯丁抑制素 methyl bestatin (MeBs, aminopeptidase inhibitor) or 
+- 布雷菲德菌素 brefeldin A (BFA, ER-to-Golgi transport inhibitor), compared to DMSO control.
+
+
+- https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE151249
+GSM4569608	MV4-11-5_RNA seq
+GSM4569609	MV4-11-11_RNA seq
+
+
+- GSE137647: ATAC-seq analysis of K562, MKPL-1, MV4-11, NB4 and U937 leukemia cell lines
+
+
+
+
+## AML 细胞系
+
+> https://www.researchgate.net/post/Which-cell-line-is-most-suitable-for-AML
+
+Loucy and OCI-AML1 cell lines
+
+We have been developing a drug against AML and used human U937 monocytic cell line and HL-60 as AML modell. 
+As AML mouse modell I recommend you to use C-1498 cell , RAW 264.7 or M1 murine Cell Line.
+
+
+---
+
+- The K562 line is composed of undifferentiated blast cells that are rich in glycophorin and may be induced to produce fetal and embryonic hemoglobin in the presence of hemin.
+K562系由富含糖蛋白的未分化母细胞组成，在血红蛋白存在的情况下可诱导产生胎儿和胚胎血红蛋白。
+
+- The KG-1 cell line is composed predominantly of myeloblasts and promyelocytes. A unique characteristic of the KG-1 cells is their almost complete dependence on colony-stimulating factor for proliferation in soft-gel culture.
+KG-1细胞系主要由成髓细胞和早幼髓细胞组成。KG-1细胞的一个独特特征是它们在软凝胶培养中几乎完全依赖集落刺激因子增殖。
+
+- The `HL-60` is a promyelocytic leukemia cell line.  In the presence of DMSO, the cells mature into granulocytes.
+HL-60是早幼粒细胞白血病细胞系。在DMSO存在下，细胞成熟为粒细胞。
+
+- Both the KG-1 and HL-60 cells differentiate into nondividing mononuclear phagocytes when exposed to phorbol esters. 
+KG-1和HL-60细胞在暴露于磷酯时均分化为不分裂的单核吞噬细胞。
+
+
+
+---
+
+- https://www.sciencedirect.com/science/article/pii/S0006291X19312069
+
+AML cell lines (Kas-1, `HL60`, NB4 and `K562`) and normal cell line of 293T were obtained from American Type Culture Collection (ATCC, USA). 
+
+The effects of TYP on AML were also confirmed in vivo using BALB/c mice xenografts bearing HL60 cells. 
+
+---
+
+
+- https://www.sciencedirect.com/topics/medicine-and-dentistry/acute-myeloid-leukemia-cell-line
+
+The various vitamin D compounds have similar effects on inducing differentiation and inhibiting proliferation of several `acute myeloid leukemia cell lines` such as `HL-60, U937, THP-1, HEL, and NB4`.
+
+In contrast, `more immature myeloid leukemia cell lines` such as `HL-60 blasts, KG1, KGla, and K562` do not respond to the hormone.
+
+Vitamin D analogs inhibit cell growth mainly by inducing cell cycle arrest. Many studies have shown that treated leukemic cell lines accumulate in the G0/G1 and G2/M phase of the cell cycle, with a concomitant decrease in the proportion of cells in S-phase [31–33].
+
+HL-60 cells treated with 1,25(OH)2D3 acquire the morphology and functional characteristics of `macrophages`. Expression of the cell-surface markers CD14 and CD11b are up-regulated. 
+
+
+
+
+
+## 正常细胞系？
+
+> https://www.sciencedirect.com/science/article/pii/S2211124723012093?via%3Dihub
+> The normal colorectal cell lines (`NCM460`) and colorectal cancer cell lines (`SW480`, `RKO`) were cultured in RPMI 1640 supplemented with 1% penicillin-streptomycin and 10% FBS.
+
+那么，AML 有没有对应的 normal cell line?
+
+
+
+> AML cell lines with a list of expression markers: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10049680/
+
+
+## Kasumi-3
+
+The Kasumi-3 cell line was derived from a 57-year-old male patient with M0. It has a few notable characteristics, including a doubling time of approximately 55–60 h in cell culture, an appearance consistent with immature lymphoblasts, and the expression of various markers, as shown in Table 1 [11]. B cell-specific, T-ALL, and NK markers were also identified in this cell line [12]. 
+
+The Kasumi-3 engraftment model in NSG mice was also developed. Mice were implanted with 1 × 106 or 10 × 106 per mouse. The amount of human CD45+ cells in peripheral blood, blood marrow, and spleen was monitored by FACS to estimate the disease progression. 
+
+
+KG-1 and KG-1a are challenging to differentiate in vitro, making them valuable for studying potential drugs that promote differentiation, such as differentiating CD34+ progenitor cells into dendritic-like cells [35,36].
+
+
+
+## Kasumi-1
+
+Cell line: kasumi-1(急性髓系白血病细胞): 人急性原粒细胞白血病细胞
+
+This cell line expresses myeloperoxidase and can differentiate into neutrophils and macrophages after treatment with IL-5 or TPA, respectively. It also expresses `CD34`, suggesting it originated from an early myeloid stem cell. 
+
+
+
+
+## Jurkat (人急性T细胞白血病细胞): T-ALL
+
+- https://www.cobioer.com/product/1583.html
+
+Established from the peripheral blood of a 14-year-old boy with acute lymphoblastic leukemia (ALL) at first relapse in 1976 (in the original paper by Schneider et al. the cell line was labelled as JM)
+
+Cell type:	T cell leukemia
+
+Morphology:	round cells growing singly or in clumps in suspension
+
+- https://baijiahao.baidu.com/s?id=1757438441811659853&wfr=spider&for=pc
+
+人白血病 T 淋巴细胞 Jurkat, Clone E6-1 由 Schneider 建立，来源于一个 14 岁的男孩的外周血。
+
+Jurkat细胞是一种常用的人类T细胞白血病细胞系，这种人类T细胞白血病细胞系是生物学研究的宝贵资源。这种细胞系具有快速增殖能力和易于培养的特点，因此在生物学研究中占有重要地位。
+
+Jurkat细胞是一种悬浮细胞。用于研究急性T细胞白血病，T细胞信号传导以及易感病毒进入的各种趋化因子受体，特别是HIV的表达的永生化人T淋巴细胞系。它在生物学研究上具有十分广泛的应用，比如应用Jurkat细胞研究核糖核酸酶P的M1-RNA，探讨抗MHCⅡ类分子转录激活因子(CⅡTA)的M1-RNA抑制细胞表面MHCⅡ类分子的表达。
+
+
+
+
+
+
+
+## ATCC: Leukemia Cell Line Panel
+
+- https://www.atcc.org/products/tcp-1010
+
+A panel of 7 leukemia cell lines representing Acute Myeloid Leukemia (AML), Acute Monocytic Leukemia (AMoL), Chronic Myeloid Leukemia (CML), and Acute Lymphoblastic Leukemia (ALL). Each culture contains genomic mutations in one or more of the following genes according to the Sanger COSMIC database: CDKN2A, KDM6A, TP53, NRAS, NOTCH1, PTEN, FBXW7, FLT3, KRAS, MLH1, and PIK3R1.
+
+```
+Components
+
+KASUMI-1, ATCC CRL-2724
+HL-60, ATCC CCL-240
+THP-1, ATCC TIB-202
+K-562, ATCC CCL-243
+RS4;11, ATCC CRL-1873
+MOLT-4, ATCC CRL-1582
+CCRF-CEM, ATCC CCL-119
+```
+
+
+
+
+## THP-1细胞系
+
+THP-1细胞系是从一名患有急性单核细胞白血病的1岁小男孩的外周血中分离得到的，自1980年建系以来，THP-1细胞被广泛用于单核细胞和巨噬细胞相关的机制、信号通路以及营养和药物运输等研究中。
+相对于U937、HL-60、ML-2等白血病细胞系，THP-1更有类似人原代单核细胞的形态和功能特征（包括细胞分化标记）。相对于人外周血单核细胞（PBMC），THP-1更易在实验室中培养和扩增，且具有更稳定的基因背景，不存在PBMC的个体差异性问题，利于实验结果的重现。因此，THP-1是各大实验室常用的急性单核细胞白血病细胞系，是研究免疫和炎症的理想工具。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 细胞系 比对信息 (map to hg38 /bam format)
+
+
+## Control: 293T (IGV)
+
+```
+1. download
+
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE151296
+SRR11858511 2.84Gb  293T GSM4572153  wild type
+SRR11858512 2.68Gb  293T GSM4572154  wild type
+
+$ cd /home/wangjl/data/rsa/293T/
+$ fasterq-dump --split-files SRR11858511
+
+2. map
+$ mkdir map
+
+id="SRR11858511";
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/293T/${id}_1.fastq /data/wangjl/rsa/293T/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/293T/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/293T/map/ /data/wangjl/HeLa/cell_cycle/293T
+```
+
+
+
+
+## Control: hESC H1 (IGV)
+
+```
+1. down
+1) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE188111
+Genome-wide transcriptomic profiling of cardiomyocyte differentiation from Wild-type and PERK-KO H1 hESCs [RNA-seq]
+PERK 是否敲除; 分化诱导 day1,2,3,5,10;
+
+GSM5670253	H1_Day0_rep1 Day0 SRR16768631 2Gb
+GSM5670254	H1_Day0_rep2 Day0 SRR16768632 2Gb
+GSM5670255	H1_Day0_rep3 Day0 SRR16768633 2Gb
+
+GSM5670268	H1_Day10_rep1 SRR16768646 3Gb
+GSM5670269	H1_Day10_rep2 SRR16768647
+GSM5670270	H1_Day10_rep3 SRR16768648
+
+
+2) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE181049 酒精和干细胞发育 //先不用
+Lim Y, Beane-Ebel JE, Tanaka Y, Ning B et al. Exploration of alcohol use disorder-associated brain miRNA-mRNA regulatory networks. Transl Psychiatry 2021 Oct 2;11(1):504. PMID: 34601489
+
+GSM5482571	Ethanol-unexposed rep 1  
+GSM5482572	Ethanol-unexposed rep 2  
+
+$ cd /home/wangjl/data/rsa/hESC/
+$ fasterq-dump --split-files SRR16768646
+
+
+2. map
+$ mkdir map
+id="SRR16768646";
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/hESC/${id}_1.fastq /data/wangjl/rsa/hESC/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/hESC/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/hESC/map/ /data/wangjl/HeLa/cell_cycle/hESC
+```
+
+
+
+## KG1 //no data
+
+```
+
+```
+
+
+
+
+
+## HEL (IGV): AML M6
+
+- Description HEL - 
+- Cell line: HEL 
+- DSMZ no.: ACC 11
+- Species validation: human (Homo sapiens)
+- Cell type: erythroleukemia 
+- Origin: established from the peripheral blood of a 30-year-old man with erythroleukemia (AML M6)
+
+
+```
+1. download
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE214480
+
+GSM6607143	HEL cell, shCtrl_biol rep 1  SRR21758080 平均 2.5Gb
+GSM6607144	HEL cell, shCtrl_biol rep 2  SRR21758079 
+GSM6607145	HEL cell, shCtrl_biol rep 3  SRR21758078
+
+$ cd /home/wangjl/data/rsa/HEL/
+$ fasterq-dump --split-files SRR21758078
+2023-10-20T06:41:47 fasterq-dump.3.0.7 err: insp_get_file_size( 'https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21758078/SRR21758078', remotely = YES ) -> RC(rcNS,rcFile,rcCreating,rcTimeout,rcExhausted)
+
+
+2. map
+$ mkdir map
+id="SRR21758078";
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/HEL/${id}_1.fastq /data/wangjl/rsa/HEL/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/HEL/map/${id}_
+
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/HEL/map/ /data/wangjl/HeLa/cell_cycle/HEL
+```
+
+
+
+
+
+## 分化 Kasumi-1 & NB4 (IGV)
 
 We observed that the compounds budesonide, mometasone and halcinonide drastically differentiate the CD34+ primitive cells to CD15+ terminally differentiated blasts (Fig. 2a–c).
 
 
-
-
-
 - In the present study, we focused on the human Akirin2 regulome and interactome in `neutrophil-like model human Caucasian promyelocytic leukemia HL60 cells`. 
 promyelocytic 早幼粒细胞的
-
-
 
 
 ```
@@ -101,15 +432,41 @@ $ ln -s /data/wangjl/rsa/NB4/map/ /data/wangjl/HeLa/cell_cycle/NB4
 
 
 
-# 8227 cell line: //todo
+## 8227 cell line: //No data;
+
+
+## Molm14 //todo
+
+MOLM-14人急性髓系白血病细胞系分离自人急性髓系白血病的外周血，包含免疫B细胞和免疫T细胞，主要用于体外急性髓系白血病细胞的培养研究。
+
+```
+1. 下载 
+
+1) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149520
+RNA-seq analysis of human KMT2A rearranged Molm14 AML cell line treated with DOT1L and/or EZH2 inhibitor
+
+GSM4504320	DMSO-1 SRR11634441 2Gb
+GSM4504324	DMSO-2 SRR11634445 
+GSM4504328	DMSO-3 SRR11634449
+GSM4504332	DMSO-4 SRR11634453
+
+
+2. 
+
+```
 
 
 
-# U937 //todo
+## U937 (IGV)
 
 ```
 1. 下载
 1a)https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE184324
+
+The AML cell line U937 was treated with decitabine (DAC) ± ATRA in technical triplicates for 3 consecutive days (with daily change of media and DAC add-on). 
+Cells were harvested and RNA was isolated after 72 hours, Fragment analysis by TapeStation confirmed RQN values ≥9.7.
+rRNA was removed and strand-specific libraries of each replicate were sequenced on an Illumina HiSeq 2500 with approximately 40 million reads per sample.
+
 GSM5584108	U937_untreated_1 SRR15929145 6Gb
 GSM5584109	U937_untreated_2 SRR15929146
 GSM5584110	U937_untreated_3 SRR15929147
@@ -117,30 +474,91 @@ GSM5584110	U937_untreated_3 SRR15929147
 $ fasterq-dump --split-files SRR15929145
 
 1b)https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223609
+Comparative gene expression profiling by performing RNA-seq in 3 replicates each of control U937 cells and its knockdown derivatives (shKDM6A, shKDM6B and shKDM6A+6B)
+
 GSM6965474	U937 cells, shControl, RNA-seq Replicate 1  SRR23203934  9Gb
 GSM6965475	U937 cells, shControl, RNA-seq Replicate 2  SRR23203933
 GSM6965476	U937 cells, shControl, RNA-seq Replicate 3  SRR23203932
 
-
 /data/wangjl/rsa/U937/
 $ scp wangjl@y.biomooc.com:/data/wangjl/sra/cell_cycle/SRR*fastq . 
 
+2. map
+$ mkdir map
 
+id="SRR15929145";
+id="SRR15929146";
+id="SRR15929147";
+
+id="SRR23203932";
+id="SRR23203933";
+id="SRR23203934";
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/U937/${id}_1.fastq /data/wangjl/rsa/U937/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/U937/map/${id}_
+
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4. view
+$ ln -s /data/wangjl/rsa/U937/map/ /data/wangjl/HeLa/cell_cycle/U937
 ```
 
 
 
 
-# THP-1 cell line
+
+## THP-1 cell line (macrophage) (IGV)
+
+- https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234829
+- Role of Carboxylesterase 1 in THP-1 Human Macrophages Under Basal Conditions or Treated with LPS+IFN Gamma (M1) OR with IL4 (M2)
+
+> 尝试研究 APA 变化： Macrophage 极化过程中
+
+- M1 which is bactericidal and pro inflammatory, 
+- and M2 which is anti inflammatory and active in tissue repair.
 
 ```
-GSM4305745	THP-1 cells, control A  SRR11059463  1.8Gb
-GSM4305746	THP-1 cells, control B  SRR11059464  1.7Gb
+1. 下载
 
-$ fasterq-dump --split-files SRR11059463
-单端
+1) 单端(不能用，太差)
+GSM4305745	THP-1 cells, control A  SRR11059463  1.8Gb # 失败：峰图太差，也很乱，不能看。原因未知。
+GSM4305746	THP-1 cells, control B  SRR11059464  1.7Gb # 失败：峰图太差，也很乱，不能看。原因未知。
 
-id="SRR11059463";
+2) 换一个来源？ https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234829
+# resting (M0), 
+# LPS + interferon gamma (M1), 
+# and IL4 (M2), each analyzed in quadruplicate.
+# 还有 CES1 KD 的没下载
+
+GSM7475290	WT_THP-1 cells M0_1 SRR24910839 平均2Gb
+GSM7475291	WT_THP-1 cells M0_2 SRR24910838
+GSM7475292	WT_THP-1 cells M0_3 SRR24910837
+GSM7475293	WT_THP-1 cells M0_4 SRR24910836
+
+GSM7475294	WT_THP-1 cells M1_1 SRR24910835
+GSM7475295	WT_THP-1 cells M1_2 SRR24910834
+GSM7475296	WT_THP-1 cells M1_3 SRR24910833
+GSM7475297	WT_THP-1 cells M1_4 SRR24910832
+
+GSM7475298	WT_THP-1 cells M2_1 SRR24910831
+GSM7475299	WT_THP-1 cells M2_2 SRR24910830
+GSM7475300	WT_THP-1 cells M2_3 SRR24910829
+GSM7475301	WT_THP-1 cells M2_4 SRR24910828
+
+
+$ fasterq-dump --split-files SRR24910828
+$ fasterq-dump --split-files SRR24910832
+
+id="SRR24910836"; ls -lth ${id}*
 
 STAR --runThreadN 50 \
 --outSAMtype BAM SortedByCoordinate \
@@ -159,31 +577,61 @@ $ ln -s /data/wangjl/rsa/THP-1/map/ /data/wangjl/HeLa/cell_cycle/THP-1
 
 
 
-# MV-4-11 cell line
+## MV4-11 cell line (IGV)
 
 ```
+1. 下载
+1) 深度太低了，且单端
 GSM4306624	MV-4-11 control A  SRR11067848  677Mb
 GSM4306625	MV-4-11 control B  SRR11067849  608Mb
 
+/home/wangjl/data/rsa/MV4-11/
+$ fasterq-dump --split-files SRR26016545
+
+2) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE242849
+GSM7771964	MV4-11 NC-1  SRR26016545 8.1Gb
+GSM7771965	MV4-11 NC-2  SRR26016544 7.8Gb
+
+//未下载
+3) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149251 
+GSM4494920	CTR-SP
+GSM4494921	CTR-MP
+
+4) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE178287
+GSM5387027	MV4-NC-1
+GSM5387028	MV4-NC-2
+
+
+
+
+
+
+2. map
+$ mkdir map
+
+id="SRR26016544"; ls -lth ${id}*
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/MV4-11/${id}_1.fastq /data/wangjl/rsa/MV4-11/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/MV4-11/map/${id}_
+
+3. index
+$ ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4. view
+$ ln -s /data/wangjl/rsa/MV4-11/map/ /data/wangjl/HeLa/cell_cycle/MV4-11
 ```
 
 
 
 
-
-# AML 细胞系
-
-> https://www.researchgate.net/post/Which-cell-line-is-most-suitable-for-AML
-
-Loucy and OCI-AML1 cell lines
-
-We have been developing a drug against AML and used human U937 monocytic cell line and HL-60 as AML modell. 
-As AML mouse modell I recommend you to use C-1498 cell , RAW 264.7 or M1 murine Cell Line.
-
-
-
-
-## HL60 cell line
+## HL60 cell line (IGV)
 
 - https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158885
 
@@ -191,12 +639,7 @@ HL-60 cells are promyeoloblasts isolated from the peripheral blood by leukophere
 
 ```
 1. 下载数据
-SRR12759747
-SRR12759748
-SRR12759749
-SRR12759750
-SRR12759751
-SRR12759752
+1) 效果不好，在3‘端末尾有一个高峰，莫名其妙!
 
 平均5G/sample;
 Run	AvgSpotLen	cell_line	genotype	GEO_Accession (exp)
@@ -215,17 +658,26 @@ $ scp wangjl@y.biomooc.com:/data/wangjl/sra/cell_cycle/SRR12759748* .
 平行传2个文件，总和还是 10M/s。
 
 
-2. 比对
-id="SRR12759747";
-id="SRR12759748";
-id="SRR12759749";
-id="SRR12759750";
-id="SRR12759751";
+2) 换一个来源
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193094
+
+GSM5773115	HL-60_RNA_rep1  SRR17446841  4Gb
+GSM5773118	HL-60_RNA_rep2  SRR17446838  2Gb
+GSM5773121	HL-60_RNA_rep3  SRR17446835  1.5Gb
+
+$ fasterq-dump --split-files SRR17446841
+
+
+2. 比对: 单端
+id="SRR17446841";
+id="SRR17446838";
+id="SRR17446835";
+
 
 STAR --runThreadN 50 \
 --outSAMtype BAM SortedByCoordinate \
 --genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
---readFilesIn /data/wangjl/rsa/HL60/${id}_1.fastq /data/wangjl/rsa/HL60/${id}_2.fastq \
+--readFilesIn /data/wangjl/rsa/HL60/${id}_1.fastq \
 --genomeLoad LoadAndKeep \
 --limitBAMsortRAM 20000000000 \
 --outFileNamePrefix /data/wangjl/rsa/HL60/map/${id}_
@@ -244,95 +696,6 @@ $ ln -s /data/wangjl/rsa/HL60/map/ /data/wangjl/HeLa/cell_cycle/HL60
 
 
 
-
-
-
-> Cell line
-
-
-> https://www.sciencedirect.com/science/article/pii/S2211124723012093?via%3Dihub
-> The normal colorectal cell lines (`NCM460`) and colorectal cancer cell lines (`SW480`, `RKO`) were cultured in RPMI 1640 supplemented with 1% penicillin-streptomycin and 10% FBS.
-
-那么，AML 有没有对应的 normal cell line?
-
-
-
-> AML cell lines with a list of expression markers: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10049680/
-
-
-## Kasumi-3
-
-The Kasumi-3 cell line was derived from a 57-year-old male patient with M0. It has a few notable characteristics, including a doubling time of approximately 55–60 h in cell culture, an appearance consistent with immature lymphoblasts, and the expression of various markers, as shown in Table 1 [11]. B cell-specific, T-ALL, and NK markers were also identified in this cell line [12]. 
-
-The Kasumi-3 engraftment model in NSG mice was also developed. Mice were implanted with 1 × 106 or 10 × 106 per mouse. The amount of human CD45+ cells in peripheral blood, blood marrow, and spleen was monitored by FACS to estimate the disease progression. 
-
-
-KG-1 and KG-1a are challenging to differentiate in vitro, making them valuable for studying potential drugs that promote differentiation, such as differentiating CD34+ progenitor cells into dendritic-like cells [35,36].
-
-
-
-## Kasumi-1
-
-This cell line expresses myeloperoxidase and can differentiate into neutrophils and macrophages after treatment with IL-5 or TPA, respectively. It also expresses `CD34`, suggesting it originated from an early myeloid stem cell. 
-
-
-
-
-```
-- The K562 line is composed of undifferentiated blast cells that are rich in glycophorin and may be induced to produce fetal and embryonic hemoglobin in the presence of hemin.
-K562系由富含糖蛋白的未分化母细胞组成，在血红蛋白存在的情况下可诱导产生胎儿和胚胎血红蛋白。
-
-- The KG-1 cell line is composed predominantly of myeloblasts and promyelocytes. A unique characteristic of the KG-1 cells is their almost complete dependence on colony-stimulating factor for proliferation in soft-gel culture.
-KG-1细胞系主要由成髓细胞和早幼髓细胞组成。KG-1细胞的一个独特特征是它们在软凝胶培养中几乎完全依赖集落刺激因子增殖。
-
-- The `HL-60` is a promyelocytic leukemia cell line.  In the presence of DMSO, the cells mature into granulocytes.
-HL-60是早幼粒细胞白血病细胞系。在DMSO存在下，细胞成熟为粒细胞。
-
-- Both the KG-1 and HL-60 cells differentiate into nondividing mononuclear phagocytes when exposed to phorbol esters. 
-KG-1和HL-60细胞在暴露于磷酯时均分化为不分裂的单核吞噬细胞。
-```
-
-
-
-
-
-
-- https://www.sciencedirect.com/science/article/pii/S0006291X19312069
-
-AML cell lines (Kas-1, `HL60`, NB4 and `K562`) and normal cell line of 293T were obtained from American Type Culture Collection (ATCC, USA). 
-
-The effects of TYP on AML were also confirmed in vivo using BALB/c mice xenografts bearing HL60 cells. 
-
-
-- https://www.sciencedirect.com/topics/medicine-and-dentistry/acute-myeloid-leukemia-cell-line
-
-The various vitamin D compounds have similar effects on inducing differentiation and inhibiting proliferation of several `acute myeloid leukemia cell lines` such as `HL-60, U937, THP-1, HEL, and NB4`.
-
-In contrast, `more immature myeloid leukemia cell lines` such as `HL-60 blasts, KG1, KGla, and K562` do not respond to the hormone.
-
-Vitamin D analogs inhibit cell growth mainly by inducing cell cycle arrest. Many studies have shown that treated leukemic cell lines accumulate in the G0/G1 and G2/M phase of the cell cycle, with a concomitant decrease in the proportion of cells in S-phase [31–33].
-
-HL-60 cells treated with 1,25(OH)2D3 acquire the morphology and functional characteristics of `macrophages`. Expression of the cell-surface markers CD14 and CD11b are up-regulated. 
-
-
-
-## ATCC: Leukemia Cell Line Panel
-
-- https://www.atcc.org/products/tcp-1010
-
-A panel of 7 leukemia cell lines representing Acute Myeloid Leukemia (AML), Acute Monocytic Leukemia (AMoL), Chronic Myeloid Leukemia (CML), and Acute Lymphoblastic Leukemia (ALL). Each culture contains genomic mutations in one or more of the following genes according to the Sanger COSMIC database: CDKN2A, KDM6A, TP53, NRAS, NOTCH1, PTEN, FBXW7, FLT3, KRAS, MLH1, and PIK3R1.
-
-```
-Components
-
-KASUMI-1, ATCC CRL-2724
-HL-60, ATCC CCL-240
-THP-1, ATCC TIB-202
-K-562, ATCC CCL-243
-RS4;11, ATCC CRL-1873
-MOLT-4, ATCC CRL-1582
-CCRF-CEM, ATCC CCL-119
-```
 
 
 
@@ -419,6 +782,8 @@ $ fasterq-dump --split-files SRR5099311
 
 @Z server
 $ scp wangjl@y.biomooc.com:/data/wangjl/sra/cell_cycle/cd34/*fastq .
+
+
 
 这个是
 ```
