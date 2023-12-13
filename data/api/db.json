@@ -1,6 +1,6 @@
 {
 
-	categories:{1:"文献", 2:"英语", 3:"代码", 4:"杂谈" },
+	categories:{1:"文献", 2:"英语", 3:"代码", 4:"杂谈", 5:"课题设计" },
 
 	posts:[
 
@@ -10,9 +10,66 @@
 
 		{
 			year: 2023,
+			title:"1212-APA.Nov.2023.md",
+			caption: "文献 APA papers: 2023.12 | ",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+
+		{
+			year: 2023,
+			title:"1212-actinomycin-D—RNA_half_life.md",
+			caption: "RNA 半衰期: 放线菌素D法检测",
+			category:5,
+			tags: ['RNA', "半衰期"],
+		},
+
+
+
+		{
+			year: 2023,
+			title:"1127-scRNA-seq.Nov.2023.md",
+			caption: "单细胞文献 2023.11",
+			category:5,
+			tags: ['APA', "macrophage"],
+		},
+
+
+
+		{
+			year: 2023,
+			title:"1113-APA_in_macrophage_polar.md",
+			caption: "macrophage 巨噬细胞激化中的APA及其调控",
+			category:5,
+			tags: ['APA', "macrophage"],
+		},
+
+
+
+		{
+			year: 2023,
+			title:"1102-GEO_AML-dataset_survival.md",
+			caption: "GEO AML 生存期数据：表达、突变",
+			category:5,
+			tags: ['AML', "scRNA-seq"],
+		},
+
+
+		{
+			year: 2023,
+			title:"1022-Cell_2019-AML-scRNA-seq.md",
+			caption: "(2019 Cell) AML scRNA-seq | (2020 Blood)CD34+ primary RNA-seq 文献精读笔记",
+			category:1,
+			tags: ['AML', "scRNA-seq"],
+		},
+
+		{
+			year: 2023,
 			title:"1013-AML-scRNA-seq-pubmed.md",
 			caption: "AML scRNA-seq in pubmed",
-			category:1,
+			category:5,
 			tags: ['AML', "scRNA-seq"],
 		},
 
@@ -21,15 +78,15 @@
 			year: 2023,
 			title:"1009-AML-cell-line.md",
 			caption: "AML 细胞系及对应的试验",
-			category:1,
+			category:5,
 			tags: ['AML', "细胞系"],
 		},
 
 		{
 			year: 2023,
 			title:"1005-APA-cell-cycle.md",
-			caption: "癌细胞中的细胞周期与APA",
-			category:1,
+			caption: "癌细胞中的细胞周期(cell cycle)与APA",
+			category:5,
 			tags: ['APA', "细胞周期"],
 		},
 
@@ -47,7 +104,7 @@
 			title:"0925-good-landmark-reviews.md",
 			caption: "标志性综述 列表",
 			category:1,
-			tags: ['免疫'],
+			tags: ["综述", '免疫'],
 		},
 
 
@@ -56,14 +113,14 @@
 			title:"0911-OVA-mouse-model.md",
 			caption: "OT-I/OT-II小鼠 及 OVA 模型",
 			category:1,
-			tags: ['免疫'],
+			tags: ['免疫', "扫盲"],
 		},
 
 		{
 			year: 2023,
 			title:"0911-APA-and-infection.md",
 			caption: "APA and infection 感染与APA: 2023.9 | 2018 Science 李斯特菌感染后 scRNA-seq dataset",
-			category:1,
+			category:5,
 			tags: ['APA'],
 		},
 
@@ -81,7 +138,7 @@
 			title:"0831-RBP-eCLIP-paper.Aug.2023.md",
 			caption: "RBP / eCLIP papers: 2023.8",
 			category:1,
-			tags: ['APA', 'RBP'],
+			tags: ['APA', 'RBP', "扫盲"],
 		},
 
 		{
@@ -89,7 +146,7 @@
 			title:"0821-APA-paper.Aug.2023.md",
 			caption: "APA papers: 2023.8 | 类器官（Organoids）| Cell",
 			category:1,
-			tags: ['APA'],
+			tags: ['APA', "扫盲"],
 		},
 
 		{

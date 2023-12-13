@@ -29,6 +29,26 @@ We focussed on acute myeloid leukemia (AML) as a paradigm of the CSC model and d
 We sampled 7 batches (CD34+_b1-7) of Human CD34+ mobilized peripheral blood stem cells (PBSCs); 2 batches (CD34+_thawed_l6-7) of thawed Human CD34+ mobilized peripheral blood stem cells (PBSCs) and 2 batches (CD34-_b1-2) of thawed Human CD34- mobilized peripheral blood stem cells (PBSCs), around 5000 single cells per sample.
 https://www.jianshu.com/p/7e893c8f1b12
 
+
+
+# GSE76004(2016 Nature) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76004
+NanoString 有FAB分类，生存期 OS，突变信息等。
+Ng SW, Mitchell A, Kennedy JA, Chen WC et al. A 17-gene stemness score for rapid determination of risk in acute leukaemia. Nature 2016 Dec 15;540(7633):433-437. PMID: 27926740
+
+
+
+# GSE76008 (): Differential gene expression analysis: LSC+ VS. LSC-
+文章同上；
+Illumina beadchip transcriptomics data containing LSC+ and LSC- sorted AML fractions were obtained from Gene Expression Omnibus data portal (`GSE76008`)23 and differential expression between LSC+ and LSC- fractions was calculated using a moderated t-test available in limma R package 3.28.21 incorporating array batch effects in linear model. A score that ranks genes from top up regulated in LSC+ fractions to top down regulated when compared to LSC- fractions was calculated.
+
+
+
+# GSE24759 (Cell 2011) 38 个分化的细胞状态：流式筛选 + 测序
+Novershtern N, Subramanian A, Lawton LN, Mak RH et al. Densely interconnected transcriptional circuits control cell states in human hematopoiesis. Cell 2011 Jan 21;144(2):296-309. PMID: 21241896
+
+Changes in gene expression after MTCH2 knockdown were also mapped to Gene Expression Omnibus dataset `GSE24759` (DMAP) 22, containing Affymetrix GeneChip HT-HG_U133A Early Access Array gene expression data of 20 distinct hematopoietic cell states
+
+We defined 38 distinct hematopoietic cell states based on cell surface marker expression, representing hematopoietic stem and progenitor cells, terminally differentiated cells, and intermediate states. For each state, we purified samples separately from 4 to 7 independent donors by multiparameter flow cytometry, yielding 211 profiled samples. Cells from all stem and progenitor populations were purified from umbilical cord blood. Terminally differentiated lymphocyte populations were purified from peripheral blood.
 ```
 
 
@@ -62,10 +82,62 @@ https://www.jianshu.com/p/7e893c8f1b12
 IF27+文章带你了解细胞能量代谢，Seahorse XF助力高分SCI、拿下国自然
 https://www.1633.com/article/65701.html
 
-
-
-
 ```
+
+
+
+# APA DB
+
+- https://pubmed.ncbi.nlm.nih.gov/34508354/ Nucleic Acids Res. 2022
+- scAPAdb (http://www.bmibig.cn/scAPAdb)
+
+
+- https://pubmed.ncbi.nlm.nih.gov/34643729/ Nucleic Acids Res. 2022
+- scAPAatlas (http://www.bioailab.com:3838/scAPAatlas)
+
+
+- http://bioinfo.szbl.ac.cn/ipaQTL Nucleic Acids Res. 2023
+- ipaQTL-atlas (http://bioinfo.szbl.ac.cn/ipaQTL)
+
+
+
+
+
+# 混合表型 AL: mixed phenotype acute leukemia
+
+
+## 5 儿童 MPAL
+
+- https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139369
+- scATAC-seq and CITE-seq performed on healthy bone marrow, CD34+ bone marrow, peripheral blood, and MPAL donors
+
+We present a single-cell framework that integrates highly multiplexed protein quantification, transcriptome profiling, and chromatin accessibility analysis. Using this approach, we establish a normal epigenetic baseline for healthy blood development, which we then use to deconvolve aberrant molecular features within blood from mixed-phenotype acute leukemia (MPAL) patients.
+
+> Granja JM, Klemm S, McGinnis LM, Kathiria AS et al. **Single-cell multiomic analysis identifies regulatory programs in mixed-phenotype acute leukemia.** Nat Biotechnol 2019 Dec;37(12):1458-1465. PMID: 31792411
+
+
+
+## 14 adults 
+
+14 newly diagnosed adult MPAL patients
+https://pubmed.ncbi.nlm.nih.gov/37292835/
+
+12个人的 scCITE-seq (有2人细胞数不够)
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE232073
+
+scDAb-seq, 3个 DNA 测序文件怎么拆分成 14个人的?
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE230827
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3076,6 +3148,9 @@ Conflict of interest statement: The authors declare no competing interest.
 ## dataaset GSE37642 芯片预后
 
 Interestingly, t(8;21) AML cases in the Gene Expression Omnibus (GSE37642) and AML cases in The Cancer Genome Atlas AML project with the highly expressed gene set of CD34+CD117dim%-high group also showed significantly worse OS than those with low expression of CD34+CD117dim gene set (SI Appendix, Fig. S5D).
+
+
+## GSE37642 (reuse )
 
 
 ## dataset OEP000629

@@ -4,6 +4,7 @@ tag used in this project
 */
 
 var tags=[
+      '课题',
       '测试',
       'js',
       'English', 'words',

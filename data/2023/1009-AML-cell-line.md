@@ -61,7 +61,7 @@ GSM4569609	MV4-11-11_RNA seq
 
 
 
-## AML 细胞系
+## AML 细胞系 简介
 
 > https://www.researchgate.net/post/Which-cell-line-is-most-suitable-for-AML
 
@@ -182,7 +182,7 @@ HL-60, ATCC CCL-240
 THP-1, ATCC TIB-202
 K-562, ATCC CCL-243
 RS4;11, ATCC CRL-1873
-MOLT-4, ATCC CRL-1582
+MOLT-4, ATCC CRL-1582 : T-cell acute lymphoblastic leukemia (T-ALL) 
 CCRF-CEM, ATCC CCL-119
 ```
 
@@ -301,11 +301,366 @@ $ ln -s /data/wangjl/rsa/hESC/map/ /data/wangjl/HeLa/cell_cycle/hESC
 
 
 
+## control: hSperm (IGV) 效果不好
+
+```
+1. down
+(1) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40196 读段太少
+GSM987942	Sperm Donor1 mRNA-seq SRR543691 1Gb
+GSM987943	Sperm Donor2 mRNA-seq SRR543695 0.3Gb
+
+(2) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE134580
+identify the population of sperm RNAs responding to obesity as measured by BMI.
+
+SRR9719710 healthy GSM3956402 1Gb
+SRR9719718 overweight GSM3956410 0.5Gb
+SRR9719729 obese GSM3956421 0.9Gb
+
+(3) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129216 ncRNA-Seq 跳过
+The effects of di-butyl phthalate exposure from medications on human sperm RNA among men
+邻苯二甲酸二丁酯
+
+GSM3702499	Sample_6_shortRNA
+GSM3702500	Sample_9_shortRNA
+
+GSM3702584	Sample_6_longRNA
+GSM3702587	Sample_9_longRNA
+
+(4) Highly conserved sperm function-related transcripts across three species: human, rat and mouse.
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE173659
+
+GSM5273207	human sperm_Sample H7  SRR14370448 4.5Gb
+GSM5273208	human sperm_Sample H1  SRR14370449
+GSM5273209	human sperm_Sample H12 SRR14370450
+GSM5273210	human sperm_Sample H13 SRR14370451
+GSM5273211	human sperm_Sample H18 SRR14370452
+GSM5273212	human sperm_Sample H19 SRR14370453
+
+$ cd /home/wangjl/data/rsa/hSperm/
+$ fasterq-dump --split-files SRR14370448
+下载2个
+
+
+2. map
+$ mkdir map
+id=SRR14370448
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/hSperm/${id}_1.fastq /data/wangjl/rsa/hSperm/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/hSperm/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/hSperm/map/ /data/wangjl/HeLa/cell_cycle/hSperm
+```
+
+
+
+
+
+## control: nerve (效果很差)
+
+```
+1. down
+(1) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142881
+Transcriptional profiling of adult retinal ganglion cells during optic nerve regeneration
+
+retinal [ˈretɪnl] adj. 视网膜的
+ganglion [ˈɡæŋɡliən] n. [组织] 神经节；[医] 腱鞘囊肿
+
+GSM4247141	Normal RGC sample 1 SRR10821187 1Gb
+GSM4247142	Normal RGC sample 2 SRR10821188
+GSM4247143	Normal RGC sample 3 SRR10821189
+
+$ cd /home/wangjl/data/rsa/nerve/
+$ fasterq-dump --split-files SRR10821187
+
+
+2. map
+$ mkdir map
+id=SRR10821187
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/nerve/${id}_1.fastq /data/wangjl/rsa/nerve/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/nerve/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/nerve/map/ /data/wangjl/HeLa/cell_cycle/nerve
+```
+
+
+
+## control brain: BT142, TS603 
+
+搜索: human brain cell line
+找到 https://www.jianshu.com/p/86a1c2da26ee
+
+```
+1. down
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE138858
+
+We report the levels of the transcripts arising from the RNA sequencing analysis of `IDH1-mutant cell lines`
+grade III oligoastrocytoma
+
+GSM4120502	BT142_1 SRR10278840 2.3Gb
+GSM4120503	BT142_2 SRR10278841
+GSM4120504	BT142_3 SRR10278842
+
+GSM4120505	TS603_1 SRR10278843
+GSM4120506	TS603_2 SRR10278844
+GSM4120507	TS603_3 SRR10278845
+
+$ cd /home/wangjl/data/rsa/BT142/
+$ fasterq-dump --split-files SRR10278840
+
+$ cd /home/wangjl/data/rsa/TS603/
+$ fasterq-dump --split-files SRR10278843
+
+
+2. map
+$ mkdir map
+id=SRR10278840
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/BT142/${id}_1.fastq /data/wangjl/rsa/BT142/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/BT142/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/BT142/map/ /data/wangjl/HeLa/cell_cycle/BT142
+
+
+
+---
+
+2. map
+$ mkdir map
+id=SRR10278843
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/TS603/${id}_1.fastq /data/wangjl/rsa/TS603/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/TS603/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/TS603/map/ /data/wangjl/HeLa/cell_cycle/TS603
+```
+
+
+
+
+
+## Jurkat (T-ALL cell line) (IGV)
+
+- T细胞激活前后 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218256
+
+- 氧气压力下甲基化的变化 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE199235
+
+```
+1. downlowd	
+
+(1) 单端 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE220995
+Comparative gene expression profiling analysis of RNA-seq data for Jurket T cells with and in the absence of FLU treatment.
+
+GSM6836669	Jurkat T cells incubated with vehicle, 4 hrs 1 SRR22741428 1.8Gb
+GSM6836670	Jurkat T cells incubated with vehicle, 4 hrs 2 SRR22741427
+GSM6836671	Jurkat T cells incubated with vehicle, 4 hrs 3 SRR22741426
+
+(2) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135370
+
+GSM4006973	n1  SRR9905122 0.6Gb
+GSM4006977	n2  SRR9905126 0.8Gb
+GSM4006981	n3  SRR9905130 1.4Gb
+
+$ cd /home/wangjl/data/rsa/Jurkat/
+$ fasterq-dump --split-files SRR22741426
+
+2. map
+$ mkdir map
+id=SRR22741426
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/Jurkat/${id}.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/Jurkat/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/Jurkat/map/ /data/wangjl/HeLa/cell_cycle/Jurkat
+```
+
+
+
+
+
+## MOLT-4 (T-ALL cell line)(IGV)
+
+```
+1. download
+GSM5993284	Molt-4 PRMT7 WT repl. 1 SRR18574394 4.8Gb
+GSM5993285	Molt-4 PRMT7 WT repl. 2 SRR18574395 3.6Gb
+GSM5993286	Molt-4 PRMT7 WT repl. 3 SRR18574396 3.5Gb
+
+$ cd /home/wangjl/data/rsa/MOLT-4/
+$ fasterq-dump --split-files SRR18574394
+
+2. map
+$ mkdir map
+id=SRR18574394
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/MOLT-4/${id}_1.fastq /data/wangjl/rsa/MOLT-4/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/MOLT-4/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/MOLT-4/map/ /data/wangjl/HeLa/cell_cycle/MOLT-4
+```
+
+
 ## KG1 //no data
 
 ```
 
 ```
+
+
+## TEX (IGV)
+
+> SYK inhibition targets acute myeloid leukemia stem cells by blocking their oxidative metabolism
+> https://www.nature.com/articles/s41419-020-03156-8
+> SYK phosphorylation was markedly reduced by R406 in all primary AML samples tested (n = 7) and in `TEX, KG1, and MOLM14` cell lines (Fig. 1A, B, D).
+
+
+---
+
+> Small-molecule inhibitors targeting Polycomb repressive complex 1 RING domain
+> https://www.nature.com/articles/s41589-021-00815-5
+> 1. `TEX` cells are derived from hematopoietic stem and progenitor cells transformed with the TLS-ERG oncogene and express `high levels of CD34 and low levels of CD38`, which serve as LIC markers29,30.
+> 2. all of which are consistent with differentiation of TEX cells
+> 3. Leukemic stem cells (LSCs) or `leukemia-initiating cells (LICs)` represent a rare population of cells that are capable of self-renewal, proliferation and differentiation into malignant blasts13,14. 
+
+
+```
+1. down
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE103834
+GSM2782576	TEX_No_virus_1 SRR6033649 3.6Gb 252bp
+GSM2782577	TEX_No_virus_2 SRR6033650
+
+$ cd /home/wangjl/data/rsa/OCI-AML3/
+$ fasterq-dump --split-files SRR6033649
+
+2. map
+$ mkdir map
+id=SRR6033649
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/TEX/${id}_1.fastq /data/wangjl/rsa/TEX/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/TEX/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/TEX/map/ /data/wangjl/HeLa/cell_cycle/TEX
+```
+
+
+
+## OCI-AML3 (IGV)
+
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE209518
+
+we performed unbiased bulk RNA sequencing comparison between OCI-AML3 wt and CD123 and or CD33 KO clones
+
+```
+1. download
+
+GSM6373730	1_AML3_wt SRR20396321 2.4Gb
+GSM6373731	2_AML3_wt SRR20396320 7Gb
+GSM6373732	3_AML3_wt SRR20396319 4Gb
+
+$ cd /home/wangjl/data/rsa/OCI-AML3/
+$ fasterq-dump --split-files SRR20396319
+
+
+2. map
+$ mkdir map
+id=SRR18574394
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/OCI-AML3/${id}_1.fastq /data/wangjl/rsa/OCI-AML3/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/OCI-AML3/map/${id}_
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/OCI-AML3/map/ /data/wangjl/HeLa/cell_cycle/OCI-AML3
+```
+
+
+
 
 
 
@@ -372,7 +727,7 @@ promyelocytic 早幼粒细胞的
 
 ```
 1. 下载
-https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210200
+1) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210200
 
 GSM6423427	Kasumi-1 control_1  SRR20729564
 GSM6423428	Kasumi-1 control_2  SRR20729563
@@ -383,15 +738,35 @@ GSM6423434	NB4 treated with control_2  SRR20751818
 
 平均 7-9G/sample
 
+2) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE146475
+RNA-sequencing and 3'RNA-sequencing (3'READS) of Kasumi-1 cells transduced with two independent FIP1L1-targeting shRNAs or a control shRNA.
+
+GSM4386836	shControl_rep1_RNA-seq  SRR11247521 2Gb
+GSM4386837	shControl_rep2_RNA-seq  SRR11247522
+GSM4386838	shControl_rep3_RNA-seq  SRR11247523
+GSM4386839	shControl_rep4_RNA-seq  SRR11247524
+
+GSM4386840	shFIP1L1-1_rep1_RNA-seq SRR11247525
+GSM4386841	shFIP1L1-1_rep2_RNA-seq SRR11247526
+GSM4386842	shFIP1L1-1_rep3_RNA-seq SRR11247527
+GSM4386843	shFIP1L1-1_rep4_RNA-seq SRR11247528
+
+GSM4386844	shFIP1L1-2_rep1_RNA-seq SRR11247529
+GSM4386845	shFIP1L1-2_rep2_RNA-seq SRR11247530
+GSM4386846	shFIP1L1-2_rep3_RNA-seq SRR11247531
+GSM4386847	shFIP1L1-2_rep4_RNA-seq SRR11247532
+
+$ cd /home/wangjl/data/rsa/kasumi-1
+$ fasterq-dump --split-files SRR11247525
+
+
 
 
 2. 比对
 /data/wangjl/rsa/kasumi-1/
 $ mkdir map/
 
-id="SRR20729562";
-id="SRR20729563";
-id="SRR20729564";
+id=SRR11247521
 
 1)kasumi-1
 STAR --runThreadN 50 \
@@ -428,6 +803,264 @@ done;
 $ ln -s /data/wangjl/rsa/kasumi-1/map/ /data/wangjl/HeLa/cell_cycle/kasumi-1
 $ ln -s /data/wangjl/rsa/NB4/map/ /data/wangjl/HeLa/cell_cycle/NB4
 ```
+
+
+基因表达定量
+
+```
+$ cd /home/wangjl/data/rsa/kasumi-1/
+$ mkdir counts
+
+$ featureCounts \
+-a /data/wangjl/ref/hg38/gencode/GRCh38.p13.gtf \
+-p \
+-T 10 \
+-o counts/featureCounts_SRR1124_matrix2.txt \
+-t exon -g gene_name \
+map/SRR1124*.sortedByCoord.out.bam #12个
+
+仅比对到 54%-65%!!
+每一行是 FAM138A，基因名。
+
+然后使用R t-test 比较DEG: kd vs. wt. 
+作者认为 kd 后促进白血病细胞分化为髓系，接近正常。
+```
+
+
+
+### DaPars of RNA-seq data after FIP1L1 KD
+
+DaPars 的使用，参考 http://blog3.dawneve.com/#/post/2023/1005-APA-cell-cycle.md
+
+```
+1. 准备3个文件
+(2)To generate the BedGraph files from BAM files
+
+$ cd /home/wangjl/data/rsa/kasumi-1
+$ mkdir bedGraph
+$ bedtools genomecov -bg -ibam /home/wangjl/data/rsa/kasumi-1/map/SRR11247521_Aligned.sortedByCoord.out.bam \
+-g /home/wangjl/data/ref/hg38/hg38_chr_size.txt -split > /home/wangjl/data/rsa/kasumi-1/bedGraph/SRR11247521.bedgraph
+
+
+$ cat SRR_list.txt 
+SRR11247521
+SRR11247522
+SRR11247523
+SRR11247524
+SRR11247525
+SRR11247526
+SRR11247527
+SRR11247528
+SRR11247529
+SRR11247530
+SRR11247531
+SRR11247532
+
+
+$ cat SRR_list.txt | head -n 4|tail -n4 | while read id; do echo $id `date`; 
+$ cat SRR_list.txt | head -n 8|tail -n4 | while read id; do echo $id `date`; 
+$ cat SRR_list.txt | tail -n4 | while read id; do echo $id `date`; 
+bedtools genomecov -bg -ibam /home/wangjl/data/rsa/kasumi-1/map/${id}_Aligned.sortedByCoord.out.bam \
+-g /home/wangjl/data/ref/hg38/hg38_chr_size.txt -split > /home/wangjl/data/rsa/kasumi-1/bedGraph/${id}.bedgraph;
+done;
+
+
+
+
+2. 开始运行 DaPars (Z server)
+(2). Sample processing
+The files generated in step 1 above will be used in step 2. 
+
+$ cd /home/wangjl/data/rsa/kasumi-1/bedGraph/
+$ cat configure_file_KD1_WT.config
+########################
+#(1)3UTR annotation: The following file is the result of step 1.
+Annotated_3UTR=/home/wangjl/data/ref/hg38/hg38_refseq_extracted_3UTR.bed 
+
+#(2)sample bedGraph: A comma-separated list of BedGraph files of samples from condition 1: KO
+Group1_Tophat_aligned_Wig=SRR11247521.bedgraph,SRR11247522.bedgraph,SRR11247523.bedgraph,SRR11247524.bedgraph
+
+#A comma-separated list of BedGraph files of samples from condition 2:WT
+Group2_Tophat_aligned_Wig=SRR11247525.bedgraph,SRR11247526.bedgraph,SRR11247527.bedgraph,SRR11247528.bedgraph
+
+Output_directory=DaPars_Output/
+Output_result_file=FIP1L1_KD1_WT
+
+#At least how many samples passing the coverage threshold in two conditions
+Num_least_in_group1=1
+Num_least_in_group2=1
+
+Coverage_cutoff=20
+
+#Cutoff for FDR of P-values from Fisher exact test.
+FDR_cutoff=0.05
+PDUI_cutoff=0.2
+Fold_change_cutoff=0.59
+########################
+
+
+$ cat configure_file_KD2_WT.config
+########################
+#(1)3UTR annotation: The following file is the result of step 1.
+Annotated_3UTR=/home/wangjl/data/ref/hg38/hg38_refseq_extracted_3UTR.bed 
+
+#(2)sample bedGraph: A comma-separated list of BedGraph files of samples from condition 1: KO
+Group1_Tophat_aligned_Wig=SRR11247521.bedgraph,SRR11247522.bedgraph,SRR11247523.bedgraph,SRR11247524.bedgraph
+
+#A comma-separated list of BedGraph files of samples from condition 2:WT
+Group2_Tophat_aligned_Wig=SRR11247529.bedgraph,SRR11247530.bedgraph,SRR11247531.bedgraph,SRR11247532.bedgraph
+
+Output_directory=DaPars_Output/
+Output_result_file=FIP1L1_KD2_WT
+
+#At least how many samples passing the coverage threshold in two conditions
+Num_least_in_group1=1
+Num_least_in_group2=1
+
+Coverage_cutoff=20
+
+#Cutoff for FDR of P-values from Fisher exact test.
+FDR_cutoff=0.05
+PDUI_cutoff=0.2
+Fold_change_cutoff=0.59
+########################
+
+
+$ python2 ~/software/dapars/src/DaPars_main.py configure_file_KD1_WT.config
+# 11:23->12:20
+
+$ python2 ~/software/dapars/src/DaPars_main.py configure_file_KD2_WT.config
+# 11:23->12:20
+
+
+
+3. 过滤检查
+$ cd /home/wangjl/data/rsa/kasumi-1/bedGraph/
+-rw-rw-r-- 1 wangjl wangjl 2.3M Nov 10 12:20 FIP1L1_KD1_WT_All_Prediction_Results.txt
+-rw-rw-r-- 1 wangjl wangjl 2.3M Nov 10 12:21 FIP1L1_KD2_WT_All_Prediction_Results.txt
+
+$ cat DaPars_Output/FIP1L1_KD1_WT_All_Prediction_Results.txt | awk '{print $34}' | sort | uniq -c
+   9135 N
+      1 Pass_Filter
+    136 Y
+
+$ cat DaPars_Output/FIP1L1_KD2_WT_All_Prediction_Results.txt | awk '{print $34}' | sort | uniq -c
+   9403 N
+      1 Pass_Filter
+     47 Y
+
+(2) 手工核对
+Gene    Loci    Pass_Filter     adjusted.P_val  PDUI_Group_diff
+
+$ cat DaPars_Output/FIP1L1_KD1_WT_All_Prediction_Results.txt | awk '$34=="Y"{print $1"\t"$4"\t"$34"\t"$33"\t"$31}' | sort -k 5nr | wc
+    136     680   10587
+
+$ cat DaPars_Output/FIP1L1_KD1_WT_All_Prediction_Results.txt | awk '$34=="Y"{print $1"\t"$4"\t"$34"\t"$33"\t"$31}' | sort -k 5nr | head
+NR_003700.1|PI4KAP2|chr22|-     chr22:21472998-21473405 Y       4.60808885704e-05       0.465
+NM_001206855.3|TFR2|chr7|-      chr7:100620420-100621126        Y       0.00014234316245        0.4475
+NM_020441.3|CORO1B|chr11|-      chr11:67435510-67438501 Y       1.70243795829e-13       0.43
+NM_001145544.2|ZSCAN18|chr19|-  chr19:58083856-58085376 Y       0.0114602192433 0.3925
+NM_023926.5|ZSCAN18|chr19|-     chr19:58083856-58085379 Y       0.0114602192433 0.3925
+XM_005259174.6|ZSCAN18|chr19|-  chr19:58083842-58085379 Y       0.0114602192433 0.3875
+NM_015465.5|GEMIN5|chr5|-       chr5:154887411-154888377        Y       0.000542394041626       0.385
+NM_001354944.2|CUL4A|chr13|+    chr13:113229642-113230219       Y       0.00133378685772        0.3825
+XM_047440354.1|DHX35|chr20|+    chr20:39038499-39039721 Y       0.000643750019056       0.3625
+NM_001003931.4|PARP3|chr3|+     chr3:51948311-51948867  Y       0.000740072138544       0.36
+
+$ cat DaPars_Output/FIP1L1_KD1_WT_All_Prediction_Results.txt | awk '$34=="Y"{print $1"\t"$4"\t"$34"\t"$33"\t"$31}' | sort -k 5nr | tail
+XM_005256564.5|MPRIP|chr17|+    chr17:17184823-17192643 Y       0.000183005615811       -0.4025
+NM_000849.5|GSTM3|chr1|-        chr1:109733937-109737169        Y       1.5727772605e-16        -0.42
+NM_001354845.2|CCNB1|chr5|+     chr5:69177524-69178245  Y       0.000515949691511       -0.4275
+NM_148955.4|SNX1|chr15|+        chr15:64137568-64144231 Y       4.45519867668e-11       -0.445
+XM_047424329.1|LOC124900275|chr9|+      chr9:129504892-129512670        Y       8.68503642711e-06       -0.4475
+NM_025205.5|MED28|chr4|+        chr4:17623601-17629306  Y       3.29718872152e-12       -0.4575
+XR_007095652.1|ANKRD28|chr3|-   chr3:15667236-15668029  Y       4.76997106203e-07       -0.4775
+NM_002871.5|RABIF|chr1|-        chr1:202878282-202881223        Y       0.00251004945504        -0.4875
+NM_172208.3|TAPBP|chr6|-        chr6:33303606-33303989  Y       2.81486719942e-06       -0.5575
+NM_001282293.2|ABCB8|chr7|+     chr7:151045209-151047782        Y       3.72749822733e-05       -0.59
+
+- PI4KAP2 
+- TFR2   不明显
+- CORO1B 重叠基因区域
+- ZSCAN18 exp low;
+- GEMIN5 不明显
+- CUL4A 3utr long;
+- DHX35 不明显
+- PARP3 近端 **
+
+- MPRIP long 3UTR 8k; 不明显
+- GSTM3 distal pA; ***
+- CCNB1 distal pA; **
+- SNX1 distal pA; ??
+- LOC124900275
+- MED28 very long 3UTR, 21k; distal pA; **
+- ANKRD28 
+- RABIF 
+- TAPBP 
+- ABCB8 
+```
+
+
+
+
+
+
+
+### 3'READS of FIP1L1 shRNA in Kasumi-1 (路径有改变)
+```
+1. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE146475 SE,75bp
+GSM4386848	shControl_rep1_3'READS SRR11247533
+GSM4386849	shControl_rep2_3'READS SRR11247534
+GSM4386850	shControl_rep3_3'READS SRR11247535
+
+GSM4386851	shFIP1L1-1_rep1_3'READS SRR11247536
+GSM4386852	shFIP1L1-1_rep2_3'READS SRR11247537
+GSM4386853	shFIP1L1-1_rep3_3'READS SRR11247538
+GSM4386854	shFIP1L1-1_rep4_3'READS SRR11247539
+
+GSM4386855	shFIP1L1-2_rep1_3'READS SRR11247540
+GSM4386856	shFIP1L1-2_rep2_3'READS SRR11247541
+GSM4386857	shFIP1L1-2_rep3_3'READS SRR11247542
+
+$ cd /home/wangjl/data/rsa/kasumi-1/3READS/
+$ fasterq-dump --split-files SRR11247533
+
+
+2.map
+$ cd /home/wangjl/data/rsa/kasumi-1/3READS/
+$ mkdir map
+id=SRR11247533
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/kasumi-1/3READS/${id}_1.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFilterMatchNminOverLread 0.2 --outFilterScoreMinOverLread 0.2 \
+--outFileNamePrefix /data/wangjl/rsa/kasumi-1/3READS/map/short_${id}_
+
+仅 63% uniq mapping，too short 21%.
+添加参数 20/75=0.2，只要比对上20个就行，默认是0.66。 umiq mapping 73%
+0.13 是 9bp，uniq mapping 73%
+
+
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/kasumi-1/3READS/map/ /data/wangjl/HeLa/cell_cycle/kasumi-1_3READS
+```
+
+
+
+
+
+
+
 
 
 
@@ -816,7 +1449,7 @@ Bulk RNA-seq data of AML patients were obtained from TCGA [87] and TARGET [88] w
 
 The clinical and genetic information were retrieved from their uploaded supplementary Table S1 [57] and the NCI TARGET website [89] for TCGA and TARGET, respectively. 
 
-Published microarray expression dataset for flow cytometry-sorted CD34+CD38− cells from AML patients was obtained under the GEO accession GSE76008 [30]. 
+Published microarray expression dataset for flow cytometry-sorted CD34+CD38− cells from AML patients was obtained under the GEO accession `GSE76008` [30]. 
 
 The authors declared that all other data supporting the findings of the study are within the paper and its additional files.
 ```

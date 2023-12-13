@@ -1032,3 +1032,542 @@ Additionally, mature erythroid cells displayed greater APA dynamics and global 3
 
 
 
+
+
+
+
+# MDA-MB-231 转录本在细胞周期中的变化：抗癌药
+
+- https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216497
+
+> Li CX, Wang JS, Wang WN, Xu DK et al. Expression dynamics of periodic transcripts during cancer cell cycle progression and their correlation with anticancer drug sensitivity. Mil Med Res 2022 Dec 19;9(1):71. PMID: 36529792
+
+
+However, the patterns of transcript isoform expression in the cell cycle are unclear. Therapies targeting cell cycle checkpoints are commonly used as anticancer therapies, but none of them were designed and have been evaluated at alternative splicing transcripts level.
+
+o explore alternative splicing patterns during cell cycle progression, we performed sequential transcriptomic assays following cell cycle synchronization in breast cancer MDA-MB-231 cell lines, used flow cytometry and reference cell cycle transcripts to confirm the cell cycle phases of samples.
+
+
+- MDA-MB-231 cells were harvested at `0, 3, 4.5, 6, 7, 9, 10, 11.5, 13, and 16 hr` after G1/S phase release. 
+- For M phase arrest, when MDA-MB-231 cells were released from G1/S phase, 1 µg/ml nocodazole was added, and after 10 hr, they were supplemented with 5 µg/ml actinomycin D.
+
+> When MDA-MB-231 cells were released from G1/S phase, 1 ug/ml nocodazole was added, and after 10 hr, they were supplemented with 5 ug/ml actinomycin D.
+
+- 微管蛋白抑制剂诺考达唑(Nocodazole)
+- 放线菌素D (Actinomycin D) 是一种代谢物、细胞凋亡诱导剂和强效抗生素，可与 DNA 的 GpC 步骤结合。可抑制DNA的修复和RNA的转录、转运，使细胞周期停滞在 G1期。
+- 放线菌素D 是自噬的激活剂，可在淋巴细胞性白血病中诱导p53依赖性细胞的死亡。
+- 放线菌素D; 更生霉素; 核酸和蛋白质合成抑制剂
+- 分子中含有一个苯氧环结构，通过它连接两个等位的环状肽链。此肽链可与DNA分子的脱氧鸟嘌呤发挥特异性相互作用，使dactinomycin D嵌入DNA双螺旋的小沟中，与DNA形成复合体，阻碍RNA多聚酶的功能，抑制RNA的合成，特别是mRNA的合成。属于周期非特异性药物。
+- 微管对于细胞进入有丝分裂时期是至关重要的，许多药物，如vincristine、colcemid、Nocodazole等都可以干扰微管的聚合，从而使细胞停留在细胞周期的G2/M 期。
+
+
+```
+1. download
+GSM6674966	231_Synchronized RNA-seq_double-thymidine_time 1 0 SRR22029273
+GSM6674967	231_Synchronized RNA-seq_double-thymidine_time 2 3 SRR22029272
+GSM6674968	231_Synchronized RNA-seq_double-thymidine_time 3 4.5 SRR22029271
+GSM6674969	231_Synchronized RNA-seq_double-thymidine_time 4 6 SRR22029270
+GSM6674970	231_Synchronized RNA-seq_double-thymidine_time 5 7 SRR22029269
+GSM6674971	231_Synchronized RNA-seq_double-thymidine_time 6 9 SRR22029268
+GSM6674972	231_Synchronized RNA-seq_double-thymidine_time 7 10 SRR22029267
+GSM6674973	231_Synchronized RNA-seq_double-thymidine_time 8 11.5 SRR22029266
+GSM6674974	231_Synchronized RNA-seq_double-thymidine_time 9 13 SRR22029265
+GSM6674975	231_Synchronized RNA-seq_double-thymidine_time 10 16 SRR22029264
+
+GSM6674976	231_Synchronized RNA-seq_double-thymidine_Nocodazole_ActinomycinD_time 1 0  SRR22029259
+GSM6674977	231_Synchronized RNA-seq_double-thymidine_Nocodazole_ActinomycinD_time 2 1.5 SRR22029260
+GSM6674978	231_Synchronized RNA-seq_double-thymidine_Nocodazole_ActinomycinD_time 3 3 SRR22029261
+GSM6674979	231_Synchronized RNA-seq_double-thymidine_Nocodazole_ActinomycinD_time 4 4.5  SRR22029262
+GSM6674980	231_Synchronized RNA-seq_double-thymidine_Nocodazole_ActinomycinD_time 5 6  SRR22029258
+
+GSM6674981	231_Synchronized RNA-seq_control SRR22029263
+
+
+SRR22029258
+to
+SRR22029273
+$ cd /home/wangjl/data/rsa/MDA-MB-231/
+$ fasterq-dump --split-files SRR22029258
+
+$ cat SRR_Acc_List.txt | head -n 8|tail -n4 | while read id; do echo $id; fasterq-dump --split-files $id; done;
+
+
+2. map
+$ mkdir map
+id=SRR22029258
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/MDA-MB-231/${id}_1.fastq /data/wangjl/rsa/MDA-MB-231/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/MDA-MB-231/map/${id}_;
+
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/MDA-MB-231/map/ /data/wangjl/HeLa/cell_cycle/MDA-MB-231
+```
+
+
+
+
+## 基因表达定量
+
+```
+// Z server.
+$ cd /home/wangjl/data/rsa/MDA-MB-231/
+$ mkdir counts
+
+$ featureCounts \
+-a /data/wangjl/ref/hg38/gencode/GRCh38.p13.gtf \
+-p \
+-T 10 \
+-o counts/featureCounts_MDA-MB-231_CellCycle10Points_matrix.txt \
+-t exon -g gene_name \
+map/SRR22029*.sortedByCoord.out.bam \
+2> counts/SRR22029.sortedByCoord.out.bam.log
+#16个bam
+
+比对到:  70-75%
+	Successfully assigned alignments : 55424393 (71.6%) 
+位置: 
+-rw-rw-r-- 1 wangjl wangjl 25M Nov 12 10:25 /home/wangjl/data/rsa/MDA-MB-231/counts/featureCounts_MDA-MB-231_CellCycle10Points_matrix.txt
+
+接着比较不同周期之间的 APA factor 的差异？ 热图
+
+
+
+
+
+2. use R: /data/wangjl/BMMC/script/b03_bulk_MDA-MB-231-CellCycle10TimePoints.R
+
+同时，直接下载表达量矩阵: GSE216497_231_Synchronized_RNA-seq_gene_expresion_FPKM.txt.gz
+
+```
+
+
+
+
+
+
+
+
+# HeLa cell along cell cycle
+
+- https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE81485
+- https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA321855&o=acc_s%3Aa
+
+```
+1. download
+GSM2154754	double thymidine block at 0h    SRR3535826  G1-S  来自SRR页面的推断
+GSM2154755	double thymidine block at 3h    SRR3535828  S
+GSM2154756	double thymidine block at 4.5h  SRR3535830  S-G2
+GSM2154757	double thymidine block at 6h    SRR3535832  G2-M   *SRR编号跳了一个数字？
+GSM2154758	double thymidine block at 9h    SRR3535834  M-G1
+GSM2154759	double thymidine block at 10.5h SRR3535835  M-G1
+GSM2154760	double thymidine block at 12h   SRR3535836  G1
+GSM2154761	double thymidine block at 15h   SRR3535837  G1-S
+
+GSM2154762	double thymidine block at 18h   SRR3535838  S-G2
+GSM2154763	double thymidine block at 19.5h SRR3535839  G2-M
+GSM2154764	double thymidine block at 21h   SRR3535840  M-G1
+GSM2154765	double thymidine block at 22.5h SRR3535841  M-G1
+GSM2154766	double thymidine block at 25.5h SRR3535842  G1
+GSM2154767	double thymidine block at 30h   SRR3535843  G1-S
+
+GSM2183617	G1 phase untreated, duplicate  b  SRR3616961  G1-b
+GSM2183618	G1 phase untreated, duplicate a   SRR3616962  G1-a
+
+
+$ cd /home/wangjl/data/rsa/HeLa/
+$ cat SRR_list.txt #16个
+SRR3535826
+SRR3535828
+SRR3535830
+SRR3535832
+SRR3535834
+SRR3535835
+SRR3535836
+SRR3535837
+
+SRR3535838
+SRR3535839
+SRR3535840
+SRR3535841
+SRR3535842
+SRR3535843
+SRR3616961
+SRR3616962
+$ cat SRR_list.txt | head -n 8 | while read id; do echo $id `date`; done;
+$ cat SRR_list.txt | tail -n 8 | while read id; do echo $id `date`; 
+fasterq-dump --split-files $id;
+done;
+22:39-> 34和35报错，35重新下载
+$ fasterq-dump --split-files SRR3535835
+2023-11-16T10:01:26 fasterq-dump.3.0.7 err: insp_get_file_size( 'https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR3535835/SRR3535835', remotely = YES ) -> RC(rcNS,rcFile,rcCreating,rcTimeout,rcExhausted)
+
+
+
+
+2. map
+$ mkdir map
+id=SRR3535826
+
+STAR --runThreadN 50 \
+--outSAMtype BAM SortedByCoordinate \
+--genomeDir /data/wangjl/ref/hg38/gencode/index/STAR/ \
+--readFilesIn /data/wangjl/rsa/HeLa/${id}_1.fastq /data/wangjl/rsa/HeLa/${id}_2.fastq \
+--genomeLoad LoadAndKeep \
+--limitBAMsortRAM 20000000000 \
+--outFileNamePrefix /data/wangjl/rsa/HeLa/map/${id}_;
+
+
+3. index
+ls  map/*bam | while read id; do echo $id; 
+samtools index -@ 10 $id;
+done;
+
+4.View on scIGV
+$ ln -s /data/wangjl/rsa/HeLa/map/ /data/wangjl/HeLa/cell_cycle/HeLa
+```
+
+
+## 基因表达定量
+
+```
+$ cd /home/wangjl/data/rsa/HeLa/
+$ mkdir counts
+
+$ featureCounts \
+-a /data/wangjl/ref/hg38/gencode/GRCh38.p13.gtf \
+-p \
+-T 10 \
+-o counts/featureCounts_HeLa_CellCycle16Points_matrix.txt \
+-t exon -g gene_name \
+map/SRR3*.sortedByCoord.out.bam 2>&1 | \
+tee counts/SRR3.sortedByCoord.out.bam.log
+
+assigned 69-79%， SRR3616961 45.7%;
+file: counts/featureCounts_HeLa_CellCycle16Points_matrix.txt
+
+
+
+2. use R: /data/wangjl/BMMC/script/b04_bulk_HeLa-CellCycle16TimePoints.R
+
+```
+
+
+
+
+## DaPars 分析 APA(HeLa)
+
+```
+1. 准备3个文件
+(2)To generate the BedGraph files from BAM files
+
+$ cd /home/wangjl/data/rsa/HeLa
+$ mkdir bedGraph
+
+$ cat SRR_list.txt 
+SRR3535826
+...
+SRR3616962
+共16个
+
+$ cat SRR_list.txt | head -n 8 | while read id; do echo $id `date`; 
+$ cat SRR_list.txt | tail -n 8 | while read id; do echo $id `date`; 
+bedtools genomecov -bg -ibam /home/wangjl/data/rsa/HeLa/map/${id}_Aligned.sortedByCoord.out.bam \
+-g /home/wangjl/data/ref/hg38/hg38_chr_size.txt -split > /home/wangjl/data/rsa/HeLa/bedGraph/${id}.bedgraph;
+done;
+
+*****WARNING: Genome (-g) files are ignored when BAM input is provided. 
+
+
+
+2. 开始运行 DaPars (Z server)
+(2). Sample processing
+The files generated in step 1 above will be used in step 2. 
+
+$ cd /home/wangjl/data/rsa/HeLa/bedGraph/
+$ cat configure_file_3_0.config
+########################
+#(1)3UTR annotation: The following file is the result of step 1.
+Annotated_3UTR=/home/wangjl/data/ref/hg38/hg38_refseq_extracted_3UTR.bed 
+
+#(2)sample bedGraph: A comma-separated list of BedGraph files of samples from condition 1: KO
+Group1_Tophat_aligned_Wig=SRR3535828.bedgraph
+
+#A comma-separated list of BedGraph files of samples from condition 2:WT
+Group2_Tophat_aligned_Wig=SRR3535826.bedgraph
+
+Output_directory=DaPars_Output/
+Output_result_file=hour_3_0
+
+#At least how many samples passing the coverage threshold in two conditions
+Num_least_in_group1=1
+Num_least_in_group2=1
+
+Coverage_cutoff=20
+
+#Cutoff for FDR of P-values from Fisher exact test.
+FDR_cutoff=0.05
+PDUI_cutoff=0.2
+Fold_change_cutoff=0.59
+########################
+
+$ python2 ~/software/dapars/src/DaPars_main.py configure_file_3_0.config
+# 只有一个样本，可以跑吗？ #22:17 -> 22:44
+$ cat DaPars_Output/hour_3_0_All_Prediction_Results.txt | awk '$16=="Y" {print $1}'| awk -F "|" '{print $2}'|sort | uniq -c| sort -k1nr
+      2 ALKBH6
+      2 AP1S2
+      2 ARID5A
+      2 GPNMB
+      2 NDRG2
+      2 NELL2
+      2 PHYKPL
+      2 PTK2B
+      2 TMEM128
+      2 ZFYVE1
+      1 ABTB1
+      1 ACTMAP
+      1 ADCK2
+      1 ADIRF
+      1 ALX1
+... 共94个
+ABTB1 ACTMAP ADCK2 ADIRF ALKBH6 ALX1 AP1S2 ARHGEF33 ARID5A BPTF C21orf58 C3orf33 CCDC113 CDC34 CFAP126 CHEK1 CHKB CHN1 CLINT1 CNTLN CRBN CRYL1 CXCL2 DCAF4 DCST1-AS1 DMBT1 EXOC6 FHIP2B FMN2 GCSHP3 GPNMB H2BC5 HERC1 HHLA3 HSCB IFNAR2 IL18BP ITGB4 KLC1 KLRK1 LCOR LINC00680 LOC105375905 LOC124903029 LOXL1 LRP6 LSP1P4 MACROD1 MCCC1 MIR4435-2HG MOK MPZL3 MST1R NDRG2 NELL2 NOL4L NUP210 ODF2L PDE2A-AS2 PELI1 PEX1 PHF8 PHLDB3 PHYKPL POLG2 POMT1 PTK2B RN7SK RNASEH2B RNF138 RNF207 RRAGB SEC24A SETD4 SLC35G1 SMIM7 SNX10 SOCS2 SOGA1 STAG3L5P SWSAP1 TMEM128 TMEM143 TNFSF12-TNFSF13 TNK1 WDR7 WDR81 WHAMMP4 ZBTB45 ZBTB49 ZFYVE1 ZNF621 ZNF708 ZNF79
+
+Gene    fit_value       Predicted_Proximal_APA  Loci    A_1_long_exp    A_1_short_exp   A_1_PDUI        B_1_long_exp    B_1_short_exp   B_1_PDUI        Group_A_Mean_PDUI       Group_B_Mean_PDUI       PDUI_Group_diff P_val   adjusted.P_val  Pass_Filter
+$ cat DaPars_Output/hour_3_0_All_Prediction_Results.txt | grep -i sccpdh
+NM_016002.3|SCCPDH|chr1|+       10979.0 246767396       chr1:246767195-246768137        92.83   504.37  0.16    93.79   660.49  0.12    0.16    0.12    0.04    0.11102165578702083     0.458318439291  N
+
+NM_001386055.1|ALKBH6|chr19|-   331.4   36009352        chr19:36009120-36009553 17.91   13.32   0.57    37.41   0.00    1.00    0.57    1.0     -0.43   4.72020205006538e-06    0.000199215980933       Y
+XM_047439567.1|ALKBH6|chr19|-   541.9   36010876        chr19:36010590-36011077 24.59   48.95   0.33    36.71   41.89   0.47    0.33    0.47    -0.14   0.13221976041816222     0.508974133157  N
+NM_198867.1|ALKBH6|chr19|-      331.4   36009352        chr19:36009121-36009553 17.91   13.32   0.57    37.41   0.00    1.00    0.57    1.0     -0.43   4.72020205006538e-06    0.000199215980933       Y
+
+
+
+
+$ cat configure_file_G1_M.config
+########################
+#(1)3UTR annotation: The following file is the result of step 1.
+Annotated_3UTR=/home/wangjl/data/ref/hg38/hg38_refseq_extracted_3UTR.bed 
+
+#(2)sample bedGraph: A comma-separated list of BedGraph files of samples from condition 1: KO
+Group1_Tophat_aligned_Wig=SRR3535836.bedgraph,SRR3535837.bedgraph
+
+#A comma-separated list of BedGraph files of samples from condition 2:WT
+Group2_Tophat_aligned_Wig=SRR3535832.bedgraph,SRR3535834.bedgraph,SRR3535840.bedgraph,SRR3535841.bedgraph
+
+Output_directory=DaPars_Output/
+Output_result_file=G1_M
+
+#At least how many samples passing the coverage threshold in two conditions
+Num_least_in_group1=1
+Num_least_in_group2=1
+
+Coverage_cutoff=20
+
+#Cutoff for FDR of P-values from Fisher exact test.
+FDR_cutoff=0.05
+PDUI_cutoff=0.2
+Fold_change_cutoff=0.59
+########################
+
+
+$ python2 ~/software/dapars/src/DaPars_main.py configure_file_G1_M.config
+# 只有一个样本，可以跑吗？ #22:39 -> 23:46
+
+Gene    fit_value       Predicted_Proximal_APA  Loci    A_1_long_exp    A_1_short_exp   A_1_PDUI        A_2_long_exp    A_2_short_exp   A_2_PDUI        B_1_long_exp    B_1_short_exp   B_1_PDUI        B_2_long_exp    B_2_short_exp   B_2_PDUI        B_3_long_exp    B_3_short_exp B_3_PDUI        B_4_long_exp    B_4_short_exp   B_4_PDUI        Group_A_Mean_PDUI       Group_B_Mean_PDUI       PDUI_Group_diff P_val   adjusted.P_val  Pass_Filter
+$ cat DaPars_Output/G1_M_All_Prediction_Results.txt | awk '$16=="Y" {print $1}'| awk -F "|" '{print $2}'|sort | uniq -c| sort -k1nr
+NM_016002.3|SCCPDH|chr1|+       8554.1  246767396       chr1:246767195-246768137        88.30   528.05  0.14    79.56   489.77  0.14    108.11  562.21  0.16    90.65   508.83  0.15    101.11  454.15  0.18    85.50   522.89  0.14    0.14    0.1575  -0.0175 0.4181913812357401    0.858902219186  N
+
+没有pass的gene。
+$ cat config.file
+0  SRR3535826
+3  SRR3535828
+4  SRR3535830
+
+6  SRR3535832 #4
+9  SRR3535834
+10 SRR3535835
+12 SRR3535836
+
+15 SRR3535837 #4
+18 SRR3535838
+19 SRR3535839
+21 SRR3535840
+
+22 SRR3535841 #3
+25 SRR3535842
+30 SRR3535843
+
+$ cat config.file | tail -n 11 | head -n 4|tail -n3| while read hour srr; do echo -e $hour"\t"$srr"\t"`date`;
+$ cat config.file | tail -n 11 | head -n 8|tail -n4| while read hour srr; do echo -e $hour"\t"$srr"\t"`date`;
+$ cat config.file | tail -n3| while read hour srr; do echo -e $hour"\t"$srr"\t"`date`;
+
+$ cat config.file | tail -n 11 | head -n 1| while read hour srr; do echo -e $hour"\t"$srr"\t"`date`;
+cp configure_file_3_0.config configure_file_${hour}_0.config;
+sed -i -e "s/3_0/${hour}_0/"  -e "s/SRR3535828/${srr}/" configure_file_${hour}_0.config;
+python2 ~/software/dapars/src/DaPars_main.py configure_file_${hour}_0.config;
+done
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# E2F 介导细胞分裂中 增强的APA (Genome Biol. 2012)
+> Genome Biol. 2012 Jul 2;13(7):R59. doi: 10.1186/gb-2012-13-7-r59.
+> E2F mediates enhanced alternative polyadenylation in proliferation
+> https://pubmed.ncbi.nlm.nih.gov/22747694/
+
+
+Abstract
+Background: The majority of mammalian genes contain multiple poly(A) sites in their 3' UTRs. Alternative cleavage and polyadenylation are emerging as an important layer of gene regulation as they generate transcript isoforms that differ in their 3' UTRs, thereby modulating genes' response to 3' UTR-mediated regulation. 
+增强的3UTR近端切割，导致全局3UTR缩短，最近偶联到分裂和癌症。调控这个的机制未知。
+Enhanced cleavage at 3' UTR proximal poly(A) sites resulting in global 3' UTR shortening was recently linked to proliferation and cancer. However, mechanisms that regulate this enhanced alternative polyadenylation are unknown.
+
+
+Results: Here, we explored, on a transcriptome-wide scale, alternative polyadenylation events associated with cellular proliferation and neoplastic transformation. 
+
+识别和定量pA位点，2个人类细胞模型：分裂、阻滞、转化状态。
+We applied a deep-sequencing technique for identification and quantification of poly(A) sites to two human cellular models, each examined under proliferative, arrested and transformed states. 
+
+2个细胞模型观察到：全局3UTR变短 偶联 分裂，比 转化 相关性强。
+In both cell systems we observed global 3' UTR shortening associated with proliferation, a link that was markedly stronger than the association with transformation. 
+
+进一步：分裂和 内含子 pA 相关。
+Furthermore, we found that proliferation is also associated with enhanced cleavage at intronic poly(A) sites. 
+
+分裂细胞中 3’端处理蛋白集 上调，E2F 转录因子促进该调控。
+Last, we found that the expression level of the set of genes that encode for 3'-end processing proteins is globally elevated in proliferation, and that E2F transcription factors contribute to this regulation.
+
+
+结论: APA 关联 细胞分裂 和 转化，分裂 增强APA：3UTR缩短 及 内含子剪切。
+Conclusions: Our results comprehensively identify alternative polyadenylation events associated with cellular proliferation and transformation, and demonstrate that the enhanced alternative polyadenylation in proliferative conditions results not only in global 3' UTR shortening but also in enhanced premature cleavage in introns. 
+
+提示 E2F 介导的 3’端 共转录调控 是连接 APA 和 分裂的一个机制。
+Our results also indicate that E2F-mediated co-transcriptional regulation of 3'-end processing genes is one of the mechanisms that links enhanced alternative polyadenylation to proliferation.
+
+- neoplastic [ˌniːəʊˈplæstɪk] adj. [肿瘤] 瘤的；新造型主义的
+
+
+
+##  什么是转化 transformation ? //todo
+- oncogenic transformation [18]
+
+> 18. Mayr C, Bartel DP. Widespread shortening of 3'UTRs by alternative cleavage and polyadenylation activates oncogenes in cancer cells. Cell. 2009;138:673–684. doi: 10.1016/j.cell.2009.06.016.
+> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2819821/
+
+- neoplastic transformation. 
+- These samples included 22 cancer cell lines, one cancer sample, five non-transformed cell lines, ten samples derived from blood cells and 97 tissues.
+
+BJ-EHT/p53kd/p16kd/RASGV12ER cells expressing shRNA constructs targeting p53 and p16INK4A and 4-hydroxy-tamoxifen (4-OHT)-inducible oncogenic HRASG12V were cultured for 3 days in the presence of 100 nM 4-OHT to `transform the cells`. These cell lines are described in detail in [23]. `BJ-EHT cells were transfected` in a final concentration of 50 nM small interfering RNAs targeting E2F1 (targeting sequence 5′-GGCCCGAUCGAUGUUUUCC-3′) and E2F2 (targeting sequence 5′-GACUCGGUAUGACACUUCG-3′) using Dharmafect reagent (Dharmacon, Lafayette, Colorado, USA).
+`siRNA 19nt 长`
+
+> 23. Voorhoeve PM, Agami R. The tumor-suppressive functions of the human INK4A locus. Cancer Cell. 2003;4:311–319. doi: 10.1016/S1535-6108(03)00223-X.
+
+
+To `transform the MCF10A cells`, we transduced them with a retroviral vector expressing RASG12VER, and cultured them for 2 and 8 days in the presence of 100 nM 4-OHT.
+
+### 4-OHT: (Z)-4-羟三苯氧胺
+别名: (Z)-4-(1-[4-(二甲氨基乙氧基)苯基]-2-苯基-1-丁烯基)苯酚, (Z)-4-OHT, 反式-4-羟三苯氧胺
+
+
+
+- The shorter isoform was not only able to transform fibroblasts but also human breast epithelial cell lines (Figure S7).
+
+
+
+
+
+
+
+
+## 3'-end processing proteins 是啥？
+
+Fig. 6 E2F-mediated regulation of APA in proliferation. 
+
+x轴: CSTF1, CSTF2, CSTF3, CPSF2, CPSF3, CPSF4, CSTF2T, PCF11(不显著), MCM2(pos ctrl), (neg1, neg2)
+y轴: 0-1.2, MCM2 做 pos ctrl, p53 合成启动子作为 neg ctrl.
+(e) Effect of knocking down E2F1 on promoter activity of eight 3'-end processing genes assessed using reporter assays. MCM2 served as positive control and an artificial p53 promoter was used as a negative one. *P < 0.05, **P < 0.01. Error bars represent SEM. 
+
+
+展示的基因: TMEM119, PTGS1, FAM100B(新基因名 UBALD2);
+(g) The effect of knocking down E2F1+2 on the relative usage of 3' UTR proximal and distal CSs in three transcripts that showed enhanced usage of the proximal CSs in proliferation was examined using 3'-qPCR (Materials and methods). In all three cases examined, reducing E2F levels increased the relative cleavage at the distal site (namely, reduced the cleavage at the proximal one). Results shown are based on duplicates; in all cases, P < 0.05, one-tail t-test).
+降低 E2F 水平，会增加 distal pA(也就是 降低 p pA).
+
+
+
+
+
+
+
+
+# PCF11 KD dataset (HeLa)
+
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE124556
+https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA512488
+
+> Kamieniarz-Gdula K, Gdula MR, Panser K, Nojima T et al. Selective Roles of Vertebrate PCF11 in Premature and Full-Length Transcript Termination. Mol Cell 2019 Apr 4;74(1):158-172.e9. PMID: 30819644
+
+- 3' mRNA-seq in HeLa cells. 
+- Control and PCF11 knock-down (4 biological replicates); 
+- control and PCF11 PAS1 deletion clones muA and muB (3 biological replicates); 
+- control and additional PCF11 PAS1 deletion clones muC and muD (1 replicate).
+
+```
+GSM3536477	3'mRNAseq_siLUC_rep1 SRR8383316
+GSM3536478	3'mRNAseq_siLUC_rep2 SRR8383317
+GSM3536479	3'mRNAseq_siLUC_rep3 SRR8383318
+GSM3536480	3'mRNAseq_siLUC_rep4 SRR8383319
+
+GSM3536481	3'mRNAseq_siPCF11_rep1 SRR8383320
+GSM3536482	3'mRNAseq_siPCF11_rep2 SRR8383321
+GSM3536483	3'mRNAseq_siPCF11_rep3 SRR8383322
+GSM3536484	3'mRNAseq_siPCF11_rep4 SRR8383323
+
+GSM3536485	3'mRNAseq_wt_rep1 SRR8383324
+GSM3536486	3'mRNAseq_wt_rep2 SRR8383325
+GSM3536487	3'mRNAseq_wt_rep3 SRR8383326
+
+GSM3536488	3'mRNAseq_muA_rep1 SRR8383327
+GSM3536489	3'mRNAseq_muA_rep2 SRR8383328
+GSM3536490	3'mRNAseq_muA_rep3 SRR8383329
+
+GSM3536491	3'mRNAseq_muB_rep1 SRR8383330
+GSM3536492	3'mRNAseq_muB_rep2 SRR8383331
+GSM3536493	3'mRNAseq_muB_rep3 SRR8383332
+
+GSM3536494	3'mRNAseq_wt_rep4 SRR8383333
+GSM3536495	3'mRNAseq_muC     SRR8383334
+GSM3536496	3'mRNAseq_muD     SRR8383335
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
