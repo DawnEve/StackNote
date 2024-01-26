@@ -8,10 +8,21 @@
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
 
+
+		{
+			year: 2024,
+			title:"0109-APA_in_T_Cell_activation.md",
+			caption: "APA in T cell activation",
+			category:5,
+			tags: ['APA', 'T细胞'],
+		},
+
+
+
 		{
 			year: 2023,
 			title:"1212-APA.Nov.2023.md",
-			caption: "文献 APA papers: 2023.12 | ",
+			caption: "文献 APA papers: 2023.11",
 			category:1,
 			tags: ['APA'],
 		},
@@ -21,7 +32,7 @@
 		{
 			year: 2023,
 			title:"1212-actinomycin-D—RNA_half_life.md",
-			caption: "RNA 半衰期: 放线菌素D法检测",
+			caption: "RNA 半衰期: 放线菌素D(actinomycin-D)法检测",
 			category:5,
 			tags: ['RNA', "半衰期"],
 		},
@@ -87,7 +98,7 @@
 			title:"1005-APA-cell-cycle.md",
 			caption: "癌细胞中的细胞周期(cell cycle)与APA",
 			category:5,
-			tags: ['APA', "细胞周期"],
+			tags: ['APA', "细胞周期", "半衰期"],
 		},
 
 		{
@@ -127,7 +138,7 @@
 		{
 			year: 2023,
 			title:"0907-APA-paper.Sep.2023.md",
-			caption: "APA papers: 2023.9",
+			caption: "APA papers: 2023.9 | 对 li wei 文章(Mol Cell. 2020)的引用",
 			category:1,
 			tags: ['APA', "scRNA-seq", 'fund'],
 		},

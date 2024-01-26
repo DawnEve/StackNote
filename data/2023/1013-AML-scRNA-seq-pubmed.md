@@ -5,12 +5,12 @@
 AML scRNA-seq
 
 
+
 # 数据集 汇总
 
 相关数据：按照年份，最新的在上面
 
 ```
-
 # HRA002637:https://ngdc.cncb.ac.cn/gsa-human/browse/HRA002637
 PRJCA010386: 3个样本
 Revealing the intratumoral heterogeneity of non-DS acute megakaryoblastic leukemia in single cell resolution
@@ -50,6 +50,29 @@ Changes in gene expression after MTCH2 knockdown were also mapped to Gene Expres
 
 We defined 38 distinct hematopoietic cell states based on cell surface marker expression, representing hematopoietic stem and progenitor cells, terminally differentiated cells, and intermediate states. For each state, we purified samples separately from 4 to 7 independent donors by multiparameter flow cytometry, yielding 211 profiled samples. Cells from all stem and progenitor populations were purified from umbilical cord blood. Terminally differentiated lymphocyte populations were purified from peripheral blood.
 ```
+
+
+
+
+## HCA dataset
+
+https://data.humancellatlas.org/hca-bio-networks/immune/datasets
+
+- Blood and immune development in human fetal bone marrow and Down syndrome: GSE166895: https://explore.data.humancellatlas.org/projects/04ad400c-58cb-40a5-bc2b-2279e13a910b
+- Bone marrow plasma cells from hip replacement surgeries:GSE117156:十个健康人 https://explore.data.humancellatlas.org/projects/a29952d9-925e-40f4-8a1c-274f118f1f51
+- Profiling of CD34+ cells from human bone marrow to understand hematopoiesis:https://www.ebi.ac.uk/ena/browser/view/PRJEB37166: https://explore.data.humancellatlas.org/projects/091cf39b-01bc-42e5-9437-f419a66c8a45
+- Single-cell RNA-seq of bone marrow cells from aplastic anemia patient and healthy donor: GSE181989 : https://explore.data.humancellatlas.org/projects/e993adcd-d4ba-4f88-9a05-d1c05bdf0c45
+- Single-cell analysis of childhood leukemia reveals a link between developmental states and ribosomal protein expression as a source of intra-individual heterogeneity: 
+GSE132509 : https://explore.data.humancellatlas.org/projects/1fa8b11f-56fa-45a6-a777-6af70e17a6b3
+
+- The Human Developmental Cell Atlas (HDCA): https://developmental.cellatlas.io/fetal-bone-marrow
+- https://developmental.cellatlas.io/fetal-immune
+- https://developmentcellatlas.cellgeni.sanger.ac.uk/fetal-immune/nkt/
+
+
+
+
+
 
 
 
