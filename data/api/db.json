@@ -7,6 +7,33 @@
 
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
+// 规范： 1. 使用标签 前沿 表示文献汇总
+
+
+		{
+			year: 2024,
+			title:"0313-APA_T_cell_2015-2024.md",
+			caption: "alternative polyadenylation & T cell, 2015-2024(n=35)",
+			category:1,
+			tags: ['前沿', 'T细胞', 'APA'],
+		},
+
+
+
+
+
+
+
+		{
+			year: 2024,
+			title:"0313-single-cell-APA_2022-2024.md",
+			caption: "single cell & alternative polyadenylation, 2022-2024(n=56)",
+			category:1,
+			tags: ['前沿', '单细胞', "APA"],
+		},
+
+
+
 
 
 		{
@@ -43,7 +70,7 @@
 			year: 2023,
 			title:"1127-scRNA-seq.Nov.2023.md",
 			caption: "单细胞文献 2023.11",
-			category:5,
+			category:1,
 			tags: ['APA', "macrophage"],
 		},
 

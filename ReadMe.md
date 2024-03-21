@@ -59,7 +59,7 @@ StackNote require a modern web browser with support for Javascript ECMAScript 20
 
 ## 1.Download
 
-$ git clone https://github.com/DawnEve/StackNote.git
+`$ git clone https://github.com/DawnEve/StackNote.git`
 
 ## 2.Create a md file
 
@@ -69,8 +69,7 @@ In `/data/2021/` with a name like `0511`-how_to_use_xx.`md`,
     and ended with .md or .html
     文件名只能使用大小写字母、数字和下划线_、连字符-，不能出现 空格 和 汉字，否则可能出错。
 
-- We recommend using awesome [Typora](https://www.typora.io/) to edit your markdown file.
-- You can save both .md file and .html file ( `Fule - Output - html with style` ), and use html file in the note system, leaving the .md file to be edited in the future.
+- We recommend using a plain text editor to edit your markdown file.
 - When insert pictures, using absolute path in markdown, like `/data/2021/images/05/xx.png`. We recommend using a dir for each month, like `/05/` for May. 
 
 
@@ -155,7 +154,7 @@ Then open your web browser: http://localhost:12345
 
 
 
-## 5.Editing methods
+## 5.How to edit?
 
 ### How to add a new top menu pointing to a .md file?
 
@@ -163,7 +162,7 @@ Add the info in /index.html, add router, import file
 make new file like src/views/Recipe.js
 
 
-### How to edit links below every page?
+### How to edit links at the bottom of every page?
 They are static and fixed in /index.html.
 
 
@@ -182,6 +181,7 @@ As shown in components/ChickenSoup.js
 
 若内容有争议、或做得不到位的地方，请及时联系我们进行整改。
 
+联系方式见 顶部菜单-About-About Me。
 
 
 # 参与贡献

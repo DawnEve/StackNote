@@ -40,7 +40,13 @@ Style ref:
 .markdown h1:hover .anchor,.markdown h2:hover .anchor,.markdown h3:hover .anchor,.markdown h4:hover .anchor,.markdown h5:hover .anchor,.markdown h6:hover .anchor{text-decoration:none}
 .markdown h1:hover .anchor .octicon-link,.markdown h2:hover .anchor .octicon-link,.markdown h3:hover .anchor .octicon-link,.markdown h4:hover .anchor .octicon-link,.markdown h5:hover .anchor .octicon-link,.markdown h6:hover .anchor .octicon-link{visibility:visible}
 .markdown h1 tt,.markdown h1 code,.markdown h2 tt,.markdown h2 code,.markdown h3 tt,.markdown h3 code,.markdown h4 tt,.markdown h4 code,.markdown h5 tt,.markdown h5 code,.markdown h6 tt,.markdown h6 code{font-size:inherit}
-.markdown h1{padding-bottom:0.3em;font-size:2.25em;line-height:1.2;border-bottom:1px solid #eee}
+.markdown h1{
+	padding-bottom:0.3em;
+	font-size:2.25em;
+	line-height:1.2;
+	border-bottom:1px solid #eee;
+	border-top: 3px solid black;
+}
 .markdown h1 .anchor{line-height:1}
 .markdown h2{padding-bottom:0.3em;
 	/*font-size:1.75em;*/
@@ -60,8 +66,8 @@ Style ref:
 .markdown h6 .anchor{line-height:1.1}
 .markdown p,.markdown blockquote,.markdown ul,.markdown ol,.markdown dl,.markdown table,.markdown pre{
 	margin-top:0;	
-	margin-bottom: 20px;
-    line-height: 1.75em;
+	margin-bottom: 1.2em;
+    line-height: 1.5em;
 }
 
 .markdown p{

@@ -151,3 +151,69 @@ GSM2833291	kb-OVA+ CD8+ T cells Suv39h1-KO, rep1, tech2
 ...
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
+# 单细胞研究：急慢性感染中淋巴结细胞APA(Front Immunol. 2024)
+> https://pubmed.ncbi.nlm.nih.gov/38352870/
+> Single-cell RNA sequencing reveals the dynamics and heterogeneity of lymph node immune cells during acute and chronic viral infections
+> Guangdong Provincial Key Laboratory of Regional Immunity and Diseases, Department of Pathogen Biology, School of Basic Medical Sciences, Shenzhen University Medical School, Shenzhen University, Shenzhen, China.
+
+巨细胞感染小鼠后，单细胞BCR、TCR测序 CD45+细胞。
+single-cell RNA sequencing(scRNA-seq), scTCR-seq and scBCR-seq were utilized to evaluate the longitudinal dynamics and heterogeneity of lymph node CD45+ immune cells in mouse models of acute (LCMV Armstrong) and chronic (LCMV clone 13) viral infections.
+
+
+
+
+
+
+
+
+# 单细胞 研究Zika病毒感染人DC的抗病毒网络(预印本 2024)
+> Single cell analysis reveals an antiviral network that controls Zika virus infection in human dendritic cells
+> https://pubmed.ncbi.nlm.nih.gov/38293140/
+
+To better understand the host response to ZIKV infection, we adapted the 10x Genomics Chromium single cell RNA sequencing (scRNA-seq) assay to simultaneously capture viral RNA and host mRNA. 
+
+Using this assay, we profiled the antiviral landscape in a population of human moDCs infected with ZIKV at the single cell level.
+
+
+
+
+
+
+
+
+# 蜱传脑炎病毒 神经元和胶质细胞 整合分析 揭示了 潜在的 病理学效果 (Comput Struct Biotechnol J.2022 IF=6.3)
+> Integrative RNA profiling of TBEV-infected neurons and astrocytes reveals potential pathogenic effectors.
+> Selinger M(1)(2), Věchtová P(1), ... Štěrba J(1), Grubhoffer L(1)(2).
+> (1)Faculty of Science, University of South Bohemia in České Budějovice, Branišovská 1760, České Budějovice 370 05, Czech Republic. 捷克
+> PMID: 35685361
+
+
+靶向中枢神经，经常引起严重的脑炎
+Tick-borne encephalitis virus (TBEV), the most medically relevant tick-transmitted flavivirus in Eurasia, targets the host central nervous system and frequently causes severe encephalitis.
+
+细胞特异性，具体机制反应还不清楚。
+The severity of TBEV-induced neuropathogenesis is highly cell-type specific and the exact mechanism responsible for such differences has not been fully described yet. 
+
+比较了 polyA 等的变化，感染后： 高、低致病效应
+Thus, we performed a comprehensive analysis of alterations in host poly-(A)/miRNA/lncRNA expression upon TBEV infection in vitro in human primary neurons (high cytopathic effect) and astrocytes (low cytopathic effect). 
+严重菌株高神经元致死率。
+Infection with severe but not mild TBEV strain resulted in a high neuronal death rate. 
+而星形胶质细胞不是这样。
+In comparison, infection with either of TBEV strains in human astrocytes did not. 
+
+
+
+
+

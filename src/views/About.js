@@ -12,10 +12,10 @@ export default{
 		<p>本项目使用Vue3.0的CDN模式，属于非常规编码。项目无需构建，直接静态服务器即可运行。
 			目前博客仅提供前台显示部分，后台目录需要手工维护。整个系统相当于是管理和有序显示markdown的。
 			而文章书写推荐使用功能完善的、能编辑和预览 markdown 文件的 
-			<a target="_blank" href="https://www.typora.io/">Typora 编辑器</a>。</p>
+			vscode + 相应插件。我个人喜欢用普通文本编辑器。</p>
 		<p>项目源码: <a target="_blank" href="https://github.com/DawnEve/StackNote">https://github.com/DawnEve/StackNote</a></p>
 
-		<p>版本变化请关注 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/changeLog.txt">change log</a> 文件。
+		<p>版本更新请关注 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/changeLog.txt">change log</a> 文件。
 		使用方法请关注 <a target="_blank" href="https://github.com/DawnEve/StackNote/blob/master/ReadMe.md">Read Me</a> 文件。</p>
 
 		<p class="smaller"><i>注: 我们和网页版的 <a target="_blank" href="https://stacknote.io/">stacknote.io</a> 没有关系，

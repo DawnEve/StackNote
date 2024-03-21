@@ -9,6 +9,30 @@ https://pubmed.ncbi.nlm.nih.gov/?term=alternative+polyadenylation+T+cell+activat
 
 
 
+
+
+
+
+# T helper 细胞的动态和可逆3UTR景观 (RNA, 2024)
+> T helper cells exhibit a dynamic and reversible 3'UTR landscape
+> https://pubmed.ncbi.nlm.nih.gov/38302256/
+> UniversitatSpital Basel; denis.seyres@unibas.ch.
+> https://rnajournal.cshlp.org/content/early/2024/02/01/rna.079897.123.long
+
+In addition, we generated 3' end UTR sequencing data from naïve, activated, memory and regulatory CD4+ T cells.
+
+3'UTR length changes were estimated using a non-negative matrix factorization approach and were compared with those inferred from long-read PacBio sequencing.
+
+We found that APA events were transient and reverted after effector phase expansion. 
+
+Using an orthogonal bulk RNAseq dataset, we did not find evidence of APA association with differential gene expression or transcript usage, indicating that APA has only a marginal effect on transcript abundance. 
+
+
+
+
+
+
+
 # 产前和产后胸腺中 初始T细胞命运决定的信号(Front Immunol. 2023)
 > Divergent molecular events underlying initial T-cell commitment in human prenatal and postnatal thymus
 > https://pubmed.ncbi.nlm.nih.gov/37828991/

@@ -144,7 +144,7 @@ v0.4.0-5@hzBig db.json add categories 5:"课题设计"; data/search.sh [2023.12.
 		APA macrophage polar;
 		RNA half life;
 v0.4.0-6@hzBig T cell activation [2024.1.26]
-
+v0.4.0-7@sust update 文档/底部链接/h2 style, right menu hover color; [2024.3.21]
 
 #
 #--> commit
@@ -154,9 +154,10 @@ v0.4.0-6@hzBig T cell activation [2024.1.26]
 核心目录 data/api/db.json
 Web url: note.biomooc.com
 local url: blog3.dawneve.cc
-
-
-
+顶部菜单：
+	菜谱: /data/api/files/recipe.md
+	About: /src/views/About.js
+底部链接：/index.html
 
 
 

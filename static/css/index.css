@@ -402,6 +402,8 @@ main > nav li a{
 /*当前行*/
 #side_contents a.cur .text_menu {color:#0096ff; font-weight:bold;}
 #side_contents a.cur .text_menu span{color:#0096ff;}
+/*hover then highlight number*/
+#side_contents a .text_menu:hover{color:#0096ff;}
 
 
 
