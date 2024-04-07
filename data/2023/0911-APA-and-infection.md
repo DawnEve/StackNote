@@ -216,4 +216,13 @@ In comparison, infection with either of TBEV strains in human astrocytes did not
 
 
 
+# 下调 CPSF6 导致 mRNA 3UTR 缩短，促进抗病毒免疫 (PLoS Pathog. 2024, IF=6.7)
+> Guangdong Province Key Laboratory of Pharmaceutical Functional Genes, MOE Key Laboratory of Gene Function and Regulation, State Key Laboratory of Biocontrol, School of Life Sciences, Sun Yat-Sen University, Guangzhou, China.
+> Yong Ge 1 2, Jingrong Huang 1 2, ..., Shaochun Yuan 1 2, Anlong Xu 1 5
+> https://pubmed.ncbi.nlm.nih.gov/38416782/
+
+Shortening of the 3' UTR of these transcripts may improve their mRNA stability and translation efficiency, leading to the promotion of type I IFN (IFN-I) signalling-based antiviral immune responses.
+
+
+
 

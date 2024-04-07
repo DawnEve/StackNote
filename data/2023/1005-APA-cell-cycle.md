@@ -1571,3 +1571,29 @@ GSM3536496	3'mRNAseq_muD     SRR8383335
 
 
 
+
+
+# 晚期前列腺癌： 使用靶向剪切的药物 导致 内含子保留 (J Exp Clin Cancer Res. 2024, IF=12.66)
+> Splicing targeting drugs highlight intron retention as an actionable vulnerability in advanced prostate cancer
+> Chiara Naro  1   2 , Ambra Antonioni  1 , ..., Maria Paola Paronetto  5   6 , Claudio Sette  7   8
+> 1 Department of Neuroscience, Section of Human Anatomy, Catholic University of the Sacred Heart, Largo Francesco Vito 1, 00168, Rome, Italy.
+> https://pubmed.ncbi.nlm.nih.gov/38413979/
+
+Advanced prostate cancer (PC) is characterized by insensitivity to androgen deprivation therapy and chemotherapy, resulting in poor outcome for most patients.
+
+对细胞系使用三个药物：
+three splicing-targeting drugs: Pladienolide B, indisulam and THZ531. 
+
+> Pladienolide B 是一种大环内酯,可选择性结合剪接因子 3b 并抑制 mRNA 剪接。通过这种作用,pladienolide B 有效地阻止增殖细胞的生长
+> Indisulam是一种碳酸酐酶抑制剂和抗肿瘤CDK抑制剂。Indisulam针对细胞周期的G1期,通过耗尽细胞周期蛋白E,诱导p53和p21,并抑制CDK2,导致G1/S转换受阻。
+> THZ531是CDK12和CDK13的选择性抑制剂,IC50值分别为158 nM和69 nM。
+
+
+Importantly, we identified PC-relevant genes (i.e. EZH2, MDM4) whose drug-induced splicing alteration exerts an impact on cell survival. 
+
+Moreover, computational analyses uncovered a widespread impact of splicing-targeting drugs on intron retention, with enrichment in genes implicated in pre-mRNA 3'-end processing (i.e. CSTF3, PCF11). 
+
+对APA抑制剂敏感，可增强正在使用的化疗药物。
+Coherently, advanced PC cells displayed high sensitivity to a specific inhibitor of the cleavage and polyadenylation complex, which enhances the effects of chemotherapeutic drugs that are already in use for this cancer.
+
+

@@ -31,7 +31,7 @@ export default{
 							{{categories.value[post.category]}}</a>
 					</span> 
 					/ 
-					<span class=tags>tags: <post-tags :tags="post.tags"></post-tags> </span>
+					<span class=tags> <post-tags :tags="post.tags"></post-tags> </span>
 				</div>
 				</li>
 
