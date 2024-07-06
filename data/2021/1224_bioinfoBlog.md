@@ -197,7 +197,7 @@ cookbook-r 统计学检验 http://www.cookbook-r.com/Statistical_analysis/Freque
 逻辑回归 https://www.jianshu.com/p/559da5aac1fd
 
 
-
+Xinming Tu https://xinmingtu.cn/
 
 
 

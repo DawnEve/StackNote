@@ -1,6 +1,6 @@
 //MyPost.js
-import PostTags from "../components/PostTags.js"
-import MyCategory from "../components/MyCategory.js"
+import PostTags from "../components/PostTags.vue.js"
+import MyCategory from "../components/MyCategory.vue.js"
 
 export default {
 	inject:['categories', 'posts'],

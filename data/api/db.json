@@ -10,6 +10,23 @@
 // 规范： 1. 使用标签 前沿 表示文献汇总
 
 
+		{
+			year: 2024,
+			title:"0619-scRNA-seq-ML-DL.md",
+			caption: "单细胞测序与机器学习、深度学习",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+		{
+			year: 2024,
+			title:"0604-APA.June.2024.md",
+			caption: "文献 APA papers: 2024.04",
+			category:1,
+			tags: ['APA'],
+		},
+
 
 		{
 			year: 2024,

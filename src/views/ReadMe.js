@@ -1,4 +1,4 @@
-import MyMarkdownFile from "../components/MyMarkdownFile.js"
+import MyMarkdownFile from "../components/MyMarkdownFile.vue.js"
 
 export default{
 	template:`
