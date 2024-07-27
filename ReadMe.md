@@ -36,7 +36,8 @@ StackNote require a modern web browser with support for Javascript ECMAScript 20
     |-Home.js
     |-MyPost.js
   |-components/
-    |-PostTags.js
+    |-PostTags.vue.js
+    |-ChickenSoup.vue.js
 |data/  # User data here, editable
   |-api
     |-db.json # a json file, like a DataBase of posters, and categories;
@@ -167,7 +168,7 @@ They are static and fixed in /index.html.
 
 
 ## 6.How to add style tag in `template`?
-As shown in components/ChickenSoup.js
+As shown in components/ChickenSoup.vue.js
 ```
 	<component is="style" scoped>
 	    pre.box{font-weight:bold; color:#bbb;}

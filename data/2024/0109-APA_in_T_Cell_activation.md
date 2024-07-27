@@ -166,12 +166,57 @@ Fig.2
 
 
 
+
+
 # CD8 细胞的命运决定(Cell 2018)
 > https://pubmed.ncbi.nlm.nih.gov/29326266/
+
+
 
 
 # 中性粒细胞及应激 动态(nature immunology, 2022)
 > Cellular and transcriptional dynamics of human neutrophils at steady state and upon stress
 > https://www.nature.com/articles/s41590-022-01311-1
+
+
+
+
+# 驻留、中央、效应记忆CD4 T细胞在 感染或疫苗后 的保护性免疫 (Immunology. 2018)
+> The roles of resident, central and effector memory CD4 T-cells in protective immunity following infection or vaccination
+> https://onlinelibrary.wiley.com/doi/full/10.1111/imm.12929
+> https://pubmed.ncbi.nlm.nih.gov/29570776/
+> Centre for Immunobiology, Institute of Infection, Immunity and Inflammation, University of Glasgow, Glasgow, UK.
+
+In order to harness the diverse protective effects of memory CD4 T-cells, we need to understand how memory CD4 T-cells are generated and how they protect the host.
+
+Currently we have limited understanding of the priming signals that lead to the generation of multifunctional memory cells. This information will be key to the development of more effective vaccines capable of producing protective multifunctional CD4 T-cells.
+
+
+
+
+
+# (综述) CD4+ T cell memory(nature immunology, 2023)
+> https://www.nature.com/articles/s41590-023-01510-4
+
+Nevertheless, transcriptional profiling of human CD69+CD4+ T cells from tissues identified a partial overlap with mouse CD8+ TRM cells107. Combined TCR and single-cell RNA sequencing revealed expanded CD4+ T cell clones uniquely present in NLTs, providing further opportunities to refine TRM cell signatures130.
+
+> 130.Poon, M. M. L. et al. Tissue adaptation and clonal segregation of human memory T cells in barrier sites. Nat. Immunol. 24, 309–319 (2023).
+
+
+
+
+
+# T mem 响应快，分裂慢 (PLoS Pathog. 2008)
+> Tentative T Cells: Memory Cells Are Quick to Respond, but Slow to Divide
+> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2275797/
+> Molecular and Integrative Neurosciences Department, The Scripps Research Institute, La Jolla, California, United States of America
+
+Although memory cells can detect, and respond to, virus infection **within a few hours**, their proliferation did not begin until **∼3 days** after infection, and occurred simultaneously in all anatomical compartments.
+
+- For the first two days there was no loss of CFSE, and on day 3 there was limited cell division; 24 hours later, the cells had divided beyond the limits of detection of the CFSE assay (>7–8 cell divisions).
+- CD4+ memory T cells do not initiate division until 3–4 days after infection
+
+
+
 
 

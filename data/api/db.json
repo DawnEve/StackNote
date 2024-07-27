@@ -12,6 +12,31 @@
 
 		{
 			year: 2024,
+			title:"0722-FOXO1-memory-CAR-T.md",
+			caption: "CAR T细胞记忆性的调控子是FOXO1",
+			category:1,
+			tags: ['CAR-T', 'T细胞'],
+		},
+
+		{
+			year: 2024,
+			title:"0720-story-mother.md",
+			caption: "小说《世上唯一在等你的人》",
+			category:4,
+			tags: ['小说'],
+		},
+
+		{
+			year: 2024,
+			title:"0706-Immune-Checkpoint-Blockade.md",
+			caption: "免疫检查点药物的响应-耐受机制",
+			category:1,
+			tags: ['Immune'],
+		},
+
+
+		{
+			year: 2024,
 			title:"0619-scRNA-seq-ML-DL.md",
 			caption: "单细胞测序与机器学习、深度学习",
 			category:1,
@@ -22,7 +47,7 @@
 		{
 			year: 2024,
 			title:"0604-APA.June.2024.md",
-			caption: "文献 APA papers: 2024.04",
+			caption: "文献 APA papers-Tandem pA 位点怎么算: 2024.04",
 			category:1,
 			tags: ['APA'],
 		},
