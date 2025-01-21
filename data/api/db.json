@@ -12,6 +12,14 @@
 
 		{
 			year: 2024,
+			title:"0816-APA-papers.Aug.2024.md",
+			caption: "APA papers: Aug. 2024",
+			category:1,
+			tags: ['APA'],
+		},
+
+		{
+			year: 2024,
 			title:"0722-FOXO1-memory-CAR-T.md",
 			caption: "CAR T细胞记忆性的调控子是FOXO1",
 			category:1,

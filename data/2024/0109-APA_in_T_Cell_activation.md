@@ -8,6 +8,52 @@ https://pubmed.ncbi.nlm.nih.gov/?term=alternative+polyadenylation+T+cell+activat
 
 
 
+# T细胞激活诱导的3UTR表达，是空间和信号依赖的(Scientific Reports, 2024)
+> Alternative 3′UTR expression induced by T cell activation is regulated in a temporal and signal dependent manner
+> https://www.nature.com/articles/s41598-024-61951-1
+> Department of Biochemistry and Biophysics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA
+
+T细胞激活后大部分基因的3UTR缩短，但是富集到 mTOR 通路的3UTR增长。
+Most APA changes upon T cell activation involve 3′UTR shortening, although a set of genes enriched for function in the mTOR pathway exhibit 3′UTR lengthening.
+
+延长T细胞激活时间，上调APA核心因子可能诱导3UTR缩短。在细胞增殖和上调APA核心因子之前，这一显著的APA程序改变会发生。
+While upregulation of the core polyadenylation machinery likely induces 3′UTR shortening following prolonged T cell stimulation; a significant program of APA changes occur prior to cellular proliferation or upregulation of the APA machinery.
+
+motif分析显示，至少一个APA子集的改变是RBM3驱动的。
+Motif analysis suggests that at least a subset of these early changes in APA are driven by upregulation of RBM3, an RNA-binding protein which competes with the APA machinery for binding. 
+
+
+Together this work expands our understanding of the impact and mechanisms of APA in response to T cell activation and suggests new mechanisms by which APA may be regulated.
+
+
+## data
+
+To define the global landscape of APA upon T cell stimulation, we re-analyzed our previously generated RNA-seq data from (CD45R0−) CD4+ primary T cells from 3 healthy human donors (GSE135118).
+
+We quantified APA using `DaPars` where we compared naïve primary T cells from the 3 donors to ex vivo stimulated T cells for 8 h or 48 h with anti-CD3 or co-stimulation with anti-CD3 and anti-CD28.
+
+
+
+- https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135118 27 samples(3个人，9样品/人[0h,8h,48h]*[naive, CD28, CD3+CD28])
+
+
+
+原始数据是这个文章：
+
+> Blake D, Radens CM, Ferretti MB, Gazzara MR et al. Alternative splicing of apoptosis genes promotes human T cell survival. Elife 2022 Oct 20;11. PMID: [36264057](https://pubmed.ncbi.nlm.nih.gov/36264057/)
+
+
+共三个人，年龄和性别分别是：
+```
+DONOR_AGE	sex
+46	male
+32	male
+26	female
+```
+
+
+
+
 
 
 
@@ -217,6 +263,137 @@ Although memory cells can detect, and respond to, virus infection **within a few
 - CD4+ memory T cells do not initiate division until 3–4 days after infection
 
 
+
+
+
+
+
+# 【实验：诱导分化】CD4+ T-Cell Differentiation In Vitro (Methods Mol Biol. 2020)
+> https://pubmed.ncbi.nlm.nih.gov/31933201/
+
+The following protocols describe the methods to induce naïve CD4+ T-cell differentiate into `Th1, Th2, Th17 and Treg` by activating TCR, together with the different cytokines and blocking antibodies in vitro. The efficiency of T helper cell differentiation is examined by detecting the expression of hallmark cytokines and transcription factors.
+
+
+
+
+
+# T细胞激活 + scRNA-seq:  lungs, lymph nodes, bone marrow and blood (Nat Commun. 2019)
+> Single-cell transcriptomics of human T cells reveals tissue and activation signatures in health and disease
+> https://pubmed.ncbi.nlm.nih.gov/31624246/
+
+Here, we use single cell RNA-sequencing (scRNA-seq) to define the heterogeneity of `human T cells isolated from lungs, lymph nodes, bone marrow and blood`, and their functional responses following `stimulation`. 
+
+
+Through analysis of >50,000 resting and activated T cells, we reveal tissue T cell signatures in mucosal and lymphoid sites, and lineage-specific activation states across all sites including distinct effector states for CD8+ T cells and an interferon-response state for CD4+ T cells.
+
+
+
+
+
+
+# (综述)T激活后的转录后修饰 (Eur J Immunol. 2021)
+> T cells at work: How post-transcriptional mechanisms control T cell homeostasis and activation
+> https://pubmed.ncbi.nlm.nih.gov/34180545/
+
+Protective T cell responses rely on the concerted production of effector molecules such as cytolytic mediators, `granzymes, and perforins`, as well as `pro-inflammatory cytokines and chemokines`. 
+
+
+Alternative polyadenylation is yet another `post‐transcriptional mechanism` involved in regulation of gene expression through mRNA 3’UTR by creating alternative 3’UTR isoforms. Global analysis of alternative 3’UTR isoforms in both human and murine quiescent T cells showed higher expression of longer 3’UTR isoforms compared to activated T cells [86, 87], because quiescent T cell preferentially use the distal polyadenylation sites. Extended 3’UTR isoforms contain more target sites for miRNAs and RBPs, which can lead to reduced protein expression in quiescent T cells, or even to functional diversity as was shown in human embryonic kidney HEK293 cells [86, 88, 89, 90, 91].
+
+> 86. Sandberg, R., Neilson, J. R., Sarma, A., Sharp, P. A. and Burge, C. B., Proliferating cells express mRNAs with shortened 3′ untranslated regions and fewer microRNA target sites. Science. 2008. 320: 1643–1647. [PMC free article] [PubMed] [Google Scholar]
+> 87. Gruber, A. R., Martin, G., Müller, P., Schmidt, A., Gruber, A. J., Gumienny, R., Mittal, N. et al., Global 3′ UTR shortening has a limited effect on protein abundance in proliferating T cells. Nat. Commun. 2014. 5: 1–10. [PubMed] [Google Scholar]
+
+> 88. Domingues, R. G., Lago‐Baldaia, I., Pereira‐Castro, I., Fachini, J. M., Oliveira, L., Drpic, D., Lopes, N. et al., `CD5` expression is regulated during human T‐cell activation by alternative polyadenylation, PTBP1, and miR‐204. Eur. J. Immunol. 2016 Jun 1;46: 1490–1503. [PMC free article] [PubMed] [Google Scholar]
+> 89. Chuvpilo, S., Zimmer, M., Kerstan, A., Glöckner, J., Avots, A., Escher, C., Fischer, C. et al., Alternative polyadenylation events contribute to the induction of `NF‐ ATc` in effector T cells. Immunity. 1999. 10: 261–269. [PubMed] [Google Scholar]
+> 90. Berkovits, B. D. and Mayr, C., Alternative 3′ UTRs act as scaffolds to regulate `membrane protein localization`. Nature. 2015. 522: 363–367. [PMC free article] [PubMed] [Google Scholar]
+> 91. Ma, W. and Mayr, C., `A membraneless organelle` associated with the endoplasmic reticulum enables 3’UTR‐mediated protein‐protein interactions. Cell. 2018. 175: 1492–1506.e19. [PMC free article] [PubMed] [Google Scholar]
+
+
+
+
+
+
+
+
+
+# CD4+ T激活过程中，免疫疾病SNP调控的动态基因表达(Nat Genet. 2022)
+> Immune disease risk variants regulate gene expression dynamics during CD4+ T cell activation
+> 1.Wellcome Sanger Institute, Wellcome Genome Campus, Cambridge, UK.
+> 2.Open Targets, Wellcome Genome Campus, Cambridge, UK.
+> https://pubmed.ncbi.nlm.nih.gov/35618845/
+
+We profiled `655,349 CD4+ T cells`, capturing transcriptional states of `unstimulated cells and three time points` of cell activation in 119 healthy individuals.
+
+This identified 38 cell clusters, including transient clusters that were only present `at individual time points` of activation. 
+
+
+
+## **Data availability**
+
+The raw scRNA-seq data study have been deposited in the European Genome-phenome Archive with accession number [EGAD00001008197](https://ega-archive.org/datasets/EGAD00001008197). Genotypes have been deposited in the European Genome-phenome Archive with accession number [EGAD00010002291](https://ega-archive.org/datasets/EGAD00010002291). Processed single-cell data and summary statistics are available at https://trynkalab.sanger.ac.uk.
+
+- https://ega-archive.org/datasets/EGAD00001008197
+We isolated `naive and memory CD4+ T cells from 119 healthy individuals` and stimulated the cells using `anti-CD3/anti-CD28 coated beads`. We profiled gene expression using single cell RNA-seq (10X-Genomics 3’ v2 kit) at `resting state and three time points of activation (16h, 40h and 5 days post stimulation)` and mapped expression quantitative trait loci.
+
+
+- 167 samples
+- DAC: EGAC00001000205
+- Technologies: Illumina HiSeq 4000, Illumina MiSeq
+
+
+
+- https://ega-archive.org/datasets/EGAD00010002291
+Blood samples were obtained from 119 healthy individuals of British ancestry. Genomic DNA was isolated from a suspension of PBMCs from each individual using a DNA isolation kit (Qiagen). Genotyping was then performed using the Infinium CoreExome-24 (v1.3) chip (Illumina).
+
+
+- 09/03/2022
+- 127 samples
+- DAC: EGAC00001000205
+- Technology: Infinium CoreExome-24 (v1.3) chip (Illumina)
+
+
+---
+
+- 单细胞可视化结果： https://trynkalab.sanger.ac.uk/
+- EGA 账号申请： https://ega-archive.org/register/
+
+
+## 评论
+
+- https://www.nature.com/articles/s41588-022-01067-2
+
+重点是3个ref及对应的一句话评论。
+
+
+
+
+
+
+## 软件: cellSNP 单细胞基因型确定
+
+- https://github.com/single-cell-genetics/cellSNP
+- 新版本用C语言实现 https://academic.oup.com/bioinformatics/article/37/23/4569/6272512?login=false
+
+使用 pysam / htslib ，结果和 samtools/bcftools mpileup 很像。
+
+Here, we introduce a software, cellsnp-lite, implemented in C/C++ and based on well-supported package htslib, for genotyping in single-cell sequencing data for both droplet and well-based platforms. 
+
+可用于混合单细胞测序中的供者基因型推断：
+
+cellSNP aims to pileup the expressed alleles in single-cell or bulk RNA-seq data, which can be directly used for `donor deconvolution` in multiplexed single-cell RNA-seq data, particularly with `vireo`, which `assigns cells to donors and detects doublets`, even without genotyping reference.
+
+
+
+## 软件 Vireo: Bayesian demultiplexing of pooled single-cell RNA-seq data without genotype reference
+
+根据混合的 RNA-seq 数据用贝叶斯拆分。
+
+- https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1865-2
+
+
+genetic variants that segregate between the samples in the pool have been proposed as `natural barcode` for cell demultiplexing. 
+
+To address this, we here present Vireo, a computationally efficient `Bayesian model to demultiplex single-cell data from pooled experimental designs`. 
 
 
 
