@@ -94,10 +94,15 @@ Style ref:
 .markdown dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}
 .markdown dl dd{padding:0 16px;margin-bottom:16px}
 
-.markdown blockquote{padding: 20px 10px;margin: 15px 0;border: 1px solid #eee;border-left: 10px solid #eee;background: #fff;}
+.markdown blockquote{padding: 20px 10px;margin: 15px 0;border: 1px solid #eee;
+	border-left: 10px solid #eee;
+	background: #fff;
+}
 .markdown blockquote>:first-child{margin-top:0}
 .markdown blockquote>:last-child{margin-bottom:0}
-.markdown blockquote p {text-indent: 0;}
+.markdown blockquote p {text-indent: 0;
+	font: 20px / 1.7 Georgia, 'Arial', 'Microsoft YaHei';
+}
 
 .markdown table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}
 .markdown table th{font-weight:bold}
@@ -139,7 +144,10 @@ Style ref:
 .markdown kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:solid 1px #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}
 
 /*fix other css style files*/
-.markdown blockquote{background: white; font-size: unset;}
+.markdown blockquote{
+	/*background: white;*/
+	font-size: unset;
+}
 
 
 .markdown li, .markdown p {

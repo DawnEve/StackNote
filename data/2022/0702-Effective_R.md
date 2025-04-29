@@ -238,5 +238,5 @@ function (x)
 # 参考: 写的过程中发现的资料。
 
 - [Efficient R programming @github](https://csgillespie.github.io/efficientR/)
-	https://csgillespie.github.io/efficientR/programming.html
+	* https://csgillespie.github.io/efficientR/programming.html
 
