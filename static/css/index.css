@@ -181,8 +181,8 @@ main > nav li a{
 .content p{
     /*line-height: 1.8;
     tab-size: 4;
-	*/
     font: 20px/1.7 Georgia,'Arial','Microsoft YaHei';
+    */
     word-wrap: break-word;
     /*margin-bottom: 1em!important;*/
 }
@@ -396,10 +396,16 @@ main > nav li a{
 .indent_5{text-indent: 8em;}
 .indent_6{text-indent: 10em;}
 
-#side_contents a{text-decoration: none; cursor: pointer;}
+#side_contents a{text-decoration: none; cursor: pointer;
+	display: block;
+}
 #side_contents a .text_menu{color:#ccc;}
 #side_contents a .text_menu span{color:#000/*#009a61 DB784D */; }
 /*当前行*/
+#side_contents a.cur {
+    border-left: 2px solid #0096ff;
+	background: #eee;
+}
 #side_contents a.cur .text_menu {color:#0096ff; font-weight:bold;}
 #side_contents a.cur .text_menu span{color:#0096ff;}
 /*hover then highlight number*/

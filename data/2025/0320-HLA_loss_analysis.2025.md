@@ -97,7 +97,7 @@ Allo-HSCT后白血病复发的最佳治疗方法是一个备受争议的问题�
 - 软件 or 代码: 没提供
 
 
-## 基于 NGS 的分析方法
+## * 基于 NGS 的分析方法
 
 选择 病人-供者 错配的位点。
 NGS-based HLA typing was selectively performed for the loci that encompassed the patient–donor HLA mismatches. 
@@ -143,6 +143,7 @@ For limit of detection (LOD), serial dilution samples of five HLA gene segments 
 > Detecting HLA loss of heterozygosity within a standard diagnostic sequencing workflow for prognostic and therapeutic opportunities
 > https://pubmed.ncbi.nlm.nih.gov/39103508/
 > Tempus AI Inc., Chicago, IL, USA.
+> https://www.nature.com/articles/s41698-024-00665-z
 
 - 发起临床试验: https://clinicaltrials.gov/study/NCT04981119
 - 软件or代码: 非商业，需要发邮件要代码。
@@ -194,6 +195,211 @@ by replacing [the germline read depth of the sample]
 尝试解释: https://blog.csdn.net/wangjunliang/article/details/147431339
 
 
+
+
+### 更多描述 
+
+(1)Optitype 确定基因型。
+The sample’s germline genotype is determined using the open-source tool Optitype36, which displays an accuracy ≥95% both in benchmark studies and our own experiments. 
+
+测序reads比对到自定义ref上。
+Candidate reads are aligned to the custom reference. 
+
+胚系比对到normal样品上，验证 HLA 基因型。
+种系与正常样本的比对用于验证作为输入的HLA基因型。
+The alignment of the germline to normal sample is used to verify the HLA genotype provided as input. 
+
+
+如果检测到任何具有40%支持reads且变异等位基因分数大于75%的变体，则认为输入的基因型不正确，测试将返回错误。
+If any variants with >40 supporting reads and a variant allele fraction superior to 75% are detected, the input genotype is considered to be incorrect and the test will return an error. 
+
+
+In this validation study, however, there were no instances of incorrect input genotypes and thus no errors were returned. 
+
+(2)过滤：完整配对的基因，编辑距离==0的保留。
+Once the genotype is confirmed, a strict read filtering is applied on both the tumor and germline alignments, where only correctly paired reads mapping exclusively to one allele with an edit distance of 0 are conserved. 
+
+BEDTools用于确定每个 allele 的每个位置的 read 深度。
+BEDTools37 is then used to determine the read depth at every position for each allele. 
+
+
+好复杂的一句话：
+正常面板的应用是将样本的种系读取深度替换为我们面板中具有相同基因型的样本的中位数读取深度。
+The panel of normals is applied by replacing the germline read depth of the sample with the median read depth of samples with the same genotype in our panel. 
+
+这些特征来源于每个基因组位置的读取深度，并计算每个等位基因在肿瘤和正常样本中读取深度的对数比以及b等位基因分数（BAF）。
+The features are derived from read depth at each genomic position and for each allele the log ratio of the read depth in the tumor and normal sample and the B-allele fraction (BAF) are calculated.
+
+
+
+
+(3)覆盖度筛选，位点数筛选，提取特征(log Read Depth 的差值)
+
+在tumor和normal样本中都>40x才被认为高覆盖度，用于产生 样本级特征
+Only positions with >40X read depth in both alleles in both tumor and normal samples are sufficient and considered to be “high-coverage”, which are used to generate the sample-level features.
+
+低于300个高覆盖度位点的样本，因为覆盖度低，不进行分类。
+Samples with fewer than 300 high-coverage positions do not receive a classification due to low coverage.
+
+样本级 特征是：1)中位数BAF比例（tumor中BAF 比上 normla中BAF）
+The sample-level features are the median BAF ratio (ratio of the BAF in the tumor to the BAF in the normal), 
+
+2)read深度的对数比之差的中位数（logR diff）：猜测是 median( log(R_T) - log(R_N) )
+the median of the difference between the log ratio of the read depth (logR diff), 
+
+3)在给定的肿瘤纯度下，logR diff与该特征的期望值之差（比率期望差）。
+and the difference between logR diff to the expected value of that feature at the given tumor purity (ratio expected difference).
+
+
+
+
+(4) 特征提取后，2个logistic回归模型。
+Once features are generated, two logistic regression models are applied. 
+
+输入是：非靶向allele的BAF， log ratio的差，肿瘤纯度。
+The subclonal LOH detection model takes the BAF of the non-targeted allele, the difference between the log ratios, and tumor purity as input. 
+
+等位基因不平衡的概率低于55%的样本被归类为稳定。
+Samples with a probability of allelic imbalance inferior to 55% are classified as stable. 
+
+剩余样本输入给 克隆模型。
+The remaining samples are then fed into the clonal model. 
+
+输入是：
+The clonal LOH detection model takes the BAF of the targeted allele, ratio expected difference, and tumor purity as input. 
+
+克隆性等位基因失衡概率小于50%的样本被归类为亚克隆性等位基因失衡；
+Samples with a probability of clonal allelic imbalance inferior to 50% are classified as subclonal allelic imbalance; 
+
+克隆性等位基因失衡概率大于50%的样本被归类为克隆性等位基因失衡。
+samples with a probability of clonal allelic imbalance superior to 50% are classified as clonal allelic imbalance. 
+
+这两个模型都是在人工标记的数据上训练的。
+Both models were trained on manually labeled data. 
+
+最后，该算法确定克隆等位基因失衡是LOH还是扩增。
+Finally, the algorithm determines whether a clonal allelic imbalance is an LOH or an amplification.
+
+
+
+
+
+(5)
+Once segmentation of the genome has been performed and copy number values have been assigned to every segment using our proprietary genome-wide copy number variation (CNV) calling algorithm, the segment overlapping with the HLA locus is selected. If this segment is determined to be a gain (major > 1) and does not present signs of LOH (minor > 0), the sample is classified as having an amplification of the HLA locus. Otherwise, the subclonal or clonal loss call is maintained. If no segment fully overlaps with the HLA locus, we use the gain/loss status of the segment either to the left or the right of the HLA locus to determine whether this locus shows signs of allelic imbalance (major =/= minor). If both segments to the right and left show no signs of allelic imbalance, the loss call is maintained.
+
+
+
+
+
+
+# 容易发生HLA-loss的基因型 (Blood. 2021)
+> https://pubmed.ncbi.nlm.nih.gov/34724566/
+> HLA associations, somatic loss of HLA expression, and clinical outcomes in immune aplastic anemia
+> Hematology Branch, National Heart, Lung, and Blood Institute, National Institutes of Health, Bethesda, MD.
+
+Most frequently affected was `HLA-B*14:02, followed by HLA-A*02:01, HLA-B*40:02, HLA-B*08:01, and HLA-B*07:02. HLA-B*14:02, HLA-B*40:02, and HLA-B*07:02` were also overrepresented in AA. 
+
+
+* Immune aplastic anemia (AA) 免疫再生障碍性贫血
+* Somatic loss of HLA class I alleles may result from copy-neutral chromosome 6p loss of heterozygosity (6p LOH)11,16,17 or acquired inactivating HLA gene mutations.18,19
+
+
+
+## 比对方法 hla-mapper
+
+To precisely detect low-frequency mutations, we used `hla-mapper` (version 2.3),32 and used thresholds defined by base-position error rates in T-cell samples, as previously published for non-HLA genes.33,34 
+
+> 32.Castelli EC, Paz MA, Souza AS, Ramalho J, Mendes-Junior CT. Hla-mapper: an application to optimize the mapping of HLA sequences produced by massively parallel sequencing procedures. Hum Immunol. 2018;79(9):678-684. [DOI] [PubMed] [Google Scholar]
+
+
+
+
+
+
+
+
+
+
+# LOHHLA (Loss Of Heterozygosity in Human Leukocyte Antigen) algorithm(Cell. 2017)
+> Allele-Specific HLA Loss and Immune Escape in Lung Cancer Evolution
+> 1Cancer Research UK Lung Cancer Centre of Excellence, University College London Cancer Institute, Paul O’Gorman Building, 72 Huntley Street, London WC1E 6BT, UK
+> https://pmc.ncbi.nlm.nih.gov/articles/PMC5720478/
+> https://pubmed.ncbi.nlm.nih.gov/29107330/
+
+- Code: https://github.com/mskcc/lohhla
+- Fig1A 算法示意图。
+
+
+As input, LOHHLA requires: `a tumor and germline BAM`; `patient-specific HLA calls`, either predicted by an HLA inference tool (e.g., `POLYSOLVER` [Shukla et al., 2015] or `Optitype` [Szolek et al., 2014]) or through HLA `serotyping`; the `HLA fasta file` location; purity and ploidy estimates. (For implementation of LOHHLA in this manuscript, ASCAT was used to estimate tumor purity and ploidy, while HLA inference was performed using POLYSOLVER, see below.)
+
+
+To call HLA LOH, LOHHLA relies upon five computational steps:
+
+## Step 1: extract HLA reads | 1.提取HLA reads. 
+肿瘤和配系reads，比对到 chr6 及其contig的reads提取出来。非配对的去掉。输出转为fastaq。
+
+First, tumor and germline reads that map to the HLA region of the genome (chr6:29909037-29913661, chr6:31321649-31324964, and chr6:31236526-31239869) as well as chromosome 6 contigs (chr6_cox_hap2, chr6_dbb_hap3, chr6_mann_hap4, chr6_mcf_hap5, chr6_qbl_hap6, chr6_ssto_hap7) are extracted using samtools view. Unpaired mates from this step are removed and the output is converted to FASTQ format.
+
+
+
+
+## Step 2: create HLA allele specific BAM files | 2.创建HLA 等位基因特异的bam文件
+
+对于病人杂合HLA等位基因的每一个，创建一个病人特异的参考fasta。
+For each of the patient’s heterozygous HLA alleles, a patient-specific reference fasta is created. 
+
+然后用该fasta创建bam文件。比对参数参考文献(2015)，允许read比对到多个等位基因上。
+The FASTQ files generated in the previous step are used to generate HLA specific BAM files,using similar mapping parameters to those previously published that allow for reads to map to multiple HLA alleles (Shukla et al., 2015). 
+
+比对后过滤，比对到不同等位基因的reads去掉，相对于参考HLA等位基因，超过一个插入、删除、错配的reads也删除。
+Post-alignment filtering is subsequently performed such that reads whose mates map to a different allele are discarded, as well as any reads that contain more than one insertion, deletion, or mismatch event compared to the reference HLA allele. 
+
+对于过滤后的 肿瘤/胚系 HLA 等位基因特异的bam文件，使用 samtools mpileup 计算覆盖度。
+For each filtered tumor/germline HLA allele-specific BAM file, coverage is then calculated using samtools mpileup.
+
+
+
+
+## Step 3: determine coverage at mismatch positions between homologous HLA alleles | 3.确定同源HLA等位基因不匹配位置的覆盖率
+
+对于每个HLA基因座，本地相互比对，使用R包 Biostrings。
+For each HLA locus, a local pairwise alignment is performed between the two homologous HLA alleles, using the R Biostrings package.
+
+提取不匹配的位置。
+From the pairwise alignment, all of the mismatch positions between the two homologs are extracted. 
+
+使用步骤2中的覆盖度，计算每个错配点的覆盖度差异。
+The HLA-specific coverage calculated in Step 2 is then used to determine differences in coverage at each of the mismatch positions. 
+
+新建文件，记录每个错配点的覆盖度，统计每个read一次，就是避免跨多个错配点的read重复计数。
+An additional file is also generated containing the coverage at every mismatch position, counting each read only once, as to avoid over-counting reads that span more than one mismatch position.
+
+> 1个read上有多个错配点，这个read只统计一次，那么计数给哪个错配点呢？
+
+
+
+
+## Step 4: obtain HLA specific logR and BAF | 4.获取HLA特异的 logR 和 BAF
+同源基因 150bp/bin，计算覆盖度，logR=肿瘤/正常。
+LogR across each HLA gene is then obtained by binning the coverage across both homologous alleles at 150 base pair intervals, for both tumor and normal.
+
+每个bin，tumor/normal覆盖度比值 * 倍增系数M，该值是 胚系中uniq比对/tumor区域uniq比对数。
+For each bin, the tumor/normal coverage ratio is multiplied by the multiplication factor, M, corresponding to number of unique mapped reads in the germline, divided by the number of unique mapped reads in the tumor region.
+
+每个SNV位点，BAF= allele1/(allele1 + allele2) 的覆盖度。
+The BAF, corresponding to the coverage of HLA allele 1 divided by the coverage of HLA allele 1 + coverage of HLA allele 2, is subsequently calculated at each polymorphic site.
+
+
+## Step 5: determine HLA haplotype specific copy number | 5.确定HLA单倍型特异性拷贝数
+Finally, at each polymorphic site, an estimate of the major and minor allele copy number is obtained using the following equations:
+
+接下来2个公式： 略
+
+where 𝜌 = tumor purity and 𝜓 = tumor ploidy, which are input at the start. The logR value from the corresponding bin in which the polymorphic site was found to reside is used as well as the BAF of the polymorphic site.
+
+For each bin, the median Allele 1 and Allele 2 copy number is then determined. To estimate copy number of Allele 1, the median value across bins is calculated. Likewise, to estimate the copy number of Allele 2, the median value across bins is calculated.
+
+A copy number < 0.5, is classified as subject to loss, and thereby indicative of LOH. To avoid over-calling LOH, we also calculate a p value relating to allelic imbalance for each HLA gene. This p value corresponds to the pairwise difference in logR values at mismatch sites between the two HLA homologs, adjusted to ensure each sequencing read is only counted once. Allelic imbalance is determined if p < 0.01 using the paired Student’s t-Test between the two distributions.
 
 
 

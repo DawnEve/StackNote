@@ -133,7 +133,7 @@ we conducted a systematic prognostic analysis using over 10,000 samples across 3
 
 
 
-# (Adv Sci (Weinh). 2025, IF=14.3)
+# APApedia 数据库: 小鼠胎儿发育与解剖 (Adv Sci (Weinh). 2025, IF=14.3)
 > The Dynamic Landscape of 3'-UTR Alternative Polyadenylation Across Mouse Fetal Development and Anatomy
 > http://xozhanglab.com/apapedia/
 > Shanghai Key Laboratory of Maternal and Fetal Medicine, Clinical and Translational Research Center of Shanghai First Maternity and Infant Hospital, Frontier Science Center for Stem Cell Research, School of Life Sciences and Technology, Tongji University, Shanghai, 200092, China.
@@ -145,6 +145,67 @@ Changes in polyadenylation site (pAS) usage often operate beyond transcriptional
 
 蛋白 Rbm38 可能限制远端pA位点使用，在脑发育中有3UTR APA 动态变化。
 Intriguingly, brain tissues display complex 3'-UTR APA dynamics during development, potentially regulated by RNA-binding proteins such as Rbm38, potentially impacting 3' UTR extension by restricting distal pAS usage. These APA events are associated with a depletion of conserved miRNA binding sites and an enrichment of transposable elements within alternative 3' UTRs.
+
+
+
+
+
+
+
+
+
+
+# PRMT5 通过抑制近端内含子 pA位点，促进 全长 HTT 的表达（亨廷顿舞蹈症，Huntington's disease (HD)） (Nucleic Acids Res. 2025)
+> PRMT5 promotes full-length HTT expression by repressing multiple proximal intronic polyadenylation sites
+> Department of Medical Biophysics, University of Toronto, Toronto, ON, M5G1L7, Canada.
+> https://pubmed.ncbi.nlm.nih.gov/40304179/
+
+Here, we identify PRMT5 as a novel regulator of HTT messenger RNA (mRNA) splicing and alternative polyadenylation.
+
+This suggests that HTT protein levels may be lowered due to this mechanism. We also detected increasing levels of these truncated HTT transcripts across a series of neuronal differentiation samples, which correlated with lower PRMT5 expression.
+
+
+
+
+
+
+
+
+
+# IGF2BP3 招募 NUDT21 来调控 SPTBN1 的APA，驱动卵巢癌(Ovarian cancer (OC))的进展 (Commun Biol. 2025)
+> IGF2BP3 recruits NUDT21 to regulate SPTBN1 alternative polyadenylation and drive ovarian cancer progression
+> Department of Obstetrics and Gynecology, The Third Affiliated Hospital of Chongqing Medical University, Chongqing, China.
+> https://pubmed.ncbi.nlm.nih.gov/40301554/
+
+Here we identify that the APA regulator NUDT21 is upregulated in OC and promotes malignant progression.
+
+We further demonstrate that IGF2BP3 interacts with NUDT21, which suggests m6A modification could regulate APA processing.
+
+机制: 
+Mechanistically, IGF2BP3, recognizing the m6A-modified site in intron 32 of SPTBN1, recruits NUDT21 to promote the usage of the SPTBN1 proximal polyadenylation site (PAS), thus increasing the generation of short transcripts in OC cells. 
+
+Intriguingly, the SPTBN1 long variant demonstrates tumor-suppressive properties, whereas the short variant enhances oncogenic activity in OC.
+
+Subsequently, we illustrate that the long isoform inhibits tumor growth and metastasis by binding to CDK1 and blocking the G2/M phase of the cell cycle.
+
+
+In conclusion, this study uncovers a previously unrecognized regulatory mechanism in OC, which could provide potential therapeutic strategies for OC.
+
+
+
+
+
+
+
+# SLC27A5 抑制 干细胞，在肝细胞癌，通过诱导 METTL14 的APA (Genes Dis. 2024)
+
+> SLC27A5 inhibits cancer stem cells by inducing alternative polyadenylation of METTL14 in hepatocellular carcinoma
+> Department of Infectious Diseases, Key Laboratory of Molecular Biology for Infectious Diseases (Ministry of Education), Institute for Viral Hepatitis, The Second Affiliated Hospital, Chongqing Medical University, Chongqing 400016, China.
+> https://pubmed.ncbi.nlm.nih.gov/40290127/
+
+
+
+
 
 
 

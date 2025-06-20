@@ -71,8 +71,8 @@ Style ref:
 }
 
 .markdown p{
-	/*
 	text-indent: 2em;
+	/*
 	display: inline-block;
 	*/
 	text-align: justify;
@@ -101,7 +101,7 @@ Style ref:
 .markdown blockquote>:first-child{margin-top:0}
 .markdown blockquote>:last-child{margin-bottom:0}
 .markdown blockquote p {text-indent: 0;
-	font: 20px / 1.7 Georgia, 'Arial', 'Microsoft YaHei';
+	font: 17px / 1.7 Georgia, 'Arial', 'Microsoft YaHei';
 }
 
 .markdown table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}

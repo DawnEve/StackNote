@@ -12,6 +12,31 @@
 
 		{
 			year: 2025,
+			title:"0612-How_science_technology_engineer_develop.md",
+			caption: "过度强调高水平论文（科学产出）反而抑制了核心技术（工具、方法、仪器）的自主创新‌——科学、技术、工程该怎么协同发展？",
+			category:4,
+			tags: ['思考'],
+		},
+
+
+		{
+			year: 2025,
+			title:"0521-Dark_side_effect_of_human.md",
+			caption: "人性黑暗面的积极与消极作用",
+			category:4,
+			tags: ["人性", '消极'],
+		},
+
+		{
+			year: 2025,
+			title:"0510-Chinese_poetry.md",
+			caption: "中国古诗词欣赏",
+			category:4,
+			tags: ['诗词'],
+		},
+
+		{
+			year: 2025,
 			title:"0320-HLA_loss_analysis.2025.md",
 			caption: "HLA loss 分析的意义和方法",
 			category:1,
@@ -781,7 +806,7 @@
 			title:"0513-last_chapter.md",
 			caption: "《明朝那些事儿》最后一节",
 			category:4,
-			tags: [],
+			tags: ['思考'],
 		},
 
 		{
