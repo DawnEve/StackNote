@@ -21,14 +21,6 @@
 
 		{
 			year: 2025,
-			title:"0521-Dark_side_effect_of_human.md",
-			caption: "人性黑暗面的积极与消极作用",
-			category:4,
-			tags: ["人性", '消极'],
-		},
-
-		{
-			year: 2025,
 			title:"0510-Chinese_poetry.md",
 			caption: "中国古诗词欣赏",
 			category:4,

@@ -1,7 +1,9 @@
 
 # HLA loss 的意义
 
-## HLA-错配造血细胞移植后复发患者的HLA丢失及检测
+
+
+## HLA-错配造血细胞移植后复发患者的HLA丢失及检测(IF=3.2)
 
 > Review: HLA loss and detection in the setting of relapse from HLA-mismatched hematopoietic cell transplant
 > Hum Immunol. 2022
@@ -86,7 +88,78 @@ Allo-HSCT后白血病复发的最佳治疗方法是一个备受争议的问题�
 
 
 
-# 部分错配型供者移植后 HLA loss 患者的临床特征和预后分析 (Cell Transplant. 2022)
+# HLA loss 是HLA整个单倍体loss了吗？(Human Immunology, 2022, IF=2.7)
+> Review: HLA loss and detection in the setting of relapse from HLA-mismatched hematopoietic cell transplant
+> St. Jude Children’s Research Hospital, Department of Pathology, MS 250, 262 Danny Thomas Place, Memphis, TN 38105, USA
+> https://www.sciencedirect.com/science/article/abs/pii/S0198885922000520
+> https://pubmed.ncbi.nlm.nih.gov/35287976/
+
+
+基因组HLA loss
+Genomic loss of HLA has been reported in 30–40% of solid tumors, and in a wide variety of tumor types [8], [9], [10], [11], [12], [13], [14], [15]. **The entire chromosome 6 may be lost, or small- or large-scale deletions may occur in the HLA region, resulting in loss of one HLA allele, several alleles, or entire haplotypes**. Copy neutral (cn)LOH with acquired uniparental disomy (aUPD), describes deletions spanning the short arm of chromosome 6p, followed by replication of the remaining chromosome by the cellular machinery.
+
+转录组HLA loss
+In contrast to genomic loss, HLA loss from transcriptional down regulation can be reversible, affecting genes encoding class I, antigen processing machinery (APM) such as proteasome subunits (low molecular mass protein, LMP2/LMP7) or transporters associated with antigen processing (TAP1/TAP2) [16]. Transcriptional downregulation of HLA may occur by hypermethylation or downregulation of class I transactivators, such as NLRC5 [17].
+
+
+与诊断性移植前样本相比，非共有的、受体特异性HLA单倍型的缺失逆转了同种异体供体T细胞激活、细胞因子释放和复发白血病细胞的杀伤。
+Loss of the unshared, recipient-specific HLA haplotype reversed allogeneic donor T cell activation, cytokine release, and killing of relapsed leukemic cells as compared to that measured with diagnostic pre-transplant samples.
+
+HLA loss 型复发可能发生在“晚期”复发，HCT时疾病进展时更常见。
+HLA loss relapse was more likely to occur in “late” relapses [27], and more common in those with active disease at the time of HCT, a trend also observed in other studies in patients with multiple lines of pre-treatment prior to HCT [32]. 
+
+
+8% 复发型MMUD和病人特异型HLA loss相关。
+脐带血移植中复发的0个有HLA loss。
+Although Crucitti [27] and others [35] did not observe HLA loss in MMUD HCT, a larger, multi-center study [36] found that overall 8% of relapses in MMUD (12% of MMUD and 4% of 10/10 MUD mismatched only for DPB1) were associated with recipient-specific HLA loss. The same study found zero instances of HLA loss in relapse after umbilical cord (UCB) HCT out of 47 evaluable AML relapse cases.
+
+
+
+
+
+
+
+
+
+# HLA loss 在不同基因有不同的loss率(Blood Adv, 2019, IF=7.28)
+> Recurrent genetic HLA loss in AML relapsed after matched unrelated allogeneic hematopoietic cell transplantation
+> https://pubmed.ncbi.nlm.nih.gov/31324640/
+> https://ebertlab.dana-farber.org/uploads/1/4/1/1/141110874/jan_blood_adv_2019.pdf
+> 1.Department of Pathology, Brigham and Women's Hospital, Harvard Medical School, Boston, MA.
+> 8.Department of Medical Oncology, Dana-Farber Cancer Institute, Harvard Medical School, Boston, MA.
+
+![fig2](data/2025/images/HLA-Loss.png)
+
+Figure 2. HLA loss at posttransplantation relapse. (A-C) B allele frequency of mismatched SNPs for each matched class 1 HLA gene in pretransplantation (gray) or relapse (red) specimens (left) and copy-number analysis of chromosome 6p (right).
+(A) The relapse specimen with 20% myeloblast percentage harbors a subtle allelic imbalance of HLA-A (left). Analysis of sorted myeloblasts confirms loss of HLA-A in the relapsed leukemic cells (right).
+(C) The relapse specimen harbors allelic imbalance of HLA-B, which was the result of a 1-Mb deletion spanning HLA-B and HLA-C
+
+
+## TruSight HLA Assign 2.1 software
+
+Paired-end 2x150 base-pair sequencing was performed (Illumina MiSeq), and data analysis was performed using **TruSight HLA Assign 2.1 software.**
+DNA sequencing has been deposited into the Sequence Read Archive (accession PRJNA521319).
+
+- https://support.illumina.com/downloads/trusight-hla-assign-2-1-ruo-software.html
+- 不免费，需要购买许可。
+
+Files Name Type & Size Date
+
+- TruSight HLA Assign 2.1 RUO Software
+	ZIP(7 MB)
+	Jan 3, 2017
+
+- TruSight HLA Assign 2.1 RUO Software Customer Release Notes
+	PDF(< 1 MB)
+	Jan 4, 2017
+
+
+
+
+
+
+
+# 部分错配型供者移植后 HLA loss 患者的临床特征和预后分析 (Cell Transplant. 2022, IF=3.2)
 > Clinical Characteristics and Outcome Analysis for HLA Loss Patients Following Partially Mismatched Related Donor Transplantation Using HLA Chimerism for Loss of Heterozygosity Analysis by Next-Generation Sequencing
 > https://pmc.ncbi.nlm.nih.gov/articles/PMC9178980/
 > Department of Hematology, Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China
@@ -139,7 +212,7 @@ For limit of detection (LOD), serial dilution samples of five HLA gene segments 
 
 
 
-# 在标准诊断测序流程中检测HLA杂合性缺失，为预后和治疗提供机会(NPJ Precis Oncol. 2024)
+# 在标准诊断测序流程中检测HLA杂合性缺失，为预后和治疗提供机会(NPJ Precis Oncol. 2024, IF=6.8)
 > Detecting HLA loss of heterozygosity within a standard diagnostic sequencing workflow for prognostic and therapeutic opportunities
 > https://pubmed.ncbi.nlm.nih.gov/39103508/
 > Tempus AI Inc., Chicago, IL, USA.
@@ -320,6 +393,42 @@ To precisely detect low-frequency mutations, we used `hla-mapper` (version 2.3),
 
 
 
+
+# HLA Loss 和 乳腺癌 (NC, 2024)
+> Converging and evolving immuno-genomic routes toward immune escape in breast cancer
+> IrsiCaixa, Germans Trias i Pujol University Hospital, Badalona, Spain.
+> https://pubmed.ncbi.nlm.nih.gov/38383522/
+> https://www.nature.com/articles/s41467-024-45292-1#Sec44
+
+乳腺癌进展中的肿瘤和免疫细胞互作还不清楚。
+The interactions between tumor and immune cells along the course of breast cancer progression remain largely unknown. 
+
+研究了多个顺序和并行、多区域肿瘤和血液样品，三阴乳腺癌队列。
+Here, we extensively characterize multiple sequential and parallel multiregion tumor and blood specimens of an index patient and a cohort of metastatic triple-negative breast cancers. 
+
+肿瘤基因组异质性增加，不同分子钟和抗治疗相关，最终导致肿瘤免疫逃逸。
+We demonstrate that a continuous increase in tumor genomic heterogeneity and distinct molecular clocks correlated with resistance to treatment, eventually allowing tumors to escape from immune control. 
+
+TCR多样性随时间丧失，
+TCR repertoire loses diversity over time, leading to convergent evolution as breast cancer progresses. 
+
+
+Although mixed populations of effector memory and cytotoxic single T cells coexist in the peripheral blood, defects in the antigen presentation machinery coupled with subdued T cell recruitment into metastases are observed, indicating a potent immune avoidance microenvironment not compatible with an effective antitumor response in lethal metastatic disease. 
+
+
+Our results demonstrate that the immune responses against cancer are not static, but rather follow dynamic processes that match cancer genomic progression, illustrating the complex nature of tumor and immune cell interactions.
+
+
+## use HLALOH
+
+We employed an accurate HLA typing method for class I17 and investigated the allele-specific HLA loss (HLALOH) and allelic imbalance in sequential and parallel late metastases for HLA class I (Supplementary Fig. 3g). 
+
+
+
+
+
+
+
 # LOHHLA (Loss Of Heterozygosity in Human Leukocyte Antigen) algorithm(Cell. 2017)
 > Allele-Specific HLA Loss and Immune Escape in Lung Cancer Evolution
 > 1Cancer Research UK Lung Cancer Centre of Excellence, University College London Cancer Institute, Paul O’Gorman Building, 72 Huntley Street, London WC1E 6BT, UK
@@ -330,12 +439,19 @@ To precisely detect low-frequency mutations, we used `hla-mapper` (version 2.3),
 - Fig1A 算法示意图。
 
 
+## HLA class I LOH
+
+To determine whether maintenance or loss of HLA were present in multiregion metastases, we used LOHHLA11,16 applying default settings to determine allele-specific copy number of HLA locus. At each heterozygous HLA locus in germline, LOH was inferred if the copy number for one of the two alleles was below 0.5 and log copy ratio difference between the two alleles was statistically significant (PVal_unique <0.05). Allelic imbalance is determined if p < 0.01 using the paired Student’s t-test between the pairwise difference in logR values at mismatch sites between the two HLA homologs, adjusted to ensure each sequencing read is only counted once.
+
+
+## Method Details: LOHHLA (Loss Of Heterozygosity in Human Leukocyte Antigen) algorithm
+
 As input, LOHHLA requires: `a tumor and germline BAM`; `patient-specific HLA calls`, either predicted by an HLA inference tool (e.g., `POLYSOLVER` [Shukla et al., 2015] or `Optitype` [Szolek et al., 2014]) or through HLA `serotyping`; the `HLA fasta file` location; purity and ploidy estimates. (For implementation of LOHHLA in this manuscript, ASCAT was used to estimate tumor purity and ploidy, while HLA inference was performed using POLYSOLVER, see below.)
 
 
 To call HLA LOH, LOHHLA relies upon five computational steps:
 
-## Step 1: extract HLA reads | 1.提取HLA reads. 
+### Step 1: extract HLA reads | 1.提取HLA reads. 
 肿瘤和配系reads，比对到 chr6 及其contig的reads提取出来。非配对的去掉。输出转为fastaq。
 
 First, tumor and germline reads that map to the HLA region of the genome (chr6:29909037-29913661, chr6:31321649-31324964, and chr6:31236526-31239869) as well as chromosome 6 contigs (chr6_cox_hap2, chr6_dbb_hap3, chr6_mann_hap4, chr6_mcf_hap5, chr6_qbl_hap6, chr6_ssto_hap7) are extracted using samtools view. Unpaired mates from this step are removed and the output is converted to FASTQ format.
@@ -343,7 +459,7 @@ First, tumor and germline reads that map to the HLA region of the genome (chr6:2
 
 
 
-## Step 2: create HLA allele specific BAM files | 2.创建HLA 等位基因特异的bam文件
+### Step 2: create HLA allele specific BAM files | 2.创建HLA 等位基因特异的bam文件
 
 对于病人杂合HLA等位基因的每一个，创建一个病人特异的参考fasta。
 For each of the patient’s heterozygous HLA alleles, a patient-specific reference fasta is created. 
@@ -360,7 +476,7 @@ For each filtered tumor/germline HLA allele-specific BAM file, coverage is then 
 
 
 
-## Step 3: determine coverage at mismatch positions between homologous HLA alleles | 3.确定同源HLA等位基因不匹配位置的覆盖率
+### Step 3: determine coverage at mismatch positions between homologous HLA alleles | 3.确定同源HLA等位基因不匹配位置的覆盖率
 
 对于每个HLA基因座，本地相互比对，使用R包 Biostrings。
 For each HLA locus, a local pairwise alignment is performed between the two homologous HLA alleles, using the R Biostrings package.
@@ -379,7 +495,7 @@ An additional file is also generated containing the coverage at every mismatch p
 
 
 
-## Step 4: obtain HLA specific logR and BAF | 4.获取HLA特异的 logR 和 BAF
+### Step 4: obtain HLA specific logR and BAF | 4.获取HLA特异的 logR 和 BAF
 同源基因 150bp/bin，计算覆盖度，logR=肿瘤/正常。
 LogR across each HLA gene is then obtained by binning the coverage across both homologous alleles at 150 base pair intervals, for both tumor and normal.
 
@@ -390,7 +506,7 @@ For each bin, the tumor/normal coverage ratio is multiplied by the multiplicatio
 The BAF, corresponding to the coverage of HLA allele 1 divided by the coverage of HLA allele 1 + coverage of HLA allele 2, is subsequently calculated at each polymorphic site.
 
 
-## Step 5: determine HLA haplotype specific copy number | 5.确定HLA单倍型特异性拷贝数
+### Step 5: determine HLA haplotype specific copy number | 5.确定HLA单倍型特异性拷贝数
 Finally, at each polymorphic site, an estimate of the major and minor allele copy number is obtained using the following equations:
 
 接下来2个公式： 略
@@ -405,4 +521,32 @@ A copy number < 0.5, is classified as subject to loss, and thereby indicative of
 
 
 
+
+
+# JLOH: Inferring loss of heterozygosity blocks from sequencing data (Computational and Structural Biotechnology Journal, 2023)
+> https://www.sciencedirect.com/science/article/pii/S2001037023004178#fig0030
+> Barcelona Supercomputing Centre (BSC-CNS), Plaça Eusebi Güell, 1-3, 08034 Barcelona, Spain
+
+- code: https://github.com/Gabaldonlab/jloh
+
+
+## 比对的影响：bowtie2 及参数
+
+2.5. Testing read mapping impact
+
+using two common mapping software with distinct algorithms: bowtie2 and BLAT [27], [28]. Reads were mapped with both tools with progressively less stringent minimum sequence identity between reads and reference (from 100% to 70% in steps of 5%). In the case of bowtie2 this is controlled by the `--score-min` and --mp parameters, which were set to --score-min L,0.0,-x and --mp 6,2, where x is a fraction of the read length. To achieve the required sequence identity thresholds, the “x” in --score-min was set to 0.0, 0.3, 0.6, 0.9, 1.2, 1.5, and 1.8.
+
+
+## 识别SNP
+
+2.6. Read mapping and variant calling
+
+Simulated short reads were mapped against the reference genomes of their parental species independently. The mapping was conducted with HISAT2 v2.1.0 [29] using very relaxed parameters (--score-min L,0.0,−1.0 --mp 6,2 --rfg 5,3 --rdg 5,3 -I 0 -X 1000). Simulated long reads were mapped with Minimap2 [30] with parameters -H -x map-pb -a. The following steps of the workflow were applied to both short and long reads. The mapping records were filtered and sorted by genome coordinate using samtools v1.15 [31], removing secondary alignments and unmapped reads (-F 0 ×0100 -F 0 ×4). Filtered mapping records were used to call short variants using bcftools v1.15 [32]. First, reads were piled up using bcftools pileup (--annotate FORMAT/AD,FORMAT/ADF,FORMAT/ADR,FORMAT/DP,FORMAT/SP,INFO/AD,INFO/ADF,INFO/ADR --output-type v --skip-indels). Then, pileups were used to perform SNP calling using bcftools call (--multiallelic-caller –variants-only); indels were not considered. Raw SNPs were filtered removing those with QUAL ≥ 20, AF ≥ 0.05, DP ≥ 4, and MQ0F ≤ 0.05. This filtering was conducted with all2vcf (https://github.com/MatteoSchiavinato/all2vcf). The final lists of SNPs from either parent of a hybrid were passed to JLOH to detect LOH blocks.
+
+
+
+# HLA 学术会议和组织
+
+- https://ihiw18.org/
+- https://ihiw19.org/
 
