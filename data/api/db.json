@@ -12,6 +12,15 @@
 
 		{
 			year: 2025,
+			title:"0822-pA_site_selection_by_CNN.md",
+			caption: "基于CNN的 polyA site 判定方法",
+			category:1,
+			tags: ['APA', "CNN"],
+		},
+
+
+		{
+			year: 2025,
 			title:"0612-How_science_technology_engineer_develop.md",
 			caption: "过度强调高水平论文（科学产出）反而抑制了核心技术（工具、方法、仪器）的自主创新‌——科学、技术、工程该怎么协同发展？",
 			category:4,
