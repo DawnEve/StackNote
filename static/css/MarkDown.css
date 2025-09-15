@@ -112,6 +112,11 @@ Style ref:
 .markdown img{max-width:100%;box-sizing:content-box;background-color:#fff}
 .markdown img[align=right]{padding-left:20px}
 .markdown img[align=left]{padding-right:20px}
+
+.markdown p img {
+    margin-left: -20px;
+}
+
 .markdown .emoji{max-width:none;background-color:transparent}
 .markdown span.frame{display:block;overflow:hidden}
 .markdown span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}

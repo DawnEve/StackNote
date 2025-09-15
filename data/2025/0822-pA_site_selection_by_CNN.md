@@ -1,6 +1,89 @@
 polyA Deep learning model lists
 
 
+> 最新的在最上。
+
+
+# scTail: 使用 reads 1 检测polyA使用率(Genome Biol. 2025)
+> scTail: precise polyadenylation site detection and its alternative usage analysis from reads 1 preserved 3' scRNA-seq data
+> https://pubmed.ncbi.nlm.nih.gov/40775355/
+
+The first-strand reads (often reads 1) of three-prime single-cell RNA-seq (3' scRNA-seq) can contain informative cDNA for analysis of polyadenylation sites (PAS), but are often overlooked or trimmed. 
+
+使用R1识别pA，使用R2定量。
+Here, we describe a computational method, scTail, to identify PAS using first-strand reads and quantify its expression leveraging second-strand reads, consequently enabling detection of alternative PAS usage.
+
+
+Compared with other methods, scTail detects PAS more precisely and retains high sensitivity. Furthermore, we demonstrated that combining `scTail` and `BRIE2` can discover differential alternative PAS usage in various biological processes including cancers and time-series development, giving critical insight into PAS regulation.
+
+
+
+## CNN 结构
+
+![fig](data/2025/images/0822_CNN_scTail.png)
+
+- Fig. 2 Developing scTail to identify PAS from 3′ tag-based scRNA-seq.
+- C Flowchart of deep neural network embedded into scTail to filter low-quality putative PASs from sequence
+
+
+
+## Code
+
+- https://github.com/StatBiomed/scTail
+
+- https://github.com/saketkc/gencode_regions
+
+
+## Method
+
+**Analysis of genomic feature of PAS**
+
+The genomic interval of 5′ UTR, 3′ UTR, intron, and exon were obtained by inputting
+the hg38 GTF file to gencode_regions package (https:// github. com/ saket kc/ genco de_
+regio ns). Then, PAS detected by scTail in K562 were assigned to genomic features such
+as 5′ UTR, 3′ UTR, and so on.
+
+
+**BRIE2 (v 2.2.2) [43]**
+> 43. Huang Y, Sanguinetti G. BRIE2: computational identification of splicing phenotypes from single-cell transcriptomic experiments. Genome Biol. 2021;22(1):251.
+
+
+
+
+
+
+
+
+# scUTRquant: 发现 不依赖基因表达的3UTR变化(NC, 2024)
+> Quantifying 3′UTR length from scRNA-seq data reveals changes independent of gene expression
+> https://pubmed.ncbi.nlm.nih.gov/38744866/
+> https://www.nature.com/articles/s41467-024-48254-9
+> Tri-Institutional Training Program in Computational Biology and Medicine, Weill Cornell Graduate College, New York, NY, 10021, USA.
+
+Although more than half of all genes generate transcripts that differ in 3'UTR length, current analysis pipelines only quantify the amount but not the length of mRNA transcripts. 
+
+人鼠200个细胞类型中的pA，注释到 GENCODE 上大约40%。
+3'UTR length is determined by 3' end cleavage sites (CS). We map CS in more than 200 primary human and mouse cell types and increase CS annotations relative to the GENCODE database by 40%. 
+
+大约一半pA只在部分细胞类型中，表明大多数基因只有1个或2个主3’结尾。
+Approximately half of all CS are used in few cell types, revealing that most genes only have one or two major 3' ends. 
+
+流程：scUTRquant
+We incorporate the CS annotations into a computational pipeline, called scUTRquant, for rapid, accurate, and simultaneous quantification of gene and 3'UTR isoform expression from single-cell RNA sequencing (scRNA-seq) data. 
+
+474个细胞类型，2134个干扰，发现细胞类型之间的很多3UTR长度变化 广泛存在，受到基因表达调控，但是影响的多是不同的基因。
+When applying scUTRquant to data from 474 cell types and 2134 perturbations, we discover extensive 3'UTR length changes across cell types that are as widespread and coordinately regulated as gene expression changes but affect mostly different genes.
+当将scUTRquant应用于来自474种细胞类型和2134种扰动的数据时，我们发现细胞类型之间广泛的3'UTR长度变化与基因表达变化一样广泛和协调调节，但主要影响不同的基因。
+
+mRNA丰度和长度是大致独立的事件，它们共同决定了蛋白质合成的数量和空间组织
+Our data indicate that mRNA abundance and mRNA length are two largely independent axes of gene regulation that together determine the amount and spatial organization of protein synthesis.
+
+
+
+
+
+
+
 
 
 # PolyaID: identify polyA sites at nucleotide resolution(Nat Commun. 2023)
@@ -8,13 +91,131 @@ polyA Deep learning model lists
 > https://pubmed.ncbi.nlm.nih.gov/37968271/
 > Department of Pharmacology, Feinberg School of Medicine, Northwestern University, Chicago, IL, 60611, USA.
 
-## CNN 结构: LSTM
+## CNN 结构: LSTM 及核心代码
+
+- https://github.com/zhejilab/PolyaModelsHuman
 
 ![fig](data/2025/images/0822_CNN_PolyaID.png)
 
 - Fig. 1: Developing deep learning models to identify polyA sites at nucleotide-level resolution and calculate polyA site strength.
 - a Overview of data analysis steps(略). b The PolyaID model architecture(见上图). g The PolyaStrength model architecture(略).
 - 训练两个模型：PolyaID 识别polyA位置； PolyaStrength 计算polyA位置的序列强度。
+
+
+
+Supposing the supporting read number for site i is ni, its relative usage ui and the log-odds transformed value oi were calculated as (Eq. 4):
+
+* Ui=ni/(n_max_site + n_second_max_site)
+* Oi=log2(ui / (1-ui))
+
+**Model architecture and training.** The polyA sequences (240 nt) were converted into a (4 × 240)matrix using one-hot encoding, the same as for the PolyaIDmodel. For the Sequence-Modeling unit, we also used a convolutional layer followed with a bidirectional LSTMlayer, but their parameters are different from those of PolyaID and are described in (Supplementary Data 3). The output layer predicts the log-odds transformed usage levels. We used the mean squared error implemented in TensorFlow2 as the loss function for model training (Eq. 5):
+
+* LOSS_usage=1/n * Sigma累加(i=1, n, (ui - vi)**2  )
+
+where ui and vi are predicted and observed usage level for the polyA site i. Data was fed into themodel during training in a batch size of 100, with a learning rate of 0.001, and optimized using the Adam optimizer with Nesterov momentum.
+
+53,105 terminal exonic polyA sites were used to build the model. And we required that the selected genes should contain ≥2 polyA sites in terminal exons. The sites were randomly separated into 80% training, 10% validation, and 10% holdout test splits. Training was monitored using the loss function and the accuracy of predictions. The model was trained for 9 epochs, after which it attained the minimum loss on the validation set. Severalmodelswere trained in replicate, and a representative model was chosen.
+
+
+
+
+
+
+```
+# https://github.com/zhejilab/PolyaModelsHuman/blob/main/polyA_prediction_pipeline.ipynb
+
+## CONSTRUCT MODELS AND INPUT DATA
+
+def make_polyaid_model(model_path):
+	'''Builds the PolyaID model and loads the trained weights.
+	'''
+
+	from contextlib import redirect_stderr
+
+	with redirect_stderr(open(os.devnull, "w")):
+
+		from keras import Input
+		from keras.models import Model
+		from keras.layers import Dense, Dropout, Flatten, Bidirectional
+		from keras.layers import Conv1D, MaxPooling1D, LSTM
+		from keras.activations import sigmoid
+		from keras.layers import ReLU
+		from keras import backend as K
+
+	import tensorflow as tf
+	tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+	
+	model_input = Input(shape = input_shape)
+	
+	x = ReLU()(Conv1D(512, 8, padding = 'valid', strides = 1, name = 'bin_conv')(model_input))
+	x = MaxPooling1D(pool_size = 3, strides = 3, name = 'bin_pool')(x)
+	x = Dropout(polyaid_bin_dropout)(x)
+	x = Bidirectional(LSTM(units = 128, return_sequences = True, name = 'bin_lstm'))(x)
+	x = Dropout(polyaid_bin_dropout)(x)
+	x = Flatten(name = 'bin_flatten')(x)
+		
+	bin_x = ReLU()(Dense(256, kernel_initializer = 'glorot_uniform', name = 'bin_dense1')(x))
+	bin_x = Dropout(polyaid_bin_dropout)(bin_x)
+	bin_x = ReLU()(Dense(256, kernel_initializer = 'glorot_uniform', name = 'bin_dense2')(bin_x))
+	bin_x = Dropout(polyaid_bin_dropout)(bin_x)
+	bin_x = ReLU()(Dense(128, kernel_initializer = 'glorot_uniform', name = 'bin_dense3')(bin_x))
+	bin_x = Dropout(polyaid_bin_dropout)(bin_x)
+	bin_x = ReLU()(Dense(64, name = 'bin_dense4')(bin_x))
+	bin_x = Dense(polyaid_bin_len, activation = 'sigmoid', name = 'bin_predictions')(bin_x)
+		
+	prob_x = ReLU()(Dense(256, kernel_initializer = 'glorot_uniform', name = 'prob_dense1')(x))
+	prob_x = Dropout(polyaid_vec_dropout)(prob_x)
+	prob_x = ReLU()(Dense(256, kernel_initializer = 'glorot_uniform', name = 'prob_dense2')(prob_x))
+	prob_x = Dropout(polyaid_vec_dropout)(prob_x)
+	prob_x = ReLU()(Dense(128, kernel_initializer = 'glorot_uniform', name = 'prob_dense3')(prob_x))
+	prob_x = Dropout(polyaid_vec_dropout)(prob_x)
+	prob_x = ReLU()(Dense(64, name = 'prob_dense4')(prob_x))
+	prob_x = Dense(polyaid_vec_len, activation = 'softmax', kernel_initializer = 'zeros', name = 'prob_predictions')(prob_x)
+	
+	model = Model(inputs = [model_input], outputs = [bin_x, prob_x], name = 'model')
+	model.load_weights(model_path)
+		
+	return model
+
+
+
+def make_polyastrength_model(model_path):
+	'''Builds the PolyaStrength model and loads the trained weights.
+	'''
+
+	from contextlib import redirect_stderr
+
+	with redirect_stderr(open(os.devnull, "w")):
+
+		from keras import Input
+		from keras.models import Model
+		from keras.layers import Dense, Dropout, Flatten, Bidirectional
+		from keras.layers import Conv1D, MaxPooling1D, LSTM
+		from keras.layers import ReLU	
+		from keras import backend as K
+
+	import tensorflow as tf
+	tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+
+	model_input = Input(shape = input_shape)
+
+	x = ReLU()(Conv1D(64, 8, padding = 'valid', strides = 1, name = 'seq_conv')(model_input))
+	x = MaxPooling1D(pool_size = 3, strides = 3, name = 'bin_pool')(x)
+	x = Dropout(polyastrength_bin_dropout)(x)
+	x = Bidirectional(LSTM(units = 16, return_sequences = True, name = 'bin_lstm'))(x)
+	x = Dropout(polyastrength_bin_dropout)(x)
+	x = Flatten(name = 'bin_flatten')(x)
+	
+	bin_x = ReLU()(Dense(128, kernel_initializer = 'glorot_uniform', name = 'bin_dense1')(x))
+	bin_x = Dropout(polyastrength_bin_dropout)(bin_x)
+	bin_x = ReLU()(Dense(64, name = 'bin_dense2')(bin_x))
+	bin_x = Dense(polyastrength_bin_len, activation = 'linear', name = 'bin_predictions')(bin_x)
+	
+	model = Model(inputs = model_input, outputs = bin_x, name = 'model')
+	model.load_weights(model_path)
+	
+	return model
+```
 
 
 ## 预测：next polyA model must be transformer, 就看谁的手速快了。

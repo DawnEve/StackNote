@@ -1,6 +1,37 @@
 APA facter functions
 
-> APA 因子的作用？
+> 目的: 能调节 APA 的因子，及其作用(shorten or lengthen 的基因数分别是多少)？
+> 课题设计: 找 CRISPR Screen 的文库，下载分析其中每个基因敲除后对APA的影响，包括但不限于 APA factor。
+数据来源: NCBI 搜 CRISPR screening，Or 找数据库；及 干扰实验
+目标产出: 数据库
+
+
+
+
+
+# PerturbSeq.db: Single-cell Perturbation Data 数据源(J Mol Biol. 2025)
+> PerturbSeq.db: An Integrated Repository for Comprehensive Analysis of Single-cell Perturbation Data
+> https://pubmed.ncbi.nlm.nih.gov/40381983/
+> The Province and Ministry Co-sponsored Collaborative Innovation Center for Medical Epigenetics, State Key Laboratory of Experimental Hematology, Tianjin Key Laboratory of Inflammatory Biology, Department of Bioinformatics, School of Basic Medical Sciences, Tianjin Medical University, Tianjin 300070, China.
+
+Single-cell perturbation studies have emerged as a transformative approach in biological research, offering unprecedented insights into cellular responses to genetic and chemical interventions. 
+
+However, the field faces challenges related to data accessibility and integration. 
+
+To address this, we present PerturbSeq.db (http://bioailab.com/PerturbSeq.db/), a comprehensive database that consolidates and harmonizes single-cell perturbation datasets from a diverse array of sources. 
+
+包括的数据集 189 个，来自77个研究的50个细胞系或组织。
+PerturbSeq.db comprises 189 datasets from 77 studies, including `165 scRNA-seq and 24 scATAC-seq datasets`, spanning approximately 50 distinct cell lines or tissues.
+
+To ensure data consistency and comparability, PerturbSeq.db employs a uniform processing pipeline across all datasets. The database is complemented by an interactive, user-friendly interface that facilitates efficient data exploration and analysis, empowering researchers to navigate the complexities of single-cell perturbation data.
+
+Overall, PerturbSeq.db serves as a critical resource for the scientific community, providing a comprehensive, well-annotated collection of datasets for analyzing and interpreting the effects of perturbation at the single-cell level.
+
+
+
+
+
+
 
 
 

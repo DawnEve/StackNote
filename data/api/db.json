@@ -12,6 +12,23 @@
 
 		{
 			year: 2025,
+			title:"0915_How_to_use_transformer_single_cell.md",
+			caption: "transformer 如何用在单细胞研究中？",
+			category:5,
+			tags: ['AI'],
+		},
+
+
+		{
+			year: 2025,
+			title:"0827-AML_cell_CART_and_APA.md",
+			caption: "AML 白血病细胞(T细胞、CART治疗前后)与APA",
+			category:5,
+			tags: ['AML', "APA"],
+		},
+
+		{
+			year: 2025,
 			title:"0822-pA_site_selection_by_CNN.md",
 			caption: "基于CNN的 polyA site 判定方法",
 			category:1,

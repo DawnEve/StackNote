@@ -25,6 +25,7 @@ v0.1.7 /tags OK
 v0.1.8 /tag/xx OK
 v0.1.9 重构 archive 页面，带年份
 v0.2.0 侧边栏md锚点用js生效，html锚点有点错位
+v0.2.1@picb transformer 和 sc[2025.9.15]
 
 #################
 ## coding.net
@@ -163,13 +164,14 @@ v0.4.1-6@picb 基于CNN的polyA模型 [2025.8.22]
 #----------> push to github dawneve/StackNote
 
 
-核心目录 data/api/db.json
+核心目录 /data/api/db.json
 Web url: note.biomooc.com
 local url: blog3.dawneve.cc
 顶部菜单：
 	菜谱: /data/api/files/recipe.md
 	About: /src/views/About.js
 底部链接：/index.html
+Home clock: /src/views/Index.js
 
 
 
