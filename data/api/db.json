@@ -8,6 +8,16 @@
 //命名规范： 月日4位-杂志名-几个-关键词.md
 
 // 规范： 1. 使用标签 前沿 表示文献汇总
+// tags: ./tags.js
+
+		{
+			year: 2025,
+			title:"0925-golden-advices-in-life.md",
+			caption: "Golden Advices in Life",
+			category:2,
+			tags: ['English', 'advice'],
+		},
+
 
 
 		{

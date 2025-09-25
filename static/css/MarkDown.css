@@ -80,15 +80,19 @@ Style ref:
 .markdown ol p{text-indent: 0;}
 
 .markdown ol,
-.markdown ul{margin-top:20px; margin-bottom:30px;}
+.markdown ul{
+	margin-top:20px; margin-bottom:30px;
+	padding-left:2em
+}
 .markdown ul p{text-indent: 0;}
 
-.markdown hr{height:4px;padding:0;margin:16px 0;background-color:#e7e7e7;border:0 none}
-.markdown ul,.markdown ol{padding-left:2em}
 .markdown ul.no-list,.markdown ol.no-list{padding:0;list-style-type:none}
 .markdown ul ul,.markdown ul ol,.markdown ol ol,.markdown ol ul{margin-top:0;margin-bottom:0}
 .markdown li>p{ margin-top:10px}
 .markdown li>ul li{line-height:1;}
+
+
+.markdown hr{height:4px;padding:0;margin:16px 0;background-color:#e7e7e7;border:0 none}
 
 .markdown dl{padding:0}
 .markdown dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}

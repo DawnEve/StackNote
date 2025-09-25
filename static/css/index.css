@@ -398,9 +398,12 @@ main > nav li a{
 
 #side_contents a{text-decoration: none; cursor: pointer;
 	display: block;
+	border-left: 2px solid #fff;
 }
 #side_contents a .text_menu{color:#ccc;}
-#side_contents a .text_menu span{color:#000/*#009a61 DB784D */; }
+#side_contents a .text_menu span{color:#000/*#009a61 DB784D */;
+	margin-left: 2px;
+}
 /*当前行*/
 #side_contents a.cur {
     border-left: 2px solid #0096ff;
