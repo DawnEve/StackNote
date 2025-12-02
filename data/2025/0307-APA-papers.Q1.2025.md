@@ -1,4 +1,52 @@
 
+
+# CFIm25通过NF-kB通路促进巨噬细胞的分化和激活 (2025, Cell Commun Signal, IF=)
+> The alternative polyadenylation regulator CFIm25 promotes macrophage differentiation and activates the NF-κB pathway
+> https://pubmed.ncbi.nlm.nih.gov/40022203/
+> Claire L Moore 
+
+CFIm25 showed a striking increase upon macrophage differentiation, suggesting it promotes this process.
+
+Indeed, CFIm25 overexpression during differentiation amplified the acquisition of macrophage characteristics and caused an earlier slowing of the cell cycle, a hallmark of this transition, along with APA-mediated downregulation of cyclin D1.
+
+The NF-κB signaling pathway plays a major role in maturation of monocytes to macrophages, and the mRNAs of null, TBL1XR1, and NFKB1, all positive regulators of NF-κB signaling, underwent 3'UTR shortening, coupled with an increase in the corresponding proteins.
+
+CFIm25 overexpression also elevated phosphorylation of the NF-κB-p65 transcription activator, produced an earlier increase in the NF-κB targets p21, Bcl-XL, ICAM1 and TNF-α, and resulted in greater resistance to NF-κB chemical inhibition.
+
+Knockdown of Tables 2 and TBL1XR1 in CFIm25-overexpressing cells attenuated these effects, reinforcing the mechanistic link between CFIm25-regulated APA and NF-κB activation. 
+
+Conversely, depletion of CFIm25 hindered differentiation and led to lengthening of NFKB1, TAB2, and TBL1XR1 3' UTRs.
+
+
+
+
+
+
+
+# [重点看 ]3'-UTR选择性聚腺苷酸化在小鼠胎儿发育和解剖中的动态景观 (Adv Sci (Weinh), IF=14.1)
+> The Dynamic Landscape of 3'-UTR Alternative Polyadenylation Across Mouse Fetal Development and Anatomy
+> https://pubmed.ncbi.nlm.nih.gov/40126195/
+> Shanghai Key Laboratory of Maternal and Fetal Medicine, Clinical and Translational Research Center of Shanghai First Maternity and Infant Hospital, Frontier Science Center for Stem Cell Research, School of Life Sciences and Technology, Tongji University, Shanghai, 200092, China.
+
+RBP通过影响3UTR延申限制远端pA使用。
+Intriguingly, brain tissues display complex 3'-UTR APA dynamics during development, potentially regulated by RNA-binding proteins such as Rbm38, potentially impacting 3' UTR extension by restricting distal pAS usage.
+
+与保守的miRNA结合位置相关，在可选择3UTR中富集转座子。
+These APA events are associated with a depletion of conserved miRNA binding sites and an enrichment of transposable elements within alternative 3' UTRs.
+
+网站：
+To facilitate further research, this work develops APApedia (http://xozhanglab.com/apapedia/), a comprehensive database cataloging identified 3'-UTR APA events, which serves as a valuable resource for the community to study APA in development and tissue-specific regulation. This comprehensive resource aids in deciphering the functional implications of APA in mouse fetal development.
+
+
+
+
+
+
+
+
+
+
+
 # 稀有 APA 与人类疾病(NC, Jan 2025) 李磊
 
 - [Impact of rare non-coding variants on human diseases through alternative polyadenylation outliers](https://www.nature.com/articles/s41467-024-55407-3)

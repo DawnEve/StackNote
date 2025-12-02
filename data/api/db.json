@@ -12,6 +12,16 @@
 
 		{
 			year: 2025,
+			title:"1021-APA-papers.Q4.2025.md",
+			caption: "APA papers: Q4.2025",
+			category:1,
+			tags: ['APA'],
+		},
+
+
+
+		{
+			year: 2025,
 			title:"0925-golden-advices-in-life.md",
 			caption: "Golden Advices in Life",
 			category:2,

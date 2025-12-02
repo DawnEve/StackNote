@@ -157,6 +157,7 @@ v0.4.1-5@picb update a line; Goto Shenzhen [2025.8.1]
 v0.4.1-6@picb 基于CNN的polyA模型 [2025.8.22]
 v0.4.1-7@picb transformer 和 sc[2025.9.15]
 v0.4.1-8@picb En/ golden advices in life [2025.9.25]
+v0.4.1-9@picb Go to Zhengzhou [2025.12.2]
 
 
 #
